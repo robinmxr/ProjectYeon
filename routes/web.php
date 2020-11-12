@@ -16,6 +16,7 @@ use App\Http\Controllers\BackPagesController;
 use App\Http\Controllers\FrontPagesController;
 use App\Http\Controllers\FrontProductsController;
 use App\Http\Controllers\BackProductsController;
+use App\Http\Controllers\BackCategoriesController;
 use App\Http\Controllers\HomeController;
 
 /*-----------------Frontend Page Routes--------------------*/
@@ -52,3 +53,13 @@ Route::get('/admin/product/edit/{id}', [BackProductsController::class, 'edit'])-
 Route::post('/admin/product/create', [BackProductsController::class, 'store'])->name('admin.product.store')->middleware('is_admin');
 
 Route::post('/admin/product/edit/{id}', [BackProductsController::class, 'update'])->name('admin.product.update')->middleware('is_admin');
+
+Route::get('/admin/category/create', [BackCategoriesController::class, 'create'])->name('admin.category.create')->middleware('is_admin');
+
+Route::get('/admin/category', [BackCategoriesController::class, 'index'])->name('admin.categories')->middleware('is_admin');
+
+Route::get('/admin/category/edit/{id}', [BackCategoriesController::class, 'edit'])->name('admin.category.edit')->middleware('is_admin');
+
+Route::post('/admin/category/create', [BackCategoriesController::class, 'store'])->name('admin.category.store')->middleware('is_admin');
+
+Route::post('/admin/category/edit/{id}', [BackCategoriesController::class, 'update'])->name('admin.category.update')->middleware('is_admin');
