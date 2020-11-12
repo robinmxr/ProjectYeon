@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Models\Product;
 use App\Models\ProductImage;
 use Image;
@@ -38,7 +39,6 @@ class BackProductsController extends Controller
           'title' => 'required|max:150',
           'price' => 'required|numeric',
           'category_id'=>'required',
-          'type' =>'required',
           'description'=>'required',
         ]);
 
@@ -49,7 +49,6 @@ class BackProductsController extends Controller
         $product->description=$request->description;
         $product->price=$request->price;
         $product->category_id=$request->category_id;
-        $product->product_type=$request->type;
         $product->slug=Str::slug($request->title,'-');
         $product->save();
 
@@ -78,7 +77,6 @@ class BackProductsController extends Controller
           'title' => 'required|max:150',
           'price' => 'required|numeric',
           'category_id'=>'required',
-          'type' =>'required',
           'description'=>'required',
         ]);
 
@@ -89,7 +87,6 @@ class BackProductsController extends Controller
         $product->description=$request->description;
         $product->price=$request->price;
         $product->category_id=$request->category_id;
-        $product->product_type=$request->type;
         $product->slug=Str::slug($request->title,'-');
         $product->save();
 
