@@ -43,8 +43,8 @@
           <td>{{ $product->id }}</td>
         <td>{{ $product->title }}</td>
         <td>{{ $product->price }}</td>
-        <td>{{ $product->product_type}}</td>
-        <td><a href="{{ route('admin.product.edit', $product->id) }}" class="btn btn-block btn-outline-primary btn-lg">Edit</td>
+        <td>     </td>
+            <td><a href="{{ route('admin.product.edit', $product->id) }}" class="btn btn-block btn-outline-primary btn-lg">Edit</a></td>
 
       </tr>
       @endforeach

@@ -1,11 +1,12 @@
-@include ('partial.header')
+@include ('frontend.partial.header')
+@include ('frontend.partial.leftside')
 	<!-- Slider -->
 @yield ('content')
 
-@include ('partial.footer')
-@include('partial.bottom')
+@include ('frontend.partial.footer')
+@include('frontend.partial.bottom')
 
-@include ('partial.script')
+@include ('frontend.partial.script')
 
 </body>
 </html>

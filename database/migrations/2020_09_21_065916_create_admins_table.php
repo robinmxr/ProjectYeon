@@ -18,6 +18,8 @@ class CreateAdminsTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('avatar');
+            $table->string('type')->default('Super Admin')->comment('Admin|Super Admin');
             $table->timestamp('admin_added_at')->nullable();
             $table->timestamps();
         });

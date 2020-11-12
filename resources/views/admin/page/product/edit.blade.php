@@ -41,10 +41,7 @@
         <input type="number" class="form-control" name="price" value="{{ $product->price }}">
       </div>
 
-      <div class="form-group">
-        <label for="exampleInputEmail1">Product Type</label>
-        <input type="text" class="form-control" name="type" value="{{ $product->product_type }}">
-      </div>
+    
 
       <div class="form-group">
         <label for="exampleInputEmail1">Category Id</label>
