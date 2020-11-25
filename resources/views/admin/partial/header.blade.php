@@ -101,6 +101,65 @@
           </ul>
         </li>
 
+
+        <--Add products and watch all the products in the admin panel
+        -->
+        <li class="nav-item has-treeview menu-open">
+          <a href="#" class="nav-link active">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Products
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Add Products</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link active">
+                <i class="far fa-circle nav-icon"></i>
+                <p>All Products</p>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+
+
+        <--Add categories and watch all the categories in the admin panel
+        -->
+        <li class="nav-item has-treeview menu-open">
+          <a href="#" class="nav-link active">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Category
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Add Category</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link active">
+                <i class="far fa-circle nav-icon"></i>
+                <p>All Categories</p>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+
+
+
+
         <li class="nav-header">Manage Products</li>
         <li class="nav-item">
           <a href="{{ route('admin.products') }}" class="nav-link">
