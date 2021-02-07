@@ -12,7 +12,9 @@ class Product extends Model
     protected $fillable = [
       'title','description','category_id','price','quantity','offer_id','slug',
     ];
-
+    protected $casts = [
+        'product_added_at' => 'datetime',
+    ];
 
     public function image()
     {
@@ -23,6 +25,7 @@ class Product extends Model
     public function category()
     {
       return $this->belongsTo('App\Models\Category', 'category_id');
+      
     }
 
 }

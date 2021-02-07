@@ -19,7 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="Category added" />
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="Minor Bug Fixes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackCategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +45,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="multiauth" />
+        <entry key="$PROJECT_DIR$" value="categorries" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -165,6 +171,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/frontend/page" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -174,7 +181,8 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -198,7 +206,22 @@
       <updated>1605176707985</updated>
       <workItem from="1605176711736" duration="2156000" />
       <workItem from="1605207945731" duration="8946000" />
-      <workItem from="1605248742312" duration="294000" />
+      <workItem from="1605248742312" duration="6549000" />
+      <workItem from="1605539928617" duration="2892000" />
+      <workItem from="1605717316947" duration="5003000" />
+      <workItem from="1606305839331" duration="8720000" />
+      <workItem from="1608574256321" duration="2381000" />
+      <workItem from="1608655852038" duration="2043000" />
+      <workItem from="1609692421810" duration="675000" />
+      <workItem from="1610789204903" duration="330000" />
+      <workItem from="1610790923372" duration="788000" />
+      <workItem from="1611507326695" duration="4582000" />
+      <workItem from="1611596298221" duration="1036000" />
+      <workItem from="1611897302865" duration="5050000" />
+      <workItem from="1612280673082" duration="2601000" />
+      <workItem from="1612598204073" duration="3113000" />
+      <workItem from="1612621966617" duration="6353000" />
+      <workItem from="1612716665251" duration="6569000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -214,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605215910908</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="missing files added">
+      <created>1605249811701</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605249811702</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,20 +265,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="multiauth" />
     <MESSAGE value="Category added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Category added" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="418" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605212254859">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="418" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1605212254859" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1605216265575">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1605216265575" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1605215985402">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1605215985402" />
+    <MESSAGE value="missing files added" />
+    <MESSAGE value="Minor Bug Fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor Bug Fixes" />
   </component>
 </project>

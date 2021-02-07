@@ -21,7 +21,15 @@ class BackProductsController extends Controller
     {
         return view('admin.page.product.addproduct');
     }
-
+    public function delete($id)
+    {
+    $product=Product::find($id);
+    if(!is_null($product)){
+        $product->delete();
+    }
+    session()->flash('success','Product has been deleted');
+    return back();
+    }
 
 
 
@@ -56,7 +64,7 @@ class BackProductsController extends Controller
         if(count($request->product_image) > 0) {
           foreach($request->product_image as $image) {
 
-          $final_image= Image::make($image);
+          $final_image= Image::make($image)->resize(1200,1486);
           $originalpath=public_path().'/images/products/';
           $final_image->save($originalpath.time().$image->getClientOriginalName());
 
@@ -68,7 +76,8 @@ class BackProductsController extends Controller
       }
 
 
-       return redirect()->route('admin.product.create');
+          session()->flash('success','Product has been added');
+          return back();
       }
       public function update(Request $request, $id)
       {
@@ -106,6 +115,7 @@ class BackProductsController extends Controller
       }*/
 
 
-       return redirect()->route('admin.products');
+          session()->flash('success','Product has been edited');
+          return back();
       }
 }

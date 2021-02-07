@@ -49,7 +49,8 @@ class BackCategoriesController extends Controller
 
 
 
-       return redirect()->route('admin.category.create');
+          session()->flash('success','Category has been Added');
+          return back();
       }
       public function update(Request $request, $id)
       {
@@ -71,4 +72,13 @@ class BackCategoriesController extends Controller
 
        return redirect()->route('admin.categories');
       }
+    public function delete($id)
+    {
+        $category=Category::find($id);
+        if(!is_null($category)){
+            $category->delete();
+        }
+        session()->flash('success','Category has been deleted');
+        return back();
+    }
 }
