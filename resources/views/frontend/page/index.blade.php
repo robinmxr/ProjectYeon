@@ -978,17 +978,13 @@
         </div>
       </div>
     </div>
-
+      <div class="flex-c-m flex-w w-full p-t-45">
+          <a href="#" class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
+              Load More
+          </a>
+      </div>
     <!-- Pagination -->
-    <div class="flex-c-m flex-w w-full p-t-38">
-      <a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7 active-pagination1">
-        1
-      </a>
 
-      <a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7">
-        2
-      </a>
-    </div>
   </div>
 </section>
 <!-- Back to top -->

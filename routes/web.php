@@ -43,6 +43,8 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+
+
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.index')->middleware('is_admin');
 Route::get('/admin/product/create', [BackProductsController::class, 'create'])->name('admin.product.create')->middleware('is_admin');
 

@@ -11,7 +11,7 @@ class FrontProductsController extends Controller
     //
     public function index()
     {
-        $products = Product::orderBy('id','desc')->get();
+        $products = Product::orderBy('id','desc')->simplepaginate(2);
         return view('frontend.page.product.index')->with('products',$products);
     }
 }
