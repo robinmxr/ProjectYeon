@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
  <head>
-	<title>Home </title>
+	<title>@yield('pagetitle')- ProjectYeon </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="{{ asset('images/icons/favicon.png') }}"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
+
+     <link rel="stylesheet" type="text/css" href="{{ asset('vendor/bootstrap5/css/bootstrap.min.css') }}">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
 <!--===============================================================================================-->
@@ -33,7 +35,17 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/util.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
+
+     <link rel="stylesheet" type="text/css" href="{{ asset('vendor/bootstrap5/css/bootstrap.css') }}">
 <!--===============================================================================================-->
+     <script src="{{ asset('js/app.js') }}" defer></script>
+
+     <!-- Fonts -->
+     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+     <!-- Styles -->
+     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="animsition">
 
@@ -45,17 +57,13 @@
 				<nav class="limiter-menu-desktop p-l-45">
 
 					<!-- Logo desktop -->
-					<a href="#" class="logo">
+					<a href="{{ route('index') }}" class="logo">
 						<img src="{{ asset('images/icons/logo-02.png') }}" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-
-							<li>
-								<a href="{{ route('index') }}">Home</a>
-							</li>
 
 							<li class="label1" data-label1="hot">
 								<a href="{{ route('products') }}">Products</a>
@@ -81,19 +89,26 @@
 					</div>
 
 					<!-- Icon header -->
-					<div class="wrap-icon-header flex-w flex-r-m h-full">
-						<div class="flex-c-m h-full p-r-25 bor6">
-							<div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="2">
-								<i class="zmdi zmdi-shopping-cart"></i>
-							</div>
-						</div>
+                    <div class="wrap-icon-header flex-w flex-r-m h-full">
+                        <div class="flex-c-m h-full p-r-25 bor6">
+                            <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 js-show-modal-search">
+                                <i class="zmdi zmdi-search"></i>
+                            </div>
+                        </div>
+                        <div class="flex-c-m h-full p-r-25 bor6">
+                            <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="0">
+                                <i class="zmdi zmdi-shopping-cart"></i>
+                            </div>
+                        </div>
 
-						<div class="flex-c-m h-full p-lr-19">
-							<div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 js-show-sidebar">
-								<i class="zmdi zmdi-menu"></i>
-							</div>
-						</div>
-					</div>
+                        <div class="flex-c-m h-full p-lr-19">
+                            <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 js-show-sidebar">
+                                <i class="zmdi zmdi-menu"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
 				</nav>
 			</div>
 		</div>
@@ -161,150 +176,30 @@
 		</div>
 
 		<!-- Modal Search -->
-		<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
-			<button class="flex-c-m btn-hide-modal-search trans-04">
-				<i class="zmdi zmdi-close"></i>
-			</button>
+        <div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
+            <div class="container-search-header">
+                <button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
+                    <img src="images/icons/icon-close2.png" alt="CLOSE">
+                </button>
 
-			<form class="container-search-header">
-				<div class="wrap-search-header">
-					<input class="plh0" type="text" name="search" placeholder="Search...">
-
-					<button class="flex-c-m trans-04">
-						<i class="zmdi zmdi-search"></i>
-					</button>
-				</div>
-			</form>
-		</div>
+                <form class="wrap-search-header flex-w p-l-15">
+                    <button class="flex-c-m trans-04">
+                        <i class="zmdi zmdi-search"></i>
+                    </button>
+                    <input class="plh3" type="text" name="search" placeholder="Search">
+                </form>
+            </div>
+        </div>
 	</header>
 
 
 	<!-- Sidebar -->
-	<aside class="wrap-sidebar js-sidebar">
-		<div class="s-full js-hide-sidebar"></div>
+	@guest
 
-		<div class="sidebar flex-col-l p-t-22 p-b-25">
-			<div class="flex-r w-full p-b-30 p-r-27">
-				<div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-sidebar">
-					<i class="zmdi zmdi-close"></i>
-				</div>
-			</div>
-
-			<div class="sidebar-content flex-w w-full p-lr-65 js-pscroll">
-				<ul class="sidebar-link w-full">
-					<li class="p-b-13">
-						<a href="index.html" class="stext-102 cl2 hov-cl1 trans-04">
-							Home
-						</a>
-					</li>
-
-					<li class="p-b-13">
-						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
-							My Wishlist
-						</a>
-					</li>
-
-					<li class="p-b-13">
-						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
-							My Account
-						</a>
-					</li>
-
-					<li class="p-b-13">
-						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
-							Track Oder
-						</a>
-					</li>
-
-					<li class="p-b-13">
-						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
-							Refunds
-						</a>
-					</li>
-
-					<li class="p-b-13">
-						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
-							Help & FAQs
-						</a>
-					</li>
-				</ul>
-
-				<div class="sidebar-gallery w-full p-tb-30">
-					<span class="mtext-101 cl5">
-						@ CozaStore
-					</span>
-
-					<div class="flex-w flex-sb p-t-36 gallery-lb">
-						<!-- item gallery sidebar -->
-						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="images/gallery-01.jpg" data-lightbox="gallery"
-							style="background-image: url('{{ asset('images/gallery-01.jpg') }}');"></a>
-						</div>
-
-						<!-- item gallery sidebar -->
-						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="images/gallery-02.jpg" data-lightbox="gallery"
-							style="background-image: url('{{ asset('images/gallery-02.jpg') }}');"></a>
-						</div>
-
-						<!-- item gallery sidebar -->
-						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="images/gallery-03.jpg" data-lightbox="gallery"
-							style="background-image: url('{{ asset('images/gallery-03.jpg') }}');"></a>
-						</div>
-
-						<!-- item gallery sidebar -->
-						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="images/gallery-04.jpg" data-lightbox="gallery"
-							style="background-image: url('{{ asset('images/gallery-04.jpg') }}');"></a>
-						</div>
-
-						<!-- item gallery sidebar -->
-						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="images/gallery-05.jpg" data-lightbox="gallery"
-							style="background-image: url('{{ asset('images/gallery-05.jpg') }}');"></a>
-						</div>
-
-						<!-- item gallery sidebar -->
-						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="images/gallery-06.jpg" data-lightbox="gallery"
-							style="background-image: url('{{ asset('images/gallery-06.jpg') }}');"></a>
-						</div>
-
-						<!-- item gallery sidebar -->
-						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="images/gallery-07.jpg" data-lightbox="gallery"
-							style="background-image: url('{{ asset('images/gallery-07.jpg') }}');"></a>
-						</div>
-
-						<!-- item gallery sidebar -->
-						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="images/gallery-08.jpg" data-lightbox="gallery"
-							style="background-image: url('{{ asset('images/gallery-08.jpg') }}');"></a>
-						</div>
-
-						<!-- item gallery sidebar -->
-						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="images/gallery-09.jpg" data-lightbox="gallery"
-							style="background-image: url('{{ asset('images/gallery-09.jpg') }} ');"></a>
-						</div>
-					</div>
-				</div>
-
-				<div class="sidebar-gallery w-full">
-					<span class="mtext-101 cl5">
-						About Us
-					</span>
-
-					<p class="stext-108 cl6 p-t-27">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus vulputate hendrerit. Praesent faucibus erat vitae rutrum gravida. Vestibulum tempus mi enim, in molestie sem fermentum quis.
-					</p>
-				</div>
-			</div>
-		</div>
-	</aside>
-
-
+        @include('frontend.partial.utils.nonloggedinside')
+@else
+        @include('frontend.partial.utils.loggedinside')
+    @endguest
 	<!-- Cart -->
 	<div class="wrap-header-cart js-panel-cart">
 		<div class="s-full js-hide-cart"></div>

@@ -10,16 +10,16 @@ class FrontPagesController extends Controller
 
     public function index()
     {
-        return view('page.index');
+        return view('frontend.page.index');
     }
     public function contact()
     {
-        return view('page.contact');
+        return view('frontend.page.contact');
     }
 
     public function cart()
     {
-        return view('page.cart');
+        return view('frontend.page.cart');
     }
 
 }

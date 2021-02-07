@@ -1,6 +1,12 @@
-@extends('layouts.app')
-
+@extends('frontend.layout.master')
+@section('pagetitle','Register')
 @section('content')
+    <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/cover.png');">
+        <h2 class="ltext-105 cl0 txt-center">
+            Register
+        </h2>
+    </section>
+    <section class="bg0 p-t-104 p-b-116">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -74,4 +80,5 @@
         </div>
     </div>
 </div>
+    </section>
 @endsection

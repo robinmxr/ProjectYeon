@@ -1,15 +1,15 @@
-@extends ('layout.master')
+@extends ('frontend.layout.master')
 
 @section ('content')
 <!-- breadcrumb -->
-<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-02.jpg');">
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/cover.png');">
   <h2 class="ltext-105 cl0 txt-center">
     Shopping Cart
   </h2>
 </section>
 <div class="container">
   <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
-    <a href="index.html" class="stext-109 cl8 hov-cl1 trans-04">
+    <a href="{{ route('index') }}" class="stext-109 cl8 hov-cl1 trans-04">
       Home
       <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
     </a>

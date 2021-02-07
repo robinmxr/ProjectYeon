@@ -1,4 +1,4 @@
-@extends ('layout.master')
+@extends ('frontend.layout.master')
 @section ('content')
 
 	<!-- Product -->
@@ -24,17 +24,15 @@
 						Men
 					</button>
 
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".bag">
-						Bag
+					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".accesories">
+						Accesories
 					</button>
 
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".shoes">
-						Shoes
+					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".kids">
+						Kids
 					</button>
 
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".watches">
-						Watches
-					</button>
+
 				</div>
 
 				<div class="flex-w flex-c-m m-tb-10">
@@ -252,11 +250,15 @@
 				</div>
 			</div>
 
+
 			<div class="row isotope-grid">
         @foreach($products as $product)
 
-      <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item {{ $product->product_type }}">
-					<!-- Block2 -->
+
+      <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item {{ $product->category->category_type }}">
+
+
+        <!-- Block2 -->
           <a href="#">
 					<div class="block2">
 						<div class="block2-pic hov-img0">

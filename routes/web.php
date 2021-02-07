@@ -54,6 +54,8 @@ Route::post('/admin/product/create', [BackProductsController::class, 'store'])->
 
 Route::post('/admin/product/edit/{id}', [BackProductsController::class, 'update'])->name('admin.product.update')->middleware('is_admin');
 
+Route::post('/admin/product/delete/{id}', [BackProductsController::class, 'delete'])->name('admin.product.delete')->middleware('is_admin');
+
 Route::get('/admin/category/create', [BackCategoriesController::class, 'create'])->name('admin.category.create')->middleware('is_admin');
 
 Route::get('/admin/category', [BackCategoriesController::class, 'index'])->name('admin.categories')->middleware('is_admin');
@@ -63,3 +65,5 @@ Route::get('/admin/category/edit/{id}', [BackCategoriesController::class, 'edit'
 Route::post('/admin/category/create', [BackCategoriesController::class, 'store'])->name('admin.category.store')->middleware('is_admin');
 
 Route::post('/admin/category/edit/{id}', [BackCategoriesController::class, 'update'])->name('admin.category.update')->middleware('is_admin');
+
+Route::post('/admin/category/delete/{id}', [BackCategoriesController::class, 'delete'])->name('admin.category.delete')->middleware('is_admin');
