@@ -22,7 +22,7 @@
 
   <!-- Main content -->
   <section class="content">
-    <div class="container-fluid">
+    <a class="container-fluid">
 
       <div class="card card-primary">
   <!-- /.card-header -->
@@ -43,8 +43,8 @@
           <td>{{ $category->id }}</td>
         <td>{{ $category->title }}</td>
         <td>{{ $category->category_type}}</td>
-            <td><a href="{{ route('admin.category.edit', $category->id) }}" class="btn btn-block btn-outline-primary btn-lg">Edit</a>
-                <a href="#deleteModal{{ $category->id }}" data-toggle="modal" class="btn btn-block btn-outline-danger">Delete</a>
+            <td><a href="{{ route('admin.category.edit', $category->id) }}" class="btn btn-block btn-secondary">Edit</a>
+                <a href="#deleteModal{{ $category->id }}" data-toggle="modal" class="btn btn-block btn-secondary">Delete</a>
                 <div class="modal fade" id="deleteModal{{ $category->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -57,11 +57,11 @@
                             <div class="modal-body">
                                 <form method="post" action="{{ route('admin.category.delete', $category->id) }}">
                                     @csrf
-                                    <button type="submit" class="btn btn-block bg-gradient-danger btn-lg">Confirm Delete</button>
+                                    <button type="submit" class="btn btn-block bg-danger btn-lg">Confirm Delete</button>
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-block bg-gradient-success btn-lg" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-block bg-success btn-lg" data-dismiss="modal">Cancel</button>
 
                             </div>
                         </div>
@@ -83,7 +83,7 @@
 
     </div>
     <!-- /.card-body -->
-
+        <a href="{{ route('admin.category.create') }}" <button type="button" class="btn btn-block bg-info btn-lg">Add More Category</button> </a>
 
       </div>
 

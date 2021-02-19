@@ -40,8 +40,17 @@
         <label for="exampleInputEmail1">Product Price</label>
         <input type="number" class="form-control" name="price" placeholder="Enter price">
       </div>
+        <div class="form-group">
+            <label for="exampleInputEmail">Product Size</label>
+        <select class="form-select" id="size" name="size">
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+            <option value="xxl">XXL</option>
+        </select>
+        </div>
 
-    
 
       <div class="form-group">
         <label for="exampleInputEmail1">Category Id</label>

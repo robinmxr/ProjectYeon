@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->integer('category_id')->unsigned();
             $table->integer('price');
             $table->integer('quantity')->default(1);
+            $table->string('size');
             $table->integer('offer_id')->unsigned()->nullable();
             $table->string('slug');
             $table->timestamp('product_added_at')->nullable();

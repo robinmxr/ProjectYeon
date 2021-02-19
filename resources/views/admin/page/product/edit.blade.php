@@ -41,7 +41,7 @@
         <input type="number" class="form-control" name="price" value="{{ $product->price }}">
       </div>
 
-    
+
 
       <div class="form-group">
         <label for="exampleInputEmail1">Category Id</label>
@@ -51,23 +51,7 @@
         <label for="exampleInputEmail1">Description</label>
         <textarea name="description" rows="8" cols="80" class="form-control">{{ $product->description }}</textarea>
       </div>
-      <div class="form-group">
-        <label for="product_image">Product Image</label>
-        <div class="input-group">
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" name="product_image[]" id="exampleInputFile">
-            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-          </div>
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" name="product_image[]" id="exampleInputFile">
-            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-          </div>
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" name="product_image[]" id="exampleInputFile">
-            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-          </div>
-        </div>
-      </div>
+
 
     </div>
     <!-- /.card-body -->

@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,24 +16,37 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BackPagesController;
 use App\Http\Controllers\FrontPagesController;
 use App\Http\Controllers\FrontProductsController;
+use App\Http\Controllers\FrontCategoriesController;
 use App\Http\Controllers\BackProductsController;
 use App\Http\Controllers\BackCategoriesController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CartController;
 
 /*-----------------Frontend Page Routes--------------------*/
 Route::get('/', [FrontPagesController::class, 'index'])->name('index');
 
 Route::get('/contact', [FrontPagesController::class, 'contact'])->name('contact');
 
-Route::get('/cart', [FrontPagesController::class, 'cart'])->name('cart');
+
 
 
 
 /*------------------------Product Route Frontend----------------------------*/
-Route::get('/products', [FrontProductsController::class, 'index'])->name('products');
+Route::get('/product', [FrontProductsController::class, 'index'])->name('products');
+
+Route::get('/product/{slug}', [FrontProductsController::class, 'viewproduct'])->name('product.view');
 
 
 
+Route::get('/category', [FrontCategoriesController::class, 'index'])->name('categories');
+
+Route::post('/cart/{id}', [FrontProductsController::class, 'addtocart'])->name('product.cart.add');
+
+Route::get('/cart', [CartController::class, 'getCart'])->name('product.cart');
+
+Route::get('cart/{id}/remove', [CartController::class, 'removeItem'])->name('product.cart.remove');
+
+Route::get('/cart/clear', [CartController::class, 'clearCart'])->name('product.cart.clear');
 /*-----------------------------Admin Routes Backend--------------------------------*/
 //Route::get('/admin', [BackPagesController::class, 'index'])->name('admin.index');
 

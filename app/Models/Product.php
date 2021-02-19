@@ -10,7 +10,7 @@ class Product extends Model
     use HasFactory;
 
     protected $fillable = [
-      'title','description','category_id','price','quantity','offer_id','slug',
+      'title','description','category_id','size','price','quantity','offer_id','slug',
     ];
     protected $casts = [
         'product_added_at' => 'datetime',
@@ -25,7 +25,18 @@ class Product extends Model
     public function category()
     {
       return $this->belongsTo('App\Models\Category', 'category_id');
-      
+
+    }
+    public function delete()
+    {
+        // delete all related photos
+        $this->image()->delete();
+        // as suggested by Dirk in comment,
+        // it's an uglier alternative, but faster
+        // Photo::where("user_id", $this->id)->delete()
+
+        // delete the user
+        return parent::delete();
     }
 
 }

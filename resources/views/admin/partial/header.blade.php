@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 
-<body class="hold-transition sidebar-mini sidebar-collapse ">
+<body class="hold-transition sidebar-mini layout-fixed ">
 <div class="wrapper">
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <!-- Left navbar links -->
@@ -88,15 +88,7 @@
 
 
                     <li class="nav-header">Manage Products</li>
-                    <li class="nav-item">
-                        <a href="{{ route('admin.products') }}" class="nav-link">
-                            <i class="nav-icon fas fa-calendar-alt"></i>
-                            <p>
-                                Products
-                                <span class="badge badge-info right">2</span>
-                            </p>
-                        </a>
-                    </li>
+
                     <li class="nav-item">
                         <a href="pages/gallery.html" class="nav-link">
                             <i class="nav-icon far fa-image"></i>

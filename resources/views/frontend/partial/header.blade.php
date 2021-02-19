@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
  <head>
-	<title>@yield('pagetitle')- ProjectYeon </title>
+	<title>@yield('pagetitle') ProjectYeon </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -57,6 +57,7 @@
 				<nav class="limiter-menu-desktop p-l-45">
 
 					<!-- Logo desktop -->
+
 					<a href="{{ route('index') }}" class="logo">
 						<img src="{{ asset('images/icons/logo-02.png') }}" alt="IMG-LOGO">
 					</a>
@@ -70,11 +71,11 @@
 							</li>
 
 							<li>
-								<a href="{{ route('cart') }}">Cart</a>
+								<a href="{{ route('product.cart') }}">Cart</a>
 							</li>
 
 							<li>
-								<a href="{{ route('products' ) }}">Categories</a>
+								<a href="{{ route('categories' ) }}">Categories</a>
 								<ul class="sub-menu">
 									<li><a href="#">Men</a></li>
 									<li><a href="#">Women</a></li>
@@ -91,12 +92,12 @@
 					<!-- Icon header -->
                     <div class="wrap-icon-header flex-w flex-r-m h-full">
                         <div class="flex-c-m h-full p-r-25 bor6">
-                            <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 js-show-modal-search">
+                            <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 js-show-modal-search">
                                 <i class="zmdi zmdi-search"></i>
                             </div>
                         </div>
                         <div class="flex-c-m h-full p-r-25 bor6">
-                            <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="0">
+                            <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="1">
                                 <i class="zmdi zmdi-shopping-cart"></i>
                             </div>
                         </div>
@@ -106,6 +107,7 @@
                                 <i class="zmdi zmdi-menu"></i>
                             </div>
                         </div>
+
 
                     </div>
 
@@ -214,9 +216,15 @@
 					<i class="zmdi zmdi-close"></i>
 				</div>
 			</div>
+            @if (Cart::isEmpty())
+                <div class="alert alert-warning">
+                    <p>Your shopping cart is empty.</p>
+                </div>
+            @else
 
 			<div class="header-cart-content flex-w js-pscroll">
 				<ul class="header-cart-wrapitem w-full">
+                    @foreach(Cart::getcontent() as $item)
 					<li class="header-cart-item flex-w flex-t m-b-12">
 						<div class="header-cart-item-img">
 							<img src="{{ asset('images/item-cart-01.jpg') }}" alt="IMG">
@@ -224,46 +232,18 @@
 
 						<div class="header-cart-item-txt p-t-8">
 							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-								White Shirt Pleat
+								{{ $item->name }}
 							</a>
 
 							<span class="header-cart-item-info">
-								1 x $19.00
+								{{ $item->price }}
 							</span>
 						</div>
 					</li>
 
-					<li class="header-cart-item flex-w flex-t m-b-12">
-						<div class="header-cart-item-img">
-							<img src="{{ asset('images/item-cart-02.jpg') }}" alt="IMG">
-						</div>
 
-						<div class="header-cart-item-txt p-t-8">
-							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-								Converse All Star
-							</a>
 
-							<span class="header-cart-item-info">
-								1 x $39.00
-							</span>
-						</div>
-					</li>
-
-					<li class="header-cart-item flex-w flex-t m-b-12">
-						<div class="header-cart-item-img">
-							<img src="{{ asset('images/item-cart-03.jpg') }}" alt="IMG">
-						</div>
-
-						<div class="header-cart-item-txt p-t-8">
-							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-								Nixon Porter Leather
-							</a>
-
-							<span class="header-cart-item-info">
-								1 x $17.00
-							</span>
-						</div>
-					</li>
+                    @endforeach
 				</ul>
 
 				<div class="w-full">
@@ -272,15 +252,16 @@
 					</div>
 
 					<div class="header-cart-buttons flex-w w-full">
-						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+						<a href="{{ route('product.cart') }}" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
 							View Cart
 						</a>
 
-						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+						<a href="#" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
 							Check Out
 						</a>
 					</div>
 				</div>
 			</div>
+                @endif
 		</div>
 	</div>

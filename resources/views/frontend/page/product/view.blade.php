@@ -1,6 +1,11 @@
 
 @extends ('frontend.layout.master')
 @section ('content')
+    <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('{{ asset('images/bg-01.jpg') }}');">
+        <h2 class="ltext-105 cl0 txt-center">
+            Contact
+        </h2>
+    </section>
 <div class="container">
   <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
     <a href="{{ route('index') }}" class="stext-109 cl8 hov-cl1 trans-04">
@@ -9,17 +14,22 @@
     </a>
 
     <a href="{{ route('products')}}" class="stext-109 cl8 hov-cl1 trans-04">
-      Men
+      {{ $product->category->category_type }}
       <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
     </a>
 
     <span class="stext-109 cl4">
-      $product
+      {{ $product->title }}
     </span>
   </div>
 </div>
 
+    @if (Session::has('success'))
+        <div class="alert alert-success">
+            <p align="center">{{ Session::get('success') }}</p>
+        </div>
 
+    @endif
 <!-- Product Detail -->
 <section class="sec-product-detail bg0 p-t-65 p-b-60">
   <div class="container">
@@ -31,35 +41,20 @@
             <div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
 
             <div class="slick3 gallery-lb">
-              <div class="item-slick3" data-thumb="images/product-detail-01.jpg">
+                @foreach($product->image as $image)
+              <div class="item-slick3" data-thumb="{{ asset('images/products/' . $image->image) }}">
                 <div class="wrap-pic-w pos-relative">
-                  <img src="images/product-detail-01.jpg" alt="IMG-PRODUCT">
+                  <img src="{{ asset('images/products/' . $image->image) }}" alt="IMG-PRODUCT">
 
-                  <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-01.jpg">
+                  <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="{{ asset('images/products/' . $image->image) }}">
                     <i class="fa fa-expand"></i>
                   </a>
                 </div>
               </div>
+                @endforeach
 
-              <div class="item-slick3" data-thumb="images/product-detail-02.jpg">
-                <div class="wrap-pic-w pos-relative">
-                  <img src="images/product-detail-02.jpg" alt="IMG-PRODUCT">
 
-                  <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-02.jpg">
-                    <i class="fa fa-expand"></i>
-                  </a>
-                </div>
-              </div>
 
-              <div class="item-slick3" data-thumb="images/product-detail-03.jpg">
-                <div class="wrap-pic-w pos-relative">
-                  <img src="images/product-detail-03.jpg" alt="IMG-PRODUCT">
-
-                  <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-03.jpg">
-                    <i class="fa fa-expand"></i>
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -68,15 +63,15 @@
       <div class="col-md-6 col-lg-5 p-b-30">
         <div class="p-r-50 p-t-5 p-lr-0-lg">
           <h4 class="mtext-105 cl2 js-name-detail p-b-14">
-            Lightweight Jacket
+               {{ $product->title }}
           </h4>
 
           <span class="mtext-106 cl2">
-            $58.79
+            {{ $product->price }}
           </span>
 
           <p class="stext-102 cl3 p-t-23">
-            Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.
+            {{ $product->description }}
           </p>
 
           <!--  -->
@@ -132,10 +127,12 @@
                     <i class="fs-16 zmdi zmdi-plus"></i>
                   </div>
                 </div>
-
-                <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
+                  <form action="{{ route('product.cart.add', $product->id) }}" method="post" role="form" id="addtocart">
+                      @csrf
+                <button type="submit" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
                   Add to cart
                 </button>
+                  </form>
               </div>
             </div>
           </div>
@@ -162,6 +159,7 @@
           </div>
         </div>
       </div>
+
     </div>
 
     <div class="bor10 m-t-50 p-t-43 p-b-40">
@@ -260,7 +258,7 @@
                   <!-- Review -->
                   <div class="flex-w flex-t p-b-68">
                     <div class="wrap-pic-s size-109 bor0 of-hidden m-r-18 m-t-6">
-                      <img src="images/avatar-01.jpg" alt="AVATAR">
+                      <img src="{{ asset('images/avatar-01.jpg') }}" alt="AVATAR">
                     </div>
 
                     <div class="size-207">
