@@ -1,4 +1,4 @@
-	<aside class="wrap-sidebar js-sidebar">
+	<div class="wrap-sidebar js-sidebar ">
 		<div class="s-full js-hide-sidebar"></div>
 
 		<div class="sidebar flex-col-l p-t-22 p-b-25">
@@ -40,14 +40,14 @@
 						</a>
 					</li>
 
-                    @if(auth()->user()->is_admin == 1)
+                   <!--
 
 					<li class="p-b-13">
 						<a href="{{url('admin/home')}}" class="stext-102 cl2 hov-cl1 trans-04">
 							Admin Panel
 						</a>
 					</li>
-                    @endif
+
 
 					<li class="p-b-13">
                               <a  href="{{ route('logout') }}"
@@ -60,6 +60,7 @@
                                                     @csrf
                     </form>
                    </li>
+                   -->
 				</ul>
 
 				<div class="sidebar-gallery w-full p-tb-30">
@@ -135,4 +136,4 @@
 				</div>
 			</div>
 		</div>
-	</aside>
+	</div>

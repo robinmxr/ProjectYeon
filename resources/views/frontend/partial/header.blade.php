@@ -4,10 +4,13 @@
 	<title>@yield('pagetitle') ProjectYeon </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta http-equiv="x-ua-compatible" content="ie=edge">
 <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="{{ asset('images/icons/favicon.png') }}"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
+
+
 
      <link rel="stylesheet" type="text/css" href="{{ asset('vendor/bootstrap5/css/bootstrap.min.css') }}">
 <!--===============================================================================================-->
@@ -33,10 +36,21 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('vendor/perfect-scrollbar/perfect-scrollbar.css') }}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/util.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
+
+
+
+
+     <link rel="stylesheet" type="text/css" href="{{ asset('css/util.css') }}">
+
+     <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
 
      <link rel="stylesheet" type="text/css" href="{{ asset('vendor/bootstrap5/css/bootstrap.css') }}">
+
+
+
+
+
+     <link rel="stylesheet" type="text/css" href="{{ asset('css/side.css') }}">
 <!--===============================================================================================-->
      <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -50,11 +64,22 @@
 <body class="animsition">
 
 	<!-- Header -->
+
+
 	<header class="header-v3">
 		<!-- Header desktop -->
+
 		<div class="container-menu-desktop trans-03">
 			<div class="wrap-menu-desktop">
-				<nav class="limiter-menu-desktop p-l-45">
+                <nav class="limiter-menu-desktop p-l-45">
+
+                    <div class="flex-c-m h-full p-lr-19">
+                        <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 js-show-sidebar">
+                            <i class="zmdi zmdi-menu"></i>
+                        </div>
+                    </div>
+                    @include('frontend.partial.utils.loggedinside')
+
 
 					<!-- Logo desktop -->
 
@@ -102,45 +127,54 @@
                             </div>
                         </div>
 
-                        <div class="flex-c-m h-full p-lr-19">
-                            <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 js-show-sidebar">
-                                <i class="zmdi zmdi-menu"></i>
-                            </div>
-                        </div>
+
 
 
                     </div>
 
-				</nav>
-			</div>
+                </nav>
+
 		</div>
+        </div>
 
 		<!-- Header Mobile -->
+
 		<div class="wrap-header-mobile">
-			<!-- Logo moblie -->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="#">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="flex-c-m h-full p-lr-19">
+                <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 js-show-sidebar">
+                    <i class="zmdi zmdi-menu" onclick="openNav()"></i>
+                </div>
+            </div>
 			<div class="logo-mobile">
 				<a href="index.html"><img src="{{ asset('images/icons/logo-01.png') }}" alt="IMG-LOGO"></a>
 			</div>
 
-			<!-- Icon header -->
-			<div class="wrap-icon-header flex-w flex-r-m h-full m-r-15">
-				<div class="flex-c-m h-full p-r-5">
-					<div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="2">
-						<i class="zmdi zmdi-shopping-cart"></i>
-					</div>
-				</div>
-			</div>
 
-			<!-- Button show menu -->
-			<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
-				<span class="hamburger-box">
-					<span class="hamburger-inner"></span>
-				</span>
-			</div>
-		</div>
+            <div class="wrap-icon-header flex-w flex-r-m h-full m-r-15">
+                <div class="flex-c-m h-full p-r-5">
+                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="2">
+                        <i class="zmdi zmdi-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+
+
+</div>
+
+
+
+
 
 
 		<!-- Menu Mobile -->
+        <!--
 		<div class="menu-mobile">
 			<ul class="main-menu-m">
 				<li>
@@ -176,6 +210,7 @@
 				</li>
 			</ul>
 		</div>
+        -->
 
 		<!-- Modal Search -->
         <div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
@@ -192,16 +227,12 @@
                 </form>
             </div>
         </div>
+
 	</header>
 
 
 	<!-- Sidebar -->
-	@guest
 
-        @include('frontend.partial.utils.nonloggedinside')
-@else
-        @include('frontend.partial.utils.loggedinside')
-    @endguest
 	<!-- Cart -->
 	<div class="wrap-header-cart js-panel-cart">
 		<div class="s-full js-hide-cart"></div>

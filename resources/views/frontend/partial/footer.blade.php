@@ -1,4 +1,5 @@
 <!-- Footer -->
+
 <footer class="bg3 p-t-75 p-b-32">
   <div class="container">
     <div class="row">
@@ -147,3 +148,4 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <i class="zmdi zmdi-chevron-up"></i>
   </span>
 </div>
+
