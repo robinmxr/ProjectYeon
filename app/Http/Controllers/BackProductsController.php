@@ -65,7 +65,7 @@ class BackProductsController extends Controller
         if(count($request->product_image) > 0) {
           foreach($request->product_image as $image) {
 
-          $final_image= Image::make($image)->resize(1200,1486);
+          $final_image= Image::make($image);
           $originalpath=public_path().'/images/products/';
           $final_image->save($originalpath.time().$image->getClientOriginalName());
 

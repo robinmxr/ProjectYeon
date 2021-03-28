@@ -74,24 +74,31 @@
                 <nav class="limiter-menu-desktop p-l-45">
 
                     <div class="flex-c-m h-full p-lr-19">
-                        <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 js-show-sidebar">
-                            <i class="zmdi zmdi-menu"></i>
+                        <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 ">
+                            <i class="zmdi zmdi-menu" onclick="openNav()"></i>
                         </div>
                     </div>
-                    @include('frontend.partial.utils.loggedinside')
+
+                    <div id="mySidenavpc" class="sidenav">
+                                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-times"></i></a>
+                                    <a href="#">About Us</a>
+                                    <a href="#">Services</a>
+                                    <a href="#">Portfolio</a>
+                                    <a href="#">Contact Us</a>
+                                </div>
 
 
 					<!-- Logo desktop -->
 
 					<a href="{{ route('index') }}" class="logo">
-						<img src="{{ asset('images/icons/logo-02.png') }}" alt="IMG-LOGO">
+						<img src="{{ asset('images/icons/logo-2.png') }}" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
 
-							<li class="label1" data-label1="hot">
+							<li>
 								<a href="{{ route('products') }}">Products</a>
 							</li>
 
@@ -123,7 +130,7 @@
                         </div>
                         <div class="flex-c-m h-full p-r-25 bor6">
                             <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="1">
-                                <i class="zmdi zmdi-shopping-cart"></i>
+                                <i class="fa fa-opencart"></i>
                             </div>
                         </div>
 
@@ -148,7 +155,7 @@
                 <a href="#">Contact Us</a>
             </div>
             <div class="flex-c-m h-full p-lr-19">
-                <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 js-show-sidebar">
+                <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11">
                     <i class="zmdi zmdi-menu" onclick="openNav()"></i>
                 </div>
             </div>
@@ -160,7 +167,7 @@
             <div class="wrap-icon-header flex-w flex-r-m h-full m-r-15">
                 <div class="flex-c-m h-full p-r-5">
                     <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="2">
-                        <i class="zmdi zmdi-shopping-cart"></i>
+                        <i class="fa fa-opencart"></i>
                     </div>
                 </div>
             </div>
@@ -248,8 +255,8 @@
 				</div>
 			</div>
             @if (Cart::isEmpty())
-                <div class="alert alert-warning">
-                    <p>Your shopping cart is empty.</p>
+                <div >
+                    <p align="center" style="background-color: purple; padding: 30px" > Cart is empty</p>
                 </div>
             @else
 

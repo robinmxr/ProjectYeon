@@ -1,8 +1,8 @@
 @extends('frontend.layout.master')
 @section('pagetitle','Login')
 @section('content')
-    <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/cover.png');">
-        <h2 class="ltext-105 cl0 txt-center">
+    <section class="bg-img1 txt-center p-lr-15 p-tb-92 bggrad">
+        <h2 class="ltext-105 cl0 txt-center lineunder">
             Login
         </h2>
     </section>

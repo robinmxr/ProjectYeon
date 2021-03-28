@@ -2,8 +2,8 @@
 @section ('content')
 
 	<!-- Product -->
-  <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
-    <h2 class="ltext-105 cl0 txt-center">
+  <section class="bg-img1 txt-center p-lr-15 p-tb-92 bggrad">
+    <h2 class="ltext-105 cl0 txt-center lineunder">
       Products
     </h2>
   </section>
@@ -265,7 +265,7 @@
               @php $i=1; @endphp
             @foreach( $product->image as $image )
             @if ($i>0)
-						<img src="{{ asset('images/products/' . $image->image) }}" alt="IMG-PRODUCT">
+						<img style="height: 360px; width: 240px;" src="{{ asset('images/products/' . $image->image) }}" alt="IMG-PRODUCT">
             @endif
             @php $i--; @endphp
             @endforeach
