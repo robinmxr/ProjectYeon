@@ -21,14 +21,17 @@ use App\Http\Controllers\BackProductsController;
 use App\Http\Controllers\BackCategoriesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
 
 /*-----------------Frontend Page Routes--------------------*/
 Route::get('/', [FrontPagesController::class, 'index'])->name('index');
 
 Route::get('/contact', [FrontPagesController::class, 'contact'])->name('contact');
 
+Route::get('/search', [FrontProductsController::class, 'search'])->name('search');
 
 
+Auth::routes();
 
 
 /*------------------------Product Route Frontend----------------------------*/
@@ -53,7 +56,7 @@ Route::get('/cart/clear', [CartController::class, 'clearCart'])->name('product.c
 /*----------------------------Product Routes Backend------------------------------*/
 
 
-Auth::routes();
+
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
@@ -83,3 +86,15 @@ Route::post('/admin/category/create', [BackCategoriesController::class, 'store']
 Route::post('/admin/category/edit/{id}', [BackCategoriesController::class, 'update'])->name('admin.category.update')->middleware('is_admin');
 
 Route::post('/admin/category/delete/{id}', [BackCategoriesController::class, 'delete'])->name('admin.category.delete')->middleware('is_admin');
+
+Route::get('/admin/order', [BackPagesController::class, 'order'])->name('admin.orders')->middleware('is_admin');
+
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/checkout', [CheckoutController::class, 'showCheckout'])->name('checkout.index');
+
+    Route::post('/checkout/order', [CheckoutController::class, 'placeOrder'])->name('checkout.place.order');
+});

@@ -97,6 +97,11 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   src: url('../fonts/Montserrat/Montserrat-Bold.ttf');
 }
 
+*:not(i)
+{
+    font-family: 'Poppins-Medium', sans-serif !important;
+}
+
 
 /*//////////////////////////////////////////////////////////////////
 [ RS PLUGIN ]*/
@@ -409,6 +414,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .sub-menu li {
   position: relative;
   background-color: transparent;
+    font-size: 16px;
+    border-radius: 10px;
 
   transition: all 0.4s;
   -webkit-transition: all 0.4s;
@@ -423,7 +430,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 .sub-menu a {
   font-family: Poppins-Regular;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   color: #555;
 
@@ -440,7 +447,12 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 /*---------------------------------------------*/
 .main-menu > li:hover > a {
   text-decoration: none;
-  color: #6c7ae0;
+    color: #433d3c;
+    font-size: 16px;
+    background-color: azure;
+    padding:10px;
+
+    border-radius: 10px;
 }
 
 .main-menu > li:hover > .sub-menu {
@@ -523,7 +535,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   height: 100%;
   bottom: 101%;
   left: 0;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0);
   padding: 50px 15px 100px 15px;
 }
 
@@ -628,8 +640,9 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 .header-v3 .fix-menu-desktop .wrap-menu-desktop {
-  background-color: #222;
-  border-color: #222;
+    background-color: #312c51;
+    border-color: #312c51;
+    height: 65px;
 }
 
 .header-v4 .fix-menu-desktop.container-menu-desktop {
@@ -840,7 +853,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
-  -moz-transition: all 0.34;
+  -moz-transition: all 0.3s;
   transition: all 0.4s;
 
   box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.18);
@@ -897,7 +910,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
-  -moz-transition: all 0.34;
+  -moz-transition: all 0.3s;
   transition: all 0.4s;
 }
 
@@ -936,7 +949,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
-  -moz-transition: all 0.34;
+  -moz-transition: all 0.3s;
   transition: all 0.4s;
 
   box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.18);
@@ -3329,5 +3342,19 @@ input.num-product::-webkit-inner-spin-button {
   .respon3 {
     padding: 20px;
   }
+
+}
+.lineunder{
+
+    text-decoration: azure underline 10px;
+
+}
+.bggrad {
+    background-image: linear-gradient(#312c51, #48426d, #312c51);
+}
+
+.colpallet:hover {
+    color:#433d3c;
+
 
 }

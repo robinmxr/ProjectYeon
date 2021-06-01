@@ -55,9 +55,12 @@
 						<button class="size-113 flex-c-m fs-16 cl2 hov-cl1 trans-04">
 							<i class="zmdi zmdi-search"></i>
 						</button>
+<form action="{{ route('search') }}" method="get">
+    @csrf
+						<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="name" placeholder="Search">
 
-						<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" placeholder="Search">
-					</div>
+</form>
+                    </div>
 				</div>
 
 				<!-- Filter -->
@@ -281,10 +284,10 @@
                                             <div class="modal-body">
 @include('frontend.partial.utils.modal')
                                             </div>
-                                           <div class="modal-footer">
-
-                                                <button type="button" class="btn-close" data-dismiss="modal"></button>
+                                            <div class="model-footer">
+                                                <button type="button" class="close" data-dismiss="modal"><i style="font-size: 40px;" class="fa fa-times" aria-hidden="true"></i></button>
                                             </div>
+
 
                                         </div>
                                     </div>
@@ -300,21 +303,16 @@
 
 						<div class="block2-txt flex-w flex-t p-t-14">
 							<div class="block2-txt-child1 flex-col-l ">
-								<span class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+								<h1 class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 									{{ $product->title }}
-								</span>
+								</h1>
 
 								<span class="stext-105 cl3">
 									Tk {{ $product->price }}
 								</span>
 							</div>
 
-							<div class="block2-txt-child2 flex-r p-t-3">
-								<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-									<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
-									<img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
-								</a>
-							</div>
+
 						</div>
 					</div>
 

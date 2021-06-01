@@ -40,15 +40,15 @@
 						</a>
 					</li>
 
-                   <!--
 
+@if(auth()->user()->is_admin == 1)
 					<li class="p-b-13">
 						<a href="{{url('admin/home')}}" class="stext-102 cl2 hov-cl1 trans-04">
 							Admin Panel
 						</a>
 					</li>
 
-
+@endif
 					<li class="p-b-13">
                               <a  href="{{ route('logout') }}"
                                  onclick="event.preventDefault();
@@ -60,12 +60,12 @@
                                                     @csrf
                     </form>
                    </li>
-                   -->
+
 				</ul>
 
 				<div class="sidebar-gallery w-full p-tb-30">
 					<span class="mtext-101 cl5">
-						@ Yeon
+						@DoogDoogi
 					</span>
 
 					<div class="flex-w flex-sb p-t-36 gallery-lb">

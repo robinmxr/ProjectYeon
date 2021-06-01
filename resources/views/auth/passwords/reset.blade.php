@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+    <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('/images/cover.png');">
+        <h2 class="ltext-105 cl0 txt-center">
+            Shopping Cart
+        </h2>
+    </section>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

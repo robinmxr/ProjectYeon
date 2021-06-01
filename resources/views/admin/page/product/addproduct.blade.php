@@ -67,14 +67,8 @@
             <input type="file" class="custom-file-input" name="product_image[]" id="exampleInputFile">
             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
           </div>
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" name="product_image[]" id="exampleInputFile">
-            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-          </div>
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" name="product_image[]" id="exampleInputFile">
-            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-          </div>
+
+
         </div>
       </div>
 

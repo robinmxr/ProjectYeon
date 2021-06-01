@@ -58,7 +58,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                             <form method="post" action="{{ route('admin.product.delete', $product->id) }}">
+                             <form method="post" action="{{ route(product.delete', $product->id) }}"'admin.>
                                  @csrf
                                  <button type="submit" class="btn btn-block bg-gradient-danger btn-lg">Confirm Delete</button>
                              </form>

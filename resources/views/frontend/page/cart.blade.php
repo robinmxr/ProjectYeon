@@ -2,8 +2,8 @@
 
 @section ('content')
 <!-- breadcrumb -->
-<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/cover.png');">
-  <h2 class="ltext-105 cl0 txt-center">
+<section class="bg-img1 txt-center p-lr-15 p-tb-92 bggrad">
+  <h2 class="ltext-105 cl0 txt-center lineunder">
     Shopping Cart
   </h2>
 </section>
@@ -20,7 +20,7 @@
   </div>
     <div class="col-sm-12">
         @if (Session::has('message'))
-            <p class="alert alert-success">{{ Session::get('message') }}</p>
+            <p class="alert ">{{ Session::get('message') }}</p>
         @endif
     </div>
 </div>
@@ -31,28 +31,28 @@
   <div class="container">
     <div class="row">
         @if (Cart::isEmpty())
-            <p class="alert alert-warning">Your shopping cart is empty.</p>
+            <h1 class="alert alert-warning">Your shopping cart is empty.</h1>
         @else
       <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
         <div class="m-l-25 m-r--38 m-lr-0-xl">
           <div class="wrap-table-shopping-cart">
             <table class="table-shopping-cart">
               <tr class="table_head">
-                <th class="column-1">Product</th>
-                <th class="column-2">Name</th>
-                <th class="column-3">Price</th>
+                <th class="column-4">Product</th>
+                <th class="column-4">Price</th>
                 <th class="column-4">Quantity</th>
-                <th class="column-5">Total</th>
+                <th class="column-4">Total</th>
+                <th class="column-4"></th>
               </tr>
 @foreach(Cart::getcontent() as $item)
               <tr class="table_row">
-                <td class="column-2">
+                <td class="column-4">
                     {{ $item->name }}
                 </td>
-                <td class="column-2">{{ $item->price }}</td>
-                <td class="column-3">{{ $item->quantity }}</td>
                 <td class="column-4">{{ $item->price }}</td>
-                <td class="column-5"><a href="{{ route('product.cart.remove', $item->id) }}" class="btn btn-outline-danger"><i class="fa fa-times"></i> </a></td>
+                <td class="column-4">{{ $item->quantity }}</td>
+                <td class="column-4">{{ $item->price }}</td>
+                <td class="column-4"><a href="{{ route('product.cart.remove', $item->id) }}" class="btn btn-outline-danger"><i class="fa fa-times"></i> </a></td>
               </tr>
 
                 @endforeach
@@ -158,7 +158,7 @@
           </div>
 
           <button class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
-            Proceed to Checkout
+              <a href="{{ route('checkout.index') }}" >Proceed to Checkout</a>
           </button>
         </div>
       </div>

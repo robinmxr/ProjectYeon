@@ -1,9 +1,18 @@
+<script src="{{ asset('vendor/bootstrap/js/popper.js') }}"></script>
+<script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+
+
+
+
+
+
+
 <!--===============================================================================================-->
 	<script src="{{ asset('vendor/animsition/js/animsition.min.js') }}"></script>
 <!--===============================================================================================-->
-	<script src="{{ asset('vendor/bootstrap/js/popper.js') }}"></script>
-	<script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+
+
 <!--===============================================================================================-->
 	<script src="{{ asset('vendor/select2/select2.min.js') }}"></script>
 	<script>
@@ -100,15 +109,15 @@
 	</script>
 <script>
     function openNav() {
+        document.getElementById("mySidenavpc").style.width = "25%";
         document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-        document.body.style.backgroundColor = "#03a9f4";
+
     }
 
     function closeNav() {
+        document.getElementById("mySidenavpc").style.width = "0";
         document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft= "0";
-        document.body.style.backgroundColor = "#03a9f4";
+
     }
 </script>
 

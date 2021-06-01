@@ -1,9 +1,9 @@
 
 @extends ('frontend.layout.master')
 @section ('content')
-    <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('{{ asset('images/bg-01.jpg') }}');">
-        <h2 class="ltext-105 cl0 txt-center">
-            Contact
+    <section class="bg-img1 txt-center p-lr-15 p-tb-92 bggrad">
+        <h2 class="ltext-105 cl0 txt-center lineunder">
+            Product
         </h2>
     </section>
 <div class="container">
@@ -25,8 +25,8 @@
 </div>
 
     @if (Session::has('success'))
-        <div class="alert alert-success">
-            <p align="center">{{ Session::get('success') }}</p>
+        <div>
+            <p style="background-color: #0c525d" align="center">{{ Session::get('success') }}</p>
         </div>
 
     @endif

@@ -19,7 +19,14 @@ class BackPagesController extends Controller
     public function index()
     {
         return view('admin.page.index');
+
+
     }
+    public function order()
+    {
+        return view('admin.page.order.all');
+    }
+
 
     /**
      * Show the form for creating a new resource.

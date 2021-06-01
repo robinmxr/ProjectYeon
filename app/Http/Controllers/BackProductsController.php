@@ -44,7 +44,7 @@ class BackProductsController extends Controller
       {
 
         $request->validate([
-          'title' => 'required|max:150',
+          'title' => 'required|unique:products|max:150',
           'price' => 'required|numeric',
           'category_id'=>'required',
           'description'=>'required',
@@ -65,7 +65,9 @@ class BackProductsController extends Controller
         if(count($request->product_image) > 0) {
           foreach($request->product_image as $image) {
 
-          $final_image= Image::make($image)->resize(1200,1486);
+          $final_image= Image::make($image)->resize(1200, 1486, function ($constraint) {
+                  $constraint->aspectRatio();
+              });
           $originalpath=public_path().'/images/products/';
           $final_image->save($originalpath.time().$image->getClientOriginalName());
 

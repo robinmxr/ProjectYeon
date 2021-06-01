@@ -1,15 +1,14 @@
 @extends('frontend.layout.master')
-@section('pagetitle','Login')
+
 @section('content')
-    <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/cover.png');">
+    <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
         <h2 class="ltext-105 cl0 txt-center">
-            Login
+            Contact
         </h2>
     </section>
-    <section class="bg0 p-t-104 p-b-116">
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
@@ -59,7 +58,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="flex-c-m stext-101 cl0 size-101 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
+                                <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
 
@@ -76,6 +75,4 @@
         </div>
     </div>
 </div>
-    </section>
-
 @endsection

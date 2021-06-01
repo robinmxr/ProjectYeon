@@ -12,11 +12,10 @@
 
 
 
-     <link rel="stylesheet" type="text/css" href="{{ asset('vendor/bootstrap5/css/bootstrap.min.css') }}">
+
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('fonts/iconic/css/material-design-iconic-font.min.css') }}">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('fonts/linearicons-v1.0.0/icon-font.min.css') }}">
 <!--===============================================================================================-->
@@ -44,7 +43,7 @@
 
      <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
 
-     <link rel="stylesheet" type="text/css" href="{{ asset('vendor/bootstrap5/css/bootstrap.css') }}">
+
 
 
 
@@ -56,7 +55,7 @@
 
      <!-- Fonts -->
      <link rel="dns-prefetch" href="//fonts.gstatic.com">
-     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
      <!-- Styles -->
      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -74,12 +73,27 @@
                 <nav class="limiter-menu-desktop p-l-45">
 
                     <div class="flex-c-m h-full p-lr-19">
-                        <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 js-show-sidebar">
-                            <i class="zmdi zmdi-menu"></i>
+                        <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11">
+                            <i class="fa fa-bars" onclick="openNav()"></i>
                         </div>
                     </div>
-                    @include('frontend.partial.utils.loggedinside')
+                    <div id="mySidenavpc" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                        <a href="#">Home</a>
+                        <a href="#">Login</a>
+                        <a href="#demo" data-toggle="collapse">Categories</a>
 
+                        <div id="demo" class="collapse">
+                            <a href="#">Men</a>
+                            <a href="#">Women</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                        <a href="#">Terms</a>
+                        <a href="#">Contact Us</a>
+
+                    </div>
+
+-->
 
 					<!-- Logo desktop -->
 
@@ -91,7 +105,7 @@
 					<div class="menu-desktop">
 						<ul class="main-menu">
 
-							<li class="label1" data-label1="hot">
+							<li>
 								<a href="{{ route('products') }}">Products</a>
 							</li>
 
@@ -100,7 +114,7 @@
 							</li>
 
 							<li>
-								<a href="{{ route('categories' ) }}">Categories</a>
+                                <a href="{{ route('categories' ) }}">Categories <i class="fa fa-angle-down"></i></a>
 								<ul class="sub-menu">
 									<li><a href="#">Men</a></li>
 									<li><a href="#">Women</a></li>
@@ -118,12 +132,12 @@
                     <div class="wrap-icon-header flex-w flex-r-m h-full">
                         <div class="flex-c-m h-full p-r-25 bor6">
                             <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 js-show-modal-search">
-                                <i class="zmdi zmdi-search"></i>
+                                <i class="fa fa-search"></i>
                             </div>
                         </div>
                         <div class="flex-c-m h-full p-r-25 bor6">
                             <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="1">
-                                <i class="zmdi zmdi-shopping-cart"></i>
+                                <i class="fa fa-opencart"></i>
                             </div>
                         </div>
 
@@ -142,25 +156,33 @@
 		<div class="wrap-header-mobile">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <a href="#">About Us</a>
+                <a href="#">Home</a>
                 <a href="#">Services</a>
-                <a href="#">Portfolio</a>
+                <a href="#demo" data-toggle="collapse">Categories</a>
+
+                <div id="demo" class="collapse">
+                    <a href="#">Men</a>
+                    <a href="#">Women</a>
+                    <a href="#">Accessories</a>
+                </div>
+                <a href="#">Terms</a>
                 <a href="#">Contact Us</a>
+
             </div>
             <div class="flex-c-m h-full p-lr-19">
-                <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 js-show-sidebar">
-                    <i class="zmdi zmdi-menu" onclick="openNav()"></i>
+                <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11">
+                    <i class="fa fa-bars" onclick="openNav()"></i>
                 </div>
             </div>
 			<div class="logo-mobile">
-				<a href="index.html"><img src="{{ asset('images/icons/logo-01.png') }}" alt="IMG-LOGO"></a>
+				<a href="#"><img src="{{ asset('images/icons/logo-01.png') }}" alt="IMG-LOGO"></a>
 			</div>
 
 
             <div class="wrap-icon-header flex-w flex-r-m h-full m-r-15">
                 <div class="flex-c-m h-full p-r-5">
                     <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="2">
-                        <i class="zmdi zmdi-shopping-cart"></i>
+                        <i class="fa fa-opencart"></i>
                     </div>
                 </div>
             </div>
@@ -219,11 +241,12 @@
                     <img src="images/icons/icon-close2.png" alt="CLOSE">
                 </button>
 
-                <form class="wrap-search-header flex-w p-l-15">
+                <form action="{{ route('search') }}" method="get" class="wrap-search-header flex-w p-l-15">
+                    @csrf
                     <button class="flex-c-m trans-04">
                         <i class="zmdi zmdi-search"></i>
                     </button>
-                    <input class="plh3" type="text" name="search" placeholder="Search">
+                    <input class="plh3" type="text" name="name" placeholder="Search">
                 </form>
             </div>
         </div>
@@ -244,7 +267,7 @@
 				</span>
 
 				<div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
-					<i class="zmdi zmdi-close"></i>
+					<i class="fa fa-times"></i>
 				</div>
 			</div>
             @if (Cart::isEmpty())

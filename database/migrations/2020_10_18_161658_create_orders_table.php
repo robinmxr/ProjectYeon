@@ -15,9 +15,17 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('order_number')->unique()->nullable();
             $table->integer('user_id')->unsigned();
-            $table->integer('total');
-            $table->boolean('status')->default(0);
+            $table->string('name');
+            $table->decimal('total',21,6);
+            $table->string('country');
+            $table->string('city');
+            $table->string('address');
+            $table->string('phone_number');
+            $table->string('payment_method')->nullable();
+            $table->boolean('payment_status')->default(1);
+            $table->boolean('order_status')->default(0);
             $table->boolean('isComplete')->default(0);
 
             $table->timestamps();
@@ -33,4 +41,5 @@ class CreateOrdersTable extends Migration
     {
         Schema::dropIfExists('orders');
     }
+
 }
