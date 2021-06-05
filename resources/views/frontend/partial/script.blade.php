@@ -4,7 +4,19 @@
 
 
 
-
+<script>
+    function getMessage() {
+        const geturl = document.getElementById("url");
+        $.ajax({
+            type:'POST',
+            url:geturl,
+            data:'_token = <?php echo csrf_token() ?>',
+            success:function(data) {
+                $("#msg").html(data.msg);
+            }
+        });
+    }
+</script>
 
 
 

@@ -253,7 +253,7 @@
             @foreach($products as $product)
 
 
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item {{ $product->category->category_type }}">
+                <div class="col-sm-4 col-md-3 col-lg-3 p-b-35 isotope-item {{ $product->category->category_type }}">
 
 
                     <!-- Block2 -->
@@ -279,9 +279,8 @@
                                             <div class="modal-body">
                                                 @include('frontend.partial.utils.modal')
                                             </div>
-                                            <div class="modal-footer">
-
-                                                <button type="button" class="btn-close" data-dismiss="modal"></button>
+                                            <div class="model-footer">
+                                                <button type="button" class="close" data-dismiss="modal"><i style="font-size: 40px;" class="fa fa-times" aria-hidden="true"></i></button>
                                             </div>
 
                                         </div>

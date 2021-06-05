@@ -42,7 +42,7 @@
       </div>
         <div class="form-group">
             <label for="exampleInputEmail">Product Size</label>
-        <select class="form-select" id="size" name="size">
+        <select class="form-control select2-blue" id="size" name="size">
             <option value="s">S</option>
             <option value="m">M</option>
             <option value="l">L</option>
@@ -50,12 +50,17 @@
             <option value="xxl">XXL</option>
         </select>
         </div>
+        <div class="form-group">
+            <label for="exampleInputEmail">Category</label>
+            <select class="form-control select2-blue" id="category_id" name="category_id">
+                @foreach($category as $cat)
+                    <option value="{{ $cat->id }}">{{ $cat->title }}</option>
+                @endforeach
+            </select>
+        </div>
 
 
-      <div class="form-group">
-        <label for="exampleInputEmail1">Category Id</label>
-        <input type="text" class="form-control" name="category_id" placeholder="Enter Category">
-      </div>
+
       <div class="form-group">
         <label for="exampleInputEmail1">Description</label>
         <textarea name="description" rows="8" cols="80" class="form-control"></textarea>

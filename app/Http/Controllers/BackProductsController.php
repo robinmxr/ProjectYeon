@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\Product;
@@ -19,7 +20,8 @@ class BackProductsController extends Controller
     }
     public function create()
     {
-        return view('admin.page.product.addproduct');
+        $category = Category::get();
+        return view('admin.page.product.addproduct',compact('category'));
     }
     public function delete($id)
     {

@@ -261,7 +261,7 @@
                 @foreach($data as $product)
 
 
-                    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item {{ $product->category->category_type }}">
+                    <div class="col-sm-4 col-md-3 col-lg-3 p-b-35 isotope-item {{ $product->category->category_type }}">
 
 
                         <!-- Block2 -->
@@ -271,7 +271,7 @@
                                     @php $i=1; @endphp
                                     @foreach( $product->image as $image )
                                         @if ($i>0)
-                                            <img style="height: 360px; width: 240px;" src="{{ asset('images/products/' . $image->image) }}" alt="IMG-PRODUCT">
+                                            <img  src="{{ asset('images/products/' . $image->image) }}" alt="IMG-PRODUCT">
                                         @endif
                                         @php $i--; @endphp
                                     @endforeach
