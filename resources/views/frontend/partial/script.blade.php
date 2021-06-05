@@ -5,16 +5,38 @@
 
 
 <script>
-    function getMessage() {
-        const geturl = document.getElementById("url");
-        $.ajax({
+    function getMessage(id) {
+        //console.log("button presses function called!");
+        console.log(id);
+
+        const url = "/cart/" + id;
+        console.log(url);
+        /*$.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
             type:'POST',
-            url:geturl,
-            data:'_token = <?php echo csrf_token() ?>',
+            url:url,
+            data:{},
+
             success:function(data) {
-                $("#msg").html(data.msg);
+                console.log("successs")
+            },
+            failure: function(data){
+                console.log(data);
+            }
+
+
+        });*/
+        $.ajax({
+            url: url,
+            method: "POST",
+            data:{_token: '{{csrf_token()}}'},
+            success: function(data){
+                console.log(data);
             }
         });
+
     }
 </script>
 
