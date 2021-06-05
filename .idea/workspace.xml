@@ -22,11 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="quick view done">
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="quickview add to cart fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/utils/modal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/utils/modal.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +266,7 @@
       <workItem from="1620497771115" duration="20000" />
       <workItem from="1622352460147" duration="829000" />
       <workItem from="1622891052077" duration="5842000" />
-      <workItem from="1622908093903" duration="3995000" />
+      <workItem from="1622908093903" duration="4191000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -326,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622897997812</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="quickview add to cart fix">
+      <created>1622915377050</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1622915377050</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,7 +369,8 @@
     <MESSAGE value="Paginationss" />
     <MESSAGE value="cart functioning" />
     <MESSAGE value="quick view done" />
-    <option name="LAST_COMMIT_MESSAGE" value="quick view done" />
+    <MESSAGE value="quickview add to cart fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="quickview add to cart fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -10,31 +10,11 @@
         console.log(id);
 
         const url = "/cart/" + id;
-        console.log(url);
-        /*$.ajax({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            type:'POST',
-            url:url,
-            data:{},
 
-            success:function(data) {
-                console.log("successs")
-            },
-            failure: function(data){
-                console.log(data);
-            }
-
-
-        });*/
         $.ajax({
             url: url,
             method: "POST",
             data:{_token: '{{csrf_token()}}'},
-            success: function(data){
-                console.log(data);
-            }
         });
 
     }
