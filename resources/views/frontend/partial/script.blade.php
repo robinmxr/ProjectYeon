@@ -19,7 +19,7 @@
 
     }
     $(document).ready(function () {
-        $('.fa-opencart').click(function(){
+        $('#reloadcart').click(function(){
             //document.getElementById("sidecart").innerText = "Lekhaaaaa";
             let url = window.location.href;
 
