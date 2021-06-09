@@ -260,7 +260,7 @@
 	<div  class="wrap-header-cart js-panel-cart" >
 		<div class="s-full js-hide-cart"></div>
 
-        <div id="sidecart" class="header-cart flex-col-l p-l-65 p-r-25">
+        <div  class="header-cart flex-col-l p-l-65 p-r-25">
             <div class="header-cart-title flex-w flex-sb-m p-b-8">
 				<span class="mtext-103 cl2">
 					Your Cart
@@ -271,7 +271,7 @@
                 </div>
             </div>
 
-
+            <div id="sidecart" >
             @if (Cart::isEmpty())
                 <div class="alert alert-warning">
                     <p>Your shopping cart is empty.</p>
@@ -319,7 +319,7 @@
                     </div>
                 </div>
             @endif
-
+            </div>
 
 
         </div>
