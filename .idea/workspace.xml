@@ -23,8 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="quickview add to cart fix">
+      <change afterPath="$PROJECT_DIR$/resources/views/frontend/partial/sidecart.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/product/allproducts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/product/allproducts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/cart.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +189,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -192,10 +197,11 @@
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xaamp\htdocs\doogdoogi\ProjectYeon\resources\views\frontend\partial" />
+      <recent name="C:\xaamp\htdocs\doogdoogi\ProjectYeon\resources\views\frontend\partial\utils" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\partial" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page\category" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page\category\index.blade.php" />
-      <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page\index.blade.php" />
     </key>
   </component>
   <component name="RunManager">
@@ -267,9 +273,6 @@
       <workItem from="1622352460147" duration="829000" />
       <workItem from="1622891052077" duration="5842000" />
       <workItem from="1622908093903" duration="4191000" />
-      <workItem from="1623084229330" duration="166000" />
-      <workItem from="1623084521301" duration="493000" />
-      <workItem from="1623085125431" duration="1135000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>

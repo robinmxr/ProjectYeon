@@ -34,6 +34,7 @@
             <h1 class="alert alert-warning">Your shopping cart is empty.</h1>
         @else
       <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
+
         <div class="m-l-25 m-r--38 m-lr-0-xl">
           <div class="wrap-table-shopping-cart">
             <table class="table-shopping-cart">
