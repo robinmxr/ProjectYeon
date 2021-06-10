@@ -7,7 +7,7 @@
 <script>
     function getMessage(id) {
         //console.log("button presses function called!");
-        console.log(id);
+        //console.log(id);
 
         const url = "/cart/" + id;
 
@@ -18,6 +18,31 @@
         });
 
     }
+    $(document).ready(function () {
+        $('#reloadcart').click(function(){
+            //document.getElementById("sidecart").innerText = "Lekhaaaaa";
+            let url = window.location.href;
+
+            $.ajax({
+                url: url,
+                method: "GET",
+                success:function(data)
+                {
+                    $("#sidecart").load(document.URL + " #sidecart");
+
+                    //$("#sidecart").load("") = doc.getElementById("sidecart")
+
+                }
+            })
+
+        });
+    })
+
+
+
+
+
+
 </script>
 
 
