@@ -18,7 +18,8 @@ class FrontProductsController extends Controller
     public function viewproduct($slug)
     {
         $product = Product::where('slug', $slug)->first();
-        return view('frontend.page.product.view')->with('product',$product);
+        $related= Product::where('category_id', '=', $product->category->id)->where('id', '!=', $product->id)->get();
+        return view('frontend.page.product.view',compact('product','related'));
     }
     public function addtocart($id){
     $product = Product::find($id);

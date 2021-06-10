@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);
 
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -710,8 +711,8 @@ pre code {
 .col-1 {
   position: relative;
   width: 100%;
-  padding-right: 60px;
-  padding-left: 60px;
+  padding-right: 45px;
+  padding-left: 45px;
 }
 
 .col {

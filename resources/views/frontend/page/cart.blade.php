@@ -31,10 +31,10 @@
   <div class="container">
     <div class="row">
         @if (Cart::isEmpty())
-            <h1 class="alert alert-warning">Your shopping cart is empty.</h1>
+            <h1 class="alert">Your shopping cart is empty.</h1>
         @else
       <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
-        <div class="m-l-25 m-r--38 m-lr-0-xl">
+        <div class="m-l-25 m-r-38 m-lr-0-xl">
           <div class="wrap-table-shopping-cart">
             <table class="table-shopping-cart">
               <tr class="table_head">
@@ -156,10 +156,11 @@
               </span>
             </div>
           </div>
-
-          <button class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
+<div class="flex-w">
+          <button class="flex-c-m stext-101 cl2 size-115 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer">
               <a href="{{ route('checkout.index') }}" >Proceed to Checkout</a>
           </button>
+</div>
         </div>
       </div>
             @endif
