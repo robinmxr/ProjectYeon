@@ -72,7 +72,7 @@
 			<div class="wrap-menu-desktop">
                 <nav class="limiter-menu-desktop p-l-45">
 
-                    <div class="flex-c-m h-full p-lr-19">
+                 <!--   <div class="flex-c-m h-full p-lr-19">
                         <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11">
                             <i class="fa fa-bars" onclick="openNav()"></i>
                         </div>
@@ -92,6 +92,7 @@
                         <a href="#">Contact Us</a>
 
                     </div>
+                    -->
 
 
 
