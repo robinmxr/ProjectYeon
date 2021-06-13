@@ -13,9 +13,9 @@
                 <div class="fcol">
                     <h2 class="hd-log"> Login  </h2>
                     <p class="pd-log "> With </p>
-                    <!-- TODO: Add logo row flex for beautification -->
+
                     <p class="pd-log selfflex">
-                        <!-- TODO: Add animation on hover and increase the logo size. -->
+
                         <a href="#"><i class="fa fa-google " aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-facebook " aria-hidden="true"></i></a>
 
@@ -38,7 +38,7 @@
 
 
 
-                        <input id="password" type="password" class="inputy form-control @error('password') is-invalid @enderror" name="password" placeholder="Enter Tour Password" required autocomplete="current-password">
+                        <input id="password" type="password" class="inputy form-control @error('password') is-invalid @enderror" name="password" placeholder="Enter Your Password" required autocomplete="current-password">
 
                         @error('password')
                         <span class="invalid-feedback" role="alert">
@@ -48,7 +48,7 @@
 
 
                     <!--<input type="password" class="inputy" placeholder="Enter Tour Password" required> -->
-                    <button type="submit"  class="btn btn-primary" > {{ __('Login') }}</button>
+                    <button type="submit"  class="btn btn-primary" style="margin-top: 10px;"> {{ __('Login') }}</button>
                     <!--<div class="form-check">
                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -70,7 +70,7 @@
                         </a>
                     @endif
 
-                    <label class="inputy docum"> Dont Have an Account? <a href="/register" > Sign up</a> .</label>
+                    <label class="inputy docum"> Dont Have an Account? <a href="{{route('register')}}" > Sign up</a> .</label>
                     <!--</form>-->
                 </form>
 

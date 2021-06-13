@@ -3427,6 +3427,7 @@ input.num-product::-webkit-inner-spin-button {
 .btn-sut {
     color: white;
     background-color: #007bff;
+    margin: 10px auto;
     /*background-color: #6775D6CC;*/
     font-size: 14px;
     border: none;
