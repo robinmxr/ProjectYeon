@@ -3357,4 +3357,93 @@ input.num-product::-webkit-inner-spin-button {
     color:#433d3c;
 
 
+
 }
+
+
+
+/* --------------------login page ------------------------------*/
+
+
+
+
+.tcol {
+    display: flex;
+    margin:  40px auto;
+    width: fit-content;
+    length: fit-content;
+    //border: grey solid 3px;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+
+
+
+}
+
+.fcol {
+    background-color: rgba(49, 44, 81, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+
+
+}
+
+.hd-log{
+    font-size: 20px;
+    padding: 30px;
+    text-align: center;
+//text-decoration: underline white 15px;
+}
+.pd-log {
+    text-align: center;
+}
+.pd-log i {
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+.scol{
+    padding: 10px;
+    justify-content: center;
+}
+
+.formtype{
+    display: flex;
+    flex-direction: column;
+
+}
+.inputy {
+    margin: 10px auto;
+    border-radius: 7px;
+    padding: 10px ;
+    border: none;
+    color: gray;
+
+}
+.btn-sut {
+    color: white;
+    background-color: #007bff;
+    /*background-color: #6775D6CC;*/
+    font-size: 14px;
+    border: none;
+    padding: 10px 40px;
+    transition: 0.4s;
+}
+
+.docum {
+    color: white;
+}
+
+.selfflex {
+    display: flex;
+    justify-content: center;
+}
+.subitem {
+    margin-top: 0.25rem;
+    margin-right: 0.25rem;
+}
+/* --------------------END login page --------------------------*/

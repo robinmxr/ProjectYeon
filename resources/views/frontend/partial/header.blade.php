@@ -4,6 +4,7 @@
 	<title>@yield('pagetitle') ProjectYeon </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="robots" content="index, follow" />
      <meta http-equiv="x-ua-compatible" content="ie=edge">
 <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="{{ asset('images/icons/favicon.png') }}"/>

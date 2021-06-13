@@ -22,7 +22,6 @@
         $('#reloadcart').click(function(){
             //document.getElementById("sidecart").innerText = "Lekhaaaaa";
             let url = window.location.href;
-
             $.ajax({
                 url: url,
                 method: "GET",

@@ -1720,10 +1720,19 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   margin-bottom: 0;
 }
 
+.form-check-label2 {
+    margin: 0;
+}
+
 .form-check-input {
   position: absolute;
   margin-top: 0.25rem;
   margin-left: -1.25rem;
+}
+.form-check-input2 {
+
+    margin-top: 0.25rem;
+
 }
 
 .form-check-input:only-child {

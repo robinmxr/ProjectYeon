@@ -3,9 +3,87 @@
 @section('content')
     <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
         <h2 class="ltext-105 cl0 txt-center">
-            Contact
+            LOGIN
         </h2>
+
+        <div class="formcont">
+
+            <!-- Two parter Body one side hase image and other has the form -->
+            <div class="tcol">
+                <div class="fcol">
+                    <h2 class="hd-log"> Login  </h2>
+                    <p class="pd-log "> With </p>
+                    <!-- TODO: Add logo row flex for beautification -->
+                    <p class="pd-log selfflex">
+                        <!-- TODO: Add animation on hover and increase the logo size. -->
+                        <a href="#"><i class="fa fa-google " aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook " aria-hidden="true"></i></a>
+
+                    </p>
+                </div>
+                <form class="formtype scol" method="POST" action="{{ route('login') }}">
+                    <!--<form class="formtype">-->
+
+                    <div >
+                        <input id="email" type="email" class="inputy form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required placeholder="Enter Your Email" autocomplete="email" autofocus>
+
+                        @error('email')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
+                    </div>
+
+                    <!--<input type="email" class="inputy" placeholder="Enter Your Email" required>-->
+
+
+
+                        <input id="password" type="password" class="inputy form-control @error('password') is-invalid @enderror" name="password" placeholder="Enter Tour Password" required autocomplete="current-password">
+
+                        @error('password')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
+
+
+                    <!--<input type="password" class="inputy" placeholder="Enter Tour Password" required> -->
+                    <button type="submit"  class="btn btn-primary" > {{ __('Login') }}</button>
+                    <!--<div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                        <label class="form-check-label" for="remember">
+                            {{ __('Remember Me') }}
+                        </label>
+                    </div> -->
+
+                    <div class="inputy docum selfflex">
+                        <input type="checkbox" class="subitem" name="remember" id="remember" {{old('remember')? 'checked' : ''}}>
+                        <label for="remember">{{__('Remember Me')}} </label>
+
+                    </div>
+
+
+                    @if (Route::has('password.request'))
+                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                            {{ __('Forgot Your Password?') }}
+                        </a>
+                    @endif
+
+                    <label class="inputy docum"> Dont Have an Account? <a href="/register" > Sign up</a> .</label>
+                    <!--</form>-->
+                </form>
+
+
+            </div>
+        </div>
+
+
+
+
     </section>
+
+    <!--
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -70,9 +148,14 @@
                             </div>
                         </div>
                     </form>
+
+                    <h3> login with <i class="fa fa-google" aria-hidden="true"></i> <i class="fa fa-facebook" aria-hidden="true"></i> </h3>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+-->
+
 @endsection
