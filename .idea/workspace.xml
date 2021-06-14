@@ -22,10 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="login frontend redesign">
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="fixxx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/css/alt/adminlte.core.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/css/alt/adminlte.core.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
     </list>
@@ -187,7 +185,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -195,11 +193,10 @@
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xaamp\htdocs\doogdoogi\ProjectYeon\resources\views\frontend\partial" />
-      <recent name="C:\xaamp\htdocs\doogdoogi\ProjectYeon\resources\views\frontend\partial\utils" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\partial" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page\category" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page\category\index.blade.php" />
+      <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page\index.blade.php" />
     </key>
   </component>
   <component name="RunManager">
@@ -271,6 +268,12 @@
       <workItem from="1622352460147" duration="829000" />
       <workItem from="1622891052077" duration="5842000" />
       <workItem from="1622908093903" duration="4191000" />
+      <workItem from="1623084229330" duration="166000" />
+      <workItem from="1623084521301" duration="493000" />
+      <workItem from="1623085125431" duration="1135000" />
+      <workItem from="1623140614597" duration="2135000" />
+      <workItem from="1623427226104" duration="1941000" />
+      <workItem from="1623690872805" duration="57000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -335,28 +338,7 @@
       <option name="project" value="LOCAL" />
       <updated>1622915377050</updated>
     </task>
-    <task id="LOCAL-00010" summary="sidebar cart auto update with ajax">
-      <created>1623259490932</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1623259490932</updated>
-    </task>
-    <task id="LOCAL-00011" summary="cleanup">
-      <created>1623260126179</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1623260126179</updated>
-    </task>
-    <task id="LOCAL-00012" summary="login frontend redesign">
-      <created>1623608907553</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1623608907553</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,10 +377,7 @@
     <MESSAGE value="cart functioning" />
     <MESSAGE value="quick view done" />
     <MESSAGE value="quickview add to cart fix" />
-    <MESSAGE value="sidebar cart auto update with ajax" />
-    <MESSAGE value="cleanup" />
-    <MESSAGE value="login frontend redesign" />
-    <option name="LAST_COMMIT_MESSAGE" value="login frontend redesign" />
+    <option name="LAST_COMMIT_MESSAGE" value="quickview add to cart fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

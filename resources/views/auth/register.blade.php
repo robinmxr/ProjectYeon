@@ -24,6 +24,7 @@
                 </div>
                 <form class="formtype scol" method="POST" action="{{ route('register') }}">
                     <!-- <form class="formtype"> -->
+                   @csrf
                     <div >
                         <input id="name" type="text" class="inputy form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Enter Your Full Name">
 
