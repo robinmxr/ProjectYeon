@@ -46,6 +46,7 @@ Route::get('/category', [FrontCategoriesController::class, 'index'])->name('cate
 Route::post('/cart/{id}', [FrontProductsController::class, 'addtocart'])->name('product.cart.add');
 
 Route::get('/cart', [CartController::class, 'getCart'])->name('product.cart');
+Route::get('/cartd', [FrontPagesController::class, 'cartd'])->name('product.cart2');
 
 Route::get('cart/{id}/remove', [CartController::class, 'removeItem'])->name('product.cart.remove');
 

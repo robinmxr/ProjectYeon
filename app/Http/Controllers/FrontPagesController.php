@@ -23,5 +23,10 @@ class FrontPagesController extends Controller
     {
         return view('frontend.page.cart');
     }
+    public function cartd()
+    {
+        return view('frontend.page.cartdemo');
+    }
+
 
 }

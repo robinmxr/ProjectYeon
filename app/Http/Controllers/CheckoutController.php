@@ -6,6 +6,7 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\ProductOrders;
 use Cart;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class CheckoutController extends Controller
@@ -25,7 +26,11 @@ class CheckoutController extends Controller
             'phone_number' => 'required',
         ]);
 
+
+
         $order = new Order;
+        $uuid = Str::uuid()->toString();
+        $order->order_number = $uuid;
         $order->user_id = auth()->user()->id;
         $order->name = $request->name;
         $order->country = $request->country;

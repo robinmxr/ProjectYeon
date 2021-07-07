@@ -25,69 +25,25 @@
             <table class="table m-0">
                 <thead>
                 <tr>
-                    <th>Order ID</th>
-                    <th>Item</th>
+                    <th>Id</th>
+                    <th>Customer</th>
                     <th>Status</th>
-                    <th>Popularity</th>
+                    <th>Total</th>
                 </tr>
                 </thead>
                 <tbody>
+                @foreach($order as $ord)
                 <tr>
-                    <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                    <td>Call of Duty IV</td>
-                    <td><span class="badge badge-success">Shipped</span></td>
+                    <td>{{ $ord->id }}</td>
+                    <td>{{ $ord->name }}</td>
+                    <td><span>{{ $ord->order_status }}</span></td>
                     <td>
-                        <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
+                        {{ $ord->total }}
                     </td>
                 </tr>
-                <tr>
-                    <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                    <td>Samsung Smart TV</td>
-                    <td><span class="badge badge-warning">Pending</span></td>
-                    <td>
-                        <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                    <td>iPhone 6 Plus</td>
-                    <td><span class="badge badge-danger">Delivered</span></td>
-                    <td>
-                        <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                    <td>Samsung Smart TV</td>
-                    <td><span class="badge badge-info">Processing</span></td>
-                    <td>
-                        <div class="sparkbar" data-color="#00c0ef" data-height="20">90,80,-90,70,-61,83,63</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="pages/examples/invoice.html">OR1848</a></td>
-                    <td>Samsung Smart TV</td>
-                    <td><span class="badge badge-warning">Pending</span></td>
-                    <td>
-                        <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                    <td>iPhone 6 Plus</td>
-                    <td><span class="badge badge-danger">Delivered</span></td>
-                    <td>
-                        <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                    <td>Call of Duty IV</td>
-                    <td><span class="badge badge-success">Shipped</span></td>
-                    <td>
-                        <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
-                    </td>
-                </tr>
+                @endforeach
+
+
                 </tbody>
             </table>
         </div>

@@ -27,13 +27,13 @@
 
 
 <!-- Shoping Cart -->
-<form class="bg0 p-t-75 p-b-85">
+<div class="bg0 p-t-75 p-b-85">
   <div class="container">
     <div class="row">
         @if (Cart::isEmpty())
             <h1 class="alert">Your shopping cart is empty.</h1>
         @else
-      <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
+      <div class="col-lg-10 col-xl-12 m-lr-auto m-b-50">
         <div class="m-l-25 m-r-38 m-lr-0-xl">
           <div class="wrap-table-shopping-cart">
             <table class="table-shopping-cart">
@@ -79,7 +79,8 @@
         </div>
       </div>
 
-      <div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">
+
+      <div class="col-sm-10 col-lg-auto col-xl-auto m-lr-auto m-b-50">
         <div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm">
           <h4 class="mtext-109 cl2 p-b-30">
             Cart Totals
@@ -94,7 +95,7 @@
 
             <div class="size-209">
               <span class="mtext-110 cl2">
-                $79.65
+               {{ Cart::getsubtotal() }}
               </span>
             </div>
           </div>
@@ -118,9 +119,9 @@
 
                 <div class="rs1-select2 rs2-select2 bor8 bg0 m-b-12 m-t-9">
                   <select class="js-select2" name="time">
-                    <option>Select a country...</option>
-                    <option>USA</option>
-                    <option>UK</option>
+                    <option>Select an Option</option>
+                    <option>Dhaka</option>
+                    <option>Other</option>
                   </select>
                   <div class="dropDownSelect2"></div>
                 </div>
@@ -156,17 +157,18 @@
               </span>
             </div>
           </div>
-<div class="flex-w">
+            <a href="{{ route('checkout.index') }}" >
+<div class="flex-w" >
           <button class="flex-c-m stext-101 cl2 size-115 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer">
-              <a href="{{ route('checkout.index') }}" >Proceed to Checkout</a>
+              Proceed to Checkout
           </button>
-</div>
+</div></a>
         </div>
       </div>
             @endif
     </div>
   </div>
-</form>
+</div>
 
 
 @endsection

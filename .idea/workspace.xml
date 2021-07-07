@@ -22,10 +22,73 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="fixxx">
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="csrf">
+      <change afterPath="$PROJECT_DIR$/resources/views/frontend/page/cartdemo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ProjectYeon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProjectYeon.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackPagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/UI/buttons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/UI/general.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/UI/icons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/UI/modals.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/UI/navbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/UI/ribbons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/UI/sliders.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/UI/timeline.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/calendar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/charts/chartjs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/charts/flot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/charts/inline.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/blank.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/contacts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/e-commerce.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/forgot-password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/invoice-print.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/invoice.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/language-menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/legacy-user-menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/lockscreen.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/pace.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/project-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/project-detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/project-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/projects.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/recover-password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/examples/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/forms/advanced.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/forms/editors.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/forms/general.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/forms/validation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/gallery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/layout/boxed.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/layout/collapsed-sidebar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/layout/fixed-footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/layout/fixed-sidebar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/layout/fixed-topnav.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/layout/top-nav-sidebar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/layout/top-nav.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/mailbox/compose.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/mailbox/mailbox.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/mailbox/read-mail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/tables/data.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/tables/jsgrid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/tables/simple.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/widgets.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/order/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/order/all.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/cart.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +227,7 @@
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/darryldecode/cart" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/haruncpi/laravel-id-generator" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kBazeaKQk5fKX16svBaAzxidPX" />
@@ -176,7 +240,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/frontend/page" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -273,7 +337,10 @@
       <workItem from="1623085125431" duration="1135000" />
       <workItem from="1623140614597" duration="2135000" />
       <workItem from="1623427226104" duration="1941000" />
-      <workItem from="1623690872805" duration="57000" />
+      <workItem from="1623690872805" duration="277000" />
+      <workItem from="1624011883485" duration="2246000" />
+      <workItem from="1625386031307" duration="1077000" />
+      <workItem from="1625670293225" duration="11126000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -338,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622915377050</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="csrf">
+      <created>1623690984182</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1623690984182</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +451,8 @@
     <MESSAGE value="cart functioning" />
     <MESSAGE value="quick view done" />
     <MESSAGE value="quickview add to cart fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="quickview add to cart fix" />
+    <MESSAGE value="csrf" />
+    <option name="LAST_COMMIT_MESSAGE" value="csrf" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

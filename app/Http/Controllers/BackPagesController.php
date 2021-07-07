@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\Product;
 use App\Models\ProductImage;
-Use Image;
+Use App\Models\Order;
 
 class BackPagesController extends Controller
 {
@@ -24,7 +24,8 @@ class BackPagesController extends Controller
     }
     public function order()
     {
-        return view('admin.page.order.all');
+        $order = Order::get();
+        return view('admin.page.order.all',compact('order'));
     }
 
 
