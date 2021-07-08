@@ -22,15 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="janina exactly">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/page/order/view.blade.php" afterDir="false" />
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="fixxx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackPagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_18_161658_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_18_161658_create_orders_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/order/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/order/all.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partial/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +179,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/page/order" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/frontend/page" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -196,7 +193,6 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\admin\page\order" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -280,12 +276,7 @@
       <workItem from="1623085125431" duration="1135000" />
       <workItem from="1623140614597" duration="2135000" />
       <workItem from="1623427226104" duration="1941000" />
-      <workItem from="1623690872805" duration="277000" />
-      <workItem from="1624011883485" duration="2246000" />
-      <workItem from="1625386031307" duration="1077000" />
-      <workItem from="1625670293225" duration="11475000" />
-      <workItem from="1625736035380" duration="1871000" />
-      <workItem from="1625758651646" duration="5337000" />
+      <workItem from="1623690872805" duration="57000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -350,21 +341,7 @@
       <option name="project" value="LOCAL" />
       <updated>1622915377050</updated>
     </task>
-    <task id="LOCAL-00010" summary="csrf">
-      <created>1623690984182</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1623690984182</updated>
-    </task>
-    <task id="LOCAL-00011" summary="janina exactly">
-      <created>1625681849467</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1625681849467</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,9 +380,7 @@
     <MESSAGE value="cart functioning" />
     <MESSAGE value="quick view done" />
     <MESSAGE value="quickview add to cart fix" />
-    <MESSAGE value="csrf" />
-    <MESSAGE value="janina exactly" />
-    <option name="LAST_COMMIT_MESSAGE" value="janina exactly" />
+    <option name="LAST_COMMIT_MESSAGE" value="quickview add to cart fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

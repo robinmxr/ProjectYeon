@@ -15,6 +15,7 @@
             url: url,
             method: "POST",
             data:{_token: '{{csrf_token()}}'},
+
         });
 
     }

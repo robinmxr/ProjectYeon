@@ -73,7 +73,7 @@
 			<div class="wrap-menu-desktop">
                 <nav class="limiter-menu-desktop p-l-45">
 
-                   <div class="flex-c-m h-full p-lr-19">
+                 <!--   <div class="flex-c-m h-full p-lr-19">
                         <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11">
                             <i class="fa fa-bars" onclick="openNav()"></i>
                         </div>
@@ -93,7 +93,7 @@
                         <a href="#">Contact Us</a>
 
                     </div>
-
+                    -->
 
 
 
@@ -127,37 +127,33 @@
 							<li>
 								<a href="{{ route('contact') }}">Contact</a>
 							</li>
-                            @guest
-                                @if (Route::has('login'))
-                                    <li>
-                                        <a href="{{ route('login') }}">{{ __('Login') }}</a>
-                                    </li>
-                                @endif
 
-                                @if (Route::has('register'))
-                                    <li>
-                                        <a href="{{ route('register') }}">{{ __('Register') }}</a>
-                                    </li>
-                                @endif
+                            @if(Auth::guest())
+                            <li>
+                                <a href="{{ route('login') }}">Login</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('register') }}">Sign up</a>
+                            </li>
                             @else
                                 <li>
-                                    <a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }}
-                                    </a>
-
-                                    <ul class="sub-menu" aria-labelledby="navbarDropdown">
-                                        <a href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                            @csrf
-                                        </form>
-                                    </ul>
+                                    <a href="#">Orders</a>
                                 </li>
-                            @endguest
+                                <li>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                               document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                        @csrf
+                                    </form>
+
+                                </li>
+
+                            @endif
+
+
 						</ul>
 					</div>
 
@@ -168,10 +164,8 @@
                                 <i class="fa fa-search"></i>
                             </div>
                         </div>
-                        @php $cart = Cart::getTotalQuantity();
-                       @endphp
                         <div class="flex-c-m h-full p-r-25 bor6">
-                            <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11  js-show-cart">
+                            <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="1">
                                 <i class="fa fa-opencart" id="reloadcart"></i>
                             </div>
                         </div>
@@ -210,13 +204,13 @@
                 </div>
             </div>
 			<div class="logo-mobile">
-				<a href="#"><img src="{{ asset('images/icons/logo-02.png') }}" alt="IMG-LOGO"></a>
+				<a href="#"><img src="{{ asset('images/icons/logo-01.png') }}" alt="IMG-LOGO"></a>
 			</div>
 
 
             <div class="wrap-icon-header flex-w flex-r-m h-full m-r-15">
                 <div class="flex-c-m h-full p-r-5">
-                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="2">
+                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart " data-notify="2">
                         <i class="fa fa-opencart"></i>
                     </div>
                 </div>
@@ -308,7 +302,7 @@
 
             <div id="sidecart" >
             @if (Cart::isEmpty())
-                <div class="alert ">
+                <div class="alert alert-warning">
                     <p>Your shopping cart is empty.</p>
                 </div>
             @else
@@ -317,7 +311,9 @@
                     <ul class="header-cart-wrapitem w-full">
                         @foreach(Cart::getcontent() as $item)
                             <li class="header-cart-item flex-w flex-t m-b-12">
-
+                                <div class="header-cart-item-img">
+                                    <img src="{{ asset('images/item-cart-01.jpg') }}" alt="IMG">
+                                </div>
 
                                 <div class="header-cart-item-txt p-t-8">
                                     <a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
@@ -337,7 +333,7 @@
 
                     <div class="w-full">
                         <div class="header-cart-total w-full p-tb-40">
-                           {{ Cart::getsubtotal() }}
+                            Total: $75.00
                         </div>
 
                         <div class="header-cart-buttons flex-w w-full">

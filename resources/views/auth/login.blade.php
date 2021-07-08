@@ -23,7 +23,7 @@
                 </div>
                 <form class="formtype scol" method="POST" action="{{ route('login') }}">
                     <!--<form class="formtype">-->
-@csrf
+                    @csrf
                     <div >
                         <input id="email" type="email" class="inputy form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required placeholder="Enter Your Email" autocomplete="email" autofocus>
 
