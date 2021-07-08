@@ -22,11 +22,7 @@ class BackPagesController extends Controller
 
 
     }
-    public function order()
-    {
-        $order = Order::get();
-        return view('admin.page.order.all',compact('order'));
-    }
+
 
 
     /**

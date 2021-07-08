@@ -22,6 +22,7 @@ use App\Http\Controllers\BackCategoriesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\OrderController;
 
 /*-----------------Frontend Page Routes--------------------*/
 Route::get('/', [FrontPagesController::class, 'index'])->name('index');
@@ -88,8 +89,11 @@ Route::post('/admin/category/edit/{id}', [BackCategoriesController::class, 'upda
 
 Route::post('/admin/category/delete/{id}', [BackCategoriesController::class, 'delete'])->name('admin.category.delete')->middleware('is_admin');
 
-Route::get('/admin/order', [BackPagesController::class, 'order'])->name('admin.orders')->middleware('is_admin');
+Route::get('/admin/order', [OrderController::class, 'order'])->name('admin.orders')->middleware('is_admin');
 
+Route::get('/admin/order/{id}', [OrderController::class, 'orderview'])->name('admin.order.view')->middleware('is_admin');
+
+Route::post('/admin/order/{id}', [OrderController::class, 'changestatus'])->name('admin.order.changestatus')->middleware('is_admin');
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
