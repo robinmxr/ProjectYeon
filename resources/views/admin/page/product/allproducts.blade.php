@@ -27,8 +27,10 @@
       <div class="card card-primary">
   <!-- /.card-header -->
   <div class="card-body">
-    <table id="example2" class="table table-bordered table-hover">
+    <table id="example2" class="table  table-hover">
         @include('admin.partial.message')
+
+
       <thead>
       <tr>
         <th>#</th>
@@ -95,6 +97,10 @@
 
     </div>
     <!-- /.card-body -->
+
+      <!-- /.card-body -->
+      <a href="{{ route('admin.product.create') }}" <button type="button" class="btn btn-block bg-info btn-lg">Add More Product</button> </a>
+
 
 
       </div>

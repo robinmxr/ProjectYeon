@@ -25,8 +25,9 @@
             <table class="table m-0">
                 <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Customer</th>
+                    <th>ID</th>
+                    <th>Customer ID</th>
+                    <th>Receiver </th>
                     <th>Status</th>
                     <th>Total</th>
 
@@ -37,7 +38,9 @@
 
 <tr>
                     <td>{{ $ord->id }}</td>
-                    <td>{{ $ord->name }}</td>
+                    <td>{{ $ord->user_id }}</td>
+                    <td> {{ $ord->name }} </td>
+
                     <td><span>{{ $ord->order_status }}</span></td>
                     <td>
                         {{ $ord->total }}

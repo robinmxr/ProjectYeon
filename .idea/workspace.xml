@@ -22,12 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="fixxx">
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment=" minor tweaks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/docs/assets/css/adminlte.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/docs/assets/css/adminlte.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/category/allcategories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/category/allcategories.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/order/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/order/all.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/product/allproducts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/product/allproducts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partial/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,6 +201,7 @@
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xaamp\htdocs\doogdoogi\ProjectYeon\resources\views\frontend" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\partial" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page\category" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page\category\index.blade.php" />
@@ -277,6 +283,7 @@
       <workItem from="1623140614597" duration="2135000" />
       <workItem from="1623427226104" duration="1941000" />
       <workItem from="1623690872805" duration="57000" />
+      <workItem from="1625934510955" duration="6900000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -341,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622915377050</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary=" minor tweaks">
+      <created>1625771909012</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1625771909012</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +394,8 @@
     <MESSAGE value="cart functioning" />
     <MESSAGE value="quick view done" />
     <MESSAGE value="quickview add to cart fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="quickview add to cart fix" />
+    <MESSAGE value=" minor tweaks" />
+    <option name="LAST_COMMIT_MESSAGE" value=" minor tweaks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -389,6 +404,21 @@
           <url>file://$PROJECT_DIR$/resources/views/admin/page/category/allcategories.blade.php</url>
           <line>48</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php</url>
+          <line>213</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php</url>
+          <line>102</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/page/category/allcategories.blade.php</url>
+          <line>49</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

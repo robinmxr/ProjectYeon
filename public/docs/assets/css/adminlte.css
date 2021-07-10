@@ -12076,7 +12076,10 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
 [class*='sidebar-dark-'] .nav-sidebar > .nav-item > .nav-link:focus {
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
+
 }
+
+
 
 [class*='sidebar-dark-'] .nav-sidebar > .nav-item > .nav-link.active {
   color: #ffffff;

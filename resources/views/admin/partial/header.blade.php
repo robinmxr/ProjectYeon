@@ -25,14 +25,27 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link">Home</a>
+                <a href="{{route('admin.index')}}" class="nav-link">Home</a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link">Contact</a>
+                <a href="{{route('index')}}" class="nav-link">Back to Website</a>
+            </li>
+
+            <li class="nav-item d-none d-sm-inline-block">
+                <a class="nav-link" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                        $('#logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                    @csrf
+                </form>
+
             </li>
         </ul>
 
         <!-- SEARCH FORM -->
+        <!--
         <form class="form-inline ml-3">
             <div class="input-group input-group-sm">
                 <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
@@ -42,7 +55,7 @@
                     </button>
                 </div>
             </div>
-        </form>
+        </form>-->
     </nav>
     <!-- /.navbar -->
 
@@ -52,7 +65,7 @@
         <a href="#" class="brand-link">
             <img src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                  style="opacity: .8">
-            <span class="brand-text font-weight-light">Yeon</span>
+            <span class="brand-text font-weight-light">DoogDoogi</span>
         </a>
 
         <!-- Sidebar -->
@@ -60,10 +73,11 @@
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
+                    <!-- TODO: Add condition to search if the image is null or not -->
                     <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block">Mojumder Saheb</a>
+                    <a href="#" class="d-block">{{ Auth::user()->name }}</a>
                 </div>
             </div>
 
@@ -88,18 +102,11 @@
 
 
 
-                    <li class="nav-header">Manage Products</li>
+                    <li class="nav-header">Manage </li>
 
-                    <li class="nav-item">
-                        <a href="pages/gallery.html" class="nav-link">
-                            <i class="nav-icon far fa-image"></i>
-                            <p>
-                                Gallery
-                            </p>
-                        </a>
-                    </li>
+
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
+                        <a  class="nav-link">
                             <i class="nav-icon fas fa-shopping-bag"></i>
                             <p>
                                 Products
@@ -123,7 +130,7 @@
                         </ul>
                     </li>
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
+                        <a  class="nav-link">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Categories
@@ -147,7 +154,7 @@
                         </ul>
                     </li>
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
+                        <a  class="nav-link">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Orders
@@ -166,7 +173,7 @@
                         </ul>
                     </li>
 
-
+                    <!--
 
                     <li class="nav-header">MISCELLANEOUS</li>
                     <li class="nav-item">
@@ -259,6 +266,7 @@
                             <p>Informational</p>
                         </a>
                     </li>
+                    -->
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->

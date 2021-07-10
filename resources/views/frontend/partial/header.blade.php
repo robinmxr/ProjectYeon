@@ -73,7 +73,7 @@
 			<div class="wrap-menu-desktop">
                 <nav class="limiter-menu-desktop p-l-45">
 
-                 <!--   <div class="flex-c-m h-full p-lr-19">
+                    <div class="flex-c-m h-full p-lr-19">
                         <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11">
                             <i class="fa fa-bars" onclick="openNav()"></i>
                         </div>
@@ -93,14 +93,14 @@
                         <a href="#">Contact Us</a>
 
                     </div>
-                    -->
+
 
 
 
 					<!-- Logo desktop -->
 
 					<a href="{{ route('index') }}" class="logo">
-						<img src="{{ asset('images/icons/logo-02.png') }}" alt="IMG-LOGO">
+						<img src="{{ asset('images/icons/logoweb.png') }}" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
@@ -136,13 +136,11 @@
                                 <a href="{{ route('register') }}">Sign up</a>
                             </li>
                             @else
-                                <li>
-                                    <a href="#">Orders</a>
-                                </li>
+
                                 <li>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
-                                                               document.getElementById('logout-form').submit();">
+                                        $('#logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST">
@@ -150,6 +148,15 @@
                                     </form>
 
                                 </li>
+
+                                @if(auth()->user()->is_admin==1)
+
+                                    <li>
+                                        <a href="{{route("admin.index")}}">Admin Panel</a>
+                                    </li>
+                                @else
+                                    <!-- -->
+                                @endif
 
                             @endif
 
@@ -204,7 +211,7 @@
                 </div>
             </div>
 			<div class="logo-mobile">
-				<a href="#"><img src="{{ asset('images/icons/logo-01.png') }}" alt="IMG-LOGO"></a>
+				<a href="{{ route('index') }}"><img src="{{ asset('images/icons/logoweb.png') }}" alt="IMG-LOGO"></a>
 			</div>
 
 

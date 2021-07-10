@@ -27,7 +27,7 @@
       <div class="card card-primary">
   <!-- /.card-header -->
   <div class="card-body">
-    <table id="example2" class="table table-bordered table-hover">
+    <table id="example2" class="table  table-hover">
         @include('admin.partial.message')
       <thead>
       <tr>
@@ -43,8 +43,8 @@
           <td>{{ $category->id }}</td>
         <td>{{ $category->title }}</td>
         <td>{{ $category->category_type}}</td>
-            <td><a href="{{ route('admin.category.edit', $category->id) }}" class="btn btn-block btn-secondary">Edit</a>
-                <a href="#deleteModal{{ $category->id }}" data-toggle="modal" class="btn btn-block btn-secondary">Delete</a>
+            <td><a href="{{ route('admin.category.edit', $category->id) }}" class="btn btn-block btn-primary btn-l">Edit</a>
+                <a href="#deleteModal{{ $category->id }}" data-toggle="modal" class="btn btn-block btn-outline-danger">Delete</a>
                 <div class="modal fade" id="deleteModal{{ $category->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">

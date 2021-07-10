@@ -666,7 +666,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   display: flex;
   align-items: center;
   height: 70px;
-  background-color: #fff;
+    background-image: linear-gradient(#312c51, #48426d, #312c51);
+  /*background-color: #fff;*/
   padding: 15px;
   display: none;
 
@@ -681,6 +682,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 /*------------------------------------------------------------------
 [ Logo mobile ]*/
 .logo-mobile {
+
   display: block;
   position: relative;
   height: 80%;
