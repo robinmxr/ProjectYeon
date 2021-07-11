@@ -80,17 +80,27 @@
                     </div>
                     <div id="mySidenavpc" class="sidenav">
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                        <a href="#">Home</a>
-                        <a href="#">Login</a>
-                        <a href="#demo" data-toggle="collapse">Categories</a>
+
+
+                        @if(!Auth::guest())
+                            <div class="sidenavdiv">  {{ auth()->user()->name }} </div>
+
+
+                        @else
+                            <a href="{{route('login')}}" class="sidenavlink"> Login</a>
+                            <a href="{{route('register')}}" class="sidenavlink"> Signup </a>
+                        @endif
+                        <a href="#"  class="sidenavlink">Home</a>
+                        <a href="#"  class="sidenavlink">Login</a>
+                        <a href="#demo" data-toggle="collapse"  class="sidenavlink">Categories</a>
 
                         <div id="demo" class="collapse">
-                            <a href="#">Men</a>
-                            <a href="#">Women</a>
-                            <a href="#">Accessories</a>
+                            <a href="#"  class="sidenavlink">Men</a>
+                            <a href="#"  class="sidenavlink">Women</a>
+                            <a href="#" class="sidenavlink">Accessories</a>
                         </div>
-                        <a href="#">Terms</a>
-                        <a href="#">Contact Us</a>
+                        <a href="#" class="sidenavlink">Terms</a>
+                        <a href="#" class="sidenavlink">Contact Us</a>
 
                     </div>
 
@@ -192,17 +202,25 @@
 		<div class="wrap-header-mobile">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <a href="#">Home</a>
-                <a href="#">Services</a>
-                <a href="#demo" data-toggle="collapse">Categories</a>
+                @if(!Auth::guest())
+                <div class="sidenavdiv">  {{ auth()->user()->name }} </div>
+
+
+                @else
+                    <a href="{{route('login')}}" class="sidenavlink"> Login</a>
+                    <a href="{{route('register')}}" class="sidenavlink"> Signup </a>
+                @endif
+                <a href="#" class="sidenavlink">Home</a>
+                <a href="#" class="sidenavlink">Services</a>
+                <a href="#demo" data-toggle="collapse" class="sidenavlink">Categories</a>
 
                 <div id="demo" class="collapse">
-                    <a href="#">Men</a>
-                    <a href="#">Women</a>
-                    <a href="#">Accessories</a>
+                    <a href="#" class="sidenavlink">Men</a>
+                    <a href="#" class="sidenavlink">Women</a>
+                    <a href="#" class="sidenavlink">Accessories</a>
                 </div>
-                <a href="#">Terms</a>
-                <a href="#">Contact Us</a>
+                <a href="#" class="sidenavlink">Terms</a>
+                <a href="#" class="sidenavlink">Contact Us</a>
 
             </div>
             <div class="flex-c-m h-full p-lr-19">

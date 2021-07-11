@@ -11,20 +11,31 @@
     padding-top: 60px;
 }
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
+.sidenavlink {
+    text-align: center;
+    padding: 8px 8px 8px 8px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 18px;
     color: #818181;
     display: block;
     transition: 0.3s;
     margin-right: 5px;
 }
 
-.sidenav a:hover {
+.sidenavlink:hover {
     color: #f1f1f1;
     border: #f1f1f1 solid 2px;
     font-size: 30px;
+}
+.sidenavdiv{
+    text-align: center;
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    margin-right: 5px;
 }
 
 .sidenav .closebtn {
