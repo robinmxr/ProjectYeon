@@ -78,12 +78,24 @@
                             <i class="fa fa-bars" onclick="openNav()"></i>
                         </div>
                     </div>
-                    <div id="mySidenavpc" class="sidenav">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <div id="mySidenavpc" class="sidenav ">
+
+                        <a href="javascript:void(0)" class="closebtn sidenavlink" onclick="closeNav()">×</a>
 
 
                         @if(!Auth::guest())
-                            <div class="sidenavdiv">  {{ auth()->user()->name }} </div>
+
+                            <div class="img-bordered sidenavimg">
+                                <img src="{{ asset('images/gallery-03.jpg') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+                            </div>
+                            <div class="sidenavdiv">
+                                <div > {{ auth()->user()->name }} </div>
+                                <span class="sm-text" ><div> Email:  {{auth()->user()-> email}}</div> <a href="#"> Change.. </a></span>
+                                <span class="sm-text"><div> Address : {{auth()->user()-> address}}</div> <a href="#"> Change.. </a></span>
+                                <span  class="sm-text"><div>  Phone {{auth()->user()-> phone}}</div> <a href="#"> Change.. </a></span><br>
+                                <span class="sm-text"> <div><a href="#"> Change Password.. </a> </div></span>
+
+                            </div>
 
 
                         @else
@@ -91,7 +103,7 @@
                             <a href="{{route('register')}}" class="sidenavlink"> Signup </a>
                         @endif
                         <a href="#"  class="sidenavlink">Home</a>
-                        <a href="#"  class="sidenavlink">Login</a>
+                        <a href="#"  class="sidenavlink">Order</a>
                         <a href="#demo" data-toggle="collapse"  class="sidenavlink">Categories</a>
 
                         <div id="demo" class="collapse">
@@ -203,7 +215,18 @@
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                 @if(!Auth::guest())
-                <div class="sidenavdiv">  {{ auth()->user()->name }} </div>
+
+                    <div class="img-bordered sidenavimg">
+                        <img src="{{ asset('images/gallery-03.jpg') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+                    </div>
+                    <div class="sidenavdiv">
+                        <div > {{ auth()->user()->name }} </div>
+                        <span class="sm-text" ><div> Email:  {{auth()->user()-> email}}</div> <a href="#"> Change.. </a></span>
+                        <span class="sm-text"><div> Address : {{auth()->user()-> address}}</div> <a href="#"> Change.. </a></span>
+                        <span  class="sm-text"><div>  Phone {{auth()->user()-> phone}}</div> <a href="#"> Change.. </a></span><br>
+                        <span class="sm-text"> <div><a href="#"> Change Password.. </a> </div></span>
+
+                    </div>
 
 
                 @else

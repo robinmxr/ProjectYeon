@@ -101,5 +101,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/checkout', [CheckoutController::class, 'showCheckout'])->name('checkout.index');
 
+
+
     Route::post('/checkout/order', [CheckoutController::class, 'placeOrder'])->name('checkout.place.order');
 });

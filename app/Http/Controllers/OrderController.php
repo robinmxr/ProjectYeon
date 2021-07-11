@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use http\Client\Curl\User;
 use Illuminate\Http\Request;
 use App\Models\ProductOrders;
 
@@ -26,5 +27,11 @@ class OrderController extends Controller
         $order->save();
         return back();
     }
+
+
+
+
+
+
 
 }
