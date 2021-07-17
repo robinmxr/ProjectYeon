@@ -23,7 +23,9 @@ class FrontProductsController extends Controller
     }
     public function addtocart($id){
     $product = Product::find($id);
-    Cart::add(uniqid(), $product->title, $product->price, $product->quantity);
+    Cart::add(uniqid(), $product->title, $product->price, $product->quantity,array(
+        'size' => 'M',
+        'image' => $product->image[0]->image));
 
         session()->flash('success','Added to cart');
         return back();

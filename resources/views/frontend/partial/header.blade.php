@@ -194,7 +194,7 @@
                             </div>
                         </div>
                         <div class="flex-c-m h-full p-r-25 bor6">
-                            <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="1">
+                            <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="{{ Cart::getTotalQuantity() }}">
                                 <i class="fa fa-opencart" id="reloadcart"></i>
                             </div>
                         </div>
@@ -213,7 +213,7 @@
 
 		<div class="wrap-header-mobile">
             <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="javascript:void(0)" class="closebtn sidenavlink" onclick="closeNav()">×</a>
                 @if(!Auth::guest())
 
                     <div class="img-bordered sidenavimg">
@@ -360,7 +360,9 @@
                         @foreach(Cart::getcontent() as $item)
                             <li class="header-cart-item flex-w flex-t m-b-12">
                                 <div class="header-cart-item-img">
-                                    <img src="{{ asset('images/item-cart-01.jpg') }}" alt="IMG">
+
+                             <img src="{{ asset('images/products/' . $item->attributes->image) }}" style="height: 80px;width: 60px;" alt="IMG">
+
                                 </div>
 
                                 <div class="header-cart-item-txt p-t-8">

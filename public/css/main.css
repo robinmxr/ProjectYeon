@@ -1950,11 +1950,12 @@ input.num-product::-webkit-inner-spin-button {
 .table-shopping-cart .column-3 {
   width: 120px;
   font-size: 16px;
+    text-align: center;
 }
 
 .table-shopping-cart .column-4 {
   width: 145px;
-  text-align: right;
+  text-align: center;
 }
 
 .table-shopping-cart .column-5 {

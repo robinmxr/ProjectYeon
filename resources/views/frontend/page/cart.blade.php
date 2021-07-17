@@ -38,21 +38,21 @@
           <div class="wrap-table-shopping-cart">
             <table class="table-shopping-cart">
               <tr class="table_head">
-                <th class="column-4">Product</th>
-                <th class="column-4">Price</th>
-                <th class="column-4">Quantity</th>
-                <th class="column-4">Total</th>
-                <th class="column-4"></th>
+                <th class="column-3">Product</th>
+                <th class="column-3">Price</th>
+                <th class="column-3">Quantity</th>
+                <th class="column-3">Total</th>
+                <th class="column-3"></th>
               </tr>
 @foreach(Cart::getcontent() as $item)
               <tr class="table_row">
-                <td class="column-4">
+                <td class="column-3">
                     {{ $item->name }}
                 </td>
-                <td class="column-4">{{ $item->price }}</td>
-                <td class="column-4">{{ $item->quantity }}</td>
-                <td class="column-4">{{ $item->price }}</td>
-                <td class="column-4"><a href="{{ route('product.cart.remove', $item->id) }}" class="btn btn-outline-danger"><i class="fa fa-times"></i> </a></td>
+                <td class="column-3">{{ $item->price }}</td>
+                <td class="column-3">{{ $item->quantity }}</td>
+                <td class="column-3">{{ $item->price }}</td>
+                <td class="column-3"><a href="{{ route('product.cart.remove', $item->id) }}" class="btn btn-outline-danger"><i class="fa fa-times"></i> </a></td>
               </tr>
 
                 @endforeach
@@ -80,7 +80,7 @@
       </div>
 
 
-      <div class="col-sm-10 col-lg-auto col-xl-auto m-lr-auto m-b-50">
+      <div class="col-sm-auto col-lg-auto col-xl-auto m-lr-auto m-b-50">
         <div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm">
           <h4 class="mtext-109 cl2 p-b-30">
             Cart Totals

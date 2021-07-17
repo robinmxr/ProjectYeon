@@ -10,6 +10,8 @@ class CartController extends Controller
 {
     public function getCart()
     {
+        $products = Cart::getcontent();
+
         return view('frontend.page.cart');
     }
     public function removeItem($id)

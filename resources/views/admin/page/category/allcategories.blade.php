@@ -83,7 +83,7 @@
 
     </div>
     <!-- /.card-body -->
-        <a href="{{ route('admin.category.create') }}" <button type="button" class="btn btn-block bg-info btn-lg">Add More Category</button> </a>
+        <a href="{{ route('admin.category.create') }}" ><button type="button" class="btn btn-block bg-info btn-lg">Add More Category</button> </a>
 
       </div>
 
