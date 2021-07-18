@@ -250,7 +250,7 @@
 
 
         <div class="row isotope-grid">
-            @foreach($products as $product)
+            @foreach($products ?? '' as $product)
 
 
                 <div class="col-sm-4 col-md-3 col-lg-3 p-b-35 isotope-item {{ $product->category->category_type }}">

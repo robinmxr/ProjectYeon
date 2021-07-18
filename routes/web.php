@@ -105,3 +105,9 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::post('/checkout/order', [CheckoutController::class, 'placeOrder'])->name('checkout.place.order');
 });
+
+
+
+Route::get('/user', function (){
+    return view('frontend.page.profile');
+} );

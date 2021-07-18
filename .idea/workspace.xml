@@ -23,13 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="profile init.">
+      <change afterPath="$PROJECT_DIR$/resources/views/frontend/page/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/category/allcategories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/category/allcategories.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/cart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/side.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/side.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,6 +288,8 @@
       <workItem from="1623427226104" duration="1941000" />
       <workItem from="1623690872805" duration="57000" />
       <workItem from="1625934510955" duration="23804000" />
+      <workItem from="1626541000877" duration="615000" />
+      <workItem from="1626545720463" duration="4377000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -382,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626012218775</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="profile init.">
+      <created>1626541018906</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1626541018906</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

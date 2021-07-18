@@ -15,6 +15,60 @@
 }
 
 
+
+
+.dasbordleft{
+    height: 100%;
+    width: 40%;
+
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #312c51;
+
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -o-transform: skew(20deg);
+
+
+
+
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.dasbordleft > *{
+
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+
+
+
+
+    transition: 0.5s;
+
+}
+
+
+.dasbordright {
+
+    height: 100%;
+    width: 40%;
+
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #312c51;
+
+
+
+
+
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+
 .navcol{
     //background-image: url(../images/sidebar-01.jpg);
     //background-size: cover ;
