@@ -18,10 +18,11 @@
 
 
 .dasbordleft{
+    content: "";
     height: 100%;
-    width: 40%;
-
-    z-index: 1;
+    width: 70%;
+    position: fixed;
+    z-index: -100;
     top: 0;
     left: 0;
     background-color: #312c51;
@@ -33,7 +34,8 @@
 
 
 
-    transition: 0.5s;
+
+
     padding-top: 60px;
 }
 .dasbordleft > *{
