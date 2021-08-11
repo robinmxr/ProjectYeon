@@ -4,10 +4,10 @@
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1>Order Number : {{ $order->order_number }}</h1>
+                    <div class="col-sm-8">
+                        <h1>Order Number: {{ $order->order_number }}</h1>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <li class="breadcrumb-item active">Orders</li>
@@ -51,18 +51,25 @@
     <td>{{ $order->total }}</td>
 </tr>
                 <tr>
-                    <td> Payment Status :</td>
-                    <td>{{ $order->payment_status }}</td>
-                    <td>Order Status :  {{ $order->order_status }}</td>
-                    <td><select class="form-control select2-blue" id="status" name="status">
-                            <option value="Pending">Pending</option>
-                            <option value="Approved">Approved</option>
-                            <option value="Shipped">Shipped</option>
-                            <option value="Delivered">Delivered</option>
-                        </select>
-                        <button type="submit" class="btn btn-default btn-block" >Save</button></td>
-                </tr>
+                    <td> Payment Status : </td>
+                    <td><button class="btn btn-block btn-secondary">{{ $order->payment_status }}</button> </td>
+                    <td>Order Status : </td>
+                    <td> <button class="btn btn-block btn-secondary">{{ $order->order_status }}</button> </td>
 
+                </tr>
+                <td>
+                    Customer :
+                    {{ $order->name }}
+                </td>
+                <td>
+                <select class="form-control select2-blue" id="status" name="status">
+                    <option value="Pending">Pending</option>
+                    <option value="Approved">Approved</option>
+                    <option value="Shipped">Shipped</option>
+                    <option value="Delivered">Delivered</option>
+                </select>
+                <button type="submit" class="btn btn-default btn-block" >Save</button>
+                </td>
                 </tbody>
             </table>
 

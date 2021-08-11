@@ -28,11 +28,13 @@ use App\Http\Controllers\OrderController;
 Route::get('/', [FrontPagesController::class, 'index'])->name('index');
 
 Route::get('/contact', [FrontPagesController::class, 'contact'])->name('contact');
+Route::get('/profile', [FrontPagesController::class, 'profile'])->name('profile');
 
 Route::get('/search', [FrontProductsController::class, 'search'])->name('search');
 
 
 Auth::routes();
+
 
 
 /*------------------------Product Route Frontend----------------------------*/
@@ -47,7 +49,7 @@ Route::get('/category', [FrontCategoriesController::class, 'index'])->name('cate
 Route::post('/cart/{id}', [FrontProductsController::class, 'addtocart'])->name('product.cart.add');
 
 Route::get('/cart', [CartController::class, 'getCart'])->name('product.cart');
-Route::get('/cartd', [FrontPagesController::class, 'cartd'])->name('product.cart2');
+
 
 Route::get('cart/{id}/remove', [CartController::class, 'removeItem'])->name('product.cart.remove');
 
@@ -111,3 +113,4 @@ Route::group(['middleware' => ['auth']], function () {
 Route::get('/user', function (){
     return view('frontend.page.profile');
 } );
+Route::post('/user', [\App\Http\Controllers\UserController::class, 'editprofile'])->name('editprofile');

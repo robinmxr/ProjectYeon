@@ -122,7 +122,7 @@
 					<!-- Logo desktop -->
 
 					<a href="{{ route('index') }}" class="logo">
-						<img src="{{ asset('images/icons/logoweb.png') }}" alt="IMG-LOGO">
+						<img src="{{ asset('images/icons/logo-02.png') }}" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
@@ -252,7 +252,7 @@
                 </div>
             </div>
 			<div class="logo-mobile">
-				<a href="{{ route('index') }}"><img src="{{ asset('images/icons/logoweb.png') }}" alt="IMG-LOGO"></a>
+				<a href="{{ route('index') }}"><img src="{{ asset('images/icons/logo-02.png') }}" alt="IMG-LOGO"></a>
 			</div>
 
 
@@ -383,7 +383,7 @@
 
                     <div class="w-full">
                         <div class="header-cart-total w-full p-tb-40">
-                            Total: $75.00
+                            Total: {{ Cart::getsubTotal() }} BDT
                         </div>
 
                         <div class="header-cart-buttons flex-w w-full">

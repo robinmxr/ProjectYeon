@@ -18,6 +18,10 @@ class FrontPagesController extends Controller
     {
         return view('frontend.page.contact');
     }
+    public function profile()
+    {
+        return view('frontend.page.profile');
+    }
 
     public function cart()
     {
