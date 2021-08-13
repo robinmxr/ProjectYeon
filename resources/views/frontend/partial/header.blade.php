@@ -90,10 +90,10 @@
                             </div>
                             <div class="sidenavdiv">
                                 <div > {{ auth()->user()->name }} </div>
-                                <span class="sm-text" ><div> Email:  {{auth()->user()-> email}}</div> <a href="#"> Change.. </a></span>
-                                <span class="sm-text"><div> Address : {{auth()->user()-> address}}</div> <a href="#"> Change.. </a></span>
-                                <span  class="sm-text"><div>  Phone {{auth()->user()-> phone}}</div> <a href="#"> Change.. </a></span><br>
-                                <span class="sm-text"> <div><a href="#"> Change Password.. </a> </div></span>
+                                <span class="sm-text" ><div> Email:  {{auth()->user()-> email}}</div> </span>
+                                <span class="sm-text"><div> Address : {{auth()->user()-> address}}</div> </span>
+                                <span  class="sm-text"><div>  Phone {{auth()->user()-> phone}}</div> </span><br>
+                                <div class="sidenavlink"> <div><a href="{{ route('profile') }}"> My Profile</a> </div></div>
 
                             </div>
 
@@ -158,27 +158,36 @@
                                 <a href="{{ route('register') }}">Sign up</a>
                             </li>
                             @else
-
                                 <li>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                        $('#logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                        @csrf
-                                    </form>
+                                    <a href="#">{{ Auth::user()->name }} <i class="fa fa-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{{ route('profile') }}">Profile</a></li>
+                                        @if(auth()->user()->is_admin==1)
 
+                                            <li>
+                                                <a href="{{route("admin.index")}}">Admin Panel</a>
+                                            </li>
+                                        @else
+                                        <!-- -->
+                                        @endif
+                                        <li>
+                                            <a href="{{ route('logout') }}"
+                                               onclick="event.preventDefault();
+                                        $('#logout-form').submit();">
+                                                {{ __('Logout') }}
+                                            </a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                                @csrf
+                                            </form>
+
+                                        </li>
+
+
+                                    </ul>
                                 </li>
 
-                                @if(auth()->user()->is_admin==1)
 
-                                    <li>
-                                        <a href="{{route("admin.index")}}">Admin Panel</a>
-                                    </li>
-                                @else
-                                    <!-- -->
-                                @endif
+
 
                             @endif
 
@@ -221,10 +230,10 @@
                     </div>
                     <div class="sidenavdiv">
                         <div > {{ auth()->user()->name }} </div>
-                        <span class="sm-text" ><div> Email:  {{auth()->user()-> email}}</div> <a href="#"> Change.. </a></span>
-                        <span class="sm-text"><div> Address : {{auth()->user()-> address}}</div> <a href="#"> Change.. </a></span>
-                        <span  class="sm-text"><div>  Phone {{auth()->user()-> phone}}</div> <a href="#"> Change.. </a></span><br>
-                        <span class="sm-text"> <div><a href="#"> Change Password.. </a> </div></span>
+                        <span class="sm-text" ><div> Email:  {{auth()->user()-> email}}</div> </span>
+                        <span class="sm-text"><div> Address : {{auth()->user()-> address}}</div> </span>
+                        <span  class="sm-text"><div>  Phone {{auth()->user()-> phone}}</div> </span><br>
+                        <span class="sm-text"> <div><a href="{{ route('profile') }}"> Profile </a> </div></span>
 
                     </div>
 
@@ -350,7 +359,7 @@
 
             <div id="sidecart" >
             @if (Cart::isEmpty())
-                <div class="alert alert-warning">
+                <div class="alert alert-danger">
                     <p>Your shopping cart is empty.</p>
                 </div>
             @else

@@ -22,11 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="fixxx">
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="User Profile">
+      <change afterPath="$PROJECT_DIR$/public/images/icons/loghjo-02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/slide.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/slide1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/slide2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/frontend/page/confirm.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/order/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/order/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CheckoutController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bg-01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/cart.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -189,7 +195,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/frontend/page" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -203,8 +209,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xaamp\htdocs\doogdoogi\ProjectYeon\public\images" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page" />
+      <recent name="C:\xaamp\htdocs\doogdoogi\ProjectYeon\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xaamp\htdocs\doogdoogi\ProjectYeon\resources\views\frontend" />
@@ -290,7 +296,8 @@
       <workItem from="1623427226104" duration="1941000" />
       <workItem from="1623690872805" duration="57000" />
       <workItem from="1625934510955" duration="23804000" />
-      <workItem from="1628704274518" duration="3326000" />
+      <workItem from="1628704274518" duration="4038000" />
+      <workItem from="1628750254377" duration="5264000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -383,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626012218775</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="User Profile">
+      <created>1628707838313</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1628707838313</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,7 +440,8 @@
     <MESSAGE value=" Admin and header minor tweaks" />
     <MESSAGE value="header minor tweaks" />
     <MESSAGE value="profile init." />
-    <option name="LAST_COMMIT_MESSAGE" value="profile init." />
+    <MESSAGE value="User Profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Profile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -445,16 +460,6 @@
           <url>file://$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php</url>
           <line>80</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php</url>
-          <line>214</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php</url>
-          <line>87</line>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

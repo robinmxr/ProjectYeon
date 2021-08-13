@@ -13,8 +13,8 @@
                 <div class=" col-sm-4  txt-center p-lr-15 p-tb-40 blurrybox ">
                     <img class="m-tb-10" src="{{ asset('images/gallery-03.jpg') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
 
-                    <div class="ltext-101 cl0"> Kuddus </div>
-                    <div class="ltext-111 cl9"> De madre </div>
+                    <div class="ltext-101 cl0"> {{ Auth::user()->name }} </div>
+                    <div class="ltext-111 cl9"> Customer </div>
 
                     <div class="card-body">
                         <table class="table table-hover  table-borderless" >

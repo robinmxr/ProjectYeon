@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,7 @@ Route::get('/', [FrontPagesController::class, 'index'])->name('index');
 
 Route::get('/contact', [FrontPagesController::class, 'contact'])->name('contact');
 Route::get('/profile', [FrontPagesController::class, 'profile'])->name('profile');
+Route::post('/profile', [UserController::class, 'editprofile'])->name('editprofile');
 
 Route::get('/search', [FrontProductsController::class, 'search'])->name('search');
 
@@ -110,7 +112,5 @@ Route::group(['middleware' => ['auth']], function () {
 
 
 
-Route::get('/user', function (){
-    return view('frontend.page.profile');
-} );
-Route::post('/user', [\App\Http\Controllers\UserController::class, 'editprofile'])->name('editprofile');
+
+

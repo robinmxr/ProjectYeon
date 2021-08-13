@@ -59,10 +59,11 @@ class CheckoutController extends Controller
                 $order->product()->save($productorder);
             }
         }
+        Cart::clear();
 
 
-        session()->flash('success','Order Has been placed');
-        return back();
+
+        return view('frontend.page.confirm',compact('order'));
 
 
 
