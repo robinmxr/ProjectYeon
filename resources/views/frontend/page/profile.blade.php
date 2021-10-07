@@ -118,35 +118,37 @@
                                             <li class="p-all-10 list-group-item">
                                             <div class="row">
                                                 <div class="col-sm-8">{{Auth::user()->name}}</div>
-                                                <div class="col-sm-4"><a href="#"> Change </a></div>
+                                                <div class="col-sm-4"><button class="btn btn-outline-info" data-toggle="modal" data-target="#namechange"> Change </button></div>
 
                                             </div>
                                             </li>
                                             <li class="p-all-10 list-group-item">
                                             <div class="row">
-                                                <div class="col-sm-8">{{Auth::user()->email}}</div>
-                                                <div class="col-sm-4"><a href="#"> Change </a></div>
+                                                <div class="col-sm-12">{{Auth::user()->email}}</div>
+                                                <!--<div class="col-sm-4"><button class="btn btn-outline-info" data-toggle="modal" data-target="#passchange"> Change </button></div>-->
 
                                             </div>
                                             </li>
                                             <li class="p-all-10 list-group-item">
                                             <div class="row">
                                                 <div class="col-sm-8">{{Auth::user()->phone}}</div>
-                                                <div class="col-sm-4"><a href="#"> Change </a></div>
+                                                <div class="col-sm-4"><button class="btn btn-outline-info" data-toggle="modal" data-target="#phonechange"> Change </button></div>
 
                                             </div>
                                             </li>
                                             <li class="p-all-10 list-group-item">
                                             <div class="row">
                                                 <div class="col-sm-8">{{Auth::user()->address}}</div>
-                                                <div class="col-sm-4"><a href="#"> Change </a></div>
+                                                <div class="col-sm-4"><button class="btn btn-outline-info" data-toggle="modal" data-target="#addresschange"> Change </button></div>
 
                                             </div>
                                             </li>
 
                                             <li class="p-all-10 list-group-item">
-                                                <div class="col-sm-12"><button class="btn btn-danger"> Change password </button></div>
+                                                <div class="col-sm-12"><button class="btn btn-danger" data-toggle="modal" data-target="#passchange"> Change password </button></div>
                                             </li>
+
+
                                         </ul>
                                     </div>
                                 </div>
@@ -276,5 +278,147 @@
 
     <!-- Modal1 -->
 
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Change password Modal -->
+    <div class="modal fade" id="passchange" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Change Password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="oldpass"> Old Password</label>
+                            <input class="form-control m-all--3" type="password" placeholder="Enter Your Old Password" id="newpass">
+                        </div>
+                        <div class="form-group">
+                            <label for="newpass"> New Password</label>
+                            <input class="form-control m-all--3" type="password" placeholder="Enter Your New Password" id="oldpass">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary m-all--3">Change Password</button>
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Change Name modal -->
+    <div class="modal fade" id="namechange" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Change Name</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name"> Name</label>
+                            <input class="form-control m-all--3" type="text" placeholder="Enter Your Desired Name" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="vernamepass"> Password</label>
+                            <input class="form-control m-all--3" type="password" placeholder="Enter Your Password" id="vernamepass">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary m-all--3">Verify</button>
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Change phone number modal -->
+    <div class="modal fade" id="phonechange" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Change Phone Number</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="newnum"> Phone Number</label>
+                            <input class="form-control m-all--3" type="text" placeholder="Enter Your new Phone Number" id="newnum">
+                        </div>
+                        <div class="form-group">
+                            <label for="phonepass">Password</label>
+                            <input class="form-control m-all--3" type="password" placeholder="Enter Your Password" id="phonepass">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary m-all--3">verify</button>
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Change address modal -->
+    <div class="modal fade" id="addresschange" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Change Address</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="newaddress"> Address</label>
+                            <input class="form-control m-all--3" type="text" placeholder="Enter Your New Address" id="newaddress">
+                        </div>
+                        <div class="form-group">
+                            <label for="addpass"> Old Password</label>
+                            <input class="form-control m-all--3" type="password" placeholder="Enter Your New Password" id="addpass">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary m-all--3">Verify</button>
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
 
 @endsection
