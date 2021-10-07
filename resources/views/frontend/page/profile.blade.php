@@ -74,6 +74,8 @@
 
                             <div class="isotope-item profile">
 
+
+                                <!--
                                 <div class="headline m-all-10 " >
                                     <div class="ltext-102 cl0">
                                         Personal Information
@@ -83,6 +85,73 @@
                             </div>
 
 
+                                <div class="tab-custom-content align-items-center">
+
+                                    <div class="main">
+                                        <div class="row bg-gray-light p-all-10">
+                                            <div class="m-all-10 ">
+                                                <h1 > hello {{Auth::user()->name}}</h1>
+                                            </div>
+                                        </div>
+
+                                        <div class="row p-all-10">
+                                            <div class="float-left  m-20"> {{Auth::user()->email}}</div>
+                                            <div class="float-right m -20"> <a href="#">Change</a></div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                 -->
+
+                                <div class="card text-center " style="width: 40rem;">
+                                    <div class="card-header layout-boxed -align-center color">
+                                        Personal Information
+
+
+
+                                    </div>
+                                    <div class="card-body">
+
+                                        <ul class="list-group">
+                                            <li class="p-all-10 list-group-item">
+                                            <div class="row">
+                                                <div class="col-sm-8">{{Auth::user()->name}}</div>
+                                                <div class="col-sm-4"><a href="#"> Change </a></div>
+
+                                            </div>
+                                            </li>
+                                            <li class="p-all-10 list-group-item">
+                                            <div class="row">
+                                                <div class="col-sm-8">{{Auth::user()->email}}</div>
+                                                <div class="col-sm-4"><a href="#"> Change </a></div>
+
+                                            </div>
+                                            </li>
+                                            <li class="p-all-10 list-group-item">
+                                            <div class="row">
+                                                <div class="col-sm-8">{{Auth::user()->phone}}</div>
+                                                <div class="col-sm-4"><a href="#"> Change </a></div>
+
+                                            </div>
+                                            </li>
+                                            <li class="p-all-10 list-group-item">
+                                            <div class="row">
+                                                <div class="col-sm-8">{{Auth::user()->address}}</div>
+                                                <div class="col-sm-4"><a href="#"> Change </a></div>
+
+                                            </div>
+                                            </li>
+
+                                            <li class="p-all-10 list-group-item">
+                                                <div class="col-sm-12"><button class="btn btn-danger"> Change password </button></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!--
                                 <form action="{{ route('editprofile') }}" method="post">
 @csrf
                                 <table class="table table-borderless " >
@@ -114,6 +183,8 @@
                                 </table>
                                     <button type="submit" class="btn btn-lg btn-success">Save Changes</button>
                                 </form>
+
+                                -->
                         </div>
                         <div class="col isotope-grid p-0">
 
