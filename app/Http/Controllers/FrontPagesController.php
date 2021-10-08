@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Order;
 use App\Models\Product;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class FrontPagesController extends Controller
 {
@@ -20,7 +22,18 @@ class FrontPagesController extends Controller
     }
     public function profile()
     {
-        return view('frontend.page.profile');
+
+        $truth =0;
+        if(Order::where('user_id', Auth::user()->id)->count() >0)
+        {
+            $truth=1;
+            $orderlist = Order::where('user_id', Auth::user()->id);
+
+        }
+        else{
+            $orderlist= null;
+        }
+        return view('frontend.page.profile', compact('orderlist','truth'));
     }
 
     public function cart()

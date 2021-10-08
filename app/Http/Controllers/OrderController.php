@@ -6,6 +6,7 @@ use App\Models\Order;
 use http\Client\Curl\User;
 use Illuminate\Http\Request;
 use App\Models\ProductOrders;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -27,6 +28,8 @@ class OrderController extends Controller
         $order->save();
         return back();
     }
+
+
 
 
 

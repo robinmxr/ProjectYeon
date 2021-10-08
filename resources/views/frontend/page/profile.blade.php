@@ -165,13 +165,31 @@
                         <div class="col isotope-grid p-0">
 
                             <div class="  isotope-item ordhist">
-                                <ul>
-                                    <li> Kala pant </li>
-                                    <li> Kala pant </li>
-                                    <li> Kala pant </li>
-                                    <li> Kala pant </li>
-                                    <li> Kala pant </li>
-                                </ul>
+
+
+                                @if($truth==1)
+                                    <h1> Order history </h1>
+
+                                @foreach($orderlist as $order)
+                                    <div class="row">
+                                        <div class="col-sm-auto"> <h1>Order id</h1></div>
+                                        <div class="col-sm-auto"> <h2>Working motherfucker!</h2></div>
+                                    </div>
+
+
+
+                                    @endforeach
+
+
+
+                                    <div class="row">
+                                        <div class="col-sm-auto"> <h1>Order id</h1></div>
+                                        <div class="col-sm-auto"> <h2>Working motherfucker!</h2></div>
+                                    </div>
+
+                                @else
+                                    <div class="error-content"> No Order is placed so far... </div>
+                                @endif
 
 
 
