@@ -3383,6 +3383,19 @@ input.num-product::-webkit-inner-spin-button {
 }
 
 
+.transbg {
+    background-color: transparent;
+
+
+}
+.transcol{
+    background-color: transparent;
+}
+.transcol:hover{
+    background-color: rgba(67, 61, 60, 0.2);
+
+}
+
 
 /* --------------------login page ------------------------------*/
 

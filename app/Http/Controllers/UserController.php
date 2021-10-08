@@ -38,7 +38,7 @@ class UserController extends Controller
             return back();
         }
         else{
-            session()->flash('Failure','Profile  has not been updated');
+            session()->flash('failure','Profile  has not been updated');
             return back();
         }
 
@@ -51,6 +51,11 @@ class UserController extends Controller
         $id = Auth::user()->id;
         $user= User::find($id);
 
+        if($request->newpass != $request->connewpass){
+            session()->flash('failure','Password  and Re-type Password Dont match');
+            return back();
+        }
+
         if(Auth::attempt(array('email'=>$user->email,'password'=>$request->oldpass))){
             $user->password= Hash::make($request->newpass);
             $user->save();
@@ -58,7 +63,7 @@ class UserController extends Controller
             return back();
         }
         else{
-            session()->flash('Failure','Password  has not been updated');
+            session()->flash('failure','Password  has not been updated');
             return back();
         }
     }
@@ -73,7 +78,7 @@ class UserController extends Controller
             return back();
         }
         else{
-            session()->flash('Failure','Phone Number  has not been updated');
+            session()->flash('failure','Phone Number  has not been updated');
             return back();
         }
     }
@@ -88,7 +93,7 @@ class UserController extends Controller
             return back();
         }
         else{
-            session()->flash('Failure','Address  has not been updated');
+            session()->flash('failure','Address  has not been updated');
             return back();
         }
     }

@@ -69,82 +69,56 @@
                             <div class="alert alert-success" role="alert">
                                 {{ session('success') }}
                             </div>
+                        @elseif(session(('failure')))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('failure') }}
+                            </div>
                         @endif
                         <div class="col isotope-grid p-0 " >
 
-                            <div class="isotope-item profile">
+                            <div class="isotope-item profile col-lg-12">
 
 
-                                <!--
-                                <div class="headline m-all-10 " >
-                                    <div class="ltext-102 cl0">
-                                        Personal Information
-                                </div>
-
-
-                            </div>
-
-
-                                <div class="tab-custom-content align-items-center">
-
-                                    <div class="main">
-                                        <div class="row bg-gray-light p-all-10">
-                                            <div class="m-all-10 ">
-                                                <h1 > hello {{Auth::user()->name}}</h1>
-                                            </div>
-                                        </div>
-
-                                        <div class="row p-all-10">
-                                            <div class="float-left  m-20"> {{Auth::user()->email}}</div>
-                                            <div class="float-right m -20"> <a href="#">Change</a></div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                 -->
-
-                                <div class="card text-center " style="width: 40rem;">
+                                <div class="card text-center " >
                                     <div class="card-header layout-boxed -align-center color">
                                         Personal Information
 
 
 
                                     </div>
-                                    <div class="card-body">
+                                    <div class="card-body ">
 
-                                        <ul class="list-group">
-                                            <li class="p-all-10 list-group-item">
+                                        <ul class="list-group ">
+                                            <li class="p-all-10  list-group-item">
                                             <div class="row">
                                                 <div class="col-sm-8">{{Auth::user()->name}}</div>
-                                                <div class="col-sm-4"><button class="btn btn-outline-info" data-toggle="modal" data-target="#namechange"> Change </button></div>
+                                                <div class="col-sm-4"><button class="btn btn-outline-dark" data-toggle="modal" data-target="#namechange"> Change </button></div>
 
                                             </div>
                                             </li>
-                                            <li class="p-all-10 list-group-item">
+                                            <li class="p-all-10 list-group-item ">
                                             <div class="row">
-                                                <div class="col-sm-12">{{Auth::user()->email}}</div>
-                                                <!--<div class="col-sm-4"><button class="btn btn-outline-info" data-toggle="modal" data-target="#passchange"> Change </button></div>-->
+                                                <div class="col-sm-8">{{Auth::user()->email}}</div>
+                                                <div class="col-sm-4"><button class="btn btn-outline-dark" data-toggle="modal" data-target="#nope"> Verify </button></div>
 
                                             </div>
                                             </li>
-                                            <li class="p-all-10 list-group-item">
+                                            <li class="p-all-10 list-group-item ">
                                             <div class="row">
                                                 <div class="col-sm-8">{{Auth::user()->phone}}</div>
-                                                <div class="col-sm-4"><button class="btn btn-outline-info" data-toggle="modal" data-target="#phonechange"> Change </button></div>
+                                                <div class="col-sm-4"><button class="btn btn-outline-dark" data-toggle="modal" data-target="#phonechange"> Change </button></div>
 
                                             </div>
                                             </li>
-                                            <li class="p-all-10 list-group-item">
+                                            <li class="p-all-10 list-group-item ">
                                             <div class="row">
                                                 <div class="col-sm-8">{{Auth::user()->address}}</div>
-                                                <div class="col-sm-4"><button class="btn btn-outline-info" data-toggle="modal" data-target="#addresschange"> Change </button></div>
+                                                <div class="col-sm-4"><button class="btn btn-outline-dark" data-toggle="modal" data-target="#addresschange"> Change </button></div>
 
                                             </div>
                                             </li>
 
-                                            <li class="p-all-10 list-group-item">
+                                            <li class="p-all-10 list-group-item ">
                                                 <div class="col-sm-12"><button class="btn btn-danger" data-toggle="modal" data-target="#passchange"> Change password </button></div>
                                             </li>
 
@@ -293,6 +267,10 @@
                     </button>
                 </div>
                 <div class="modal-body">
+
+                    <p id="doesnotmatch">
+
+                    </p>
                     <form action="{{route('changepassword')}}" method="POST">
                         <div class="form-group">
                             @csrf
@@ -332,6 +310,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
+
                     <form action="{{route('editname')}}" method="post">
                         <div class="form-group">
                             @csrf
@@ -404,6 +383,7 @@
                 <div class="modal-body">
                     <form action="{{route('changeaddress')}}" method="POST">
                         @csrf
+
                         <div class="form-group">
                             <label for="newaddress"> Address</label>
                             <input class="form-control m-all--3" type="text" placeholder="Enter Your New Address" id="newaddress" name="newaddress">
