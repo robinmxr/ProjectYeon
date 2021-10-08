@@ -11,7 +11,11 @@
 
         <div class="row">
                 <div class=" col-sm-4  txt-center p-lr-15 p-tb-40 blurrybox ">
-                    <img class="m-tb-10" src="{{ asset('images/gallery-03.jpg') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+                    @if(Auth::user()->image)
+                    <img class="m-tb-10" src="{{ asset('images/profiles/'. Auth::user()->image) }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+@else
+                        <img class="m-tb-10" src="{{ asset('images/gallery-03.jpg') }}"  style="height: 180px; width:180px;border-radius: 50%;"/>
+                    @endif
 
                     <div class="ltext-101 cl0"> {{ Auth::user()->name }} </div>
                     <div class="ltext-111 cl9"> Customer </div>
@@ -24,9 +28,11 @@
                                 <td > 120 </td>
                             </tr>
                             <tr>
-                                <td><form>
+                                <td><form method="post" action="{{ route('addimage')  }}" enctype="multipart/form-data">
+                                        @csrf
                                         <input type="file" class="custom-file-input" name="image" id="exampleInputFile">
                                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                        <button type="submit">Change</button>
                                     </form></td>
                             </tr>
 

@@ -23,13 +23,12 @@ class FrontPagesController extends Controller
     public function profile()
     {
 
-        if(Order::where('user_id', Auth::user()->id)->count() >0)
-        {
+
 
             $orderlist = Order::where('user_id', Auth::user()->id)->get();
 
 
-        }
+
 
         return view('frontend.page.profile', compact('orderlist'));
     }

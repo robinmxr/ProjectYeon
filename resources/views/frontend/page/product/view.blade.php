@@ -156,7 +156,7 @@
           </li>
 
           <li class="nav-item p-b-10">
-            <a class="nav-link" data-toggle="tab" href="#reviews" role="tab">Reviews (1)</a>
+            <a class="nav-link" data-toggle="tab" href="#reviews" role="tab">Reviews</a>
           </li>
         </ul>
 
@@ -178,31 +178,31 @@
                 <ul class="p-lr-28 p-lr-15-sm">
                   <li class="flex-w flex-t p-b-7">
                     <span class="stext-102 cl3 size-205">
-                      Weight
+                     Material
                     </span>
 
                     <span class="stext-102 cl6 size-206">
-                      0.79 kg
+                      {{ $product->material }}
                     </span>
                   </li>
 
                   <li class="flex-w flex-t p-b-7">
                     <span class="stext-102 cl3 size-205">
-                      Dimensions
+                      Value Addition
                     </span>
 
                     <span class="stext-102 cl6 size-206">
-                      110 x 33 x 100 cm
+                     {{ $product->value_addition }}
                     </span>
                   </li>
 
                   <li class="flex-w flex-t p-b-7">
                     <span class="stext-102 cl3 size-205">
-                      Materials
+                      Care
                     </span>
 
                     <span class="stext-102 cl6 size-206">
-                      60% cotton
+                     {{ $product->care }}
                     </span>
                   </li>
 
@@ -212,19 +212,11 @@
                     </span>
 
                     <span class="stext-102 cl6 size-206">
-                      Black, Blue, Grey, Green, Red, White
+                      {{ $product->color }}
                     </span>
                   </li>
 
-                  <li class="flex-w flex-t p-b-7">
-                    <span class="stext-102 cl3 size-205">
-                      Size
-                    </span>
 
-                    <span class="stext-102 cl6 size-206">
-                      XL, L, M, S
-                    </span>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -306,11 +298,11 @@
 
   <div class="bg6 flex-c-m flex-w size-302 m-t-73 p-tb-15">
     <span class="stext-107 cl6 p-lr-25">
-      SKU: JAK-01
+      SKU: {{ $product->code }}
     </span>
 
     <span class="stext-107 cl6 p-lr-25">
-      Categories: Jacket, Men
+      Categories: {{ $product->category->category_type }}
     </span>
   </div>
 </section>

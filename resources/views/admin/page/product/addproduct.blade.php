@@ -41,6 +41,26 @@
         <input type="number" class="form-control" name="price" placeholder="Enter price">
       </div>
         <div class="form-group">
+            <label for="exampleInputEmail1">Product Code</label>
+            <input type="text" class="form-control" name="code" placeholder="Enter code">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Material</label>
+            <input type="text" class="form-control" name="material" placeholder="Enter material">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Color</label>
+            <input type="text" class="form-control" name="color" placeholder="Enter color">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Value Addition</label>
+            <input type="text" class="form-control" name="value" placeholder="Enter value addition">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Care</label>
+            <input type="text" class="form-control" name="care" placeholder="Enter care">
+        </div>
+        <div class="form-group">
             <label for="exampleInputEmail">Product Size</label>
         <select class="form-control select2-blue" id="size" name="size">
             <option value="s">S</option>

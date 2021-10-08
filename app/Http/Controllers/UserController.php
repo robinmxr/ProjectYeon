@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Image;
+use App\Models\UserImage;
 
 class UserController extends Controller
 {
@@ -101,7 +103,7 @@ class UserController extends Controller
     public function addimage(Request $request)
     {
         $image=$request->image;
-        $final_image= Image::make($image)->resize(300,300, function ($constraint) {
+        $final_image= Image::make($image)->resize(180,180, function ($constraint) {
             $constraint->aspectRatio();
         });
         $originalpath=public_path().'/images/profiles/';

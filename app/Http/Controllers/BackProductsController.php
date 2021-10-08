@@ -59,6 +59,11 @@ class BackProductsController extends Controller
         $product->description=$request->description;
         $product->price=$request->price;
         $product->size=$request->size;
+          $product->code=$request->code;
+          $product->material=$request->material;
+          $product->color=$request->color;
+          $product->care=$request->care;
+          $product->value_addition=$request->value;
         $product->category_id=$request->category_id;
         $product->slug=Str::slug($request->title,'-');
         $product->save();
