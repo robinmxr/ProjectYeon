@@ -127,67 +127,48 @@
                                     </div>
                                 </div>
 
-                                <!--
-                                <form action="" method="post">
-@csrf
-                                <table class="table table-borderless " >
-                                    <tbody>
-                                    <tr>
-                                        <td>Name</td>
-                                        <td> <input class="stext-111 cl2 plh3 size-104 p-l-62 p-r-30" type="text" name="name" value="{{ Auth::user()->name }}"></td>
 
-                                    </tr>
-                                    <tr>
-                                        <td>Email</td>
-                                        <td> <input class="stext-111 cl2 plh3 size-104 p-l-62 p-r-30" type="text" name="email" value="{{ Auth::user()->email }}"></td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>Phone</td>
-                                        <td> <input class="stext-111 cl2 plh3 size-104 p-l-62 p-r-30" type="text" name="phone" value="{{ Auth::user()->phone }}"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Address</td>
-                                        <td> <input class="stext-111 cl2 plh3 size-104 p-l-62 p-r-30" type="text" name="address" value="{{ Auth::user()->address }}"></td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>Password</td>
-                                        <td> <a class="btn btn-secondary size-104" href="#" ><i class="fa fa-edit"></i> Change </a></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                    <button type="submit" class="btn btn-lg btn-success">Save Changes</button>
-                                </form>
-
-                                -->
                         </div>
                         <div class="col isotope-grid p-0">
 
                             <div class="  isotope-item ordhist">
-
+                            <div class=" text-center rounded">
                                 <h1> Order history </h1>
 
 
                                 @if($orderlist->count()>0)
-                                <div class="row">
-                                    <div class="col-sm-auto">
+                                <div class="row p-5">
+                                    <div class="col-sm-3">
                                         <p > Order ID</p>
                                     </div>
-                                    <div class="col-sm-auto">
+                                    <div class="col-sm-3">
                                         <p>Total </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p>Status </p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <p>Goto. </p>
                                     </div>
                                 </div>
 
 
                                 @foreach($orderlist as $oer)
-                                    <div class="row">
-                                        <div class="col-sm-auto">
+                                    <div class="row p-5">
+                                        <div class="col-sm-3">
                                             <p > {{$oer->id}}</p>
                                         </div>
-                                        <div class="col-sm-auto">
+                                        <div class="col-sm-3">
                                             <p>{{$oer->total}}</p>
                                         </div>
+                                        <div class="col-sm-3">
+                                            <p>{{$oer->order_status}}</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <button class="btn btn-outline-light"  > Goto </button>
+                                        </div>
+
+
                                     </div>
 
                                     @endforeach
@@ -200,8 +181,7 @@
 
 
                                     @endif
-
-
+                            </div>
 
                             </div>
 
