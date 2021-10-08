@@ -154,7 +154,7 @@
                                 </div>
 
                                 <!--
-                                <form action="{{ route('editprofile') }}" method="post">
+                                <form action="" method="post">
 @csrf
                                 <table class="table table-borderless " >
                                     <tbody>
@@ -293,14 +293,19 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="POST">
+                    <form action="{{route('changepassword')}}" method="POST">
                         <div class="form-group">
+                            @csrf
                             <label for="oldpass"> Old Password</label>
-                            <input class="form-control m-all--3" type="password" placeholder="Enter Your Old Password" id="newpass">
+                            <input class="form-control m-all--3" type="password" placeholder="Enter Your Old Password" id="oldpass" name="oldpass">
                         </div>
                         <div class="form-group">
                             <label for="newpass"> New Password</label>
-                            <input class="form-control m-all--3" type="password" placeholder="Enter Your New Password" id="oldpass">
+                            <input class="form-control m-all--3" type="password" placeholder="Enter Your New Password" id="newpass" name="newpass">
+                        </div>
+                        <div class="form-group">
+                            <label for="newpass">Confirm New Password</label>
+                            <input class="form-control m-all--3" type="password" placeholder="Enter Your New Password" id="connewpass" name="connewpass">
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary m-all--3">Change Password</button>
@@ -327,14 +332,15 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="POST">
+                    <form action="{{route('editname')}}" method="post">
                         <div class="form-group">
+                            @csrf
                             <label for="name"> Name</label>
-                            <input class="form-control m-all--3" type="text" placeholder="Enter Your Desired Name" id="name">
+                            <input class="form-control m-all--3" type="text" placeholder="Enter Your Desired Name" id="name" name="name">
                         </div>
                         <div class="form-group">
                             <label for="vernamepass"> Password</label>
-                            <input class="form-control m-all--3" type="password" placeholder="Enter Your Password" id="vernamepass">
+                            <input class="form-control m-all--3" type="password" placeholder="Enter Your Password" id="vernamepass" name="vernamepass">
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary m-all--3">Verify</button>
@@ -361,14 +367,15 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="POST">
+                    <form action="{{route('changephone')}}" method="POST">
+                        @csrf
                         <div class="form-group">
                             <label for="newnum"> Phone Number</label>
-                            <input class="form-control m-all--3" type="text" placeholder="Enter Your new Phone Number" id="newnum">
+                            <input class="form-control m-all--3" type="text" placeholder="Enter Your new Phone Number" id="newnum" name="newnum">
                         </div>
                         <div class="form-group">
                             <label for="phonepass">Password</label>
-                            <input class="form-control m-all--3" type="password" placeholder="Enter Your Password" id="phonepass">
+                            <input class="form-control m-all--3" type="password" placeholder="Enter Your Password" id="phonepass" name="phonepass">
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary m-all--3">verify</button>
@@ -395,14 +402,15 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="POST">
+                    <form action="{{route('changeaddress')}}" method="POST">
+                        @csrf
                         <div class="form-group">
                             <label for="newaddress"> Address</label>
-                            <input class="form-control m-all--3" type="text" placeholder="Enter Your New Address" id="newaddress">
+                            <input class="form-control m-all--3" type="text" placeholder="Enter Your New Address" id="newaddress" name="newaddress">
                         </div>
                         <div class="form-group">
                             <label for="addpass"> Old Password</label>
-                            <input class="form-control m-all--3" type="password" placeholder="Enter Your New Password" id="addpass">
+                            <input class="form-control m-all--3" type="password" placeholder="Enter Your New Password" id="addpass" name="addpass">
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary m-all--3">Verify</button>
@@ -419,6 +427,6 @@
         </div>
     </div>
 
-    
+
 
 @endsection

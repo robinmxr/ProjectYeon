@@ -31,6 +31,10 @@ Route::get('/', [FrontPagesController::class, 'index'])->name('index');
 Route::get('/contact', [FrontPagesController::class, 'contact'])->name('contact');
 Route::get('/profile', [FrontPagesController::class, 'profile'])->name('profile');
 Route::post('/profile', [UserController::class, 'editprofile'])->name('editprofile');
+Route::post('/profile/editname', [UserController::class, 'editname'])->name('editname');
+Route::post('/profile/changepassword', [UserController::class, 'changepassword'])->name('changepassword');
+Route::post('/profile/changephone', [UserController::class, 'changephone'])->name('changephone');
+Route::post('/profile/changeaddress', [UserController::class, 'changeaddress'])->name('changeaddress');
 
 Route::get('/search', [FrontProductsController::class, 'search'])->name('search');
 

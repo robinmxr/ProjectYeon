@@ -24,7 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="User Profile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +297,8 @@
       <workItem from="1625934510955" duration="23804000" />
       <workItem from="1628704274518" duration="4038000" />
       <workItem from="1628750254377" duration="5264000" />
-      <workItem from="1633634330600" duration="6796000" />
+      <workItem from="1633634330600" duration="8513000" />
+      <workItem from="1633667594810" duration="2064000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
