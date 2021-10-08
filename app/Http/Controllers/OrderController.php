@@ -19,8 +19,17 @@ class OrderController extends Controller
     {
         $order = Order::find($id);
         $productorders = ProductOrders::where('order_id',$order->id)->get();
+
         return view('admin.page.order.view',compact('order','productorders'));
     }
+
+    public function userorderview($id)
+    {
+        $order = Order::find($id);
+        $productorders = ProductOrders::where('order_id',$order->id)->get();
+        return view('frontend.page.order.view',compact('order','productorders'));
+    }
+
     public function changestatus(Request $request,$id)
     {
         $order=Order::find($id);

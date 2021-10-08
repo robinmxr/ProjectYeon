@@ -154,7 +154,7 @@
 
 
                                 @foreach($orderlist as $oer)
-                                    <div class="row p-5">
+                                    <div class="row p-all-5">
                                         <div class="col-sm-3">
                                             <p > {{$oer->id}}</p>
                                         </div>
@@ -165,7 +165,7 @@
                                             <p>{{$oer->order_status}}</p>
                                         </div>
                                         <div class="col-sm-3">
-                                            <button class="btn btn-outline-light"  > Goto </button>
+                                            <a class="btn btn-outline-light" href="{{route('order', $oer->id)}}"> Goto </a>
                                         </div>
 
 

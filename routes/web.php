@@ -104,7 +104,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/checkout', [CheckoutController::class, 'showCheckout'])->name('checkout.index');
 
     Route::get('/profile', [FrontPagesController::class, 'profile'])->name('profile');
-
+    Route::get('/order/{id}', [OrderController::class, 'userorderview'])->name('order');
     Route::post('/profile', [UserController::class, 'editprofile'])->name('editprofile');
     Route::post('/profile/editname', [UserController::class, 'editname'])->name('editname');
     Route::post('/profile/changepassword', [UserController::class, 'changepassword'])->name('changepassword');
