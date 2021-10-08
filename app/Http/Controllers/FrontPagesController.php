@@ -23,17 +23,15 @@ class FrontPagesController extends Controller
     public function profile()
     {
 
-        $truth =0;
         if(Order::where('user_id', Auth::user()->id)->count() >0)
         {
-            $truth=1;
-            $orderlist = Order::where('user_id', Auth::user()->id);
+
+            $orderlist = Order::where('user_id', Auth::user()->id)->get();
+
 
         }
-        else{
-            $orderlist= null;
-        }
-        return view('frontend.page.profile', compact('orderlist','truth'));
+
+        return view('frontend.page.profile', compact('orderlist'));
     }
 
     public function cart()

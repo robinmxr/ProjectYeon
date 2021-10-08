@@ -166,31 +166,40 @@
 
                             <div class="  isotope-item ordhist">
 
+                                <h1> Order history </h1>
 
-                                @if($truth==1)
-                                    <h1> Order history </h1>
 
-                                @foreach($orderlist as $order)
-                                    <div class="row">
-                                        <div class="col-sm-auto"> <h1>Order id</h1></div>
-                                        <div class="col-sm-auto"> <h2>Working motherfucker!</h2></div>
+                                @if($orderlist->count()>0)
+                                <div class="row">
+                                    <div class="col-sm-auto">
+                                        <p > Order ID</p>
                                     </div>
+                                    <div class="col-sm-auto">
+                                        <p>Total </p>
+                                    </div>
+                                </div>
 
 
+                                @foreach($orderlist as $oer)
+                                    <div class="row">
+                                        <div class="col-sm-auto">
+                                            <p > {{$oer->id}}</p>
+                                        </div>
+                                        <div class="col-sm-auto">
+                                            <p>{{$oer->total}}</p>
+                                        </div>
+                                    </div>
 
                                     @endforeach
 
 
 
-                                    <div class="row">
-                                        <div class="col-sm-auto"> <h1>Order id</h1></div>
-                                        <div class="col-sm-auto"> <h2>Working motherfucker!</h2></div>
-                                    </div>
+                                    @else
 
-                                @else
                                     <div class="error-content"> No Order is placed so far... </div>
-                                @endif
 
+
+                                    @endif
 
 
 
