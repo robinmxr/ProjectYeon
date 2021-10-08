@@ -51,7 +51,7 @@
                 </td>
                 <td class="column-3">{{ $item->price }}</td>
                 <td class="column-3">{{ $item->quantity }}</td>
-                <td class="column-3">{{ $item->price }}</td>
+                <td class="column-3">{{ number_format($item->price * $item->quantity) }}</td>
                 <td class="column-3"><a href="{{ route('product.cart.remove', $item->id) }}" class="btn btn-outline-danger"><i class="fa fa-times"></i> </a></td>
               </tr>
 

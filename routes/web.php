@@ -46,7 +46,7 @@ Route::get('/product/{slug}', [FrontProductsController::class, 'viewproduct'])->
 
 Route::get('/category', [FrontCategoriesController::class, 'index'])->name('categories');
 
-Route::post('/cart/{id}', [FrontProductsController::class, 'addtocart'])->name('product.cart.add');
+Route::post('/cart', [FrontProductsController::class, 'addtocart'])->name('product.cart.add');
 
 Route::get('/cart', [CartController::class, 'getCart'])->name('product.cart');
 
