@@ -110,6 +110,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/profile/changepassword', [UserController::class, 'changepassword'])->name('changepassword');
     Route::post('/profile/changephone', [UserController::class, 'changephone'])->name('changephone');
     Route::post('/profile/changeaddress', [UserController::class, 'changeaddress'])->name('changeaddress');
+    Route::post('/profile/addimage', [UserController::class, 'addimage'])->name('addimage');
 
 
     Route::post('/checkout/order', [CheckoutController::class, 'placeOrder'])->name('checkout.place.order');

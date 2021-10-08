@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -96,5 +97,21 @@ class UserController extends Controller
             session()->flash('failure','Address  has not been updated');
             return back();
         }
+    }
+    public function addimage(Request $request)
+    {
+        $image=$request->image;
+        $final_image= Image::make($image)->resize(300,300, function ($constraint) {
+            $constraint->aspectRatio();
+        });
+        $originalpath=public_path().'/images/profiles/';
+        $final_image->save($originalpath.time().$image->getClientOriginalName());
+
+        $user_image = new UserImage;
+        $user_image->user_id = Auth::user()->id;
+        $user_image->image=time().$image->getClientOriginalName();
+        $user_image->save();
+        session()->flash('success','Image has been added');
+        return back();
     }
 }

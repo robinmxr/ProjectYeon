@@ -23,13 +23,11 @@
                                 <td  >Total Orders: </td>
                                 <td > 120 </td>
                             </tr>
-                            <tr >
-                                <td >Orders Deliverd: </td>
-                                <td > 120 </td>
-                            </tr>
-                            <tr >
-                                <td >Pending Orders: </td>
-                                <td > 120 </td>
+                            <tr>
+                                <td><form>
+                                        <input type="file" class="custom-file-input" name="image" id="exampleInputFile">
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                    </form></td>
                             </tr>
 
                             </tbody>

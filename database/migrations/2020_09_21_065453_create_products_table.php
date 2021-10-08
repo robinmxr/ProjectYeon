@@ -23,6 +23,12 @@ class CreateProductsTable extends Migration
             $table->string('size');
             $table->integer('offer_id')->unsigned()->nullable();
             $table->string('slug');
+            $table->string('material')->nullable();
+            $table->string('color')->nullable();
+            $table->string('value_addition')->nullable();
+            $table->string('care')->nullable();
+            $table->string('code');
+
             $table->timestamp('product_added_at')->nullable();
             $table->timestamps();
         });

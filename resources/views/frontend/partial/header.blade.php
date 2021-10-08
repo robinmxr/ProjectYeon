@@ -90,9 +90,7 @@
                             </div>
                             <div class="sidenavdiv">
                                 <div > {{ auth()->user()->name }} </div>
-                                <span class="sm-text" ><div> Email:  {{auth()->user()-> email}}</div> </span>
-                                <span class="sm-text"><div> Address : {{auth()->user()-> address}}</div> </span>
-                                <span  class="sm-text"><div>  Phone {{auth()->user()-> phone}}</div> </span><br>
+
                                 <div class="sidenavlink"> <div><a href="{{ route('profile') }}"> My Profile</a> </div></div>
 
                             </div>
@@ -230,9 +228,7 @@
                     </div>
                     <div class="sidenavdiv">
                         <div > {{ auth()->user()->name }} </div>
-                        <span class="sm-text" ><div> Email:  {{auth()->user()-> email}}</div> </span>
-                        <span class="sm-text"><div> Address : {{auth()->user()-> address}}</div> </span>
-                        <span  class="sm-text"><div>  Phone {{auth()->user()-> phone}}</div> </span><br>
+
                         <span class="sm-text"> <div><a href="{{ route('profile') }}"> Profile </a> </div></span>
 
                     </div>

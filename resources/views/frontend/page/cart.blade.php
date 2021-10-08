@@ -153,7 +153,7 @@
 
             <div class="size-209 p-t-1">
               <span class="mtext-110 cl2">
-                $79.65
+                {{ Cart::getsubtotal() +80 }}
               </span>
             </div>
           </div>
