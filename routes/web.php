@@ -1,6 +1,8 @@
 <?php
 
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ProductReviewController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -41,6 +43,7 @@ Auth::routes();
 Route::get('/product', [FrontProductsController::class, 'index'])->name('products');
 
 Route::get('/product/{slug}', [FrontProductsController::class, 'viewproduct'])->name('product.view');
+Route::post('/product/{slug}', [ProductReviewController::class, 'addreview'])->name('product.review');
 
 
 
@@ -54,6 +57,11 @@ Route::get('/cart', [CartController::class, 'getCart'])->name('product.cart');
 Route::get('cart/{id}/remove', [CartController::class, 'removeItem'])->name('product.cart.remove');
 
 Route::get('/cart/clear', [CartController::class, 'clearCart'])->name('product.cart.clear');
+
+Route::get('auth/google/', [LoginController::class, 'redirectToGoogle'])->name('login.google');
+Route::get('auth/google/callback', [LoginController::class, 'handleGoogleCallback'])->name('login.googlecallback');
+Route::get('auth/facebook/', [LoginController::class, 'loginWithFacebook'])->name('login.facebook');
+Route::get('auth/facebook/callback', [LoginController::class, 'facebookRedirect'])->name('login.facebookcallback');
 /*-----------------------------Admin Routes Backend--------------------------------*/
 //Route::get('/admin', [BackPagesController::class, 'index'])->name('admin.index');
 
@@ -62,7 +70,7 @@ Route::get('/cart/clear', [CartController::class, 'clearCart'])->name('product.c
 
 
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+
 
 
 

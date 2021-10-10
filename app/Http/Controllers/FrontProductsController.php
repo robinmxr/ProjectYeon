@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\ProductReview;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use Cart;
+use Auth;
 
 class FrontProductsController extends Controller
 {
@@ -18,8 +20,9 @@ class FrontProductsController extends Controller
     public function viewproduct($slug)
     {
         $product = Product::where('slug', $slug)->first();
+        $review = ProductReview::where('product_id',$product->id)->get();
         $related= Product::where('category_id', '=', $product->category->id)->where('id', '!=', $product->id)->get();
-        return view('frontend.page.product.view',compact('product','related'));
+        return view('frontend.page.product.view',compact('product','related','review'));
     }
     public function addtocart($id){
     $product = Product::find($id);

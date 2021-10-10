@@ -125,7 +125,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 </footer>
 <div class="btn-back-to-top" id="myBtn">
   <span class="symbol-btn-back-to-top">
-    <i class="zmdi zmdi-chevron-up"></i>
+    <i class="fa fa-arrow-circle-o-up"></i>
   </span>
 </div>
 

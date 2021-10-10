@@ -16,8 +16,8 @@
 
                     <p class="pd-log selfflex">
 
-                        <a href="#"><i class="fa fa-google " aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-facebook " aria-hidden="true"></i></a>
+                        <a href="{{ route('login.google') }}"><i class="fa fa-google " aria-hidden="true"></i></a>
+                        <a href="{{ route('login.facebook') }}"><i class="fa fa-facebook " aria-hidden="true"></i></a>
 
                     </p>
                 </div>

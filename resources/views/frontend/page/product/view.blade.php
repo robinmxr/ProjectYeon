@@ -229,6 +229,7 @@
                 <div class="p-b-30 m-lr-15-sm">
                   <!-- Review -->
                   <div class="flex-w flex-t p-b-68">
+                      @foreach($review as $rev)
                     <div class="wrap-pic-s size-109 bor0 of-hidden m-r-18 m-t-6">
                       <img src="{{ asset('images/avatar-01.jpg') }}" alt="AVATAR">
                     </div>
@@ -236,33 +237,27 @@
                     <div class="size-207">
                       <div class="flex-w flex-sb-m p-b-17">
                         <span class="mtext-107 cl2 p-r-20">
-                          Ariana Grande
+                          {{ $rev->user->name }}
                         </span>
 
-                        <span class="fs-18 cl11">
-                          <i class="zmdi zmdi-star"></i>
-                          <i class="zmdi zmdi-star"></i>
-                          <i class="zmdi zmdi-star"></i>
-                          <i class="zmdi zmdi-star"></i>
-                          <i class="zmdi zmdi-star-half"></i>
-                        </span>
+
                       </div>
 
                       <p class="stext-102 cl6">
-                        Quod autem in homine praestantissimum atque optimum est, id deseruit. Apud ceteros autem philosophos
+                       {{ $rev->review }}
                       </p>
                     </div>
+                      @endforeach
                   </div>
-
+@auth
                   <!-- Add review -->
-                  <form class="w-full">
+                  <form method="post" action="{{ route('product.review',$product->id) }}" class="w-full">
+                      @csrf
                     <h5 class="mtext-108 cl2 p-b-7">
                       Add a review
                     </h5>
 
-                    <p class="stext-102 cl6">
-                      Your email address will not be published. Required fields are marked *
-                    </p>
+
 
 
 
@@ -272,21 +267,19 @@
                         <textarea class="size-110 bor8 stext-102 cl2 p-lr-20 p-tb-10" id="review" name="review"></textarea>
                       </div>
 
-                      <div class="col-sm-6 p-b-5">
-                        <label class="stext-102 cl3" for="name">Name</label>
-                        <input class="size-111 bor8 stext-102 cl2 p-lr-20" id="name" type="text" name="name">
-                      </div>
 
-                      <div class="col-sm-6 p-b-5">
-                        <label class="stext-102 cl3" for="email">Email</label>
-                        <input class="size-111 bor8 stext-102 cl2 p-lr-20" id="email" type="text" name="email">
-                      </div>
-                    </div>
+
+
 
                     <button class="flex-c-m stext-101 cl0 size-112 bg7 bor11 hov-btn3 p-lr-15 trans-04 m-b-10">
                       Submit
                     </button>
+
+                    </div>
                   </form>
+    @elseauth
+                    <h1>You have to be logged in to post a review</h1>
+    @endauth
                 </div>
               </div>
             </div>
@@ -360,7 +353,7 @@
 </section>
 <div class="btn-back-to-top" id="myBtn">
   <span class="symbol-btn-back-to-top">
-    <i class="fa-arrow-up"></i>
+    <i class="fa fa-arrow-up"></i>
   </span>
 </div>
 
