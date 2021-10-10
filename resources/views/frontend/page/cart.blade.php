@@ -41,6 +41,7 @@
                 <th class="column-3">Product</th>
                 <th class="column-3">Price</th>
                 <th class="column-3">Quantity</th>
+                <th class="column-3">Size</th>
                 <th class="column-3">Total</th>
                 <th class="column-3"></th>
               </tr>
@@ -51,7 +52,8 @@
                 </td>
                 <td class="column-3">{{ $item->price }}</td>
                 <td class="column-3">{{ $item->quantity }}</td>
-                <td class="column-3">{{ $item->price }}</td>
+                <td class="column-3">{{ $item->attributes->size }}</td>
+                <td class="column-3">{{ number_format($item->price * $item->quantity) }}</td>
                 <td class="column-3"><a href="{{ route('product.cart.remove', $item->id) }}" class="btn btn-outline-danger"><i class="fa fa-times"></i> </a></td>
               </tr>
 

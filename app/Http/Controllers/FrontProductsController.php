@@ -24,10 +24,10 @@ class FrontProductsController extends Controller
         $related= Product::where('category_id', '=', $product->category->id)->where('id', '!=', $product->id)->get();
         return view('frontend.page.product.view',compact('product','related','review'));
     }
-    public function addtocart($id){
-    $product = Product::find($id);
-    Cart::add(uniqid(), $product->title, $product->price, $product->quantity,array(
-        'size' => 'M',
+    public function addtocart(Request $request){
+    $product = Product::find($request->id);
+    Cart::add(uniqid(), $product->title, $product->price, $request->quantity, array(
+        'size' => $request->size,
         'image' => $product->image[0]->image));
 
         session()->flash('success','Added to cart');
