@@ -1,4 +1,4 @@
-@extends('admin.layout.master')
+@extends('frontend.layout.master')
 @section('content')
     <div class="content-wrapper">
         <section class="content-header">
@@ -62,13 +62,8 @@
                     {{ $order->name }}
                 </td>
                 <td>
-                <select class="form-control select2-blue" id="status" name="status">
-                    <option value="Pending">Pending</option>
-                    <option value="Approved">Approved</option>
-                    <option value="Shipped">Shipped</option>
-                    <option value="Delivered">Delivered</option>
-                </select>
-                <button type="submit" class="btn btn-default btn-block" >Save</button>
+
+
                 </td>
                 </tbody>
             </table>

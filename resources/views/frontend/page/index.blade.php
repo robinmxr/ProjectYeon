@@ -1,5 +1,8 @@
 <!-- Slider -->
 @extends ('frontend.layout.master')
+@section('pagetitle')
+    Home
+@endsection
 @section ('content')
 <section class="section-slide">
   <div class="wrap-slick1 rs2-slick1">
@@ -9,7 +12,7 @@
           <div class="flex-col-c-m h-full p-t-100 p-b-60 respon5">
             <div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
               <span class="ltext-202 txt-center cl0 respon2">
-                Women Collection 2018
+                Saree Collection 2021
               </span>
             </div>
 
@@ -20,7 +23,7 @@
             </div>
 
             <div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-              <a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+              <a href="{{ route('products') }}" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn2 p-lr-15 trans-04">
                 Shop Now
               </a>
             </div>
@@ -33,18 +36,18 @@
           <div class="flex-col-c-m h-full p-t-100 p-b-60 respon5">
             <div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="0">
               <span class="ltext-202 txt-center cl0 respon2">
-                WoMen New Season
+                Festive Season
               </span>
             </div>
 
             <div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn" data-delay="800">
               <h2 class="ltext-104 txt-center cl0 p-t-22 p-b-40 respon1">
-                Jackets & Coats
+                Kurti and Dresses
               </h2>
             </div>
 
             <div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
-              <a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+              <a href="{{ route('products') }}" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn2 p-lr-15 trans-04">
                 Shop Now
               </a>
             </div>
@@ -57,18 +60,18 @@
           <div class="flex-col-c-m h-full p-t-100 p-b-60 respon5">
             <div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">
               <span class="ltext-202 txt-center cl0 respon2">
-                WoMen Collection 2018
+                Panjabi Collection
               </span>
             </div>
 
             <div class="layer-slick1 animated visible-false" data-appear="rotateInUpRight" data-delay="800">
               <h2 class="ltext-104 txt-center cl0 p-t-22 p-b-40 respon1">
-                NEW SEASON
+                Mens
               </h2>
             </div>
 
             <div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-              <a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+              <a href="{{ route('products') }}" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn2 p-lr-15 trans-04">
                 Shop Now
               </a>
             </div>

@@ -15,11 +15,7 @@
     </section>
     <div class="container ">
         <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
-    <div class="alert alert-dark size-212">
-        Your Order Has Been Submitted.<br>
-        Our Representative will call you in a while to confirm the order.<br>
-        Your Order Id : {{ $order->order_number }}
-    </div>
+    <!--Terms -->
 </div>
     </div>
         <!--div class="dasbordleft" > <p> somedjeifnfoiebibvfewibn</p></div-->

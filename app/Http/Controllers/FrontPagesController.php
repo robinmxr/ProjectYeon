@@ -5,6 +5,7 @@ use App\Models\Order;
 use App\Models\Product;
 
 
+use App\Models\ProductReview;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,11 +27,16 @@ class FrontPagesController extends Controller
 
 
             $orderlist = Order::where('user_id', Auth::user()->id)->get();
+            $review = ProductReview::where('user_id', Auth::user()->id)->get();
+            $flag = 0;
+            if(isset(Auth::user()->image->image)){
+                $flag = 1;
+            }
 
 
 
 
-        return view('frontend.page.profile', compact('orderlist'));
+        return view('frontend.page.profile', compact('orderlist','review','flag'));
     }
 
     public function cart()

@@ -41,8 +41,8 @@
                             <div class="size-204 flex-w flex-m respon6-next">
 
 
-                                <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail" onclick="getMessage('{{$product->id}}')">
-                                    Add to cart
+                                <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+                                    <a href="{{ route('product.view',$product->slug) }}">View Product</a>
                                 </button>
                             </div>
                         </div>

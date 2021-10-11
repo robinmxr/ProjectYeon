@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
  <head>
-	<title>@yield('pagetitle') ProjectYeon </title>
+	<title>@yield('pagetitle') | DoogDoogi </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
      <meta name="robots" content="index, follow" />

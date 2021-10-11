@@ -37,6 +37,7 @@ class FrontProductsController extends Controller
         $searchkey = $request->input('name');
         $data = Product::orWhere('title', 'LIKE', '%'.$searchkey.'%')
             ->orWhere('description', 'LIKE', '%'.$searchkey.'%')
+            ->orWhere('material', 'LIKE', '%'.$searchkey.'%')
             ->get();
 
         return view('frontend.page.search',compact('searchkey', 'data'));

@@ -3,18 +3,21 @@
 <script src="{{ asset('vendor/jquery/jquery-3.2.1.min.js') }}"></script>
 
 
-
 <script>
     function getMessage(id) {
         //console.log("button presses function called!");
         //console.log(id);
-
-        const url = "/cart/" + id;
+        const size = $(".js2_select").val();
+        const quantity = $("#quantity").val();
+        const url = "/cart/";
 
         $.ajax({
             url: url,
             method: "POST",
-            data:{_token: '{{csrf_token()}}'},
+            data:{id:id,
+                quantity: quantity,
+                size:size,
+                _token: '{{csrf_token()}}'},
 
         });
 
@@ -44,8 +47,6 @@
 
 
 </script>
-
-
 
 <!--===============================================================================================-->
 	<script src="{{ asset('vendor/animsition/js/animsition.min.js') }}"></script>
