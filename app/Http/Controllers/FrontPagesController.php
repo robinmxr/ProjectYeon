@@ -29,7 +29,7 @@ class FrontPagesController extends Controller
             $orderlist = Order::where('user_id', Auth::user()->id)->get();
             $review = ProductReview::where('user_id', Auth::user()->id)->get();
             $flag = 0;
-            if(isset(Auth::user()->image->image)){
+            if(isset(Auth::user()->image[0]->image)){
                 $flag = 1;
             }
 
@@ -47,6 +47,7 @@ class FrontPagesController extends Controller
     {
         return view('frontend.page.cartdemo');
     }
+
 
 
 }

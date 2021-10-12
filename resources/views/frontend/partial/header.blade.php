@@ -138,9 +138,9 @@
 							<li>
                                 <a href="{{ route('categories' ) }}">Categories <i class="fa fa-angle-down"></i></a>
 								<ul class="sub-menu">
-									<li><a href="#">Men</a></li>
-									<li><a href="#">Women</a></li>
-									<li><a href="#">Accessories</a></li>
+									<li><a href="{{ route('categories.type','men') }}">Men</a></li>
+									<li><a href="{{ route('categories.type','women') }}">Women</a></li>
+									<li><a href="{{ route('categories.type','etc') }}">Accessories</a></li>
 								</ul>
 							</li>
 

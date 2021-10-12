@@ -26,7 +26,7 @@
 
         <!-- /.card-header -->
         <!-- form start -->
-        <form method="post" action="{{ route('admin.category.store') }}" role="form">
+        <form method="post" action="{{ route('admin.category.store') }}" role="form" enctype="multipart/form-data">
             @csrf
             @include('admin.partial.message')
             <div class="card-body">
@@ -39,6 +39,17 @@
                     <label for="exampleInputEmail1">Category Type</label>
                     <input type="text" class="form-control" name="category_type" placeholder="Enter Category Type">
                 </div>
+                <div class="form-group">
+        <label for="image">Category Image</label>
+        <div class="input-group">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="image" id="exampleInputFile">
+            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+          </div>
+
+
+        </div>
+      </div>
 
 
 

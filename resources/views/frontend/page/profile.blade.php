@@ -12,10 +12,11 @@
         <div class="row">
                 <div class=" col-sm-4  txt-center p-lr-15 p-tb-40 blurrybox ">
 
-
+@if($flag==1)
                         <img class="m-tb-10" src="{{ asset('images/profiles/'.Auth::user()->image[0]->image) }}" style="height: 180px; width:180px;border-radius: 50%;"/>
-
-
+@else
+                        <img class="m-tb-10" src="{{ asset('images/gallery-03.jpg') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+@endif
 
                     <div class="ltext-101 cl0"> {{ Auth::user()->name }} </div>
                     <div class="ltext-111 cl9"> Customer </div>
@@ -25,7 +26,7 @@
                             <tbody>
                             <tr >
                                 <td  >Total Orders: </td>
-                                <td > 120 </td>
+                                <td > </td>
                             </tr>
                             <tr>
                                 <td><form method="post" action="{{ route('addimage')  }}" enctype="multipart/form-data">

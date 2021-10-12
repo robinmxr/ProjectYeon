@@ -13,7 +13,7 @@ class CreateUserImageTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_image', function (Blueprint $table) {
+        Schema::create('user_images', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id')->unsigned();
             $table->string('image')->nullable();

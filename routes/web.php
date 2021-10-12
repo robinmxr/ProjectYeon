@@ -48,6 +48,7 @@ Route::post('/product/{slug}', [ProductReviewController::class, 'addreview'])->n
 
 
 Route::get('/category', [FrontCategoriesController::class, 'index'])->name('categories');
+Route::get('/category/{type}', [FrontCategoriesController::class, 'bytype'])->name('categories.type');
 
 Route::post('/cart', [FrontProductsController::class, 'addtocart'])->name('product.cart.add');
 

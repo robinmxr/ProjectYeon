@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use Image;
 
 
 class BackCategoriesController extends Controller
@@ -44,6 +45,13 @@ class BackCategoriesController extends Controller
         $category = new Category;
         $category->title=$request->title;
         $category->category_type=$request->category_type;
+        $image = $request->image;
+        $final_image= Image::make($image)->resize(1200, 1486, function ($constraint) {
+          $constraint->aspectRatio();
+      });
+  $originalpath=public_path().'/images/categories/';
+  $final_image->save($originalpath.time().$image->getClientOriginalName());
+  $category->image=time().$image->getClientOriginalName();
         $category->save();
 
 
@@ -65,6 +73,7 @@ class BackCategoriesController extends Controller
         $category = category::find($id);
         $category->title=$request->title;
         $category->category_type=$request->category_type;
+        
         $category->save();
 
 
