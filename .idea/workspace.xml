@@ -24,15 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="janina ki korsi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackCategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontCategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_08_172312_create_user_image_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_08_172312_create_user_image_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/page/category/addcategory.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/category/addcategory.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/category/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/order/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/order/view.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -316,6 +311,7 @@
       <workItem from="1633889343631" duration="5175000" />
       <workItem from="1633934818568" duration="4230000" />
       <workItem from="1634063188562" duration="1948000" />
+      <workItem from="1634108493782" duration="3301000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>

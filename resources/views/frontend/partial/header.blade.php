@@ -86,7 +86,11 @@
                         @if(!Auth::guest())
 
                             <div class="img-bordered sidenavimg">
-                                <img src="{{ asset('images/gallery-03.jpg') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+                                @if(isset(Auth::user()->image[0]->image))
+                                    <img src="{{ asset('images/profiles/'.Auth::user()->image[0]->image) }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+                                @else
+                                    <img src="{{ asset('images/profiles/gallery-03.jpg') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+                                @endif
                             </div>
                             <div class="sidenavdiv">
                                 <div > {{ auth()->user()->name }} </div>
@@ -105,9 +109,9 @@
                         <a href="#demo" data-toggle="collapse"  class="sidenavlink">Categories</a>
 
                         <div id="demo" class="collapse">
-                            <a href="#"  class="sidenavlink">Men</a>
-                            <a href="#"  class="sidenavlink">Women</a>
-                            <a href="#" class="sidenavlink">Accessories</a>
+                            <a href="{{ route('categories.type','men') }}"  class="sidenavlink">Men</a>
+                            <a href="{{ route('categories.type','women') }}"  class="sidenavlink">Women</a>
+                            <a href="{{ route('categories.type','etc') }}" class="sidenavlink">Accessories</a>
                         </div>
                         <a href="#" class="sidenavlink">Terms</a>
                         <a href="#" class="sidenavlink">Contact Us</a>
@@ -224,7 +228,12 @@
                 @if(!Auth::guest())
 
                     <div class="img-bordered sidenavimg">
-                        <img src="{{ asset('images/gallery-03.jpg') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+
+                        @if(isset(Auth::user()->image[0]->image))
+                        <img src="{{ asset('images/profiles/'.Auth::user()->image[0]->image) }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+                        @else
+                            <img src="{{ asset('images/profiles/gallery-03.jpg') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+                            @endif
                     </div>
                     <div class="sidenavdiv">
                         <div > {{ auth()->user()->name }} </div>

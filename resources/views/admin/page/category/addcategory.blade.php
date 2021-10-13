@@ -37,7 +37,12 @@
 
                 <div class="form-group">
                     <label for="exampleInputEmail1">Category Type</label>
-                    <input type="text" class="form-control" name="category_type" placeholder="Enter Category Type">
+                    <select class="form-control select2-blue" id="type" name="category_type">
+                        <option value="women">Women</option>
+                        <option value="men">Men</option>
+                        <option value="etc">Accessories</option>
+
+                    </select>
                 </div>
                 <div class="form-group">
         <label for="image">Category Image</label>
