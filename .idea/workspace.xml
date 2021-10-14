@@ -22,12 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="janina ki korsi">
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="Sidebar dynamic image.user order view">
+      <change beforePath="$PROJECT_DIR$/.idea/ProjectYeon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProjectYeon.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/category/addcategory.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/category/addcategory.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/order/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/order/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_21_065453_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_21_065453_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/product.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,9 +187,6 @@
       <path value="$PROJECT_DIR$/vendor/nette/schema" />
       <path value="$PROJECT_DIR$/vendor/nette/utils" />
       <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
-      <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
-      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
-      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
       <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
     </include_path>
@@ -311,7 +312,10 @@
       <workItem from="1633889343631" duration="5175000" />
       <workItem from="1633934818568" duration="4230000" />
       <workItem from="1634063188562" duration="1948000" />
-      <workItem from="1634108493782" duration="3301000" />
+      <workItem from="1634108493782" duration="4609000" />
+      <workItem from="1634142692159" duration="4501000" />
+      <workItem from="1634148879013" duration="3426000" />
+      <workItem from="1634200872548" duration="4218000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -453,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633940398408</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Sidebar dynamic image.user order view">
+      <created>1634112477776</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1634112477776</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +509,8 @@
     <MESSAGE value="profile init." />
     <MESSAGE value="User Profile" />
     <MESSAGE value="janina ki korsi" />
-    <option name="LAST_COMMIT_MESSAGE" value="janina ki korsi" />
+    <MESSAGE value="Sidebar dynamic image.user order view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sidebar dynamic image.user order view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

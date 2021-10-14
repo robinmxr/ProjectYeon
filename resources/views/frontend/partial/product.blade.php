@@ -7,19 +7,19 @@
         </div>
         <div class="flex-w flex-sb-m p-b-52">
             <div class="flex-w flex-l-m filter-tope-group m-tb-10">
-                <button class="btn btn-lg btn-outline-dark" data-filter="*">
+                <button class="btn btn-outline-dark" data-filter="*">
                     All Products
                 </button>
 
-                <button class="btn btn-lg btn-outline-dark" data-filter=".women">
+                <button class="btn btn-outline-dark" data-filter=".women">
                     Women
                 </button>
 
-                <button class="btn btn-lg btn-outline-dark" data-filter=".men">
+                <button class="btn btn-outline-dark" data-filter=".men">
                     Men
                 </button>
 
-                <button class="btn btn-lg btn-outline-dark" data-filter=".accesories">
+                <button class="btn btn-outline-dark" data-filter=".etc">
                     Accesories
                 </button>
 
@@ -68,13 +68,9 @@
                     <a href="{{ route('product.view',$product->slug) }}">
                         <div class="block2">
                             <div class="block2-pic hov-img0">
-                                @php $i=1; @endphp
-                                @foreach( $product->image as $image )
-                                    @if ($i>0)
-                                        <img src="{{ asset('images/products/' . $image->image) }}" alt="IMG-PRODUCT">
-                                    @endif
-                                    @php $i--; @endphp
-                                @endforeach
+
+                                        <img src="{{ asset('images/products/' . $product->image[0]->image) }}" alt="IMG-PRODUCT">
+
                                 <a href="#productmodal{{ $product->id }}" data-toggle="modal" data-target="#productmodal{{ $product->id }}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
                                     Quick View
                                 </a>

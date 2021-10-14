@@ -121,9 +121,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/darryldecode/cart" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/ui" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/haruncpi/laravel-id-generator" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/maximebf/debugbar" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/debug" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/laravel-debugbar" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/socialite" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/oauth1-client" />
     </content>

@@ -28,6 +28,8 @@ class CreateProductsTable extends Migration
             $table->string('value_addition')->nullable();
             $table->string('care')->nullable();
             $table->string('code');
+            $table->string('tag')->nullable();
+            $table->string('featured')->nullable();
 
             $table->timestamp('product_added_at')->nullable();
             $table->timestamps();

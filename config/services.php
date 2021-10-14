@@ -33,7 +33,7 @@ return [
     'google' => [
         'client_id' => '20065125381-egffvmti2mde37r7m1v6d48u3p45a58c.apps.googleusercontent.com',
         'client_secret' => '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',
-        'redirect' => 'http://localhost:8000/auth/google/callback',
+        'redirect' => 'https://doogdoogibd.com/auth/google/callback',
     ],
     'facebook' => [
         'client_id' => '4511409272243166',
