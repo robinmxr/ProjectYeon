@@ -7,7 +7,8 @@
     function getMessage(id) {
         //console.log("button presses function called!");
         //console.log(id);
-        const size = $(".js2_select").val();
+        const size = $("#sizeprod").val();
+		//console.log(size);
         const quantity = $("#quantity").val();
         const url = "/cart/";
 

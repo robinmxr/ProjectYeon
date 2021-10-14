@@ -49,10 +49,10 @@
                                     @foreach($productorders as $productsord)
                                         <tr class="table_row">
                                             <td class="column-3">
-                                                {{ $productsord->title }}
+                                                {{ $productsord->product->title }}
                                             </td>
                                             <td class="column-3">{{ $productsord->quantity }}</td>
-                                            <td class="column-3">{{ $productsord->price }}</td>
+                                            <td class="column-3">{{ $productsord->product->price }}</td>
                                             <td class="column-3"></td>
                                             <td class="column-3"></td>
 

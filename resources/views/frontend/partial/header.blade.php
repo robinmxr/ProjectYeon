@@ -89,7 +89,7 @@
                                 @if(isset(Auth::user()->image[0]->image))
                                     <img src="{{ asset('images/profiles/'.Auth::user()->image[0]->image) }}" style="height: 180px; width:180px;border-radius: 50%;"/>
                                 @else
-                                    <img src="{{ asset('images/profiles/gallery-03.jpg') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+                                    <img src="{{ asset('images/profiledef.png') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
                                 @endif
                             </div>
                             <div class="sidenavdiv">
