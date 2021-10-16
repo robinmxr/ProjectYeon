@@ -41,6 +41,10 @@
         <input type="number" class="form-control" name="price" placeholder="Enter price">
       </div>
         <div class="form-group">
+            <label for="exampleInputEmail1">Product Quantity</label>
+            <input type="number" class="form-control" name="quantity" placeholder="Enter quantity">
+        </div>
+        <div class="form-group">
             <label for="exampleInputEmail1">Product Code</label>
             <input type="text" class="form-control" name="code" placeholder="Enter code">
         </div>
@@ -61,14 +65,16 @@
             <input type="text" class="form-control" name="care" placeholder="Enter care">
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail">Product Size</label>
-        <select class="form-control select2-blue" id="size" name="size">
-            <option value="s">S</option>
-            <option value="m">M</option>
-            <option value="l">L</option>
-            <option value="xl">XL</option>
-            <option value="xxl">XXL</option>
-        </select>
+            <label for="exampleInputEmail">Available Size</label>
+            <input type="text" class="form-control" name="size" placeholder="Enter sizes">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail">Tag</label>
+            <input type="text" class="form-control" name="tag" placeholder="Enter tag">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail">Featured</label>
+            <input type="text" class="form-control" name="featured" placeholder="Want to add as featured?">
         </div>
         <div class="form-group">
             <label for="exampleInputEmail">Category</label>
@@ -92,6 +98,14 @@
             <input type="file" class="custom-file-input" name="product_image[]" id="exampleInputFile">
             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
           </div>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" name="product_image[]" id="exampleInputFile">
+                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+            </div>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" name="product_image[]" id="exampleInputFile">
+                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+            </div>
 
 
         </div>

@@ -45,7 +45,7 @@
             </span>
 
             <p class="stext-115 cl6 size-213 p-t-18">
-              Coza Store Center 8th floor, 379 Hudson St, New York, NY 10018 US
+              DoogDoogi Fashion & Tailors.Plot 51,Road 10,Sector 10,Uttara,Dhaka
             </p>
           </div>
         </div>
@@ -61,7 +61,7 @@
             </span>
 
             <p class="stext-115 cl1 size-213 p-t-18">
-              +1 800 1236879
+              +8801
             </p>
           </div>
         </div>
@@ -77,7 +77,7 @@
             </span>
 
             <p class="stext-115 cl1 size-213 p-t-18">
-              contact@example.com
+              sales@doogdoogi.com
             </p>
           </div>
         </div>

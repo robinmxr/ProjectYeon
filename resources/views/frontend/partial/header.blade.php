@@ -225,20 +225,20 @@
 		<div class="wrap-header-mobile">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn sidenavlink" onclick="closeNav()">×</a>
+
                 @if(!Auth::guest())
 
                     <div class="img-bordered sidenavimg">
-
                         @if(isset(Auth::user()->image[0]->image))
-                        <img src="{{ asset('images/profiles/'.Auth::user()->image[0]->image) }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+                            <img src="{{ asset('images/profiles/'.Auth::user()->image[0]->image) }}" style="height: 180px; width:180px;border-radius: 50%;"/>
                         @else
-                            <img src="{{ asset('images/profiles/gallery-03.jpg') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
-                            @endif
+                            <img src="{{ asset('images/profiledef.png') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+                        @endif
                     </div>
                     <div class="sidenavdiv">
                         <div > {{ auth()->user()->name }} </div>
 
-                        <span class="sm-text"> <div><a href="{{ route('profile') }}"> Profile </a> </div></span>
+                        <div class="sidenavlink"> <div><a href="{{ route('profile') }}"> My Profile</a> </div></div>
 
                     </div>
 
@@ -247,17 +247,18 @@
                     <a href="{{route('login')}}" class="sidenavlink"> Login</a>
                     <a href="{{route('register')}}" class="sidenavlink"> Signup </a>
                 @endif
-                <a href="#" class="sidenavlink">Home</a>
-                <a href="#" class="sidenavlink">Services</a>
-                <a href="#demo" data-toggle="collapse" class="sidenavlink">Categories</a>
+                <a href="#"  class="sidenavlink">Home</a>
+                <a href="#"  class="sidenavlink">Order</a>
+                <a href="#demo" data-toggle="collapse"  class="sidenavlink">Categories</a>
 
                 <div id="demo" class="collapse">
-                    <a href="#" class="sidenavlink">Men</a>
-                    <a href="#" class="sidenavlink">Women</a>
-                    <a href="#" class="sidenavlink">Accessories</a>
+                    <a href="{{ route('categories.type','men') }}"  class="sidenavlink">Men</a>
+                    <a href="{{ route('categories.type','women') }}"  class="sidenavlink">Women</a>
+                    <a href="{{ route('categories.type','etc') }}" class="sidenavlink">Accessories</a>
                 </div>
                 <a href="#" class="sidenavlink">Terms</a>
                 <a href="#" class="sidenavlink">Contact Us</a>
+
 
             </div>
             <div class="flex-c-m h-full p-lr-19">
@@ -272,7 +273,7 @@
 
             <div class="wrap-icon-header flex-w flex-r-m h-full m-r-15">
                 <div class="flex-c-m h-full p-r-5">
-                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart " data-notify="2">
+                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart " data-notify="{{ Cart::getTotalQuantity() }}">
                         <i class="fa fa-opencart"></i>
                     </div>
                 </div>

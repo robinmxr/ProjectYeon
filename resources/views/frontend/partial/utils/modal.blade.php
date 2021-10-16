@@ -6,13 +6,9 @@
                 <div class="p-l-25 p-r-30 p-lr-0-lg">
                     <div class="wrap-slick3 flex-sb flex-w">
                         <div class="wrap-pic-w pos-relative">
-                            @php $i=1; @endphp
-                            @foreach( $product->image as $image )
-                                @if ($i>0)
-                                    <img src="{{ asset('images/products/' . $image->image) }}" alt="IMG-PRODUCT">
-                                @endif
-                                @php $i--; @endphp
-                            @endforeach
+
+                                    <img src="{{ asset('images/products/' . $product->image[0]->image) }}" alt="IMG-PRODUCT">
+
 
                         </div>
             </div>
@@ -40,10 +36,11 @@
                         <div class="flex-w flex-r-m p-b-10">
                             <div class="size-204 flex-w flex-m respon6-next">
 
-
+                                <a href="{{ route('product.view',$product->slug) }}">
                                 <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
-                                    <a href="{{ route('product.view',$product->slug) }}">View Product</a>
+                                    View Product
                                 </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -52,17 +49,15 @@
                     <div class="flex-w flex-m p-l-100 p-t-40 respon7">
 
 
-                        <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
+                        <a href="https://facebook.com/doogdoogishop" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Our Facebook">
                             <i class="fa fa-facebook"></i>
                         </a>
 
-                        <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
-                            <i class="fa fa-twitter"></i>
+                        <a href="https://instagram.com/doogdoogishop" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Our Instagram">
+                            <i class="fa fa-instagram"></i>
                         </a>
 
-                        <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
-                            <i class="fa fa-google-plus"></i>
-                        </a>
+
                     </div>
                 </div>
             </div>

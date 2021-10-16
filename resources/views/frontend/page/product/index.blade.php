@@ -12,26 +12,21 @@
 		<div class="container">
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
-						All Products
-					</button>
+                    <button class="btn btn-outline-dark" data-filter="*">
+                        All Products
+                    </button>
 
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".women">
-						Women
-					</button>
+                    <button class="btn btn-outline-dark" data-filter=".women">
+                        Women
+                    </button>
 
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".men">
-						Men
-					</button>
+                    <button class="btn btn-outline-dark" data-filter=".men">
+                        Men
+                    </button>
 
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".accesories">
-						Accesories
-					</button>
-
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".kids">
-						Kids
-					</button>
-
+                    <button class="btn btn-outline-dark" data-filter=".etc">
+                        Accesories
+                    </button>
 
 				</div>
 
@@ -265,36 +260,32 @@
           <a href="{{ route('product.view',$product->slug) }}">
 					<div class="block2">
 						<div class="block2-pic hov-img0">
-              @php $i=1; @endphp
-            @foreach( $product->image as $image )
-            @if ($i>0)
-						<img src="{{ asset('images/products/' . $image->image) }}" alt="IMG-PRODUCT">
-            @endif
-            @php $i--; @endphp
-            @endforeach
+
+						<img src="{{ asset('images/products/' . $product->image[0]->image) }}" alt="IMG-PRODUCT">
+
 							<a href="#productmodal{{ $product->id }}" data-toggle="modal" data-target="#productmodal{{ $product->id }}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
 								Quick View
 							</a>
                             <div class="modal fade" id="productmodal{{ $product->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
 
-                                    <div class="modal-dialog modal-xl">
-                                        <div class="modal-content">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
 
-                                            <div class="modal-body">
-@include('frontend.partial.utils.modal')
-                                            </div>
-                                            <div class="model-footer">
-                                                <button type="button" class="close" data-dismiss="modal"><i style="font-size: 40px;" class="fa fa-times" aria-hidden="true"></i></button>
-                                            </div>
-
-
+                                        <div class="modal-body">
+                                            @include('frontend.partial.utils.modal')
                                         </div>
+                                        <div class="model-footer">
+                                            <button type="button" class="close" data-dismiss="modal"><i style="font-size: 40px;" class="fa fa-times" aria-hidden="true"></i></button>
+                                        </div>
+
+
                                     </div>
+                                </div>
 
 
 
-                        </div>
+                            </div>
 
 
 

@@ -21,17 +21,8 @@
             </a>
           </li>
 
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Shoes
-            </a>
-          </li>
 
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Watches
-            </a>
-          </li>
+
         </ul>
       </div>
 
@@ -73,21 +64,19 @@
         </h4>
 
         <p class="stext-107 cl7 size-201">
-          Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+          Any questions? Let us know in store at Plot #51, Road #10,Sector #10,Uttara,Dhaka
         </p>
 
         <div class="p-t-27">
-          <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+          <a href="https://facebook.com/doogdoogishop" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
             <i class="fa fa-facebook"></i>
           </a>
 
-          <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+          <a href="https://facebook.com/doogdoogishop" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
             <i class="fa fa-instagram"></i>
           </a>
 
-          <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-            <i class="fa fa-pinterest-p"></i>
-          </a>
+
         </div>
       </div>
 
@@ -116,7 +105,7 @@
 
       <p class="stext-107 cl6 txt-center">
         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | DoogDoogi . Theme by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
       </p>

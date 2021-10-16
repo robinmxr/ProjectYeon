@@ -57,8 +57,11 @@ class CheckoutController extends Controller
                 ]);
 
                 $order->product()->save($productorder);
+                $product->quantity--;
+                $product->save();
             }
         }
+
         Cart::clear();
 
 

@@ -1,5 +1,8 @@
 
 @extends ('frontend.layout.master')
+@section('pagetitle')
+    {{ $product->title }}
+@endsection
 @section ('content')
     <section class="bg-img1 txt-center p-lr-15 p-tb-92 bggrad">
         <h2 class="ltext-105 cl0 txt-center lineunder">
@@ -63,13 +66,17 @@
 
       <div class="col-md-6 col-lg-5 p-b-30">
         <div class="p-r-50 p-t-5 p-lr-0-lg">
-          <h4 class="mtext-105 cl2 js-name-detail p-b-14">
-               {{ $product->title }}
-          </h4>
 
+            <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" >
+                {{ $product->title }}
+            </button>
           <span class="mtext-106 cl2">
             {{ $product->price }} Taka
           </span>
+
+            <h4 class="mtext-105 cl2 js-name-detail p-b-14">
+                 Available : {{ $product->quantity }}
+            </h4>
 
           <p class="stext-102 cl3 p-t-23">
             {{ $product->description }}

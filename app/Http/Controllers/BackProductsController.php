@@ -59,7 +59,10 @@ class BackProductsController extends Controller
         $product->description=$request->description;
         $product->price=$request->price;
         $product->size=$request->size;
+        $product->quantity=$request->quantity;
           $product->code=$request->code;
+          $product->tag=$request->tag;
+          $product->featured=$request->featured;
           $product->material=$request->material;
           $product->color=$request->color;
           $product->care=$request->care;
