@@ -234,6 +234,7 @@
 
 
             </ul>
+
             <!-- Nav tabs -->
 
 
@@ -245,58 +246,35 @@
                     <div class="wrap-slick2">
                         <div class="slick2">
                             @foreach($products as $product)
-                            <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-                                <!-- Block2 -->
-                                <a href="{{ route('product.view',$product->slug) }}">
-                                    <div class="block2">
-                                        <div class="block2-pic hov-img0">
+                                <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+                                    <!-- Block2 -->
+                                    <a href="{{ route('product.view',$product->slug) }}">
+                                        <div class="block2">
+                                            <div class="block2-pic hov-img0">
 
-                                            <img src="{{ asset('images/products/' . $product->image[0]->image) }}" alt="IMG-PRODUCT">
-
-                                           
-                                            <div class="modal fade" id="productmodal{{ $product->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-
-                                                <div class="modal-dialog modal-xl">
-                                                    <div class="modal-content">
-
-                                                        <div class="modal-body">
-                                                            @include('frontend.partial.utils.modal')
-                                                        </div>
-                                                        <div class="model-footer">
-                                                            <button type="button" class="close" data-dismiss="modal"><i style="font-size: 40px;" class="fa fa-times" aria-hidden="true"></i></button>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-
-
+                                                <img src="{{ asset('images/products/' . $product->image[0]->image) }}" alt="IMG-PRODUCT">
 
                                             </div>
 
 
-
-                                        </div>
-
-
-                                        <div class="block2-txt flex-w flex-t p-t-14">
-                                            <div class="block2-txt-child1 flex-col-l ">
+                                            <div class="block2-txt flex-w flex-t p-t-14">
+                                                <div class="block2-txt-child1 flex-col-l ">
 								<span class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 									{{ $product->title }}
 								</span>
 
-                                                <span class="stext-105 cl3">
+                                                    <span class="stext-105 cl3">
 									Tk {{ $product->price }}
 								</span>
+                                                </div>
+
+
                                             </div>
-
-
                                         </div>
-                                    </div>
 
 
-                                </a>
-                            </div>
+                                    </a>
+                                </div>
                             @endforeach
 
 
