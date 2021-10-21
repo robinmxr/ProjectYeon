@@ -22,8 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="modal fix .. I guess?">
-      <change afterPath="$PROJECT_DIR$/.cpanel.yml" afterDir="false" />
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="cpanel yml">
+      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +223,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/frontend/page" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -237,6 +237,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\dgsite\ProjectYeon" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page" />
       <recent name="C:\xaamp\htdocs\doogdoogi\ProjectYeon\public\images" />
     </key>
@@ -482,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634807036514</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="cpanel yml">
+      <created>1634823116603</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1634823116603</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,7 +536,8 @@
     <MESSAGE value="User Profile" />
     <MESSAGE value="janina ki korsi" />
     <MESSAGE value="modal fix .. I guess?" />
-    <option name="LAST_COMMIT_MESSAGE" value="modal fix .. I guess?" />
+    <MESSAGE value="cpanel yml" />
+    <option name="LAST_COMMIT_MESSAGE" value="cpanel yml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
