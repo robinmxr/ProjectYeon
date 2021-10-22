@@ -67,16 +67,22 @@
       <div class="col-md-6 col-lg-5 p-b-30">
         <div class="p-r-50 p-t-5 p-lr-0-lg">
 
-            <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" >
+            <h4 class="mtext-105 cl2  js-name-detail p-b-14">
                 {{ $product->title }}
-            </button>
+
+            </h4>
           <span class="mtext-106 cl2">
             {{ $product->price }} Taka
           </span>
 
-            <h4 class="mtext-105 cl2 js-name-detail p-b-14">
-                 Available : {{ $product->quantity }}
-            </h4>
+
+            <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" >
+                @if($product->quantity>0)
+                    Available
+                @else
+                    Stock Out
+                @endif
+            </button>
 
           <p class="stext-102 cl3 p-t-23">
             {{ $product->description }}
