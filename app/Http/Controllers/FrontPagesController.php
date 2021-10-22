@@ -15,7 +15,8 @@ class FrontPagesController extends Controller
     public function index()
     {
         $products = Product::orderBy('id','desc')->paginate(20);
-        return view('frontend.page.index',compact('products'));
+        $featured = Product::where('featured','true')->get();
+        return view('frontend.page.index',compact('products','featured'));
     }
     public function contact()
     {
@@ -43,9 +44,17 @@ class FrontPagesController extends Controller
     {
         return view('frontend.page.cart');
     }
-    public function cartd()
+    public function about()
     {
-        return view('frontend.page.cartdemo');
+        return view('frontend.page.about');
+    }
+    public function faq()
+    {
+        return view('frontend.page.faq');
+    }
+    public function terms()
+    {
+        return view('frontend.page.terms');
     }
 
 

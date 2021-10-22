@@ -38,9 +38,11 @@ class BackProductsController extends Controller
     public function edit($id)
     {
       $product = Product::find($id);
-        return view('admin.page.product.edit')->with('product',$product);
+      $category = Category::get();
+        return view('admin.page.product.edit',compact('product','category'));
 
     }
+
 
       public function store(Request $request)
       {
@@ -109,7 +111,15 @@ class BackProductsController extends Controller
         $product->description=$request->description;
         $product->price=$request->price;
         $product->category_id=$request->category_id;
-        $product->slug=Str::slug($request->title,'-');
+        $product->size=$request->size;
+          $product->quantity=$request->quantity;
+          $product->code=$request->code;
+          $product->tag=$request->tag;
+          $product->featured=$request->featured;
+          $product->material=$request->material;
+          $product->color=$request->color;
+          $product->care=$request->care;
+          $product->value_addition=$request->value;
         $product->save();
 
         //ProductImage Model insert Image

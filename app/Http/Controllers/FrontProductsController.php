@@ -15,7 +15,12 @@ class FrontProductsController extends Controller
     public function index()
     {
         $products = Product::orderBy('id','desc')->paginate(16);
-        return view('frontend.page.product.index')->with('products',$products);
+        return view('frontend.page.product.index',compact('products'));
+    }
+    public function bytag($tag)
+    {
+        $products = Product::where('tag',$tag)->paginate(16);
+        return view('frontend.page.product.index',compact('products'));
     }
     public function viewproduct($slug)
     {
@@ -38,7 +43,8 @@ class FrontProductsController extends Controller
         $data = Product::orWhere('title', 'LIKE', '%'.$searchkey.'%')
             ->orWhere('description', 'LIKE', '%'.$searchkey.'%')
             ->orWhere('material', 'LIKE', '%'.$searchkey.'%')
-            ->get();
+            ->orWhere('color', 'LIKE', '%'.$searchkey.'%')
+            ->paginate(16);
 
         return view('frontend.page.search',compact('searchkey', 'data'));
 

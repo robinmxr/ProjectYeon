@@ -32,6 +32,12 @@ Route::get('/', [FrontPagesController::class, 'index'])->name('index');
 
 Route::get('/contact', [FrontPagesController::class, 'contact'])->name('contact');
 
+Route::get('/about', [FrontPagesController::class, 'about'])->name('about');
+
+Route::get('/terms', [FrontPagesController::class, 'terms'])->name('terms');
+
+Route::get('/faq', [FrontPagesController::class, 'faq'])->name('faq');
+
 Route::get('/search', [FrontProductsController::class, 'search'])->name('search');
 
 
@@ -43,11 +49,13 @@ Auth::routes();
 Route::get('/product', [FrontProductsController::class, 'index'])->name('products');
 
 Route::get('/product/{slug}', [FrontProductsController::class, 'viewproduct'])->name('product.view');
+
 Route::post('/product/{slug}', [ProductReviewController::class, 'addreview'])->name('product.review');
 
 
 
 Route::get('/category', [FrontCategoriesController::class, 'index'])->name('categories');
+
 Route::get('/category/{type}', [FrontCategoriesController::class, 'bytype'])->name('categories.type');
 
 Route::post('/cart', [FrontProductsController::class, 'addtocart'])->name('product.cart.add');
@@ -60,8 +68,11 @@ Route::get('cart/{id}/remove', [CartController::class, 'removeItem'])->name('pro
 Route::get('/cart/clear', [CartController::class, 'clearCart'])->name('product.cart.clear');
 
 Route::get('auth/google/', [LoginController::class, 'redirectToGoogle'])->name('login.google');
+
 Route::get('auth/google/callback', [LoginController::class, 'handleGoogleCallback'])->name('login.googlecallback');
+
 Route::get('auth/facebook/', [LoginController::class, 'loginWithFacebook'])->name('login.facebook');
+
 Route::get('auth/facebook/callback', [LoginController::class, 'facebookRedirect'])->name('login.facebookcallback');
 /*-----------------------------Admin Routes Backend--------------------------------*/
 //Route::get('/admin', [BackPagesController::class, 'index'])->name('admin.index');

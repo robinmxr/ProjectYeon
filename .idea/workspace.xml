@@ -22,13 +22,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="janina ki korsi">
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="lalalalaa">
+      <change afterPath="$PROJECT_DIR$/resources/views/frontend/page/about.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/frontend/page/faq.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/product/allproducts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/product/allproducts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/product/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/checkout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/contact.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/product/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/product/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/utils/modal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/utils/modal.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/search.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,32 +60,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <excluded-from-favorite>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="master" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </excluded-from-favorite>
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="finalize" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="inter" />
@@ -212,9 +199,6 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
       <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
       <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
-      <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
-      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
-      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kBazeaKQk5fKX16svBaAzxidPX" />
@@ -338,6 +322,11 @@
       <workItem from="1633889343631" duration="5175000" />
       <workItem from="1633934818568" duration="4230000" />
       <workItem from="1634063188562" duration="1948000" />
+      <workItem from="1634108493782" duration="4609000" />
+      <workItem from="1634142692159" duration="4501000" />
+      <workItem from="1634148879013" duration="3426000" />
+      <workItem from="1634200872548" duration="5223000" />
+      <workItem from="1634369051658" duration="8548000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -479,7 +468,21 @@
       <option name="project" value="LOCAL" />
       <updated>1633940398408</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Sidebar dynamic image.user order view">
+      <created>1634112477776</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1634112477776</updated>
+    </task>
+    <task id="LOCAL-00022" summary="lalalalaa">
+      <created>1634206670729</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1634206670730</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +527,9 @@
     <MESSAGE value="profile init." />
     <MESSAGE value="User Profile" />
     <MESSAGE value="janina ki korsi" />
-    <option name="LAST_COMMIT_MESSAGE" value="janina ki korsi" />
+    <MESSAGE value="Sidebar dynamic image.user order view" />
+    <MESSAGE value="lalalalaa" />
+    <option name="LAST_COMMIT_MESSAGE" value="lalalalaa" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -543,6 +548,11 @@
           <url>file://$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php</url>
           <line>80</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/frontend/page/profile.blade.php</url>
+          <line>291</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

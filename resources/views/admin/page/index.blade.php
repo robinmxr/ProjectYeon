@@ -47,8 +47,8 @@
               <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Likes</span>
-                <span class="info-box-number">41,410</span>
+                <span class="info-box-text">Products</span>
+                <span class="info-box-number"> {{ \App\Models\Product::count() }}</span>
               </div>
               <!-- /.info-box-content -->
             </div>

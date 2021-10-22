@@ -1,5 +1,8 @@
 
 @extends ('frontend.layout.master')
+@section('pagetitle')
+    Checkout
+@endsection
 @section ('content')
 <section class="bg-img1 txt-center p-lr-15 p-tb-92 bggrad">
   <h2 class="ltext-105 cl0 txt-center lineunder">

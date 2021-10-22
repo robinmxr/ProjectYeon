@@ -245,7 +245,7 @@
                     <!-- Slide2 -->
                     <div class="wrap-slick2">
                         <div class="slick2">
-                            @foreach($products as $product)
+                            @foreach($featured as $product)
                                 <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
                                     <!-- Block2 -->
                                     <a href="{{ route('product.view',$product->slug) }}">

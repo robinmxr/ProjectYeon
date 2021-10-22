@@ -43,14 +43,59 @@
 
 
 
-      <div class="form-group">
-        <label for="exampleInputEmail1">Category Id</label>
-        <input type="text" class="form-control" name="category_id" value="{{ $product->category_id }}">
-      </div>
+
       <div class="form-group">
         <label for="exampleInputEmail1">Description</label>
         <textarea name="description" rows="8" cols="80" class="form-control">{{ $product->description }}</textarea>
       </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Product Quantity</label>
+            <input type="number" class="form-control" name="quantity" value="{{ $product->quantity }}">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Product Code</label>
+            <input type="text" class="form-control" name="code" value="{{ $product->code }}">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Material</label>
+            <input type="text" class="form-control" name="material" value="{{ $product->material }}">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Color</label>
+            <input type="text" class="form-control" name="color" value="{{ $product->color }}">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Value Addition</label>
+            <input type="text" class="form-control" name="value" value="{{ $product->value_addition }}">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Care</label>
+            <input type="text" class="form-control" name="care" value="{{ $product->care }}">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail">Available Size</label>
+            <input type="text" class="form-control" name="size" value="{{ $product->size }}">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail">Tag</label>
+            <input type="text" class="form-control" name="tag" value="{{ $product->tag }}">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail">Featured</label>
+            <select class="form-control select2-blue" name="featured">
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail">Category</label>
+            <select class="form-control select2-blue" id="category_id" name="category_id">
+                @foreach($category as $cat)
+                    <option value="{{ $cat->id }}">{{ $cat->title }}</option>
+                @endforeach
+            </select>
+        </div>
+
 
 
     </div>

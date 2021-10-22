@@ -342,16 +342,10 @@
           <!-- Block2 -->
           <div class="block2">
             <div class="block2-pic hov-img0">
-                @php $i=1; @endphp
-                @foreach( $relproduct->image as $image )
-                    @if ($i>0)
-                        <img src="{{ asset('images/products/' . $image->image) }}" alt="IMG-PRODUCT">
-                    @endif
-                    @php $i--; @endphp
-                @endforeach
-              <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
-                Quick View
-              </a>
+
+                        <img src="{{ asset('images/products/' . $relproduct->image[0]->image) }}" alt="IMG-PRODUCT">
+
+
             </div>
 
             <div class="block2-txt flex-w flex-t p-t-14">

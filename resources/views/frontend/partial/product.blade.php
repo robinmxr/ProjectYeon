@@ -1,11 +1,11 @@
 <div class="bg0 m-t-23 p-b-140">
     <div class="container">
-        <div class="p-b-10">
-            <h3 class="ltext-103 cl5">
+        <div class="p-b-32">
+            <h3 class="ltext-105 cl5 txt-center respon1">
                 Latest Arrivals
             </h3>
         </div>
-        <div class="flex-w flex-sb-m p-b-52">
+        <div class="flex-w flex-sb-m p-b-32">
             <div class="flex-w flex-l-m filter-tope-group m-tb-10">
                 <button class="btn btn-outline-dark" data-filter="*">
                     All Products

@@ -1,5 +1,8 @@
 <!-- Slider -->
 @extends ('frontend.layout.master')
+@section('pagetitle')
+    Profile
+@endsection
 
 @section ('content')
 
@@ -26,7 +29,7 @@
                             <tbody>
                             <tr >
                                 <td  >Total Orders: </td>
-                                <td > </td>
+                                <td >  {{ $orderlist->count() }}</td>
                             </tr>
                             <tr>
                                 <td><form method="post" action="{{ route('addimage')  }}" enctype="multipart/form-data">
@@ -195,10 +198,15 @@
 
                             <div class="  isotope-item reviews">
                                 <ul>
+
                                     <li>My Reviews  </li>
+                                    @if($review->count()>0)
                                     @foreach($review as $rev)
                                         <li>{{ $rev->$review }}</li>
 @endforeach
+                                    @else
+                                    <li>No Reviews by you</li>
+                                        @endif
 
                                 </ul>
 

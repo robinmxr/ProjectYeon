@@ -37,6 +37,7 @@
         <th>Product Title</th>
         <th>Price</th>
         <th>Type</th>
+          <th>Picture</th>
         <th>Action</th>
       </tr>
       </thead>
@@ -47,6 +48,8 @@
         <td>{{ $product->title }}</td>
         <td>{{ $product->price }}</td>
         <td>{{ $product->category->title }}</td>
+            <td>
+            <img src="{{ asset('images/products/'.$product->image[0]->image) }}" style="height: 180px; width:180px;border-radius: 50%;"/></td>
             <td>
                 <a href="{{ route('admin.product.edit', $product->id) }}" class="btn btn-block btn-outline-primary btn-lg">Edit</a>
                 <a href="#deleteModal{{ $product->id }}" data-toggle="modal" class="btn btn-block btn-outline-danger">Delete</a>

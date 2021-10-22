@@ -104,8 +104,8 @@
                             <a href="{{route('login')}}" class="sidenavlink"> Login</a>
                             <a href="{{route('register')}}" class="sidenavlink"> Signup </a>
                         @endif
-                        <a href="#"  class="sidenavlink">Home</a>
-                        <a href="#"  class="sidenavlink">Order</a>
+
+
                         <a href="#demo" data-toggle="collapse"  class="sidenavlink">Categories</a>
 
                         <div id="demo" class="collapse">
@@ -113,8 +113,11 @@
                             <a href="{{ route('categories.type','women') }}"  class="sidenavlink">Women</a>
                             <a href="{{ route('categories.type','etc') }}" class="sidenavlink">Accessories</a>
                         </div>
-                        <a href="#" class="sidenavlink">Terms</a>
-                        <a href="#" class="sidenavlink">Contact Us</a>
+                        <a href="{{ route('about') }}" class="sidenavlink">About</a>
+                        <a href="{{ route('contact') }}" class="sidenavlink">Contact</a>
+                        <a href="{{ route('terms') }}" class="sidenavlink">Terms</a>
+                        <a href="{{ route('faq') }}" class="sidenavlink">Questions</a>
+
 
                     </div>
 
@@ -256,8 +259,10 @@
                     <a href="{{ route('categories.type','women') }}"  class="sidenavlink">Women</a>
                     <a href="{{ route('categories.type','etc') }}" class="sidenavlink">Accessories</a>
                 </div>
-                <a href="#" class="sidenavlink">Terms</a>
-                <a href="#" class="sidenavlink">Contact Us</a>
+                <a href="{{ route('about') }}" class="sidenavlink">About</a>
+                <a href="{{ route('contact') }}" class="sidenavlink">Contact</a>
+                <a href="{{ route('terms') }}" class="sidenavlink">Terms</a>
+                <a href="{{ route('faq') }}" class="sidenavlink">Questions</a>
 
 
             </div>
