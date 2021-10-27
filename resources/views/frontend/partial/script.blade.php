@@ -1,16 +1,19 @@
+<script src="{{ asset('vendor/jquery/jquery-3.2.1.min.js') }}"></script>
 <script src="{{ asset('vendor/bootstrap/js/popper.js') }}"></script>
 <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('vendor/jquery/jquery-3.2.1.min.js') }}"></script>
 
 
 <script>
+
+
+
     function getMessage(id) {
         //console.log("button presses function called!");
         //console.log(id);
         const size = $("#sizeprod").val();
 		//console.log(size);
         const quantity = $("#quantity").val();
-        const url = "/cart/";
+        const url = "{{route('product.cart.add')}}";
 
         $.ajax({
             url: url,
@@ -24,6 +27,7 @@
 
     }
     $(document).ready(function () {
+
         $('#reloadcart').click(function(){
             //document.getElementById("sidecart").innerText = "Lekhaaaaa";
             let url = window.location.href;
@@ -32,8 +36,9 @@
                 method: "GET",
                 success:function(data)
                 {
+                    console.log("{{ Cart::getTotalQuantity() }}")
                     $("#sidecart").load(document.URL + " #sidecart");
-
+                    $("#notq").load(document.URL+ " #notify-cart");
                     //$("#sidecart").load("") = doc.getElementById("sidecart")
 
                 }
