@@ -65,35 +65,22 @@
 
 
                     <!-- Block2 -->
-                    <a href="{{ route('product.view',$product->slug) }}">
+                    <a href="{{ route('product.view',['slug'=>$product->slug,'id'=>$product->id]) }}">
                         <div class="block2">
                             <div class="block2-pic hov-img0">
 
                                         <img src="{{ asset('images/products/' . $product->image[0]->image) }}" alt="IMG-PRODUCT">
 
-                                <a href="#productmodal{{ $product->id }}" data-toggle="modal" data-target="#productmodal{{ $product->id }}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                    Quick View
-                                </a>
-                                <div class="modal fade" id="productmodal{{ $product->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-
-                                    <div class="modal-dialog modal-xl">
-                                        <div class="modal-content">
-
-                                            <div class="modal-body">
-                                                @include('frontend.partial.utils.modal')
-                                            </div>
-                                            <div class="model-footer">
-                                                <button type="button" class="close" data-dismiss="modal"><i style="font-size: 40px;" class="fa fa-times" aria-hidden="true"></i></button>
-                                            </div>
-
-
-                                        </div>
+                                
+                                @if($product->quantity>0)
+                                    <div class="block2-btn flex-c-m stext-103 cl0 size-102 bg7 bor2 hov-btn3 p-lr-15 trans-04" >
+                                Add to Cart
                                     </div>
-
-
-
+                                @else
+                                <div class="block2-btn flex-c-m stext-103 cl1 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04" >
+                                Out of Stock
                                 </div>
+                                    @endif
 
 
 

@@ -67,14 +67,16 @@
       <div class="col-md-6 col-lg-5 p-b-30">
         <div class="p-r-50 p-t-5 p-lr-0-lg">
 
-            <h4 class="mtext-105 cl2  js-name-detail p-b-14">
+           <h4 class="mtext-105 cl2  js-name-detail p-b-14">
                 {{ $product->title }}
 
             </h4>
           <span class="mtext-106 cl2">
             {{ $product->price }} Taka
           </span>
-
+            <p class="stext-102 cl3 p-t-23">
+                {{ $product->description }}
+            </p>
 
             <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" >
                 @if($product->quantity>0)
@@ -83,10 +85,6 @@
                     Stock Out
                 @endif
             </button>
-
-          <p class="stext-102 cl3 p-t-23">
-            {{ $product->description }}
-          </p>
 
           <!--  -->
           <div class="p-t-33">
@@ -123,14 +121,33 @@
                     <i class="fs-16 fa fa-plus"></i>
                   </div>
                 </div>
+                 @if($product->quantity>0)
+
                   <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail" onclick="getMessage('{{$product->id}}')">
                                     Add to cart
                                 </button>
+                                @else
+                                <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+                                   Not Available
+                                </button>
+                                @endif
+
               </div>
             </div>
           </div>
 
-          <!--  -->
+            <!-- -->
+
+            <!-- wild testing
+            <form method="post" action="{{route('product.cart.add')}}">
+                @csrf
+                <input type="text" plcaeholder="size" name="id" id="id" value="{{$product->id}}" />
+                <input type="text" plcaeholder="size" name="size" id="size" value="S" />
+                <input type="text" plcaeholder="Quantity" name="quantity" id="quantity"  value="1" />
+                <button type="submit" plcaeholder="size">Submit</button>
+            </form>
+
+            -->
           <div class="flex-w flex-m p-l-100 p-t-40 respon7">
 
 
@@ -151,7 +168,7 @@
 
     </div>
 
-    <div class="bor10 m-t-50 p-t-43 p-b-40">
+  <div class="bor10 m-t-50 p-t-43 p-b-40">
       <!-- Tab01 -->
       <div class="tab01">
         <!-- Nav tabs -->
@@ -260,7 +277,7 @@
                   </div>
 @auth
                   <!-- Add review -->
-                  <form method="post" action="{{ route('product.review',$product->id) }}" class="w-full">
+                  <form method="post" action="{{ route('product.review',['slug'=>$product->slug,'id'=>$product->id]) }}" class="w-full">
                       @csrf
                     <h5 class="mtext-108 cl2 p-b-7">
                       Add a review
@@ -346,6 +363,7 @@
           @foreach($related as $relproduct)
         <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
           <!-- Block2 -->
+          <a href="{{ route('product.view',['slug'=>$relproduct->slug,'id'=>$relproduct->id]) }}">
           <div class="block2">
             <div class="block2-pic hov-img0">
 
@@ -368,6 +386,7 @@
 
             </div>
           </div>
+          </a>
         </div>
           @endforeach
 

@@ -23,8 +23,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="many new thing">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_21_2021_1_36_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_21_2021_1_36_PM__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_21_2021_4_40_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_21_2021_4_40_PM__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackCategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/product/addproduct.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/product/addproduct.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/category/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/product/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/product/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/search.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/utils/modal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/utils/modal.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,6 +355,10 @@
       <workItem from="1633889343631" duration="5175000" />
       <workItem from="1633934818568" duration="4230000" />
       <workItem from="1634063188562" duration="1948000" />
+      <workItem from="1635097669536" duration="4151000" />
+      <workItem from="1635186929316" duration="2102000" />
+      <workItem from="1635272110569" duration="2404000" />
+      <workItem from="1635527568463" duration="3215000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -475,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633940398408</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="many new thing">
+      <created>1634924374145</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1634924374145</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +524,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="inter" />
+                        <option value="origin/finalize" />
                       </list>
                     </value>
                   </entry>
@@ -520,7 +552,8 @@
     <MESSAGE value="profile init." />
     <MESSAGE value="User Profile" />
     <MESSAGE value="janina ki korsi" />
-    <option name="LAST_COMMIT_MESSAGE" value="janina ki korsi" />
+    <MESSAGE value="many new thing" />
+    <option name="LAST_COMMIT_MESSAGE" value="many new thing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

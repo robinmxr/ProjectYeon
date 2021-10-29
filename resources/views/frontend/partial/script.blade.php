@@ -10,7 +10,7 @@
         const size = $("#sizeprod").val();
 		//console.log(size);
         const quantity = $("#quantity").val();
-        const url = "/cart/";
+        const url = "{{route('product.cart.add')}}";
 
         $.ajax({
             url: url,
@@ -19,6 +19,8 @@
                 quantity: quantity,
                 size:size,
                 _token: '{{csrf_token()}}'},
+            
+            
 
         });
 
@@ -33,10 +35,11 @@
                 success:function(data)
                 {
                     $("#sidecart").load(document.URL + " #sidecart");
-
+                    //console.log("loaded " + data);
                     //$("#sidecart").load("") = doc.getElementById("sidecart")
 
-                }
+                },
+                  
             })
 
         });
