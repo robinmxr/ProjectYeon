@@ -101,7 +101,14 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 {
     font-family: 'Poppins-Medium', sans-serif !important;
 }
+/*-----------------VARIABLES ----------------------------------*/
 
+:root{
+    --red-selected-dark : #3D0000;
+    --red-less-dark: #51050F;
+    --red-matte: #841818;
+    --red-mildly-light: #f87f7f;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ RS PLUGIN ]*/
@@ -2142,7 +2149,7 @@ input.num-product::-webkit-inner-spin-button {
     TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 ==================================================================*/
 .cl0 {color: #fff;}
-.cl1 {color: #FF5C58;}
+.cl1 {color: #717fe0;}
 .cl2 {color: #333;}
 .cl3 {color: #666;}
 .cl4 {color: #999;}
@@ -2676,8 +2683,10 @@ input.num-product::-webkit-inner-spin-button {
 .bg11 {background-color: rgba(219, 17, 17, 0.8);}
 .bg12 {background-color: rgba(17, 180, 19, 0.83);}
 .bg13 {background-color: #3D0000;}
+
 .bg14 {background-color: #51050F;}
 .bg15 {background-color: #841818;}
+.bg16 {background-color: #db3e3e;}
 /*---------------------------------------------*/
 .bg-overlay1::before {
   content: "";
@@ -3561,7 +3570,16 @@ label.star:before {
 
 
 .sizebox:checked + label {
-    background-color: #ddbbff;
-    border-color: #8344cc;
+    /*background-color: #ddbbff;
+    border-color: #8344cc;*/
+    background-color: var(--red-mildly-light);
+    border: solid 2px var(--red-selected-dark);
 
+}
+
+
+
+.btn-col-bg-red {
+    background-color: var(--red-mildly-light);
+    border: solid 2px var(--red-selected-dark);
 }
