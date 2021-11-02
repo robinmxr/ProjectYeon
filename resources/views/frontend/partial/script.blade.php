@@ -6,11 +6,13 @@
 <script>
 
 
-
     function getMessage(id) {
         //console.log("button presses function called!");
         //console.log(id);
-        const size = $("#sizeprod").val();
+        //console.log(size);
+
+        //const size = $("#sizeprod").val();
+        const size = $(".sizebox:checked ").val();
 		//console.log(size);
         const quantity = $("#quantity").val();
         const url = "{{route('product.cart.add')}}";
@@ -22,6 +24,12 @@
                 quantity: quantity,
                 size:size,
                 _token: '{{csrf_token()}}'},
+            success:function (data){
+                let c = "{{ Cart::getTotalQuantity() }}";
+                //let nott = document.getElementById("#notify-cart");
+                //nott.setAttribute("data-notify", c);
+                //$("#notq").load(document.URL+ " #notify-cart");
+            }
 
         });
 
@@ -38,7 +46,7 @@
                 {
                     console.log("{{ Cart::getTotalQuantity() }}")
                     $("#sidecart").load(document.URL + " #sidecart");
-                    $("#notq").load(document.URL+ " #notify-cart");
+
                     //$("#sidecart").load("") = doc.getElementById("sidecart")
 
                 }
@@ -46,6 +54,9 @@
 
         });
     })
+
+
+
 
 
 
@@ -132,6 +143,9 @@
 				swal(nameProduct, "is added to cart !", "success");
 			});
 		});
+
+
+
 
 	</script>
 <!--===============================================================================================-->

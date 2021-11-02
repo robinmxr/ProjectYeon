@@ -2668,7 +2668,10 @@ input.num-product::-webkit-inner-spin-button {
 .bg7 {background-color: #333;}
 .bg8 {background-color: #f3f3f3;}
 .bg9 {background-color: rgba(255,255,255,0.9);}
+.bg10 {background-color: #F62;}
 
+.bg11 {background-color: rgba(219, 17, 17, 0.8);}
+.bg12 {background-color: rgba(17, 180, 19, 0.83);}
 /*---------------------------------------------*/
 .bg-overlay1::before {
   content: "";
@@ -3101,6 +3104,11 @@ input.num-product::-webkit-inner-spin-button {
   background-color: #222;
   color: #fff;
 }
+.hov-btn113:hover {
+  opacity: 0.5;
+}
+
+
 
 .hov-btn1:hover i {
   color: #fff;
@@ -3534,4 +3542,20 @@ label.star:hover {
 label.star:before {
     content: '\f006';
     font-family: FontAwesome
+}
+
+
+
+/* ---------------------- size boxes ----------------------------------- */
+
+
+.sizebox {
+    display: none;
+}
+
+
+.sizebox:checked + label {
+    background-color: #ddbbff;
+    border-color: #8344cc;
+
 }
