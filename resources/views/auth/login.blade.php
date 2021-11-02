@@ -48,7 +48,7 @@
 
 
                     <!--<input type="password" class="inputy" placeholder="Enter Tour Password" required> -->
-                    <button type="submit"  class="btn btn-primary" style="margin-top: 10px;"> {{ __('Login') }}</button>
+                    <button type="submit"  class="btn btn-danger" style="margin-top: 10px;"> {{ __('Login') }}</button>
                     <!--<div class="form-check">
                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 

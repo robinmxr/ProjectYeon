@@ -63,7 +63,7 @@
 
 
                 <!--<input type="password" class="inputy" placeholder="Enter Tour Password" required> -->
-                    <button type="submit"  class="btn btn-primary" style="margin-top: 10px;"> {{ __('Register') }}</button>
+                    <button type="submit"  class="btn btn-danger" style="margin-top: 10px;"> {{ __('Register') }}</button>
 
 
 
