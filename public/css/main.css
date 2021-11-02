@@ -2033,7 +2033,7 @@ input.num-product::-webkit-inner-spin-button {
 
 /*---------------------------------------------*/
 .block1-txt:hover {
-  background-color: rgba(103,117,214,0.8);
+  background-color: rgba(255, 92, 88, 0.5);
 }
 
 .block1-txt:hover .block1-txt-child2 {
@@ -3158,7 +3158,7 @@ input.num-product::-webkit-inner-spin-button {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(103,117,214,0.8);
+  background: #FF5C58;
   opacity: 0;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
