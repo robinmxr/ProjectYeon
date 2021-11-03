@@ -1,13 +1,18 @@
+<script src="{{ asset('vendor/jquery/jquery-3.2.1.min.js') }}"></script>
 <script src="{{ asset('vendor/bootstrap/js/popper.js') }}"></script>
 <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('vendor/jquery/jquery-3.2.1.min.js') }}"></script>
 
 
 <script>
+
+
     function getMessage(id) {
         //console.log("button presses function called!");
         //console.log(id);
-        const size = $("#sizeprod").val();
+        //console.log(size);
+
+        //const size = $("#sizeprod").val();
+        const size = $(".sizebox:checked ").val();
 		//console.log(size);
         const quantity = $("#quantity").val();
         const url = "{{route('product.cart.add')}}";
@@ -19,13 +24,18 @@
                 quantity: quantity,
                 size:size,
                 _token: '{{csrf_token()}}'},
-            
-            
+            success:function (data){
+                let c = "{{ Cart::getTotalQuantity() }}";
+                //let nott = document.getElementById("#notify-cart");
+                //nott.setAttribute("data-notify", c);
+                //$("#notq").load(document.URL+ " #notify-cart");
+            }
 
         });
 
     }
     $(document).ready(function () {
+
         $('#reloadcart').click(function(){
             //document.getElementById("sidecart").innerText = "Lekhaaaaa";
             let url = window.location.href;
@@ -34,16 +44,19 @@
                 method: "GET",
                 success:function(data)
                 {
+                    console.log("{{ Cart::getTotalQuantity() }}")
                     $("#sidecart").load(document.URL + " #sidecart");
-                    //console.log("loaded " + data);
+
                     //$("#sidecart").load("") = doc.getElementById("sidecart")
 
-                },
-                  
+                }
             })
 
         });
     })
+
+
+
 
 
 
@@ -130,6 +143,9 @@
 				swal(nameProduct, "is added to cart !", "success");
 			});
 		});
+
+
+
 
 	</script>
 <!--===============================================================================================-->

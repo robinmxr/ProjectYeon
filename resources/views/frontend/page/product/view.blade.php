@@ -64,111 +64,126 @@
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-5 p-b-30">
-        <div class="p-r-50 p-t-5 p-lr-0-lg">
 
-           <h4 class="mtext-105 cl2  js-name-detail p-b-14">
-                {{ $product->title }}
 
-            </h4>
-          <span class="mtext-106 cl2">
+        <div class="col-md-6 col-lg-5 p-b-30 text-center flex-column">
+            <div class="p-r-50 p-t-5 p-lr-0-lg">
+
+                <h4 class="ltext-103 cl2  js-name-detail p-tb-14">
+                    {{ $product->title }}
+
+                </h4>
+                <div class="mtext-106 cl2 p-tb-7">
             {{ $product->price }} Taka
-          </span>
-            <p class="stext-102 cl3 p-t-23">
-                {{ $product->description }}
-            </p>
+          </div>
 
-            <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04" >
+
+
                 @if($product->quantity>0)
-                    Available
-                @else
-                    Stock Out
-                @endif
-            </button>
+                <div class=" mtext-106 cl0 size-101 trans-04 p-tb-10 bg12 " >
 
-          <!--  -->
-          <div class="p-t-33">
-            <div class="flex-w flex-r-m p-b-10">
-              <div class="size-203 flex-c-m respon6">
-                Size
-              </div>
-
-              <div class="size-204 respon6-next">
-                <div class="rs1-select2 bor8 bg0">
-                  <select class="js-select2" name="time" id="sizeprod">
-
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                  </select>
-                  <div class="dropDownSelect2"></div>
+                        Available
                 </div>
-              </div>
-            </div>
+                    @else
+                    <div class=" mtext-106 cl0 size-101 trans-04 p-tb-10 bg11 " >
+                        Stock Out
+                    </div>
+                    @endif
 
 
-            <div class="flex-w flex-r-m p-b-10">
-              <div class="size-204 flex-w flex-m respon6-next">
-                <div class="wrap-num-product flex-w m-r-20 m-tb-10">
-                  <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-                    <i class="fs-16 fa fa-minus"></i>
-                  </div>
+                <p class="stext-102 cl3 p-t-23">
+                    {{ $product->description }}
+                </p>
 
-                  <input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product"  id="quantity" value="1">
+                <!--  -->
+                <div class="p-t-33">
+                    <div class="flex-w flex-r-m p-b-10">
+                        <div class="size-203 flex-c-m respon6">
+                            Size
+                        </div>
 
-                  <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-                    <i class="fs-16 fa fa-plus"></i>
-                  </div>
+
+                        <div class="size-204 respon6-next">
+
+                            <input type="radio" class="btn-check sizebox " name="options" id="option1" autocomplete="off" value="S" checked>
+                            <label class="btn btn-outline-dark sizeboxlab" for="option1" >S</label>
+
+                            <input type="radio" class="btn-check sizebox" name="options" id="option2" autocomplete="off" value="M">
+                            <label class="btn btn-outline-dark sizeboxlab" for="option2">M</label>
+
+                            <input type="radio" class="btn-check sizebox " name="options" id="option3" autocomplete="off" value="L" disabled>
+                            <label class="btn btn-outline-dark sizeboxlab" for="option3">L</label>
+
+                            <input type="radio" class="btn-check sizebox" name="options" id="option4" autocomplete="off" value="XL">
+                            <label class="btn btn-outline-dark sizeboxlab" for="option4" >XL</label>
+
+                        </div>
+                        <!--
+                        <div class="size-204 respon6-next">
+                            <div class="rs1-select2 bor8 bg0">
+                                <select class="js-select2" name="time" id="sizeprod" type="radio">
+
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                </select>
+                                <div class="dropDownSelect2"></div>
+                            </div>
+                        </div>
+
+                        -->
+                    </div>
+
+
+                    <div class="flex-w flex-r-m p-b-10">
+                        <div class="size-204 flex-w flex-m respon6-next">
+                            <div class="wrap-num-product flex-w m-r-20 m-tb-10">
+                                <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+                                    <i class="fs-16 fa fa-minus"></i>
+                                </div>
+
+                                <input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product"  id="quantity" value="1">
+
+                                <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+                                    <i class="fs-16 fa fa-plus"></i>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
                 </div>
-                 @if($product->quantity>0)
+                <div class="flex-row text-center">
+                    <button class="stext-101 btn-col-bg-red size-101 m-2 hov-btn1  trans-04 js-addcart-detail" onclick="getMessage('{{$product->id}}')">
+                        Add to Wishlist
+                    </button>
+                    <button class="stext-101 btn-col-bg-red size-101 m-2   hov-btn1  trans-04 js-addcart-detail" onclick="getMessage('{{$product->id}}')">
+                        Add to cart
+                    </button>
+                </div>
+                <!--  -->
+                <div class="flex-w flex-m p-l-100 p-t-40 respon7">
 
-                  <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail" onclick="getMessage('{{$product->id}}')">
-                                    Add to cart
-                                </button>
-                                @else
-                                <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
-                                   Not Available
-                                </button>
-                                @endif
 
-              </div>
+                    <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+
+                    <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+
+                    <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                </div>
             </div>
-          </div>
-
-            <!-- -->
-
-            <!-- wild testing
-            <form method="post" action="{{route('product.cart.add')}}">
-                @csrf
-                <input type="text" plcaeholder="size" name="id" id="id" value="{{$product->id}}" />
-                <input type="text" plcaeholder="size" name="size" id="size" value="S" />
-                <input type="text" plcaeholder="Quantity" name="quantity" id="quantity"  value="1" />
-                <button type="submit" plcaeholder="size">Submit</button>
-            </form>
-
-            -->
-          <div class="flex-w flex-m p-l-100 p-t-40 respon7">
-
-
-            <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
-              <i class="fa fa-facebook"></i>
-            </a>
-
-            <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
-              <i class="fa fa-twitter"></i>
-            </a>
-
-            <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </div>
         </div>
-      </div>
 
     </div>
 
-  <div class="bor10 m-t-50 p-t-43 p-b-40">
+    <div class="bor10 m-t-50 p-t-43 p-b-40">
       <!-- Tab01 -->
       <div class="tab01">
         <!-- Nav tabs -->
@@ -277,7 +292,7 @@
                   </div>
 @auth
                   <!-- Add review -->
-                  <form method="post" action="{{ route('product.review',['slug'=>$product->slug,'id'=>$product->id]) }}" class="w-full">
+                  <form method="post" action="{{ route('product.review',$product->id) }}" class="w-full">
                       @csrf
                     <h5 class="mtext-108 cl2 p-b-7">
                       Add a review
@@ -363,7 +378,6 @@
           @foreach($related as $relproduct)
         <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
           <!-- Block2 -->
-          <a href="{{ route('product.view',['slug'=>$relproduct->slug,'id'=>$relproduct->id]) }}">
           <div class="block2">
             <div class="block2-pic hov-img0">
 
@@ -386,7 +400,6 @@
 
             </div>
           </div>
-          </a>
         </div>
           @endforeach
 

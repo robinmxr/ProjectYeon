@@ -101,7 +101,14 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 {
     font-family: 'Poppins-Medium', sans-serif !important;
 }
+/*-----------------VARIABLES ----------------------------------*/
 
+:root{
+    --red-selected-dark : #3D0000;
+    --red-less-dark: #51050F;
+    --red-matte: #841818;
+    --red-mildly-light: #f87f7f;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ RS PLUGIN ]*/
@@ -138,7 +145,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .loader05 {
   width: 56px;
   height: 56px;
-  border: 4px solid #717fe0;
+  border: 4px solid #FF5C58;
   border-radius: 50%;
   position: relative;
   animation: loader-scale 1s ease-out infinite;
@@ -166,7 +173,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   height: 38px;
   bottom: 0px;
   right: 40px;
-  background-color: #717fe0;
+  background-color: #FF5C58;
   opacity: 0.5;
   justify-content: center;
   align-items: center;
@@ -186,7 +193,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 .btn-back-to-top:hover {
   opacity: 1;
-  background-color: #717fe0;
+  background-color: #FF5C58;
 }
 
 @media (max-width: 575px) {
@@ -295,7 +302,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 .header-v3 .wrap-menu-desktop {
-  background-color: rgba(49, 44, 81, 0.3);;
+  background-color: rgba(132, 24, 24, 0.2);
   top: 0;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
@@ -517,7 +524,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   min-width: 15px;
   height: 15px;
   padding: 0 3px;
-  background-color: #717fe0;
+  background-color: #FF5C58;
 }
 
 /*---------------------------------------------*/
@@ -640,8 +647,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 .header-v3 .fix-menu-desktop .wrap-menu-desktop {
-    background-color: #312c51;
-    border-color: #312c51;
+    background-color: #841818;
+    border-color: #641212;
     height: 65px;
 }
 
@@ -748,7 +755,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .main-menu-m {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #717fe0;
+  background-color: #FF5C58;
 }
 
 .main-menu-m > li > a {
@@ -1667,7 +1674,7 @@ button.mfp-close {
 
 
 .swal-button {
-  background-color: #717fe0;
+  background-color: #FF5C58;
   font-family: Poppins-Regular;
   font-size: 16px;
   color: white;
@@ -1755,8 +1762,8 @@ button.mfp-close {
 
 .show-search:hover:after,
 .show-filter:hover:after {
-  background-color: #717fe0;
-  border-color: #717fe0;
+  background-color: #FF5C58;
+  border-color: #FF5C58;
 }
 
 /*---------------------------------------------*/
@@ -2033,7 +2040,7 @@ input.num-product::-webkit-inner-spin-button {
 
 /*---------------------------------------------*/
 .block1-txt:hover {
-  background-color: rgba(103,117,214,0.8);
+  background-color: rgba(255, 92, 88, 0.5);
 }
 
 .block1-txt:hover .block1-txt-child2 {
@@ -2154,6 +2161,9 @@ input.num-product::-webkit-inner-spin-button {
 .cl10 {color: #1d1d1d;}
 .cl11 {color: #f9ba48;}
 .cl12 {color: #ccc;}
+.c13 {color : #3D0000;}
+.c14 {color : #841818;}
+.c15 {color : #51050F;}
 
 /*//////////////////////////////////////////////////////////////////
 [ S-Text 0 - 15 ]*/
@@ -2660,7 +2670,7 @@ input.num-product::-webkit-inner-spin-button {
 ==================================================================*/
 .bg-none {background-color: transparent;}
 .bg0 {background-color: #fff;}
-.bg1 {background-color: #717fe0;}
+.bg1 {background-color: #FF5C58;}
 .bg2 {background-color: #e6e6e6;}
 .bg3 {background-color: #222;}
 .bg5 {background-color: rgba(0,0,0,0.5);}
@@ -2668,7 +2678,15 @@ input.num-product::-webkit-inner-spin-button {
 .bg7 {background-color: #333;}
 .bg8 {background-color: #f3f3f3;}
 .bg9 {background-color: rgba(255,255,255,0.9);}
+.bg10 {background-color: #F62;}
 
+.bg11 {background-color: rgba(219, 17, 17, 0.8);}
+.bg12 {background-color: rgba(17, 180, 19, 0.83);}
+.bg13 {background-color: #3D0000;}
+
+.bg14 {background-color: #51050F;}
+.bg15 {background-color: #841818;}
+.bg16 {background-color: #db3e3e;}
 /*---------------------------------------------*/
 .bg-overlay1::before {
   content: "";
@@ -3070,8 +3088,8 @@ input.num-product::-webkit-inner-spin-button {
 
 .hov-cl0:hover {color: #fff;}
 .hov-bg0:hover {background-color: #fff;}
-.hov-cl1:hover {color: #717fe0;}
-.hov-bg1:hover {background-color: #717fe0;}
+.hov-cl1:hover {color: #FF5C58;}
+.hov-bg1:hover {background-color: #FF5C58;}
 
 /*---------------------------------------------*/
 .hov-img0 {
@@ -3101,6 +3119,11 @@ input.num-product::-webkit-inner-spin-button {
   background-color: #222;
   color: #fff;
 }
+.hov-btn113:hover {
+  opacity: 0.5;
+}
+
+
 
 .hov-btn1:hover i {
   color: #fff;
@@ -3110,13 +3133,13 @@ input.num-product::-webkit-inner-spin-button {
 .hov-btn2:hover {
   border-color: #fff;
   background-color: #fff;
-  color: #717fe0;
+  color: #FF5C58;
 }
 
 /*---------------------------------------------*/
 .hov-btn3:hover {
-  border-color: #717fe0;
-  background-color: #717fe0;
+  border-color: #FF5C58;
+  background-color: #FF5C58;
   color: #fff;
 }
 
@@ -3126,8 +3149,8 @@ input.num-product::-webkit-inner-spin-button {
 
 /*---------------------------------------------*/
 .hov-tag1:hover {
-  color: #717fe0;
-  border-color: #717fe0;
+  color: #FF5C58;
+  border-color: #FF5C58;
 }
 
 
@@ -3144,7 +3167,7 @@ input.num-product::-webkit-inner-spin-button {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(103,117,214,0.8);
+  background: #FF5C58;
   opacity: 0;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -3355,7 +3378,7 @@ input.num-product::-webkit-inner-spin-button {
 
 }
 .bggrad {
-    background-image: linear-gradient(#312c51, #48426d, #312c51) ;
+    background-image: linear-gradient(rgb(132, 24, 24), rgb(175, 38, 38), rgb(132, 24, 24)) ;
 
 }
 .silverbgrad{
@@ -3534,4 +3557,29 @@ label.star:hover {
 label.star:before {
     content: '\f006';
     font-family: FontAwesome
+}
+
+
+
+/* ---------------------- size boxes ----------------------------------- */
+
+
+.sizebox {
+    display: none;
+}
+
+
+.sizebox:checked + label {
+    /*background-color: #ddbbff;
+    border-color: #8344cc;*/
+    background-color: var(--red-mildly-light);
+    border: solid 2px var(--red-selected-dark);
+
+}
+
+
+
+.btn-col-bg-red {
+    background-color: var(--red-mildly-light);
+    border: solid 2px var(--red-selected-dark);
 }
