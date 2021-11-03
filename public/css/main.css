@@ -3574,8 +3574,8 @@ label.star:before {
 
 
 .sizebox:checked + label {
-    background-color: #ddbbff;
-    border-color: #8344cc;
+    background-color: var(--red-mildly-light);
+    border-color:2px solid var(--red-selected-dark);
 
 }
 
