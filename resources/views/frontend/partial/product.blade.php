@@ -6,6 +6,7 @@
             </h3>
         </div>
         <div class="flex-w flex-sb-m p-b-32">
+
             <div class="flex-w flex-l-m filter-tope-group m-tb-10">
                 <button class="bor11 stext-109 btn-col-bg-red size-107 m-2 hov-btn1  trans-04" data-filter="*">
                     All Products
@@ -24,7 +25,6 @@
                 </button>
 
             </div>
-
             <div class="flex-w flex-c-m m-tb-10">
 
 
@@ -68,7 +68,7 @@
 
                                         <img src="{{ asset('images/products/' . $product->image[0]->image) }}" alt="IMG-PRODUCT">
 
-                                
+
                                 @if($product->quantity>0)
                                     <div class="block2-btn flex-c-m stext-103 cl0 size-102 bg7 bor2 hov-btn3 p-lr-15 trans-04" >
                                 Add to Cart
