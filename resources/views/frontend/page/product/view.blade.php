@@ -80,7 +80,7 @@
 
 
                 @if($product->quantity>0)
-                <div class=" mtext-106 cl0 size-101 trans-04 p-tb-10 bg12 " >
+                <div class=" mtext-106  size-101 trans-04 p-tb-10 blinking " >
 
                         Available
                 </div>
