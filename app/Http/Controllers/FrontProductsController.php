@@ -17,17 +17,23 @@ class FrontProductsController extends Controller
         $products = Product::orderBy('id','desc')->paginate(16);
         return view('frontend.page.product.index',compact('products'));
     }
-    public function bytag($tag)
+    public function viewbytag($tag)
     {
         $products = Product::where('tag',$tag)->paginate(16);
         return view('frontend.page.product.index',compact('products'));
     }
-    public function viewproduct($slug)
+    public function viewbycat($id)
     {
-        $product = Product::where('slug', $slug)->first();
+        $products = Product::where('category_id',$id)->paginate(16);
+        return view('frontend.page.product.index',compact('products'));
+    }
+    public function viewproduct($id,$slug)
+    {
+        $product = Product::find($id);
         $review = ProductReview::where('product_id',$product->id)->get();
         $related= Product::where('category_id', '=', $product->category->id)->where('id', '!=', $product->id)->get();
         return view('frontend.page.product.view',compact('product','related','review'));
+
     }
     public function addtocart(Request $request){
     $product = Product::find($request->id);

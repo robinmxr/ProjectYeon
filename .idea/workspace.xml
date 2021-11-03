@@ -22,15 +22,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="htaccess">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="many new thing">
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="prod">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/icons/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/icons/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +72,7 @@
         </map>
       </branch-storage>
     </favorite-branches>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="inter" />
@@ -226,10 +224,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/frontend/page" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -340,6 +339,12 @@
       <workItem from="1633889343631" duration="5175000" />
       <workItem from="1633934818568" duration="4230000" />
       <workItem from="1634063188562" duration="1948000" />
+      <workItem from="1635097669536" duration="4151000" />
+      <workItem from="1635186929316" duration="2102000" />
+      <workItem from="1635272110569" duration="2404000" />
+      <workItem from="1635527568463" duration="3576000" />
+      <workItem from="1635919489273" duration="1704000" />
+      <workItem from="1635960313145" duration="1387000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -481,36 +486,21 @@
       <option name="project" value="LOCAL" />
       <updated>1633940398408</updated>
     </task>
-    <task id="LOCAL-00021" summary="modal fix .. I guess?">
-      <created>1634807036514</created>
+    <task id="LOCAL-00021" summary="many new thing">
+      <created>1634924374145</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1634807036514</updated>
+      <updated>1634924374145</updated>
     </task>
-    <task id="LOCAL-00022" summary="cpanel yml">
-      <created>1634823116603</created>
+    <task id="LOCAL-00022" summary="prod">
+      <created>1635531025849</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1634823116603</updated>
+      <updated>1635531025849</updated>
     </task>
-    <task id="LOCAL-00023" summary="cpanel yml">
-      <created>1634824726570</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1634824726570</updated>
-    </task>
-    <task id="LOCAL-00024" summary="htaccess">
-      <created>1634824740121</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1634824740121</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +517,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="inter" />
+                        <option value="origin/finalize" />
                       </list>
                     </value>
                   </entry>
@@ -555,11 +545,9 @@
     <MESSAGE value="profile init." />
     <MESSAGE value="User Profile" />
     <MESSAGE value="janina ki korsi" />
-    <MESSAGE value="modal fix .. I guess?" />
-    <MESSAGE value="cpanel yml" />
-    <MESSAGE value="htaccess" />
-    <option name="LAST_COMMIT_MESSAGE" value="htaccess" />
-    <option name="LAST_COMMIT_MESSAGE" value="janina ki korsi" />
+    <MESSAGE value="many new thing" />
+    <MESSAGE value="prod" />
+    <option name="LAST_COMMIT_MESSAGE" value="prod" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

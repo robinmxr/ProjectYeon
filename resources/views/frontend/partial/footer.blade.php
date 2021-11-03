@@ -1,5 +1,31 @@
 <!-- Footer -->
+<!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
 
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "101351325126372");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 <footer class="bg3 p-t-75 p-b-32">
   <div class="container">
     <div class="row">
@@ -112,9 +138,5 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     </div>
   </div>
 </footer>
-<div class="btn-back-to-top" id="myBtn">
-  <span class="symbol-btn-back-to-top">
-    <i class="fa fa-arrow-circle-o-up"></i>
-  </span>
-</div>
+
 

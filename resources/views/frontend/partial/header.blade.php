@@ -16,10 +16,8 @@
 
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
-
 <!--===============================================================================================-->
-
-     <!--===============================================================================================-->
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('fonts/linearicons-v1.0.0/icon-font.min.css') }}">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('vendor/animate/animate.css') }}">
@@ -318,7 +316,7 @@
                             </div>
                         </div>
                         <div class="flex-c-m h-full p-r-25 bor6">
-                            <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" id="notify-cart" data-notify="{{ Cart::getTotalQuantity() }}">
+                            <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="{{ Cart::getTotalQuantity() }}">
                                 <i class="fa fa-opencart" id="reloadcart"></i>
                             </div>
                         </div>
@@ -360,8 +358,8 @@
                     <a href="{{route('login')}}" class="sidenavlink"> Login</a>
                     <a href="{{route('register')}}" class="sidenavlink"> Signup </a>
                 @endif
-                <a href="{{route('home')}}"  class="sidenavlink">Home</a>
-                <!--<a href="#"  class="sidenavlink">Order</a>-->
+
+
                 <a href="#demo" data-toggle="collapse"  class="sidenavlink">Categories</a>
 
                 <div id="demo" class="collapse">
@@ -377,7 +375,7 @@
 
             </div>
             <div class="flex-c-m h-full p-lr-19">
-                <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11">
+                <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11">
                     <i class="fa fa-bars" onclick="openNav()"></i>
                 </div>
             </div>
@@ -387,10 +385,8 @@
 
 
             <div class="wrap-icon-header flex-w flex-r-m h-full m-r-15">
-                <div class="flex-c-m h-full p-r-5" >
-                    <div id="notq">
-                        <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart " id="notify-cart" data-notify="{{ Cart::getTotalQuantity() }}">
-                    </div>
+                <div class="flex-c-m h-full p-r-5">
+                    <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart " data-notify="{{ Cart::getTotalQuantity() }}">
                         <i class="fa fa-opencart"></i>
                     </div>
                 </div>

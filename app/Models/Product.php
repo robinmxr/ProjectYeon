@@ -27,10 +27,15 @@ class Product extends Model
       return $this->belongsTo('App\Models\Category', 'category_id');
 
     }
+    public function size()
+    {
+        return $this->hasMany('App\Models\ProductSize');
+    }
     public function delete()
     {
         // delete all related photos
         $this->image()->delete();
+        $this->size()->delete();
         // as suggested by Dirk in comment,
         // it's an uglier alternative, but faster
         // Photo::where("user_id", $this->id)->delete()

@@ -42,4 +42,11 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\UserImage');
     }
+    public function delete()
+    {
+
+        $this->image()->delete();
+
+        return parent::delete();
+    }
 }

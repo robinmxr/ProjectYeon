@@ -50,7 +50,7 @@ class BackCategoriesController extends Controller
           $constraint->aspectRatio();
       });
   $originalpath=public_path().'/images/categories/';
-  $final_image->save($originalpath.time().$image->getClientOriginalName());
+  $final_image->save('images/categories/'.time().$image->getClientOriginalName());
   $category->image=time().$image->getClientOriginalName();
         $category->save();
 

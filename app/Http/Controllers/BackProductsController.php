@@ -48,7 +48,7 @@ class BackProductsController extends Controller
       {
 
         $request->validate([
-          'title' => 'required|unique:products|max:150',
+          'title' => 'required|max:150',
           'price' => 'required|numeric',
           'category_id'=>'required',
           'description'=>'required',
@@ -81,7 +81,7 @@ class BackProductsController extends Controller
                   $constraint->aspectRatio();
               });
           $originalpath=public_path().'/images/products/';
-          $final_image->save($originalpath.time().$image->getClientOriginalName());
+          $final_image->save('images/products/'.time().$image->getClientOriginalName());
 
           $product_image = new ProductImage;
           $product_image->product_id = $product->id;

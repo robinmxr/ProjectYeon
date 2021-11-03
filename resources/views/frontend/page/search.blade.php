@@ -58,7 +58,7 @@
 
 
                         <!-- Block2 -->
-                        <a href="{{ route('product.view',$product->slug) }}">
+                        <a href="{{ route('product.view',['slug'=>$product->slug,'id'=>$product->id]) }}">
                             <div class="block2">
                                 <div class="block2-pic hov-img0">
                                     @php $i=1; @endphp
