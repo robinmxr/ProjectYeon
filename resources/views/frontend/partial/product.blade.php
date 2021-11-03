@@ -7,24 +7,21 @@
         </div>
         <div class="flex-w flex-sb-m p-b-32">
             <div class="flex-w flex-l-m filter-tope-group m-tb-10">
-                <button class="btn btn-outline-dark" data-filter="*">
+                <button class="bor11 stext-109 btn-col-bg-red size-107 m-2 hov-btn1  trans-04" data-filter="*">
                     All Products
                 </button>
 
-                <button class="btn btn-outline-dark" data-filter=".women">
+                <button class="bor11  stext-109 btn-col-bg-red size-107 m-2 hov-btn1  trans-04" data-filter=".women">
                     Women
                 </button>
 
-                <button class="btn btn-outline-dark" data-filter=".men">
+                <button class="bor11 stext-109 btn-col-bg-red size-107 m-2 hov-btn1  trans-04" data-filter=".men">
                     Men
                 </button>
 
-                <button class="btn btn-outline-dark" data-filter=".etc">
+                <button class="bor11 stext-109 btn-col-bg-red size-107 m-2 hov-btn1  trans-04" data-filter=".etc">
                     Accesories
                 </button>
-
-
-
 
             </div>
 
