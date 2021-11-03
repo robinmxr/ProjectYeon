@@ -66,7 +66,7 @@
 
 
 
-        <div class="col-md-6 col-lg-5 p-b-30 text-center flex-column">
+        <div class="col-md-6 col-lg-5 p-b-30 text-center">
             <div class="p-r-50 p-t-5 p-lr-0-lg">
 
                 <h4 class="ltext-103 cl2  js-name-detail p-tb-14">
@@ -150,18 +150,13 @@
                                 </div>
                             </div>
 
-
+                            <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail" onclick="getMessage('{{$product->id}}')">
+                                Add to cart
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="flex-row text-center">
-                    <button class="stext-101 btn-col-bg-red size-101 m-2 hov-btn1  trans-04 js-addcart-detail" onclick="getMessage('{{$product->id}}')">
-                        Add to Wishlist
-                    </button>
-                    <button class="stext-101 btn-col-bg-red size-101 m-2   hov-btn1  trans-04 js-addcart-detail" onclick="getMessage('{{$product->id}}')">
-                        Add to cart
-                    </button>
-                </div>
+
                 <!--  -->
                 <div class="flex-w flex-m p-l-100 p-t-40 respon7">
 
