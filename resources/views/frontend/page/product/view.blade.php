@@ -150,9 +150,14 @@
                                 </div>
                             </div>
 
-                            <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail" onclick="getMessage('{{$product->id}}')">
-                                Add to cart
-                            </button>
+                                <button class="flex-c-m stext-102 cl0 size-102 btn-col-bg-red m-2  hov-btn1 p-lr-10 trans-04 js-addcart-detail" onclick="getMessage('{{$product->id}}')">
+                                    Add to Wishlist
+                                </button>
+                                <button class="flex-c-m stext-102 cl0 size-102 btn-col-bg-red m-2 hov-btn1 p-lr-10 trans-04 js-addcart-detail" onclick="getMessage('{{$product->id}}')">
+                                    Add to cart
+                                </button>
+
+
                         </div>
                     </div>
                 </div>
