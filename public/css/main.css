@@ -3431,7 +3431,7 @@ input.num-product::-webkit-inner-spin-button {
     margin:  40px auto;
     width: fit-content;
     length: fit-content;
-    //border: grey solid 3px;
+    border: rgb(206, 72, 72) solid 3px;
     padding: 10px;
     backdrop-filter: blur(10px);
 
@@ -3440,7 +3440,7 @@ input.num-product::-webkit-inner-spin-button {
 }
 
 .fcol {
-    background-color: rgba(81, 44, 44, 0.3);
+    background-color: rgba(87, 53, 53, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -3583,4 +3583,54 @@ label.star:before {
 .btn-col-bg-red {
     background-color: var(--red-mildly-light);
     border: solid 2px var(--red-selected-dark);
+}
+
+
+/*---------------------blinking tabs -----------------*/
+
+
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: .2;
+    }
+
+    20% {
+        opacity: .4;
+    }
+    30% {
+        opacity: .6;
+    }
+    40% {
+        opacity: .8;
+    }
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: .8;
+    }
+    70% {
+        opacity: .6;
+    }
+    80% {
+        opacity: .4;
+    }
+    90% {
+        opacity: .2;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.blinking {
+    color: #28A745FF;
+    animation-duration: 2s;
+    animation-iteration-count: infinite ;
+   -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: blink;
 }
