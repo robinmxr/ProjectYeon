@@ -48,13 +48,15 @@ Auth::routes();
 /*------------------------Product Route Frontend----------------------------*/
 Route::get('/product', [FrontProductsController::class, 'index'])->name('products');
 
-Route::get('/product/{slug}', [FrontProductsController::class, 'viewproduct'])->name('product.view');
+Route::get('/product/{id}/{slug}', [FrontProductsController::class, 'viewproduct'])->name('product.view');
 
-Route::post('/product/{slug}', [ProductReviewController::class, 'addreview'])->name('product.review');
+Route::post('/product/{id}/{slug}', [ProductReviewController::class, 'addreview'])->name('product.review');
+Route::get('/product/{tag}', [FrontProductsController::class, 'viewbytag'])->name('product.tag');
 
 
 
 Route::get('/category', [FrontCategoriesController::class, 'index'])->name('categories');
+Route::get('/category/id/{id}', [FrontProductsController::class, 'viewbycat'])->name('product.cat');
 
 Route::get('/category/{type}', [FrontCategoriesController::class, 'bytype'])->name('categories.type');
 

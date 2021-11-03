@@ -106,8 +106,8 @@ class UserController extends Controller
         $final_image= Image::make($image)->resize(180,180, function ($constraint) {
             $constraint->aspectRatio();
         });
-        $originalpath=public_path().'/images/profiles/';
-        $final_image->save($originalpath.time().$image->getClientOriginalName());
+        $originalpath='/images/profiles/';
+        $final_image->save('images/profiles/'.time().$image->getClientOriginalName());
 
         $user_image = new UserImage;
         $user_image->user_id = Auth::user()->id;
