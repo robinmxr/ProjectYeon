@@ -119,7 +119,12 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .slick-slide {outline: none !important;}
 
 
-
+:root {
+    --red-selected-dark:  #3D0000;
+    --red-less-dark:  #51050F;
+    --red-matte:  #841818;
+    --red-mildly-light:  #f87f7f;
+}
 
 
 /*//////////////////////////////////////////////////////////////////
@@ -412,7 +417,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   visibility: hidden;
   opacity: 0;
   border-radius: 5px;
-  
+
 }
 
 .sub-menu li {
@@ -3622,4 +3627,10 @@ label.star:before {
    -moz-animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
     animation-name: blink;
+}
+
+
+.btn-col-bg-red {
+    background-color: var(--red-mildly-light);
+    border: 2px solid var(--red-selected-dark);
 }
