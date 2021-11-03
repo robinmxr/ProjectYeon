@@ -21,12 +21,13 @@
 .dasbordleft{
     content: "";
     height: 100%;
-    width: 70%;
+    width: 50%;
     position: fixed;
     z-index: -100;
     top: 0;
     left: 0;
-    background-color: #312c51;
+    background-color: rgba(81, 44, 44, 0.8);
+    backdrop-filter: blur(6px);
 
     -webkit-transform: skew(20deg);
     -moz-transform: skew(20deg);
@@ -81,20 +82,23 @@
 
 .sidenavlink {
 
-    text-align: center;
+    text-align: left;
     padding: 8px 8px 8px 8px;
     text-decoration: none;
     font-size: 18px;
-    color: #818181;
+    /*color: #818181;*/
+    color: var(--white);
     display: block;
     transition: 0.3s;
     margin-right: 5px;
+    border-bottom: #fff0f0 solid 1px;
 }
 
 .sidenavlink:hover {
 
-    color: #f1f1f1;
-    border: #f1f1f1 solid 2px;
+    color: var(--white);
+    /*border: #f1f1f1 solid 2px;*/
+    border-color: var(--white);
     font-size: 30px;
 }
 .sidenavdiv{

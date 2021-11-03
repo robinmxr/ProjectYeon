@@ -169,8 +169,8 @@
 	</script>
 <script>
     function openNav() {
-        document.getElementById("mySidenavpc").style.width = "25%";
-        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mySidenavpc").style.width = "20%";
+        document.getElementById("mySidenav").style.width = "200px";
 
     }
 
