@@ -649,7 +649,11 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 .header-v3 .fix-menu-desktop .wrap-menu-desktop {
     background-color: #841818;
-    border-color: #641212;
+    /*border-bottom: 7px solid #641212;*/
+    box-shadow:
+        inset 0 -3em 3em rgba(0,0,0,0.1),
+        0 0  0 2px #641212,
+        0.3em 0.3em 1em rgba(0,0,0,0.3);
     height: 65px;
 }
 
