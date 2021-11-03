@@ -17,7 +17,7 @@ class CreateProductSizesTable extends Migration
             $table->id();
             $table->integer('product_id')->unsigned();
             $table->string('name');
-            $table->string('dimensions');
+            $table->string('dimensions')->nullable();
             $table->timestamps();
         });
     }
