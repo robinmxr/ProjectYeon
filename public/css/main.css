@@ -119,7 +119,12 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .slick-slide {outline: none !important;}
 
 
-
+:root {
+    --red-selected-dark:  #3D0000;
+    --red-less-dark:  #51050F;
+    --red-matte:  #841818;
+    --red-mildly-light:  #f87f7f;
+}
 
 
 /*//////////////////////////////////////////////////////////////////
@@ -412,7 +417,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   visibility: hidden;
   opacity: 0;
   border-radius: 5px;
-  
+
 }
 
 .sub-menu li {
@@ -3569,9 +3574,65 @@ label.star:before {
 
 
 .sizebox:checked + label {
-    background-color: #ddbbff;
-    border-color: #8344cc;
+    background-color: var(--red-mildly-light);
+    border-color:2px solid var(--red-selected-dark);
 
+}
+
+
+/*---------------------blinking tabs -----------------*/
+
+
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: .2;
+    }
+
+    20% {
+        opacity: .4;
+    }
+    30% {
+        opacity: .6;
+    }
+    40% {
+        opacity: .8;
+    }
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: .8;
+    }
+    70% {
+        opacity: .6;
+    }
+    80% {
+        opacity: .4;
+    }
+    90% {
+        opacity: .2;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.blinking {
+    color: #28A745FF;
+    animation-duration: 2s;
+    animation-iteration-count: infinite ;
+   -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: blink;
+}
+
+
+.btn-col-bg-red {
+    background-color: var(--red-mildly-light);
+    border: 2px solid var(--red-selected-dark);
 }
 
 

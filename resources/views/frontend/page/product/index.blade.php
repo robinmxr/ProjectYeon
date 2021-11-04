@@ -14,25 +14,27 @@ Products
 	<div class="bg0 m-t-23 p-b-140">
 		<div class="container">
 			<div class="flex-w flex-sb-m p-b-52">
-				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
-                    <button class="btn btn-outline-dark" data-filter="*">
+
+
+                <div class="flex-w flex-l-m filter-tope-group m-tb-10">
+
+                    <button class="bor11 stext-109 btn-col-bg-red size-107 m-2 hov-btn1  trans-04" data-filter="*">
                         All Products
                     </button>
 
-                    <button class="btn btn-outline-dark" data-filter=".women">
+                    <button class="bor11  stext-109 btn-col-bg-red size-107 m-2 hov-btn1  trans-04" data-filter=".women">
                         Women
                     </button>
 
-                    <button class="btn btn-outline-dark" data-filter=".men">
+                    <button class="bor11 stext-109 btn-col-bg-red size-107 m-2 hov-btn1  trans-04" data-filter=".men">
                         Men
                     </button>
 
-                    <button class="btn btn-outline-dark" data-filter=".etc">
+                    <button class="bor11 stext-109 btn-col-bg-red size-107 m-2 hov-btn1  trans-04" data-filter=".etc">
                         Accesories
                     </button>
 
-				</div>
-
+                </div>
 				<div class="flex-w flex-c-m m-tb-10">
 
 
@@ -76,7 +78,7 @@ Products
 
 						<img src="{{ asset('images/products/' . $product->image[0]->image) }}" alt="IMG-PRODUCT">
 
-							
+
                             @if($product->quantity>0)
                                     <div class="block2-btn flex-c-m stext-103 cl0 size-102 bg7 bor2 hov-btn3 p-lr-15 trans-04" >
                                 Add to Cart
