@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Category;
+use App\Models\ProductSize;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\Product;
@@ -72,6 +73,15 @@ class BackProductsController extends Controller
         $product->category_id=$request->category_id;
         $product->slug=Str::slug($request->title,'-');
         $product->save();
+
+        if(!is_null($request->size)) {
+            foreach ($request->size ?? [] as $size) {
+                $newsize = new ProductSize;
+                $newsize->name = $size;
+                $newsize->product_id = $product->id;
+                $newsize->save();
+            }
+        }
 
         //ProductImage Model insert Image
         if(count($request->product_image) > 0) {
