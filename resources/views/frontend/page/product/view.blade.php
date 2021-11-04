@@ -145,7 +145,7 @@
                 </div>
 
                 <div class="flex-row">
-                    <button class="stext-102 cl0 size-102 m-2 btn-col-bg-red  hov-btn1 p-lr-5 trans-04 js-addcart-detail" onclick="addtoWishlist('{{$product->id}}')">
+                    <button class="stext-102 cl0 size-102 m-2 btn-col-bg-red  hov-btn1 p-lr-5 trans-04 js-addwish-detail" onclick="addtoWishlist('{{$product->id}}')">
                         Add to Wishlist
                     </button>
                     <button class="stext-102 cl0 size-102 m-2 btn-col-bg-red hov-btn1 p-lr-10 trans-04 js-addcart-detail" onclick="getMessage('{{$product->id}}')">

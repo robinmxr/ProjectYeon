@@ -9,8 +9,7 @@
 
     function addtoWishlist(prodId){
         const url = "{{route('wishlist.add')}}"
-        console.log(url);
-        console.log(prodId);
+
         $.ajax({
             url: url,
             method: "POST",
@@ -147,7 +146,7 @@
 			$(this).on('click', function(){
 				swal(nameProduct, "is added to wishlist !", "success");
 
-				$(this).addClass('js-addedwish-detail');
+
 				$(this).off('click');
 			});
 		});
