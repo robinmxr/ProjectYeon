@@ -88,7 +88,9 @@ class FrontPagesController extends Controller
 
     public function showWishlist(){
         //TODO:  A wishlist view page
-        return ;
+
+
+        return view('frontend.page.wishlist');
     }
 
 }

@@ -137,6 +137,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/profile/addimage', [UserController::class, 'addimage'])->name('addimage');
     Route::post('wishlist/add', [FrontPagesController::class, 'addtoWishlist'])->name('wishlist.add');
     //TODO: Wishlist view design.
+    Route::get('/wishlist/', [FrontPagesController::class, 'showWishlist'])->name('wishlist');
     Route::post('/checkout/order', [CheckoutController::class, 'placeOrder'])->name('checkout.place.order');
 });
 
