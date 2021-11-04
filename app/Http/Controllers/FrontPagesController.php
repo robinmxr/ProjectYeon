@@ -6,6 +6,7 @@ use App\Models\Product;
 
 
 use App\Models\ProductReview;
+use App\Models\Wishlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -57,6 +58,33 @@ class FrontPagesController extends Controller
         return view('frontend.page.terms');
     }
 
+
+
+    public function addtoWishlist(Request $request)
+    {
+
+
+
+            $id = Auth::user()->id;
+            $prodId = $request->productId;
+            if(!Wishlist::where(['user_id'=> $id, 'product_id'=>$prodId])->count() > 0){
+                return $this->addwish($id, $prodId);
+            }
+            else{
+                return;
+            }
+
+
+
+    }
+
+    public function addwish($userId, $prodId){
+        $wishItem = new Wishlist;
+        $wishItem->user_id = $userId;
+        $wishItem->product_id = $prodId;
+        $wishItem->save();
+        return back();
+    }
 
 
 }

@@ -6,6 +6,23 @@
 <script>
 
 
+
+    function addtoWishlist(prodId){
+        const url = "{{route('wishlist.add')}}"
+        console.log(url);
+        console.log(prodId);
+        $.ajax({
+            url: url,
+            method: "POST",
+            data: {
+                productId:prodId,
+                _token: '{{csrf_token()}}',
+            }
+            }
+
+        )
+
+    }
     function getMessage(id) {
         //console.log("button presses function called!");
         //console.log(id);
