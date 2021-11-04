@@ -497,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635531025849</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="cautionary update">
+      <created>1635969701179</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1635969701179</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +551,8 @@
     <MESSAGE value="janina ki korsi" />
     <MESSAGE value="many new thing" />
     <MESSAGE value="prod" />
-    <option name="LAST_COMMIT_MESSAGE" value="prod" />
+    <MESSAGE value="cautionary update" />
+    <option name="LAST_COMMIT_MESSAGE" value="cautionary update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -558,6 +566,11 @@
           <url>file://$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php</url>
           <line>113</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php</url>
+          <line>81</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
