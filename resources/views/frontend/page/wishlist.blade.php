@@ -1,7 +1,7 @@
 <!-- Slider -->
 @extends ('frontend.layout.master')
 @section('pagetitle')
-    Confirm
+    Wishlist
 @endsection
 @section ('content')
 
@@ -10,12 +10,19 @@
 
     <section class="bg-img1 txt-center p-lr-15 p-tb-92 bggrad">
         <h2 class="ltext-105 cl0 txt-center lineunder">
-            DoogDoogi
+            My Wishlist
         </h2>
     </section>
     <div class="container ">
         <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
-            <!--Terms -->
+            <!--wishlists -->
+            @foreach($wishitems as $wishitem)
+                <div class="size-101">
+                    {{$wishitem->product_id}}
+                </div>
+            @endforeach
+
+
         </div>
     </div>
     <!--div class="dasbordleft" > <p> somedjeifnfoiebibvfewibn</p></div-->

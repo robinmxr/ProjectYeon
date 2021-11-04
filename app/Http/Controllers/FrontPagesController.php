@@ -89,8 +89,10 @@ class FrontPagesController extends Controller
     public function showWishlist(){
         //TODO:  A wishlist view page
 
+        $wishitems = Wishlist::where('user_id', Auth::user()->id)->get();
 
-        return view('frontend.page.wishlist');
+
+        return view('frontend.page.wishlist', compact('wishitems'));
     }
 
 }
