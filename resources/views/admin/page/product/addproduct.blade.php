@@ -41,8 +41,8 @@
             <label class="form-check-label" for="inline1">Small</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="size[]" id="inlineRadio2" value="M">
-            <label class="form-check-label" for="inlineRadio2">Medium</label>
+            <input class="form-check-input" type="checkbox" name="size[]" id="inlineRadi2" value="M">
+            <label class="form-check-label" for="inlineRadi2">Medium</label>
         </div>
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" name="size[]" id="inlineRadio3" value="L">
