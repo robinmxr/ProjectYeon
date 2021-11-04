@@ -75,7 +75,7 @@ class BackProductsController extends Controller
         $product->save();
 
         if(!is_null($request->size)) {
-            foreach ($request->size ?? [] as $size) {
+            foreach ($request->size as $size) {
                 $newsize = new ProductSize;
                 $newsize->name = $size;
                 $newsize->product_id = $product->id;
