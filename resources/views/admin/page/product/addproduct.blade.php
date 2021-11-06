@@ -52,6 +52,10 @@
             <input class="form-check-input" type="checkbox" name="size[]" id="inlineRadio3" value="XL">
             <label class="form-check-label" for="inlineRadio3">Extra Large</label>
         </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="size[]" id="inlineRadio3" value="free">
+            <label class="form-check-label" for="inlineRadio3">Free Size</label>
+        </div>
 
         </div>
       <div class="form-group">
@@ -82,10 +86,12 @@
             <label for="exampleInputEmail1">Care</label>
             <input type="text" class="form-control" name="care" placeholder="Enter care">
         </div>
+        <!--
         <div class="form-group">
             <label for="exampleInputEmail">Available Size</label>
             <input type="text" class="form-control" name="size" placeholder="Enter sizes">
         </div>
+        -->
         <div class="form-group">
             <label for="exampleInputEmail">Tag</label>
             <input type="text" class="form-control" name="tag" placeholder="Enter tag">

@@ -5,11 +5,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\ProductSize;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\Product;
 use App\Models\ProductImage;
 use Image;
+use Intervention\Image\Size;
+
 class BackProductsController extends Controller
 {
     //
@@ -61,7 +64,8 @@ class BackProductsController extends Controller
         $product->title=$request->title;
         $product->description=$request->description;
         $product->price=$request->price;
-        $product->size=$request->size;
+        //$product->size=$request->size;
+
         $product->quantity=$request->quantity;
           $product->code=$request->code;
           $product->tag=$request->tag;
@@ -72,16 +76,28 @@ class BackProductsController extends Controller
           $product->value_addition=$request->value;
         $product->category_id=$request->category_id;
         $product->slug=Str::slug($request->title,'-');
-        $product->save();
 
-        if(!is_null($request->size)) {
-            foreach ($request->size as $size) {
-                $newsize = new ProductSize;
-                $newsize->name = $size;
-                $newsize->product_id = $product->id;
-                $newsize->save();
-            }
-        }
+
+
+
+          $product->save();
+
+          if(!is_null($request->size)) {
+              foreach ($request->size as $size) {
+                  $newsize = new ProductSize;
+                  $newsize->name = $size;
+                  $newsize->product_id = $product->id;
+
+                  $newsize->save();
+
+                  //$product->size()->Hasmany::create($newsize);
+                  //$newsize->product()->save($product);
+              }
+          }
+
+
+
+
 
         //ProductImage Model insert Image
         if(count($request->product_image) > 0) {

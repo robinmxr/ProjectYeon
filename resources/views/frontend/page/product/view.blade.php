@@ -105,17 +105,12 @@
 
                         <div class="size-204 respon6-next">
 
-                            <input type="radio" class="btn-check sizebox " name="options" id="option1" autocomplete="off" value="S" checked>
-                            <label class="btn btn-outline-dark sizeboxlab" for="option1" >S</label>
+                            @foreach($size as $sizes)
+                                <input type="radio" class="btn-check sizebox " name="options" id="option1" autocomplete="off" value="S" checked>
+                                <label class="btn btn-outline-dark sizeboxlab" for="option1" >{{$sizes->name}}</label>
+                            @endforeach
 
-                            <input type="radio" class="btn-check sizebox" name="options" id="option2" autocomplete="off" value="M">
-                            <label class="btn btn-outline-dark sizeboxlab" for="option2">M</label>
 
-                            <input type="radio" class="btn-check sizebox " name="options" id="option3" autocomplete="off" value="L" disabled>
-                            <label class="btn btn-outline-dark sizeboxlab" for="option3">L</label>
-
-                            <input type="radio" class="btn-check sizebox" name="options" id="option4" autocomplete="off" value="XL">
-                            <label class="btn btn-outline-dark sizeboxlab" for="option4" >XL</label>
 
                         </div>
 
