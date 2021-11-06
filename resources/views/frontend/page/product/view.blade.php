@@ -282,7 +282,9 @@
                   </div>
 @auth
                   <!-- Add review -->
+
                   <form method="post" action="{{ route('product.review',['id'=>$product->id,'slug'=>$product->slug ]) }}" class="w-full">
+
                       @csrf
                     <h5 class="mtext-108 cl2 p-b-7">
                       Add a review

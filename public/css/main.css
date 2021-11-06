@@ -3634,3 +3634,53 @@ label.star:before {
     background-color: var(--red-mildly-light);
     border: 2px solid var(--red-selected-dark);
 }
+
+
+/*---------------------blinking tabs -----------------*/
+
+
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: .2;
+    }
+
+    20% {
+        opacity: .4;
+    }
+    30% {
+        opacity: .6;
+    }
+    40% {
+        opacity: .8;
+    }
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: .8;
+    }
+    70% {
+        opacity: .6;
+    }
+    80% {
+        opacity: .4;
+    }
+    90% {
+        opacity: .2;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.blinking {
+    color: #28A745FF;
+    animation-duration: 2s;
+    animation-iteration-count: infinite ;
+   -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: blink;
+}

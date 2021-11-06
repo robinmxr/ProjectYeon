@@ -35,7 +35,25 @@
         <label for="exampleInputEmail1">Product Title</label>
         <input type="text" class="form-control" name="title" placeholder="Enter Name of Product">
       </div>
+        <div class="form-group">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="size[]" id="inline1" value="S">
+            <label class="form-check-label" for="inline1">Small</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="size[]" id="inlineRadi2" value="M">
+            <label class="form-check-label" for="inlineRadi2">Medium</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="size[]" id="inlineRadio3" value="L">
+            <label class="form-check-label" for="inlineRadio3">Large</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="size[]" id="inlineRadio3" value="XL">
+            <label class="form-check-label" for="inlineRadio3">Extra Large</label>
+        </div>
 
+        </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Product Price</label>
         <input type="number" class="form-control" name="price" placeholder="Enter price">
@@ -84,6 +102,7 @@
                 @endforeach
             </select>
         </div>
+
 
 
 
