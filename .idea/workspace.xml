@@ -22,9 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
+
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="wishlister faizlami">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/wishlist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/wishlist.blade.php" afterDir="false" />
+
     <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="check the checkbox">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackProductsController.php" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +83,8 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -213,6 +222,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
     </include_path>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="2" />
   </component>
   <component name="ProjectId" id="1kBazeaKQk5fKX16svBaAzxidPX" />
   <component name="ProjectViewState">
@@ -497,6 +509,58 @@
       <option name="project" value="LOCAL" />
       <updated>1635531025849</updated>
     </task>
+
+    <task id="LOCAL-00023" summary="cautionary update">
+      <created>1635969701179</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1635969701179</updated>
+    </task>
+    <task id="LOCAL-00024" summary="add to wishlist">
+      <created>1636003959454</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1636003959454</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add to wishlist working">
+      <created>1636012223034</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1636012223034</updated>
+    </task>
+    <task id="LOCAL-00026" summary="add to wishlist js detail">
+      <created>1636012611105</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1636012611105</updated>
+    </task>
+    <task id="LOCAL-00027" summary="sidebar change">
+      <created>1636017844135</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1636017844135</updated>
+    </task>
+    <task id="LOCAL-00028" summary="ajaira">
+      <created>1636019162029</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1636019162029</updated>
+    </task>
+    <task id="LOCAL-00029" summary="wishlister faizlami">
+      <created>1636125204168</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1636125204168</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
+
     <task id="LOCAL-00023" summary="check the checkbox">
       <created>1636010332135</created>
       <option name="number" value="00023" />
@@ -505,6 +569,7 @@
       <updated>1636010332135</updated>
     </task>
     <option name="localTasksCounter" value="24" />
+
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,9 +616,20 @@
     <MESSAGE value="janina ki korsi" />
     <MESSAGE value="many new thing" />
     <MESSAGE value="prod" />
+
+    <MESSAGE value="cautionary update" />
+    <MESSAGE value="add to wishlist" />
+    <MESSAGE value="add to wishlist working" />
+    <MESSAGE value="add to wishlist js detail" />
+    <MESSAGE value="sidebar change" />
+    <MESSAGE value="ajaira" />
+    <MESSAGE value="wishlister faizlami" />
+    <option name="LAST_COMMIT_MESSAGE" value="wishlister faizlami" />
+
     <MESSAGE value="checkbox" />
     <MESSAGE value="check the checkbox" />
     <option name="LAST_COMMIT_MESSAGE" value="check the checkbox" />
+
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -565,8 +641,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php</url>
-          <line>113</line>
-          <option name="timeStamp" value="2" />
+          <line>81</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php</url>
+          <line>284</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

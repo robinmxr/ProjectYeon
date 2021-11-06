@@ -118,21 +118,7 @@
                             <label class="btn btn-outline-dark sizeboxlab" for="option4" >XL</label>
 
                         </div>
-                        <!--
-                        <div class="size-204 respon6-next">
-                            <div class="rs1-select2 bor8 bg0">
-                                <select class="js-select2" name="time" id="sizeprod" type="radio">
 
-                                    <option>S</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                    <option>XL</option>
-                                </select>
-                                <div class="dropDownSelect2"></div>
-                            </div>
-                        </div>
-
-                        -->
                     </div>
 
 
@@ -150,13 +136,22 @@
                                 </div>
                             </div>
 
-                            <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail" onclick="getMessage('{{$product->id}}')">
-                                Add to cart
-                            </button>
+
                         </div>
+
+
                     </div>
+
                 </div>
 
+                <div class="flex-row">
+                    <button class="stext-102 cl0 size-102 m-2 btn-col-bg-red  hov-btn1 p-lr-5 trans-04 js-addwish-detail" onclick="addtoWishlist('{{$product->id}}')">
+                        Add to Wishlist
+                    </button>
+                    <button class="stext-102 cl0 size-102 m-2 btn-col-bg-red hov-btn1 p-lr-10 trans-04 js-addcart-detail" onclick="getMessage('{{$product->id}}')">
+                        Add to cart
+                    </button>
+                </div>
                 <!--  -->
                 <div class="flex-w flex-m p-l-100 p-t-40 respon7">
 
@@ -287,7 +282,9 @@
                   </div>
 @auth
                   <!-- Add review -->
-                  <form method="post" action="{{ route('product.review',['id'=>$product->id,'slug'=>$product->slug]) }}" class="w-full">
+
+                  <form method="post" action="{{ route('product.review',['id'=>$product->id,'slug'=>$product->slug ]) }}" class="w-full">
+
                       @csrf
                     <h5 class="mtext-108 cl2 p-b-7">
                       Add a review

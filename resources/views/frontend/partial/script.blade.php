@@ -6,6 +6,22 @@
 <script>
 
 
+
+    function addtoWishlist(prodId){
+        const url = "{{route('wishlist.add')}}"
+
+        $.ajax({
+            url: url,
+            method: "POST",
+            data: {
+                productId:prodId,
+                _token: '{{csrf_token()}}',
+            }
+            }
+
+        )
+
+    }
     function getMessage(id) {
         //console.log("button presses function called!");
         //console.log(id);
@@ -130,7 +146,7 @@
 			$(this).on('click', function(){
 				swal(nameProduct, "is added to wishlist !", "success");
 
-				$(this).addClass('js-addedwish-detail');
+
 				$(this).off('click');
 			});
 		});

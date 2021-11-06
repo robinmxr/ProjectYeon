@@ -116,4 +116,8 @@ class UserController extends Controller
         session()->flash('success','Image has been added');
         return back();
     }
+
+
+
+
 }

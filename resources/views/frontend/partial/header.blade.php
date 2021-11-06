@@ -123,6 +123,24 @@
 
 
                                     </div>
+                                    <div class="sidenavdiv">
+
+                                        <a href="{{route('wishlist')}}" class="sidenavlink">
+                                            <div class="flex-row">
+                                                <div>
+                                                    <i class="fa fa-heartbeat p-r-15 p-l-5" aria-hidden="true"></i>
+                                                </div>
+                                                <div>My Wishlist</div>
+                                            </div>
+
+                                        </a>
+
+
+
+
+
+
+                                    </div>
 
 
                                 @else
@@ -275,6 +293,7 @@
                                     <a href="#">{{ Auth::user()->name }} <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <li><a href="{{ route('profile') }}">Profile</a></li>
+                                        <li><a href="{{ route('wishlist') }}">Wishlist</a></li>
                                         @if(auth()->user()->is_admin==1)
 
                                             <li>

@@ -126,6 +126,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/checkout', [CheckoutController::class, 'showCheckout'])->name('checkout.index');
 
     Route::get('/profile', [FrontPagesController::class, 'profile'])->name('profile');
+    //TODO: Profile background Redesign.
+
     Route::get('/order/{id}', [OrderController::class, 'userorderview'])->name('order');
     Route::post('/profile', [UserController::class, 'editprofile'])->name('editprofile');
     Route::post('/profile/editname', [UserController::class, 'editname'])->name('editname');
@@ -133,8 +135,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/profile/changephone', [UserController::class, 'changephone'])->name('changephone');
     Route::post('/profile/changeaddress', [UserController::class, 'changeaddress'])->name('changeaddress');
     Route::post('/profile/addimage', [UserController::class, 'addimage'])->name('addimage');
-
-
+    Route::post('wishlist/add', [FrontPagesController::class, 'addtoWishlist'])->name('wishlist.add');
+    //TODO: Wishlist view design.
+    Route::get('/wishlist/', [FrontPagesController::class, 'showWishlist'])->name('wishlist');
     Route::post('/checkout/order', [CheckoutController::class, 'placeOrder'])->name('checkout.place.order');
 });
 
