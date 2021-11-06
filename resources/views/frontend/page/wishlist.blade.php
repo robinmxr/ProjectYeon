@@ -16,9 +16,9 @@
     <div class="container ">
         <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
             <!--wishlists -->
-            @foreach($wishitems as $wishitem)
+            @foreach($prodList as $prod)
                 <div class="size-101">
-                    {{$wishitem->product_id}}
+                    {{$prod->title}}
                 </div>
             @endforeach
 

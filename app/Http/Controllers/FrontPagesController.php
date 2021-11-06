@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Models\ProductReview;
 use App\Models\Wishlist;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 
 class FrontPagesController extends Controller
@@ -67,12 +68,10 @@ class FrontPagesController extends Controller
 
             $id = Auth::user()->id;
             $prodId = $request->productId;
-            if(!Wishlist::where(['user_id'=> $id, 'product_id'=>$prodId])->count() > 0){
+            //if(!Wishlist::where(['user_id'=> $id, 'product_id'=>$prodId])->count() > 0){
                 return $this->addwish($id, $prodId);
-            }
-            else{
-                return;
-            }
+
+            //}
 
 
 
@@ -89,10 +88,16 @@ class FrontPagesController extends Controller
     public function showWishlist(){
         //TODO:  A wishlist view page
 
-        $wishitems = Wishlist::where('user_id', Auth::user()->id)->get();
+        $wishitems = Wishlist::where('user_id',"=", Auth::user()->id);
+        //echo($wishitems->lazy());
+        $prodList = $wishitems;
 
 
-        return view('frontend.page.wishlist', compact('wishitems'));
+
+
+
+
+        return view('frontend.page.wishlist', compact('prodList'));
     }
 
 }

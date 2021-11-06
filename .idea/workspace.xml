@@ -22,7 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="sidebar change">
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="wishlister faizlami">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/wishlist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/wishlist.blade.php" afterDir="false" />
@@ -77,6 +77,8 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -214,6 +216,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
     </include_path>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="2" />
   </component>
   <component name="ProjectId" id="1kBazeaKQk5fKX16svBaAzxidPX" />
   <component name="ProjectViewState">
@@ -533,7 +538,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636017844135</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="ajaira">
+      <created>1636019162029</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1636019162029</updated>
+    </task>
+    <task id="LOCAL-00029" summary="wishlister faizlami">
+      <created>1636125204168</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1636125204168</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +604,9 @@
     <MESSAGE value="add to wishlist working" />
     <MESSAGE value="add to wishlist js detail" />
     <MESSAGE value="sidebar change" />
-    <option name="LAST_COMMIT_MESSAGE" value="sidebar change" />
+    <MESSAGE value="ajaira" />
+    <MESSAGE value="wishlister faizlami" />
+    <option name="LAST_COMMIT_MESSAGE" value="wishlister faizlami" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
