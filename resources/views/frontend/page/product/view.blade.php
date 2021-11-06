@@ -106,8 +106,8 @@
                         <div class="size-204 respon6-next">
                             <!-- TODO: add to cart works even if the size is not selected. Fix it!!-->
                             @foreach($size as $sizes)
-                                <input type="radio" class="btn-check sizebox " name="options" id="option1" autocomplete="off" value="{{$sizes->name}}" >
-                                <label class="btn btn-outline-dark sizeboxlab" for="option1" >{{$sizes->name}}</label>
+                                <input type="radio" class="btn-check sizebox " name="options" id="option{{$sizes->name}}" autocomplete="off" value="{{$sizes->name}}" >
+                                <label class="btn btn-outline-dark sizeboxlab" for="option{{$sizes->name}}" >{{$sizes->name}}</label>
                             @endforeach
 
 
