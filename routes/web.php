@@ -4,6 +4,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ProductReviewController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WishlistController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -135,9 +136,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/profile/changephone', [UserController::class, 'changephone'])->name('changephone');
     Route::post('/profile/changeaddress', [UserController::class, 'changeaddress'])->name('changeaddress');
     Route::post('/profile/addimage', [UserController::class, 'addimage'])->name('addimage');
-    Route::post('wishlist/add', [FrontPagesController::class, 'addtoWishlist'])->name('wishlist.add');
+    Route::post('wishlist/add', [WishlistController::class, 'addtoWishlist'])->name('wishlist.add');
     //TODO: Wishlist view design.
-    Route::get('/wishlist/', [FrontPagesController::class, 'showWishlist'])->name('wishlist');
+    Route::get('/wishlist/', [WishlistController::class, 'showWishlist'])->name('wishlist');
     Route::post('/checkout/order', [CheckoutController::class, 'placeOrder'])->name('checkout.place.order');
 });
 

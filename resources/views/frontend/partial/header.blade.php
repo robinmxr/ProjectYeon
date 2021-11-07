@@ -70,7 +70,8 @@
 		<!-- Header desktop -->
 
 		<div class="container-menu-desktop trans-03">
-			<div class="wrap-menu-desktop">
+
+			<div class="wrap-menu-desktop how-shadow1">
                 <nav class="limiter-menu-desktop p-l-45">
 
                     <div class="flex-c-m h-full p-lr-19">
@@ -462,7 +463,7 @@
         <div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
             <div class="container-search-header">
                 <button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-                    <img src="images/icons/icon-close2.png" alt="CLOSE">
+                    X
                 </button>
 
                 <form action="{{ route('search') }}" method="get" class="wrap-search-header flex-w p-l-15">

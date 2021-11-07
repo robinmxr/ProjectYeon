@@ -56,6 +56,7 @@ class BackProductsController extends Controller
           'price' => 'required|numeric',
           'category_id'=>'required',
           'description'=>'required',
+            'product_image'=>'required'
         ]);
 
 

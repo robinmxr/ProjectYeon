@@ -22,16 +22,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="wishlister faizlami">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/wishlist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/wishlist.blade.php" afterDir="false" />
-
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="check the checkbox">
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="cautionary update">
+      <change beforePath="$PROJECT_DIR$/.idea/ProjectYeon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProjectYeon.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_3_2021_12_05_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_3_2021_12_05_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackProductsController.php" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +85,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="MIXED" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -106,7 +106,6 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
-      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
@@ -138,7 +137,6 @@
       <path value="$PROJECT_DIR$/vendor/brick/math" />
       <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
       <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
-      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
@@ -156,7 +154,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
-      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation" />
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
@@ -174,7 +171,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
@@ -221,10 +217,11 @@
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
     </include_path>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="2" />
   </component>
   <component name="ProjectId" id="1kBazeaKQk5fKX16svBaAzxidPX" />
   <component name="ProjectViewState">
@@ -236,6 +233,7 @@
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/frontend/page" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -354,6 +352,7 @@
       <workItem from="1635527568463" duration="3576000" />
       <workItem from="1635919489273" duration="1704000" />
       <workItem from="1635960313145" duration="1387000" />
+      <workItem from="1636264731009" duration="1870000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -509,7 +508,6 @@
       <option name="project" value="LOCAL" />
       <updated>1635531025849</updated>
     </task>
-
     <task id="LOCAL-00023" summary="cautionary update">
       <created>1635969701179</created>
       <option name="number" value="00023" />
@@ -517,59 +515,7 @@
       <option name="project" value="LOCAL" />
       <updated>1635969701179</updated>
     </task>
-    <task id="LOCAL-00024" summary="add to wishlist">
-      <created>1636003959454</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1636003959454</updated>
-    </task>
-    <task id="LOCAL-00025" summary="add to wishlist working">
-      <created>1636012223034</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1636012223034</updated>
-    </task>
-    <task id="LOCAL-00026" summary="add to wishlist js detail">
-      <created>1636012611105</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1636012611105</updated>
-    </task>
-    <task id="LOCAL-00027" summary="sidebar change">
-      <created>1636017844135</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1636017844135</updated>
-    </task>
-    <task id="LOCAL-00028" summary="ajaira">
-      <created>1636019162029</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1636019162029</updated>
-    </task>
-    <task id="LOCAL-00029" summary="wishlister faizlami">
-      <created>1636125204168</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1636125204168</updated>
-    </task>
-    <option name="localTasksCounter" value="30" />
-
-    <task id="LOCAL-00023" summary="check the checkbox">
-      <created>1636010332135</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1636010332135</updated>
-    </task>
     <option name="localTasksCounter" value="24" />
-
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,20 +562,8 @@
     <MESSAGE value="janina ki korsi" />
     <MESSAGE value="many new thing" />
     <MESSAGE value="prod" />
-
     <MESSAGE value="cautionary update" />
-    <MESSAGE value="add to wishlist" />
-    <MESSAGE value="add to wishlist working" />
-    <MESSAGE value="add to wishlist js detail" />
-    <MESSAGE value="sidebar change" />
-    <MESSAGE value="ajaira" />
-    <MESSAGE value="wishlister faizlami" />
-    <option name="LAST_COMMIT_MESSAGE" value="wishlister faizlami" />
-
-    <MESSAGE value="checkbox" />
-    <MESSAGE value="check the checkbox" />
-    <option name="LAST_COMMIT_MESSAGE" value="check the checkbox" />
-
+    <option name="LAST_COMMIT_MESSAGE" value="cautionary update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -641,13 +575,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php</url>
-          <line>81</line>
-          <option name="timeStamp" value="13" />
+          <line>113</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php</url>
-          <line>284</line>
-          <option name="timeStamp" value="14" />
+          <line>81</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
