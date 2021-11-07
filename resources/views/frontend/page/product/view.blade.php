@@ -66,8 +66,8 @@
 
 
 
-        <div class="col-md-6 col-lg-5 p-b-30 text-center">
-            <div class="p-r-50 p-t-5 p-lr-0-lg">
+        <div class="col-md-6 col-lg-5 p-b-30 text-center border-left">
+            <div class="p-t-50  p-lr-0-lg">
 
                 <h4 class="ltext-103 cl2  js-name-detail p-tb-14">
                     {{ $product->title }}
@@ -117,9 +117,10 @@
                     </div>
 
 
-                    <div class="flex-w flex-r-m p-b-10">
-                        <div class="size-204 flex-w flex-m respon6-next">
-                            <div class="wrap-num-product flex-w m-r-20 m-tb-10">
+                    <div class="flex-w flex-c p-b-10">
+
+                        <div class="flex-sb respon6-next">
+                            <div class="wrap-num-product flex-w  m-tb-10 ">
                                 <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
                                     <i class="fs-16 fa fa-minus"></i>
                                 </div>
@@ -139,7 +140,7 @@
 
                 </div>
 
-                <div class="flex-row">
+                <div class="flex-sb">
                     <button class="stext-102 cl0 size-102 m-2 btn-col-bg-red  hov-btn1 p-lr-5 trans-04 js-addwish-detail" onclick="addtoWishlist('{{$product->id}}')">
                         Add to Wishlist
                     </button>
@@ -147,8 +148,8 @@
                         Add to cart
                     </button>
                 </div>
-                <!--  -->
-                <div class="flex-w flex-m p-l-100 p-t-40 respon7">
+                <!--
+                <div class="flex-w flex-m p-l-100 p-t-40 respon6">
 
 
                     <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
@@ -163,6 +164,8 @@
                         <i class="fa fa-google-plus"></i>
                     </a>
                 </div>
+
+                 -->
             </div>
         </div>
 
