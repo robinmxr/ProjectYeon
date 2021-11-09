@@ -16,11 +16,20 @@
     <div class="container ">
         <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
             <!--wishlists -->
-            @foreach($prodList as $prod)
-                <div class="size-101">
-                    {{$prod->title}}
-                </div>
-            @endforeach
+            <!--<h1> </h1>-->
+
+            <div class="flex-column">
+                @foreach($prodList as $prod)
+
+                    <div class="card">
+                        <div class="card-body" >
+                            {{$prod->title}}
+                        </div>
+                    </div>
+
+                @endforeach
+            </div>
+
 
 
         </div>
