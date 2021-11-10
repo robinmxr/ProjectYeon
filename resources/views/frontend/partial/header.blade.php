@@ -498,9 +498,7 @@
 
             <div id="sidecart" >
             @if (Cart::isEmpty())
-                <div class="alert alert-danger">
-                    <p>Your shopping cart is empty.</p>
-                </div>
+                <img src="{{ asset('images/cart.png') }}">
             @else
             <!--TODO: use "refreshcart()" function to get all the cart data and then show them in the upcoming code -->
                 <div class="header-cart-content flex-w js-pscroll">

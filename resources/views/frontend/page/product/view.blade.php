@@ -300,9 +300,12 @@
                                     </div>
                                 @endforeach
                             </div>
-                        @auth
+                        @guest
+                            <h1>You must be logged in to post review</h1>
                             <!-- Add review -->
 
+
+                            @elseguest
                                 <form method="post" action="{{ route('product.review',['id'=>$product->id,'slug'=>$product->slug ]) }}" class="w-full">
 
                                     @csrf
@@ -332,9 +335,7 @@
 
                                     </div>
                                 </form>
-                            @elseauth
-                                <h1>You have to be logged in to post a review</h1>
-                            @endauth
+                            @endguest
                         </div>
                     </div>
                 </div>
