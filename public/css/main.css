@@ -679,7 +679,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   display: flex;
   align-items: center;
   height: 70px;
-    background-image: linear-gradient(#312c51, #48426d, #312c51);
+    background-image: linear-gradient(rgb(132, 24, 24), rgb(175, 38, 38), rgb(132, 24, 24)) ;
+    /*background-image: linear-gradient(#312c51, #48426d, #312c51);
   /*background-color: #fff;*/
   padding: 15px;
   display: none;
@@ -3685,10 +3686,24 @@ label.star:before {
     animation-name: blink;
 }
 .dangerblinking {
-    color: #fc1212;
+    color: #28A745FF;
     animation-duration: 2s;
     animation-iteration-count: infinite ;
    -moz-animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
     animation-name: blink;
+}
+.parallax {
+    /* The image used */
+    background-image: url("../images/svg/paraluxtry.svg");
+
+    /* Full height */
+    height: 100%;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
