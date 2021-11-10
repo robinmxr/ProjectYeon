@@ -22,6 +22,20 @@
         )
 
     }
+    // TODO: Remove wishlist item by Id ajax implementation.
+    function removewishbyid(id){
+        //$id = id;
+        const url = 'wishlist/remove/' + id;
+
+        $.ajax({
+            url: url,
+            method: "GET",
+            success: function (data) {
+
+                $("#wishlistloader").load(document.URL + " #wishlistloader");
+            }
+        });
+    }
     function getMessage(id) {
         //console.log("button presses function called!");
         //console.log(id);

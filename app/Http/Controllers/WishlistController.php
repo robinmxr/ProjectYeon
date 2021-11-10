@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use App\Models\Wishlist;
 use Illuminate\Database\Eloquent\Model;
@@ -19,7 +20,7 @@ class WishlistController extends Controller
     }
 
     public function showWishlist(){
-        //TODO:  A wishlist view page
+
 
         $wishitems = Wishlist::where('user_id',"=", Auth::user()->id)->get();
         //echo($wishitems);
@@ -31,5 +32,19 @@ class WishlistController extends Controller
         //$prodList = $wishitems;
 
         return view('frontend.page.wishlist', compact('prodList'));
+    }
+
+    // TODO: Remove from wishlist table by id
+    public function removeWLbyid($id){
+        $wishitem=Wishlist::where('product_id','=',$id)->where('user_id',"=", Auth::user()->id)->get();
+        foreach ($wishitem as $w){
+            if(!is_null($w)){
+                $w->delete();
+            }
+        }
+
+        session()->flash('success','Wishlist Item has been deleted');
+        return back();
+
     }
 }

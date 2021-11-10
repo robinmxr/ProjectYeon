@@ -18,20 +18,21 @@
             <!--wishlists -->
             <!--<h1> </h1>-->
 
-            <div class="col-lg-12 flex-column">
+            <div class="col-lg-12 flex-column" id="wishlistloader">
                 @foreach($prodList as $prod)
 
                     <div class="card w-100 m-sm-4">
 
                         <div class="card-body flex-sb" >
 
-                            <div class="flex-sa">
+                            <div class="flex-sa col-lg-8">
                                 <div >
-                                    <img  class="m-sm-1" src="{{ asset('images/products/' . $prod->image[0]->image) }}" style="height: 80px;width: 60px;" alt="IMG-PRODUCT">
+                                    <img  class="m-sm-1 mr-sm-3" src="{{ asset('images/products/' . $prod->image[0]->image) }}" style="height: 80px;width: 60px;" alt="IMG-PRODUCT">
                                 </div>
                                 <div>
-                                    <div class="size-103 text-uppercase">{{$prod->title}}</div>
-                                    <div> {{$prod->price}}</div>
+                                    <div class="size-103 mtext-113">{{$prod->title}}</div>
+                                    <div>{{$prod->description}}</div>
+                                    <div>Price: {{$prod->price}}  BDT. </div>
                                 </div>
                             </div>
 
@@ -48,7 +49,7 @@
                             <!-- TODO: Implement delete post method -->
                             <!-- TODO: fix same product multiple wishlist input problem -->
                             <div>
-                                <button class="btn btn-outline-danger m-tb-25"> <i class="fa fa-trash"></i></button>
+                                <button class="btn btn-outline-danger m-tb-25" onclick="removewishbyid({{$prod->id}})"> <i class="fa fa-trash"></i></button>
                             </div>
 
 
