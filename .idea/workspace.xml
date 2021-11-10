@@ -22,14 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="wishlish.blade new design">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_3_2021_12_05_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_3_2021_12_05_PM__Default_Changelist_.xml" beforeDir="false" />
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="wishlish.blade delete button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WishlistController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WishlistController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/wishlist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/wishlist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -536,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636525809729</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="wishlish.blade delete button">
+      <created>1636566497461</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1636566497461</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,7 +591,8 @@
     <MESSAGE value="WishlistController.php fixes" />
     <MESSAGE value="wishlish.blade fixes" />
     <MESSAGE value="wishlish.blade new design" />
-    <option name="LAST_COMMIT_MESSAGE" value="wishlish.blade new design" />
+    <MESSAGE value="wishlish.blade delete button" />
+    <option name="LAST_COMMIT_MESSAGE" value="wishlish.blade delete button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

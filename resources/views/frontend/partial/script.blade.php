@@ -22,7 +22,7 @@
         )
 
     }
-    // TODO: Remove wishlist item by Id ajax implementation.
+
     function removewishbyid(id){
         //$id = id;
         const url = 'wishlist/remove/' + id;

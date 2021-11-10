@@ -352,7 +352,7 @@
         </div>
 
 		<!-- Header Mobile -->
-
+        <!-- TODO: Edit Mobile view -->
 		<div class="wrap-header-mobile">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn sidenavlink" onclick="closeNav()">×</a>
@@ -502,7 +502,7 @@
                     <p>Your shopping cart is empty.</p>
                 </div>
             @else
-            <!--TODO: use "refreshcart()" function to get all the cart data and then show them in the upcoming code -->
+
                 <div class="header-cart-content flex-w js-pscroll">
                     <ul class="header-cart-wrapitem w-full">
                         @foreach(Cart::getcontent() as $item)
