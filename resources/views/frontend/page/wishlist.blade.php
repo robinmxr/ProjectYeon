@@ -35,8 +35,18 @@
                                 </div>
                             </div>
 
+                            <div class=" m-tb-25">
+                                @if($prod->quantity>0)
+
+                                    <div class="blinking"> Only {{$prod->quantity}} item(s) left!</div>
+                                    @else
+                                    <div class="dangerblinking"> Product is stock out </div>
+                                    @endif
+                            </div>
 
 
+                            <!-- TODO: Implement delete post method -->
+                            <!-- TODO: fix same product multiple wishlist input problem -->
                             <div>
                                 <button class="btn btn-outline-danger m-tb-25"> <i class="fa fa-trash"></i></button>
                             </div>

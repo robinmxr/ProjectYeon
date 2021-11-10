@@ -3684,3 +3684,11 @@ label.star:before {
     -webkit-animation-iteration-count: infinite;
     animation-name: blink;
 }
+.dangerblinking {
+    color: #fc1212;
+    animation-duration: 2s;
+    animation-iteration-count: infinite ;
+   -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: blink;
+}
