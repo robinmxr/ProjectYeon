@@ -184,9 +184,7 @@
             <a class="nav-link" data-toggle="tab" href="#information" role="tab">Additional information</a>
           </li>
 
-          <li class="nav-item p-b-10">
-            <a class="nav-link" data-toggle="tab" href="#reviews" role="tab">Reviews</a>
-          </li>
+
         </ul>
 
         <!-- Tab panes -->
@@ -252,94 +250,100 @@
           </div>
 
           <!-- - -->
-          <div class="tab-pane fade" id="reviews" role="tabpanel">
-            <div class="row">
-              <div class="col-sm-10 col-md-8 col-lg-6 m-lr-auto">
-                <div class="p-b-30 m-lr-15-sm">
-                  <!-- Review -->
-                  <div class="flex-w flex-t p-b-68">
-                      @foreach($review as $rev)
-                    <div class="wrap-pic-s size-109 bor0 of-hidden m-r-18 m-t-6">
-                      <img src="{{ asset('images/avatar-01.jpg') }}" alt="AVATAR">
-                    </div>
 
-                    <div class="size-207">
-                      <div class="flex-w flex-sb-m p-b-17">
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="bor10 m-t-50 p-t-43 p-b-40">
+        <!-- Tab01 -->
+
+    <div class="tab01">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+
+
+            <li class="nav-item p-b-10">
+                <a class="nav-link active" data-toggle="tab" href="#reviews" role="tab">Reviews</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content p-t-43">
+            <!-- - -->
+
+
+
+            <div class="tab-pane fade show active" id="reviews" role="tabpanel">
+                <div class="row">
+                    <div class="col-sm-10 col-md-8 col-lg-6 m-lr-auto">
+                        <div class="p-b-30 m-lr-15-sm">
+                            <!-- Review -->
+                            <div class="flex-w flex-t p-b-68">
+                                @foreach($review as $rev)
+                                    <div class="wrap-pic-s size-109 bor0 of-hidden m-r-18 m-t-6">
+                                        <img src="{{ asset('images/avatar-01.jpg') }}" alt="AVATAR">
+                                    </div>
+
+                                    <div class="size-207">
+                                        <div class="flex-w flex-sb-m p-b-17">
                         <span class="mtext-107 cl2 p-r-20">
                           {{ $rev->user->name }}
                         </span>
 
 
-                      </div>
+                                        </div>
 
-                      <p class="stext-102 cl6">
-                       {{ $rev->review }}
-                      </p>
+                                        <p class="stext-102 cl6">
+                                            {{ $rev->review }}
+                                        </p>
+                                    </div>
+                                @endforeach
+                            </div>
+                        @guest
+                            <h1>You must be logged in to post review</h1>
+                            <!-- Add review -->
+
+
+                            @elseguest
+                                <form method="post" action="{{ route('product.review',['id'=>$product->id,'slug'=>$product->slug ]) }}" class="w-full">
+
+                                    @csrf
+                                    <h5 class="mtext-108 cl2 p-b-7">
+                                        Add a review
+                                    </h5>
+
+
+
+
+
+                                    <div class="row p-b-25">
+                                        <div class="col-12 p-b-5">
+                                            <label class="stext-102 cl3" for="review">Your review</label>
+
+
+                                            <textarea class="size-110 bor8 stext-102 cl2 p-lr-20 p-tb-10" id="review" name="review"></textarea>
+                                        </div>
+
+
+
+
+
+                                        <button class="flex-c-m stext-101 cl0 size-112 bg7 bor11 hov-btn3 p-lr-15 trans-04 m-b-10">
+                                            Submit
+                                        </button>
+
+                                    </div>
+                                </form>
+                            @endguest
+                        </div>
                     </div>
-                      @endforeach
-                  </div>
-@auth
-                  <!-- Add review -->
-
-                  <form method="post" action="{{ route('product.review',['id'=>$product->id,'slug'=>$product->slug ]) }}" class="w-full">
-
-                      @csrf
-                    <h5 class="mtext-108 cl2 p-b-7">
-                      Add a review
-                    </h5>
-
-
-
-
-                     <!-- <div class="container d-flex justify-content-center mt-200">
-                          <div class="row">
-                              <div class="col-md-12">
-                                  <div class="stars">
-                                      <form action="">
-                                          <input class="star star-5" id="star-5" type="radio" name="star" />
-                                          <label class="star star-5" for="star-5"></label>
-                                          <input class="star star-4" id="star-4" type="radio" name="star" />
-                                          <label class="star star-4" for="star-4"></label>
-                                          <input class="star star-3" id="star-3" type="radio" name="star" />
-                                          <label class="star star-3" for="star-3"></label>
-                                          <input class="star star-2" id="star-2" type="radio" name="star" />
-                                          <label class="star star-2" for="star-2"></label>
-                                          <input class="star star-1" id="star-1" type="radio" name="star" />
-                                          <label class="star star-1" for="star-1"></label>
-                                      </form>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>-->
-                    <div class="row p-b-25">
-                      <div class="col-12 p-b-5">
-                        <label class="stext-102 cl3" for="review">Your review</label>
-
-
-                        <textarea class="size-110 bor8 stext-102 cl2 p-lr-20 p-tb-10" id="review" name="review"></textarea>
-                      </div>
-
-
-
-
-
-                    <button class="flex-c-m stext-101 cl0 size-112 bg7 bor11 hov-btn3 p-lr-15 trans-04 m-b-10">
-                      Submit
-                    </button>
-
-                    </div>
-                  </form>
-    @elseauth
-                    <h1>You have to be logged in to post a review</h1>
-    @endauth
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
+    </div>
+
 
   <div class="bg6 flex-c-m flex-w size-302 m-t-73 p-tb-15">
     <span class="stext-107 cl6 p-lr-25">
