@@ -18,13 +18,33 @@
             <!--wishlists -->
             <!--<h1> </h1>-->
 
-            <div class="flex-column">
+            <div class="col-lg-12 flex-column">
                 @foreach($prodList as $prod)
 
-                    <div class="card">
-                        <div class="card-body" >
-                            {{$prod->title}}
+                    <div class="card w-100 m-sm-4">
+
+                        <div class="card-body flex-sb" >
+
+                            <div class="flex-sa">
+                                <div >
+                                    <img  class="m-sm-1" src="{{ asset('images/products/' . $prod->image[0]->image) }}" style="height: 80px;width: 60px;" alt="IMG-PRODUCT">
+                                </div>
+                                <div>
+                                    <div class="size-103 text-uppercase">{{$prod->title}}</div>
+                                    <div> {{$prod->price}}</div>
+                                </div>
+                            </div>
+
+
+
+                            <div>
+                                <button class="btn btn-outline-danger m-tb-25"> <i class="fa fa-trash"></i></button>
+                            </div>
+
+
                         </div>
+
+
                     </div>
 
                 @endforeach
