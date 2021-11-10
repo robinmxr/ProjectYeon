@@ -498,7 +498,17 @@
 
             <div id="sidecart" >
             @if (Cart::isEmpty())
-                <img src="{{ asset('images/cart.png') }}">
+                    <div> <img src="{{ asset('images/cart.png') }}"></div>
+                    <div class="header-cart-buttons flex-w w-full">
+                        <a href="{{ route('products') }}" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+                           Go Shopping!
+                        </a>
+                        <a href="{{ route('wishlist') }}" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+                            Check Wishlist
+                        </a>
+
+
+                    </div>
             @else
             <!--TODO: use "refreshcart()" function to get all the cart data and then show them in the upcoming code -->
                 <div class="header-cart-content flex-w js-pscroll">
@@ -537,7 +547,7 @@
                                 View Cart
                             </a>
 
-                            <a href="#" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+                            <a href="{{ route('checkout.index') }}" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
                                 Check Out
                             </a>
                         </div>
