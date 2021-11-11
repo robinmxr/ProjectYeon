@@ -34,7 +34,7 @@ class WishlistController extends Controller
         return view('frontend.page.wishlist', compact('prodList'));
     }
 
-    // TODO: Remove from wishlist table by id
+
     public function removeWLbyid($id){
         $wishitem=Wishlist::where('product_id','=',$id)->where('user_id',"=", Auth::user()->id)->get();
         foreach ($wishitem as $w){

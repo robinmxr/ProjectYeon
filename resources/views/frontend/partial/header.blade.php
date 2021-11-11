@@ -500,11 +500,11 @@
             <div id="sidecart" >
             @if (Cart::isEmpty())
                     <div> <img src="{{ asset('images/cart.png') }}"></div>
-                    <div class="header-cart-buttons flex-w w-full">
-                        <a href="{{ route('products') }}" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+                    <div class="header-cart-buttons flex-sa w-full m-t-20 m-lr-5">
+                        <a href="{{ route('products') }}" class="flex-c-m stext-109 cl0 size-105 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
                            Go Shopping!
                         </a>
-                        <a href="{{ route('wishlist') }}" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+                        <a href="{{ route('wishlist') }}" class="flex-c-m stext-109 cl0 size-105 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
                             Check Wishlist
                         </a>
 
