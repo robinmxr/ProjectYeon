@@ -31,6 +31,7 @@ class Product extends Model
     {
         return $this->hasMany('App\Models\ProductSize');
     }
+
     public function delete()
     {
         // delete all related photos
