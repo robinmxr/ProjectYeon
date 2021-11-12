@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Wishlist;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -116,6 +117,8 @@ class UserController extends Controller
         session()->flash('success','Image has been added');
         return back();
     }
+
+
 
 
 

@@ -61,43 +61,5 @@ class FrontPagesController extends Controller
 
 
 
-    public function addtoWishlist(Request $request)
-    {
-
-
-
-            $id = Auth::user()->id;
-            $prodId = $request->productId;
-            //if(!Wishlist::where(['user_id'=> $id, 'product_id'=>$prodId])->count() > 0){
-                return $this->addwish($id, $prodId);
-
-            //}
-
-
-
-    }
-
-    public function addwish($userId, $prodId){
-        $wishItem = new Wishlist;
-        $wishItem->user_id = $userId;
-        $wishItem->product_id = $prodId;
-        $wishItem->save();
-        return back();
-    }
-
-    public function showWishlist(){
-        //TODO:  A wishlist view page
-
-        $wishitems = Wishlist::where('user_id',"=", Auth::user()->id);
-        //echo($wishitems->lazy());
-        $prodList = $wishitems;
-
-
-
-
-
-
-        return view('frontend.page.wishlist', compact('prodList'));
-    }
 
 }

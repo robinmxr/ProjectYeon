@@ -22,13 +22,33 @@
         )
 
     }
+
+    function removewishbyid(id){
+        //$id = id;
+        const url = 'wishlist/remove/' + id;
+
+        $.ajax({
+            url: url,
+            method: "GET",
+            success: function (data) {
+
+                $("#wishlistloader").load(document.URL + " #wishlistloader");
+            }
+        });
+    }
     function getMessage(id) {
         //console.log("button presses function called!");
         //console.log(id);
         //console.log(size);
-
+        let size = "";
         //const size = $("#sizeprod").val();
-        const size = $(".sizebox:checked ").val();
+        if( $(".sizebox:checked ").val()!=null){
+            size = $(".sizebox:checked ").val();
+        }
+        else{
+            size = $("#option1").val()
+        }
+
 		//console.log(size);
         const quantity = $("#quantity").val();
         const url = "{{route('product.cart.add')}}";

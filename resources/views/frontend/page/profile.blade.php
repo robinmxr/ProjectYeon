@@ -9,7 +9,7 @@
 
 
 
-    <div class="  p-tb-92  bg-img1" style="background-image: url('images/bg-01.jpg');" >
+    <div class="  p-tb-92  bg-img1" style="background-image: url('images/svg/asset8.svg');" >
 
 
         <div class="row">
@@ -54,8 +54,7 @@
                 <div class="col-sm-8 ">
                     <div class="container">
 
-                        <div class="flex-w flex-l-m filter-tope-group m-tb-10 ">
-
+                        <div class="flex-sa  filter-tope-group m-tb-10  ">
 
                             <button class="btn cl6 hov2 bor3 trans-04 m-r-32 m-tb-5 how-active1 sels-button" data-filter=".profile">
                                 About
@@ -82,7 +81,9 @@
                                 {{ session('failure') }}
                             </div>
                         @endif
-                        <div class="col isotope-grid p-0 " >
+
+
+                        <div class="col isotope-grid p-0 m-tb-20 " >
 
                             <div class="isotope-item profile col-lg-12">
 

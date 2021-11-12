@@ -63,6 +63,7 @@
 </head>
 <body class="animsition">
 
+
 	<!-- Header -->
 
 
@@ -70,7 +71,8 @@
 		<!-- Header desktop -->
 
 		<div class="container-menu-desktop trans-03">
-			<div class="wrap-menu-desktop">
+
+			<div class="wrap-menu-desktop how-shadow1">
                 <nav class="limiter-menu-desktop p-l-45">
 
                     <div class="flex-c-m h-full p-lr-19">
@@ -351,7 +353,7 @@
         </div>
 
 		<!-- Header Mobile -->
-
+        <!-- TODO: Edit Mobile view -->
 		<div class="wrap-header-mobile">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn sidenavlink" onclick="closeNav()">×</a>
@@ -462,7 +464,7 @@
         <div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
             <div class="container-search-header">
                 <button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-                    <img src="images/icons/icon-close2.png" alt="CLOSE">
+                    X
                 </button>
 
                 <form action="{{ route('search') }}" method="get" class="wrap-search-header flex-w p-l-15">
@@ -497,11 +499,19 @@
 
             <div id="sidecart" >
             @if (Cart::isEmpty())
-                <div class="alert alert-danger">
-                    <p>Your shopping cart is empty.</p>
-                </div>
+                    <div> <img src="{{ asset('images/cart.png') }}"></div>
+                    <div class="header-cart-buttons flex-sa w-full m-t-20 m-lr-5">
+                        <a href="{{ route('products') }}" class="flex-c-m stext-109 cl0 size-105 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+                           Go Shopping!
+                        </a>
+                        <a href="{{ route('wishlist') }}" class="flex-c-m stext-109 cl0 size-105 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+                            Check Wishlist
+                        </a>
+
+
+                    </div>
             @else
-            <!--TODO: use "refreshcart()" function to get all the cart data and then show them in the upcoming code -->
+
                 <div class="header-cart-content flex-w js-pscroll">
                     <ul class="header-cart-wrapitem w-full">
                         @foreach(Cart::getcontent() as $item)
@@ -538,7 +548,7 @@
                                 View Cart
                             </a>
 
-                            <a href="#" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+                            <a href="{{ route('checkout.index') }}" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
                                 Check Out
                             </a>
                         </div>

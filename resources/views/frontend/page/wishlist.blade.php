@@ -16,11 +16,65 @@
     <div class="container ">
         <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
             <!--wishlists -->
-            @foreach($prodList as $prod)
-                <div class="size-101">
-                    {{$prod->title}}
+            <!--<h1> </h1>-->
+
+            <div class="col-lg-12 flex-column" id="wishlistloader">
+                @if(count($prodList)>0)
+                @foreach($prodList as $prod)
+
+                    <div class="card w-100 m-sm-4">
+
+                        <div class="card-body flex-sb" >
+
+                            <div class="col-lg-8 flex-sa ">
+                                <div >
+                                    <img  class="m-sm-1 mr-sm-3" src="{{ asset('images/products/' . $prod->image[0]->image) }}" style="height: 80px;width: 60px;" alt="IMG-PRODUCT">
+                                </div>
+                                <div>
+                                    <div class="size-103 mtext-113">{{$prod->title}}</div>
+                                    <div>{{$prod->description}}</div>
+                                    <div>Price: {{$prod->price}}  BDT. </div>
+                                </div>
+                            </div>
+
+                            <div class=" m-tb-25">
+                                @if($prod->quantity>0)
+
+                                    <div class="blinking"> Only {{$prod->quantity}} item(s) left!</div>
+                                    @else
+                                    <div class="dangerblinking"> Product is stock out </div>
+                                    @endif
+                            </div>
+
+
+
+                            <!-- TODO: fix same product multiple wishlist input problem -->
+                            <div>
+                                <button class="btn btn-outline-danger m-tb-25" onclick="removewishbyid({{$prod->id}})"> <i class="fa fa-trash"></i></button>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                @endforeach
+                @else
+                <div class="alert-danger p-lg-5 m-sm-5 ltext-101 text-sm-center">
+
+                    <div class="cl0 ltext-105">
+                        <i class="fa fa-exclamation-triangle "></i>
+                    </div>
+                    <div>
+                        Wishlist is so empty!
+                    </div>
+
                 </div>
-            @endforeach
+                @endif
+
+            </div>
+
 
 
         </div>

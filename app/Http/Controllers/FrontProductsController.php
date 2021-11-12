@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\ProductReview;
+use App\Models\ProductSize;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use Cart;
@@ -31,8 +32,9 @@ class FrontProductsController extends Controller
     {
         $product = Product::find($id);
         $review = ProductReview::where('product_id',$product->id)->get();
+        $size = ProductSize::where('product_id', $product->id)->get();
         $related= Product::where('category_id', '=', $product->category->id)->where('id', '!=', $product->id)->get();
-        return view('frontend.page.product.view',compact('product','related','review'));
+        return view('frontend.page.product.view',compact('product','related','review','size'));
 
     }
     public function addtocart(Request $request){

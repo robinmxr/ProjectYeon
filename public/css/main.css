@@ -124,6 +124,11 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
     --red-less-dark:  #51050F;
     --red-matte:  #841818;
     --red-mildly-light:  #f87f7f;
+
+
+    --cl-komola : #fa5e46;
+    --cl-majherlal : #f94237;
+    --cl-garolal : #f9353c;
 }
 
 
@@ -302,8 +307,9 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 .header-v3 .wrap-menu-desktop {
   background-color: rgba(132, 24, 24, 0.2);
+
   top: 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  /*border-bottom: 1px solid rgba(255,255,255,0.1);*/
 }
 
 .header-v4 .wrap-menu-desktop {
@@ -321,6 +327,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   display: flex;
   align-items: center;
   background-color: transparent;
+
 }
 
 
@@ -649,12 +656,13 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 
 .header-v3 .fix-menu-desktop .wrap-menu-desktop {
-    background-color: #841818;
-    /*border-bottom: 7px solid #641212;*/
-    box-shadow:
+    /*background-color: #841818;
+    border-bottom: 7px solid #641212;*/
+    background-image: linear-gradient(to right, var(--cl-garolal), var(--cl-majherlal), var(--cl-komola)) ;
+    /*box-shadow:
         inset 0 -3em 3em rgba(0,0,0,0.1),
         0 0  0 2px #641212,
-        0.3em 0.3em 1em rgba(0,0,0,0.3);
+        0.3em 0.3em 1em rgba(0,0,0,0.3);*/
     height: 65px;
 }
 
@@ -679,7 +687,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   display: flex;
   align-items: center;
   height: 70px;
-    background-image: linear-gradient(#312c51, #48426d, #312c51);
+    background-image: linear-gradient(rgb(132, 24, 24), rgb(175, 38, 38), rgb(132, 24, 24)) ;
+    /*background-image: linear-gradient(#312c51, #48426d, #312c51);
   /*background-color: #fff;*/
   padding: 15px;
   display: none;
@@ -3382,7 +3391,8 @@ input.num-product::-webkit-inner-spin-button {
 
 }
 .bggrad {
-    background-image: linear-gradient(rgb(132, 24, 24), rgb(175, 38, 38), rgb(132, 24, 24)) ;
+    /*background-image: linear-gradient(rgb(132, 24, 24), rgb(175, 38, 38), rgb(132, 24, 24)) ;*/
+    background-image: linear-gradient(to right, var(--cl-garolal), var(--cl-majherlal), var(--cl-komola)) ;
 
 }
 .silverbgrad{
@@ -3683,4 +3693,33 @@ label.star:before {
    -moz-animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
     animation-name: blink;
+}
+.dangerblinking {
+    color: #28A745FF;
+    animation-duration: 2s;
+    animation-iteration-count: infinite ;
+   -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: blink;
+}
+.parallax {
+    /* The image used */
+    background-image: url("../images/svg/asset8.svg");
+
+    /* Full height */
+    height: 100%;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.newcols{
+    --cl-komola : #fa5e46;
+    --cl-majherlal : #f94237;
+    --cl-garolal : rgba(249, 53, 60, 0.2);
 }
