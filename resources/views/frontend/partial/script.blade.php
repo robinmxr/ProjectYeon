@@ -195,6 +195,7 @@
 			var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
 
 			$(this).on('click', function(){
+
 				swal(nameProduct, "is added to wishlist !", "success");
 
 
