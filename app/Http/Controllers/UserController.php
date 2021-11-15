@@ -110,10 +110,21 @@ class UserController extends Controller
         $originalpath='/images/profiles/';
         $final_image->save('images/profiles/'.time().$image->getClientOriginalName());
 
-        $user_image = new UserImage;
-        $user_image->user_id = Auth::user()->id;
-        $user_image->image=time().$image->getClientOriginalName();
-        $user_image->save();
+        $cwu_picture = UserImage::where('user_id', "=", Auth::user()->id)->first();
+
+        //Change if user already has one profile picture
+        if(isset($cwu_picture)>0){
+            $cwu_picture->image= time().$image->getCLientOriginalName();
+            $cwu_picture->save();
+        }
+        else{
+            $user_image = new UserImage;
+            $user_image->user_id = Auth::user()->id;
+            $user_image->image=time().$image->getClientOriginalName();
+            $user_image->save();
+        }
+
+
         session()->flash('success','Image has been added');
         return back();
     }

@@ -687,7 +687,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   display: flex;
   align-items: center;
   height: 70px;
-    background-image: linear-gradient(rgb(132, 24, 24), rgb(175, 38, 38), rgb(132, 24, 24)) ;
+    /*background-image: linear-gradient(rgb(132, 24, 24), rgb(175, 38, 38), rgb(132, 24, 24)) ;*/
+    background-image: linear-gradient(to right, var(--cl-garolal), var(--cl-majherlal), var(--cl-komola)) ;
     /*background-image: linear-gradient(#312c51, #48426d, #312c51);
   /*background-color: #fff;*/
   padding: 15px;
@@ -3695,7 +3696,7 @@ label.star:before {
     animation-name: blink;
 }
 .dangerblinking {
-    color: #28A745FF;
+    color: #ff0000;
     animation-duration: 2s;
     animation-iteration-count: infinite ;
    -moz-animation-iteration-count: infinite;
@@ -3721,5 +3722,49 @@ label.star:before {
 .newcols{
     --cl-komola : #fa5e46;
     --cl-majherlal : #f94237;
-    --cl-garolal : rgba(249, 53, 60, 0.2);
+    --cl-garolal : rgba(249, 53, 60);
+}
+
+.prop:hover .hoverbutton {
+    opacity: 0.3;
+}
+
+.prop:hover .middle {
+    opacity: 1;
+}
+
+
+.hoverbutton{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.hoverbutton-btn{
+    background-color: var(--cl-komola);
+    color: white;
+    font-size: 10px;
+    /*padding: 16px 32px;*/
+}
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+
+.propiclabelstyle {
+
+}
+.inputinlabel{
+    display: none;
 }
