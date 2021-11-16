@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Auth;
 class WishlistController extends Controller
 {
     public function addwish(Request $request){
-
         $cwu_wishlist = Wishlist::where('user_id', '=', Auth::user()->id)->where('product_id', '=', $request->productId)->first();
         if(isset($cwu_wishlist))
         {

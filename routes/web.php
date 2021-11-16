@@ -27,6 +27,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\OfferController;
 
 /*-----------------Frontend Page Routes--------------------*/
 Route::get('/', [FrontPagesController::class, 'index'])->name('index');
@@ -106,6 +107,7 @@ Route::get('/admin/category/create', [BackCategoriesController::class, 'create']
 
 Route::get('/admin/category', [BackCategoriesController::class, 'index'])->name('admin.categories')->middleware('is_admin');
 
+
 Route::get('/admin/category/edit/{id}', [BackCategoriesController::class, 'edit'])->name('admin.category.edit')->middleware('is_admin');
 
 Route::post('/admin/category/create', [BackCategoriesController::class, 'store'])->name('admin.category.store')->middleware('is_admin');
@@ -120,6 +122,13 @@ Route::get('/admin/order/{id}', [OrderController::class, 'orderview'])->name('ad
 
 Route::post('/admin/order/{id}', [OrderController::class, 'changestatus'])->name('admin.order.changestatus')->middleware('is_admin');
 
+Route::get('/admin/offer', [OfferController::class, 'show'])->name('admin.offers')->middleware('is_admin');
+
+Route::get('/admin/offer/create', [OfferController::class, 'create'])->name('admin.offer.create')->middleware('is_admin');
+
+Route::post('/admin/offer/create', [OfferController::class, 'store'])->name('admin.offer.store')->middleware('is_admin');
+
+Route::post('/admin/offer/delete/{id}', [OfferController::class, 'delete'])->name('admin.offer.delete')->middleware('is_admin');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
