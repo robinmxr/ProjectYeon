@@ -9,7 +9,7 @@
    FAQ
   </h2>
 </section>
-
+<!-- TODO: Create mobile and pc view for FAQ page. -->
 
 <!-- Content page -->
 <section class="bg0 p-t-104 p-b-116">
