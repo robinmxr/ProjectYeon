@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Offer;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class OfferController extends Controller
@@ -34,5 +35,23 @@ class OfferController extends Controller
         }
         session()->flash('success','Offer has been deleted');
         return back();
+    }
+    public function addoffer($id,Request $request)
+    {
+
+        $product = Product::find($id);
+        if($request->offer_id != null)
+        {
+            $offer = Offer::find($request->offer_id);
+            $product->offer_id = $request->offer_id;
+            $product->offer_price = $product->price - (($product->price * $offer->percentage ) / 100 );
+
+
+        }
+        else
+        {
+            $product->offer_id = null;
+            $product->offer_price = null;
+        }
     }
 }
