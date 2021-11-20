@@ -1,12 +1,12 @@
 <!-- Slider -->
 @extends ('frontend.layout.master')
 @section('pagetitle')
-    Confirm
+    Terms
 @endsection
 @section ('content')
 
 
-
+<!-- TODO: Create mobile and pc view for terms and conditions page. -->
 
     <section class="bg-img1 txt-center p-lr-15 p-tb-92 bggrad">
         <h2 class="ltext-105 cl0 txt-center lineunder">
