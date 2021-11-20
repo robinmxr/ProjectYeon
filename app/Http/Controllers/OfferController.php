@@ -45,6 +45,7 @@ class OfferController extends Controller
             $offer = Offer::find($request->offer_id);
             $product->offer_id = $request->offer_id;
             $product->offer_price = $product->price - (($product->price * $offer->percentage ) / 100 );
+            $product->save();
 
 
         }
@@ -52,6 +53,16 @@ class OfferController extends Controller
         {
             $product->offer_id = null;
             $product->offer_price = null;
+            $product->save();
         }
+        session()->flash('success','Offer has been added to the product');
+        return back();
+
+    }
+    public function showoffer($id)
+    {
+        $product = Product::find($id);
+        $offers = Offer::all();
+        return view('admin.page.product.addoffer',compact('product','offers'));
     }
 }

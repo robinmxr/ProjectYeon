@@ -99,6 +99,10 @@ Route::get('/admin/product/edit/{id}', [BackProductsController::class, 'edit'])-
 
 Route::post('/admin/product/create', [BackProductsController::class, 'store'])->name('admin.product.store')->middleware('is_admin');
 
+Route::get('/admin/product/{id}', [OfferController::class, 'showoffer'])->name('admin.product.showoffer')->middleware('is_admin');
+
+Route::post('/admin/product/{id}', [OfferController::class, 'addoffer'])->name('admin.product.addoffer')->middleware('is_admin');
+
 Route::post('/admin/product/edit/{id}', [BackProductsController::class, 'update'])->name('admin.product.update')->middleware('is_admin');
 
 Route::post('/admin/product/delete/{id}', [BackProductsController::class, 'delete'])->name('admin.product.delete')->middleware('is_admin');

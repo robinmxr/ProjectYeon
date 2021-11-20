@@ -52,6 +52,8 @@
             <img src="{{ asset('images/products/'.$product->image[0]->image) }}" style="height: 180px; width:180px;border-radius: 50%;"/></td>
             <td>
                 <a href="{{ route('admin.product.edit', $product->id) }}" class="btn btn-block btn-outline-primary btn-lg">Edit</a>
+                <a href="{{ route('admin.product.showoffer', $product->id) }}" class="btn btn-block btn-outline-primary btn-lg">Offer</a>
+
                 <a href="#deleteModal{{ $product->id }}" data-toggle="modal" class="btn btn-block btn-outline-danger">Delete</a>
                 <div class="modal fade" id="deleteModal{{ $product->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
