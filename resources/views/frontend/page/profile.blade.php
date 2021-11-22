@@ -1,7 +1,7 @@
 <!-- Slider -->
 @extends ('frontend.layout.master')
 @section('pagetitle')
-    Profile
+    {{Auth::user()->name}}
 @endsection
 
 @section ('content')
