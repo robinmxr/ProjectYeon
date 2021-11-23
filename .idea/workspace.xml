@@ -22,13 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="offer">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/page/product/addoffer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OfferController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OfferController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/product/allproducts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/product/allproducts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="offer mostly done" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -355,7 +349,7 @@
       <workItem from="1636264731009" duration="1870000" />
       <workItem from="1637173690738" duration="3000" />
       <workItem from="1637260861974" duration="1056000" />
-      <workItem from="1637407880547" duration="2333000" />
+      <workItem from="1637407880547" duration="2464000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -560,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637407912897</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="offer mostly done">
+      <created>1637410246667</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1637410246667</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,7 +614,8 @@
     <MESSAGE value="cart button spacing" />
     <MESSAGE value="login background" />
     <MESSAGE value="offer" />
-    <option name="LAST_COMMIT_MESSAGE" value="offer" />
+    <MESSAGE value="offer mostly done" />
+    <option name="LAST_COMMIT_MESSAGE" value="offer mostly done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

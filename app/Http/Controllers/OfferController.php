@@ -40,7 +40,7 @@ class OfferController extends Controller
     {
 
         $product = Product::find($id);
-        if($request->offer_id != null)
+        if($request->offer_id != 0)
         {
             $offer = Offer::find($request->offer_id);
             $product->offer_id = $request->offer_id;
@@ -51,8 +51,8 @@ class OfferController extends Controller
         }
         else
         {
-            $product->offer_id = null;
-            $product->offer_price = null;
+            $product->offer_id = 0;
+            $product->offer_price = 0;
             $product->save();
         }
         session()->flash('success','Offer has been added to the product');

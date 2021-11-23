@@ -35,7 +35,7 @@
         <div class="form-group">
             <label for="exampleInputEmail">Add Offer</label>
             <select class="form-control select2-blue" id="offer_id" name="offer_id">
-                <option value=null>No Offer</option>
+                <option value="0">No Offer</option>
                 @foreach($offers as $offer)
                     <option value="{{ $offer->id }}">{{ $offer->title }}</option>
                 @endforeach
