@@ -6,29 +6,29 @@
 <script>
     //Profile
 
-    var fileupload = $('#propic');
+    let fileupload = $('#propic');
     $('#propic').on('change', function(e){
         console.log($('#propic').prop('files')[0]);
-        const url = "{{ route('addimage')  }}";
-        var file_data = $('#propic').prop('files')[0]
+        let url = "{{ route('addimage')  }}";
+
+        let file_data = $('#propic').prop('files')[0]
 
         //var dataURL = canvas.toDataURL(fileupload.target.files[0], 1.0)
         //var blob = dataURItoBlob(dataURL)
         //var fr = new FileReader();
         //fr.readAsDataURL(("#propic")[0].files[0]);
-        var formData = new FormData();
+        let formData = new FormData();
         formData.append('image',file_data);
         formData.append('_token', '{{csrf_token()}}')
 
-        console.log(formData)
+        //console.log(formData)
 
-        var xhr = new XMLHttpRequest();
+        let xhr = new XMLHttpRequest();
         xhr.open("POST", url, true);
         xhr.send(formData);
-        console.log(xhr.responseText);
-        if(xhr.responseText=='success'){
-            $('#pict').load(document.URL + ' #pict');
-        }
+        console.log(xhr.status);
+        $('#pict').load(document.URL + ' #pict');
+
 
 
     });
