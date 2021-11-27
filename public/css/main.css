@@ -3445,16 +3445,19 @@ input.num-product::-webkit-inner-spin-button {
     margin:  40px auto;
     width: fit-content;
     length: fit-content;
-    border: rgb(206, 72, 72) solid 3px;
+    /*border: rgb(206, 72, 72) solid 3px; */
     padding: 10px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 4px;
 
 
 
 }
 
 .fcol {
-    background-color: rgba(87, 53, 53, 0.5);
+    background-color: rgba(226, 30, 30, 0.84);
     display: flex;
     flex-direction: column;
     justify-content: center;
