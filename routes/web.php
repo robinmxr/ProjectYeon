@@ -141,6 +141,12 @@ Route::get('/admin/image', [PublicImageController::class, 'addimage'])->name('ad
 
 Route::post('/admin/image', [PublicImageController::class, 'storeimage'])->name('admin.coverimage.store')->middleware('is_admin');
 
+Route::get('/admin/gallery', [PublicImageController::class, 'showimage'])->name('admin.gallery')->middleware('is_admin');
+
+Route::post('/admin/gallery/{id}', [PublicImageController::class, 'deleteimage'])->name('admin.coverimage.delete')->middleware('is_admin');
+
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => ['auth']], function () {

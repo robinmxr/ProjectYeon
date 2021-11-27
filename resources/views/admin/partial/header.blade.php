@@ -193,6 +193,12 @@
                                     <p>Add Cover Image</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.gallery') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Gallery</p>
+                                </a>
+                            </li>
 
 
                         </ul>
