@@ -178,6 +178,25 @@
 
                         </ul>
                     </li>
+                    <li class="nav-item has-treeview">
+                        <a  class="nav-link">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                Images
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('admin.coverimage') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Add Cover Image</p>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </li>
 
                     <!--
 

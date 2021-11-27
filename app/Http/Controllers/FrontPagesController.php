@@ -6,6 +6,7 @@ use App\Models\Product;
 
 
 use App\Models\ProductReview;
+use App\Models\PublicImage;
 use App\Models\Wishlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
@@ -18,7 +19,8 @@ class FrontPagesController extends Controller
     {
         $products = Product::orderBy('id','desc')->paginate(20);
         $featured = Product::where('featured','true')->get();
-        return view('frontend.page.index',compact('products','featured'));
+        $images = PublicImage::all();
+        return view('frontend.page.index',compact('products','featured','images'));
     }
     public function contact()
     {

@@ -7,17 +7,13 @@
 <section class="section-slide">
   <div class="wrap-slick1 rs2-slick1">
     <div class="slick1">
-      <div class="item-slick1 bg-overlay1" style="background-image: url(images/webslide1.jpg);">
-        
-      </div>
+     @foreach($images as $image)
+            <div class="item-slick1 bg-overlay1" style="background-image: url({{ asset('images/cover/'.$image->image) }});">
 
-      <div class="item-slick1 bg-overlay1" style="background-image: url(images/webslide2.jpg);" >
-        
       </div>
+        @endforeach
 
-      <div class="item-slick1 bg-overlay1" style="background-image: url(images/webslide.jpg);">
-        
-      </div>
+
     </div>
 
 

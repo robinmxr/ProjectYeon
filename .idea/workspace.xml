@@ -22,7 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="offer mostly done" />
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="offer done">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/page/image/addimage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontPagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partial/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -227,7 +234,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/page/product" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/page/image" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -241,6 +248,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\admin\page\image" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\admin\page\product" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\admin\page" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page" />
@@ -350,6 +358,9 @@
       <workItem from="1637173690738" duration="3000" />
       <workItem from="1637260861974" duration="1056000" />
       <workItem from="1637407880547" duration="2464000" />
+      <workItem from="1637690804017" duration="1490000" />
+      <workItem from="1637957533290" duration="2491000" />
+      <workItem from="1638011714081" duration="2151000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -561,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637410246667</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="offer done">
+      <created>1637690995726</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1637690995726</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,7 +633,8 @@
     <MESSAGE value="login background" />
     <MESSAGE value="offer" />
     <MESSAGE value="offer mostly done" />
-    <option name="LAST_COMMIT_MESSAGE" value="offer mostly done" />
+    <MESSAGE value="offer done" />
+    <option name="LAST_COMMIT_MESSAGE" value="offer done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
