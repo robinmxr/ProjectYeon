@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class PublicImage extends Model
 {
     use HasFactory;
+
     public $timestamps = false;
 }

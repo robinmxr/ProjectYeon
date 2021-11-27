@@ -32,6 +32,7 @@ class PublicImageController extends Controller
         $images = PublicImage::all();
         return view('admin.page.image.gallery',compact('images'));
     }
+
     public function deleteimage($id)
     {
         $image = PublicImage::find($id);
