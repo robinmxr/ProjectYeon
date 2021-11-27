@@ -531,6 +531,11 @@
                                     <span class="header-cart-item-info">
 								{{ $item->price }}
 							</span>
+
+
+                                    <span class="header-cart-item-info">
+								old price : {{$item->attributes->oldprice}}
+							</span>
                                 </div>
                             </li>
 

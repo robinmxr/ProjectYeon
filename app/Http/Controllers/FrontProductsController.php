@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Offer;
 use App\Models\ProductReview;
 use App\Models\ProductSize;
 use Illuminate\Http\Request;
@@ -39,9 +40,28 @@ class FrontProductsController extends Controller
     }
     public function addtocart(Request $request){
     $product = Product::find($request->id);
-    Cart::add(uniqid(), $product->title, $product->price, $request->quantity, array(
-        'size' => $request->size,
-        'image' => $product->image[0]->image));
+    $offerid = Offer::find($product->offer_id);
+
+
+    if(isset($offerid)){
+
+        $price = $product->price - $product->price * $offerid->percentage/100;
+        Cart::add(uniqid(), $product->title, $price, $request->quantity, array(
+            'size' => $request->size,
+            'image' => $product->image[0]->image,
+            'offerpercent' => $offerid->percentage,
+                'oldprice' => $product->price)
+
+        );
+
+    }
+    else {
+        Cart::add(uniqid(), $product->title, $product->price, $request->quantity, array(
+            'size' => $request->size,
+            'image' => $product->image[0]->image));
+
+    }
+
 
         session()->flash('success','Added to cart');
         return back();
