@@ -77,7 +77,7 @@
             size = $(".sizebox:checked ").val();
         }
         else{
-            size = $("#option1").val()
+            size = document.getElementsByName("options")[0].value
         }
 
 		//console.log(size);
