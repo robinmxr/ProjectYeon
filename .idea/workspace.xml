@@ -22,9 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="cart offer update">
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="minor fix.. profile pic issue still remains">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontProductsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,7 +357,6 @@
       <workItem from="1637173690738" duration="3000" />
       <workItem from="1637260861974" duration="1056000" />
       <workItem from="1637407880547" duration="2333000" />
-      <workItem from="1638093716549" duration="316000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -558,14 +561,7 @@
       <option name="project" value="LOCAL" />
       <updated>1637407912897</updated>
     </task>
-    <task id="LOCAL-00030" summary="cart offer update">
-      <created>1638023825528</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1638023825528</updated>
-    </task>
-    <option name="localTasksCounter" value="31" />
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -618,8 +614,7 @@
     <MESSAGE value="cart button spacing" />
     <MESSAGE value="login background" />
     <MESSAGE value="offer" />
-    <MESSAGE value="cart offer update" />
-    <option name="LAST_COMMIT_MESSAGE" value="cart offer update" />
+    <option name="LAST_COMMIT_MESSAGE" value="offer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

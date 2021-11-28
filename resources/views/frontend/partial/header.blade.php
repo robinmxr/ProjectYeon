@@ -529,13 +529,11 @@
                                     </a>
 
                                     <span class="header-cart-item-info">
-								{{ $item->price }}
+								{{ $item->price }} TK
 							</span>
 
 
-                                    <span class="header-cart-item-info">
-								old price : {{$item->attributes->oldprice}}
-							</span>
+
                                 </div>
                             </li>
 

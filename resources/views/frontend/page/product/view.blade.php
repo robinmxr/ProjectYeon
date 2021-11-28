@@ -74,7 +74,13 @@
 
                 </h4>
                 <div class="mtext-106 cl2 p-tb-7">
-            {{ $product->price }} Taka
+            @if($product->offer_id == null || $product->offer_id == 0)
+                        {{ $product->price }} Taka
+                    @else
+                        <del>{{ $product->price }} Taka </del>
+                        <h1 class="ltext-104 cl2">{{ $product->offer->percentage }} % OFF!</h1>
+                        {{ $product->offer_price }} Taka
+                    @endif
           </div>
 
 
@@ -144,9 +150,15 @@
                     <button class="stext-102 cl0 size-102 m-2 btn-col-bg-red  hov-btn1 p-lr-5 trans-04 js-addwish-detail" onclick="addtoWishlist('{{$product->id}}')">
                         Add to Wishlist
                     </button>
+                    @if($product->quantity>0)
                     <button class="stext-102 cl0 size-102 m-2 btn-col-bg-red hov-btn1 p-lr-10 trans-04 js-addcart-detail" onclick="getMessage('{{$product->id}}')">
                         Add to cart
                     </button>
+                        @else
+                        <button class="stext-102 cl0 size-102 m-2 btn-col-bg-red hov-btn1 p-lr-10 trans-04 js-addcart-detail" disabled>
+                            Add to cart
+                        </button>
+                    @endif
                 </div>
                 <!--
                 <div class="flex-w flex-m p-l-100 p-t-40 respon6">
