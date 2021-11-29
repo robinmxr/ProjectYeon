@@ -8,7 +8,7 @@
   <div class="wrap-slick1 rs2-slick1">
     <div class="slick1">
      @foreach($images as $image)
-            <div class="item-slick1 bg-overlay1" style="background-image: url({{ asset('images/cover/'.$image->image) }});">
+            <div class="item-slick1 bg-overlay1 herobg" style="--bgi: url({{ asset('images/cover/'.$image->image) }});">
 
       </div>
         @endforeach

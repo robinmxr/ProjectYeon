@@ -3771,3 +3771,16 @@ label.star:before {
 .inputinlabel{
     display: none;
 }
+
+
+
+.herobg{
+    background-image: var(--bgi);
+}
+@media (max-width: 991px) {
+
+    .herobg{
+        background-image: url('../images/webslide.jpg');
+    }
+
+}
