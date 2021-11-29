@@ -22,9 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="seperate cover for mobile view">
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="bg-overlay1::before opacity 0.5 to 0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -557,14 +557,7 @@
       <option name="project" value="LOCAL" />
       <updated>1637407912897</updated>
     </task>
-    <task id="LOCAL-00030" summary="seperate cover for mobile view">
-      <created>1638198665255</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1638198665255</updated>
-    </task>
-    <option name="localTasksCounter" value="31" />
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,8 +610,7 @@
     <MESSAGE value="cart button spacing" />
     <MESSAGE value="login background" />
     <MESSAGE value="offer" />
-    <MESSAGE value="seperate cover for mobile view" />
-    <option name="LAST_COMMIT_MESSAGE" value="seperate cover for mobile view" />
+    <option name="LAST_COMMIT_MESSAGE" value="offer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

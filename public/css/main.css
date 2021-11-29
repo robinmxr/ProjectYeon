@@ -707,21 +707,20 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .logo-mobile {
 
     display: block;
-    position: relative;
     height: 80%;
     padding-right: 25px;
     -webkit-flex-grow: 1;
     -moz-flex-grow: 1;
     flex-grow: 1;
+
 }
 
 .logo-mobile img {
-    max-width: calc(100% - 20px);
-    max-height: 100%;
-    position:absolute;
+    max-width: calc(100% - 10px);
+    max-height: 200%;
     top: 0;
     left: 0;
-    bottom: 0;
+    bottom: 10px;
     margin: auto;
 }
 
@@ -756,7 +755,12 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
         display: -moz-box;
         display: -ms-flexbox;
         display: flex;
+        height: 60px;
+        position: fixed;
+
+        z-index: 1000;
     }
+
     .container-menu-desktop {display: none;}
 
     /*
