@@ -69,9 +69,9 @@
                                         <img src="{{ asset('images/products/' . $product->image[0]->image) }}" alt="IMG-PRODUCT">
 
 
+                                <div class="block2-btn flex-c-m stext-103 cl0 size-102 bg7 bor2 hov-btn3 p-lr-15 trans-04" >
+                                    Add to Cart
                                 @if($product->quantity>0)
-                                    <div class="block2-btn flex-c-m stext-103 cl0 size-102 bg7 bor2 hov-btn3 p-lr-15 trans-04" >
-                                Add to Cart
                                     </div>
                                 @else
                                 <div class="block2-btn flex-c-m stext-103 cl1 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04" >
@@ -116,4 +116,5 @@
 
 
     </div>
+</div>
 </div>

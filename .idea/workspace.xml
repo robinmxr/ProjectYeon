@@ -22,9 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="bg-overlay1::before opacity 0.5 to 0">
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="cover n bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/script.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OfferController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OfferController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/util.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/util.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/slide1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/product/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/product/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/product/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/product.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +238,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/page/product" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/page/image" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -244,6 +252,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\admin\page\image" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\admin\page\product" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\admin\page" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page" />
@@ -352,7 +361,13 @@
       <workItem from="1636264731009" duration="1870000" />
       <workItem from="1637173690738" duration="3000" />
       <workItem from="1637260861974" duration="1056000" />
-      <workItem from="1637407880547" duration="2333000" />
+      <workItem from="1637407880547" duration="2464000" />
+      <workItem from="1637690804017" duration="1490000" />
+      <workItem from="1637957533290" duration="2491000" />
+      <workItem from="1638011714081" duration="3876000" />
+      <workItem from="1638167306781" duration="3386000" />
+      <workItem from="1638183136636" duration="1543000" />
+      <workItem from="1638191146421" duration="5373000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -557,7 +572,28 @@
       <option name="project" value="LOCAL" />
       <updated>1637407912897</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="offer mostly done">
+      <created>1637410246667</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1637410246667</updated>
+    </task>
+    <task id="LOCAL-00031" summary="offer done">
+      <created>1637690995726</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1637690995726</updated>
+    </task>
+    <task id="LOCAL-00032" summary="cover image upload">
+      <created>1638013915493</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1638013915493</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,7 +610,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="redish_all" />
+                        <option value="origin/finalize" />
                       </list>
                     </value>
                   </entry>
@@ -610,7 +646,10 @@
     <MESSAGE value="cart button spacing" />
     <MESSAGE value="login background" />
     <MESSAGE value="offer" />
-    <option name="LAST_COMMIT_MESSAGE" value="offer" />
+    <MESSAGE value="offer mostly done" />
+    <MESSAGE value="offer done" />
+    <MESSAGE value="cover image upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="cover image upload" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

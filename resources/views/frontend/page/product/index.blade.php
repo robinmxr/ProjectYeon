@@ -74,9 +74,16 @@ Products
         <!-- Block2 -->
           <a href="{{ route('product.view',['slug'=>$product->slug,'id'=>$product->id]) }}">
 					<div class="block2">
+
+
 						<div class="block2-pic hov-img0">
 
+
 						<img src="{{ asset('images/products/' . $product->image[0]->image) }}" alt="IMG-PRODUCT">
+                            @if($product->offer_id != null || $product->offer_id != 0)
+                                <div class="corner-ribbon">{{ $product->offer->percentage }} %</div>
+
+                            @endif
 
 
                             @if($product->quantity>0)
@@ -98,10 +105,17 @@ Products
 								<h1 class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 									{{ $product->title }}
 								</h1>
-
-								<span class="stext-105 cl3">
+                                @if($product->offer_id == null || $product->offer_id == 0)
+                                    <span class="stext-105 cl3">
 									Tk {{ $product->price }}
 								</span>
+                                @else
+                                    <span class="stext-105 cl3">
+									Tk {{ $product->offer_price }}
+								</span>
+                                @endif
+
+
 							</div>
 
 
