@@ -36,7 +36,7 @@ class OfferController extends Controller
         session()->flash('success','Offer has been deleted');
         return back();
     }
-    public function addoffer($id,Request $request)
+    public function addoffer(Request $request,$id)
     {
 
         $product = Product::find($id);
