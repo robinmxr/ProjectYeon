@@ -557,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637407912897</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="seperate cover for mobile view">
+      <created>1638198665255</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1638198665255</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,7 +617,8 @@
     <MESSAGE value="cart button spacing" />
     <MESSAGE value="login background" />
     <MESSAGE value="offer" />
-    <option name="LAST_COMMIT_MESSAGE" value="offer" />
+    <MESSAGE value="seperate cover for mobile view" />
+    <option name="LAST_COMMIT_MESSAGE" value="seperate cover for mobile view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

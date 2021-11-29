@@ -758,12 +758,17 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
         display: flex;
     }
     .container-menu-desktop {display: none;}
+
+    /*
     .bggrad {
         display : none ;
     }
+
     .wrap-slick1 {
         display: none ;
     }
+
+     */
 }
 
 /*==================================================================
