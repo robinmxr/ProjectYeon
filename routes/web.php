@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ProductReviewController;
+use App\Http\Controllers\PublicImageController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WishlistController;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\OfferController;
 
 /*-----------------Frontend Page Routes--------------------*/
 Route::get('/', [FrontPagesController::class, 'index'])->name('index');
@@ -74,9 +76,9 @@ Route::get('auth/google/', [LoginController::class, 'redirectToGoogle'])->name('
 
 Route::get('auth/google/callback', [LoginController::class, 'handleGoogleCallback'])->name('login.googlecallback');
 
-Route::get('auth/facebook/', [LoginController::class, 'loginWithFacebook'])->name('login.facebook');
+Route::get('auth/facebook/', [LoginController::class, 'facebookRedirect'])->name('login.facebook');
 
-Route::get('auth/facebook/callback', [LoginController::class, 'facebookRedirect'])->name('login.facebookcallback');
+Route::get('auth/facebook/callback', [LoginController::class, 'loginWithFacebook'])->name('login.facebookcallback');
 /*-----------------------------Admin Routes Backend--------------------------------*/
 //Route::get('/admin', [BackPagesController::class, 'index'])->name('admin.index');
 
@@ -98,6 +100,10 @@ Route::get('/admin/product/edit/{id}', [BackProductsController::class, 'edit'])-
 
 Route::post('/admin/product/create', [BackProductsController::class, 'store'])->name('admin.product.store')->middleware('is_admin');
 
+Route::get('/admin/product/{id}', [OfferController::class, 'showoffer'])->name('admin.product.showoffer')->middleware('is_admin');
+
+Route::post('/admin/product/{id}', [OfferController::class, 'addoffer'])->name('admin.product.addoffer')->middleware('is_admin');
+
 Route::post('/admin/product/edit/{id}', [BackProductsController::class, 'update'])->name('admin.product.update')->middleware('is_admin');
 
 Route::post('/admin/product/delete/{id}', [BackProductsController::class, 'delete'])->name('admin.product.delete')->middleware('is_admin');
@@ -105,6 +111,7 @@ Route::post('/admin/product/delete/{id}', [BackProductsController::class, 'delet
 Route::get('/admin/category/create', [BackCategoriesController::class, 'create'])->name('admin.category.create')->middleware('is_admin');
 
 Route::get('/admin/category', [BackCategoriesController::class, 'index'])->name('admin.categories')->middleware('is_admin');
+
 
 Route::get('/admin/category/edit/{id}', [BackCategoriesController::class, 'edit'])->name('admin.category.edit')->middleware('is_admin');
 
@@ -116,9 +123,28 @@ Route::post('/admin/category/delete/{id}', [BackCategoriesController::class, 'de
 
 Route::get('/admin/order', [OrderController::class, 'order'])->name('admin.orders')->middleware('is_admin');
 
+Route::get('/admin/image', [PublicImageController::class, 'addimage'])->name('admin.coverimage')->middleware('is_admin');
+
 Route::get('/admin/order/{id}', [OrderController::class, 'orderview'])->name('admin.order.view')->middleware('is_admin');
 
 Route::post('/admin/order/{id}', [OrderController::class, 'changestatus'])->name('admin.order.changestatus')->middleware('is_admin');
+
+Route::get('/admin/offer', [OfferController::class, 'show'])->name('admin.offers')->middleware('is_admin');
+
+Route::get('/admin/offer/create', [OfferController::class, 'create'])->name('admin.offer.create')->middleware('is_admin');
+
+Route::post('/admin/offer/create', [OfferController::class, 'store'])->name('admin.offer.store')->middleware('is_admin');
+
+Route::post('/admin/offer/delete/{id}', [OfferController::class, 'delete'])->name('admin.offer.delete')->middleware('is_admin');
+
+Route::get('/admin/image', [PublicImageController::class, 'addimage'])->name('admin.coverimage')->middleware('is_admin');
+
+Route::post('/admin/image', [PublicImageController::class, 'storeimage'])->name('admin.coverimage.store')->middleware('is_admin');
+
+Route::get('/admin/gallery', [PublicImageController::class, 'showimage'])->name('admin.gallery')->middleware('is_admin');
+
+Route::post('/admin/gallery/{id}', [PublicImageController::class, 'deleteimage'])->name('admin.coverimage.delete')->middleware('is_admin');
+
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -12,10 +12,20 @@ use Illuminate\Support\Facades\Auth;
 class WishlistController extends Controller
 {
     public function addwish(Request $request){
-        $wishItem = new Wishlist;
-        $wishItem->user_id = Auth::user()->id;
-        $wishItem->product_id = $request->productId;
-        $wishItem->save();
+        $cwu_wishlist = Wishlist::where('user_id', '=', Auth::user()->id)->where('product_id', '=', $request->productId)->first();
+        if(isset($cwu_wishlist))
+        {
+            session()->flash('success','Wishlist Item is already added.');
+        }
+        else{
+            $wishItem = new Wishlist;
+            $wishItem->user_id = Auth::user()->id;
+            $wishItem->product_id = $request->productId;
+            $wishItem->save();
+            session()->flash('success','Wishlist Item is added.');
+        }
+
+
         return back();
     }
 

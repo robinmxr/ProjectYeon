@@ -8,12 +8,12 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Manage Products</h1>
+          <h1>Manage Offers</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Manage Products</li>
+            <li class="breadcrumb-item active">Manage Categories</li>
           </ol>
         </div>
       </div>
@@ -22,56 +22,46 @@
 
   <!-- Main content -->
   <section class="content">
-    <div class="container-fluid">
+    <a class="container-fluid">
 
       <div class="card card-primary">
   <!-- /.card-header -->
   <div class="card-body">
     <table id="example2" class="table  table-hover">
         @include('admin.partial.message')
-
-
       <thead>
       <tr>
         <th>#</th>
-        <th>Product Title</th>
-        <th>Price</th>
-        <th>Type</th>
-          <th>Picture</th>
-        <th>Action</th>
+        <th>Offer Title</th>
+        <th>Percentage</th>
+          <th>Actions</th>
       </tr>
       </thead>
       <tbody>
-        @foreach($products as $product)
+        @foreach($offers as $offer)
         <tr>
-          <td>{{ $product->id }}</td>
-        <td>{{ $product->title }}</td>
-        <td>{{ $product->price }}</td>
-        <td>{{ $product->category->title }}</td>
+          <td>{{ $offer->id }}</td>
+        <td>{{ $offer->title }}</td>
+        <td>{{ $offer->percentage}}</td>
             <td>
-            <img src="{{ asset('images/products/'.$product->image[0]->image) }}" style="height: 180px; width:180px;border-radius: 50%;"/></td>
-            <td>
-                <a href="{{ route('admin.product.edit', $product->id) }}" class="btn btn-block btn-outline-primary btn-lg">Edit</a>
-                <a href="{{ route('admin.product.showoffer', $product->id) }}" class="btn btn-block btn-outline-primary btn-lg">Offer</a>
-
-                <a href="#deleteModal{{ $product->id }}" data-toggle="modal" class="btn btn-block btn-outline-danger">Delete</a>
-                <div class="modal fade" id="deleteModal{{ $product->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <a href="#deleteModal{{ $offer->id }}" data-toggle="modal" class="btn btn-block btn-outline-danger">Delete</a>
+                <div class="modal fade" id="deleteModal{{ $offer->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="deleteModal{{ $product->id }}">Are You Sure?</h5>
+                                <h5 class="modal-title" id="deleteModal{{ $offer->id }}">Are You Sure?</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                             <form method="post" action="{{ route('admin.product.delete', $product->id) }}">
-                                 @csrf
-                                 <button type="submit" class="btn btn-block bg-gradient-danger btn-lg">Confirm Delete</button>
-                             </form>
+                                <form method="post" action="{{ route('admin.offer.delete', $offer->id) }}">
+                                    @csrf
+                                    <button type="submit" class="btn btn-block bg-danger btn-lg">Confirm Delete</button>
+                                </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-block bg-gradient-success btn-lg" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-block bg-success btn-lg" data-dismiss="modal">Cancel</button>
 
                             </div>
                         </div>
@@ -80,16 +70,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-            </td>
+        </td>
 
       </tr>
       @endforeach
@@ -102,11 +83,7 @@
 
     </div>
     <!-- /.card-body -->
-
-      <!-- /.card-body -->
-      <a href="{{ route('admin.product.create') }}" <button type="button" class="btn btn-block bg-info btn-lg">Add More Product</button> </a>
-
-
+        <a href="{{ route('admin.offer.create') }}" ><button type="button" class="btn btn-block bg-info btn-lg">Add More offer</button> </a>
 
       </div>
 

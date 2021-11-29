@@ -4,6 +4,7 @@
 	<title>@yield('pagetitle') | DoogDoogi </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="csrf-token" content="{{ csrf_token() }}">
      <meta name="robots" content="index, follow" />
      <meta http-equiv="x-ua-compatible" content="ie=edge">
 <!--===============================================================================================-->
@@ -528,8 +529,11 @@
                                     </a>
 
                                     <span class="header-cart-item-info">
-								{{ $item->price }}
+								{{ $item->price }} TK
 							</span>
+
+
+
                                 </div>
                             </li>
 

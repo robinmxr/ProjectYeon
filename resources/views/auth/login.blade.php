@@ -1,5 +1,9 @@
 @extends('frontend.layout.master')
 
+@section('pagetitle')
+    Login
+@endsection
+
 @section('content')
     <!--<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">-->
     <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/svg/asset8.svg');">
@@ -17,8 +21,8 @@
 
                     <p class="pd-log selfflex">
 
-                        <a href="{{ route('login.google') }}"><i class="fa fa-google " aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-facebook " aria-hidden="true"></i></a>
+                        <a class="cl0" href="{{ route('login.google') }}"><i class="fa fa-google " aria-hidden="true"></i></a>
+                        <a class="cl0href="#"><i class="fa fa-facebook " aria-hidden="true"></i></a>
 
                     </p>
                 </div>

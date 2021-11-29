@@ -4,6 +4,37 @@
 
 
 <script>
+    //Profile
+
+    let fileupload = $('#propic');
+    $('#propic').on('change', function(e){
+        console.log($('#propic').prop('files')[0]);
+        let url = "{{ route('addimage')  }}";
+
+        let file_data = $('#propic').prop('files')[0]
+
+        //var dataURL = canvas.toDataURL(fileupload.target.files[0], 1.0)
+        //var blob = dataURItoBlob(dataURL)
+        //var fr = new FileReader();
+        //fr.readAsDataURL(("#propic")[0].files[0]);
+        let formData = new FormData();
+        formData.append('image',file_data);
+        formData.append('_token', '{{csrf_token()}}')
+
+        //console.log(formData)
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", url, true);
+        xhr.send(formData);
+        console.log(xhr.status);
+        $('#pict').load(document.URL + ' #pict');
+
+
+
+    });
+</script>
+
+<script>
 
 
 
@@ -46,7 +77,7 @@
             size = $(".sizebox:checked ").val();
         }
         else{
-            size = $("#option1").val()
+            size = document.getElementsByName("options")[0].value
         }
 
 		//console.log(size);
@@ -164,6 +195,7 @@
 			var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
 
 			$(this).on('click', function(){
+
 				swal(nameProduct, "is added to wishlist !", "success");
 
 

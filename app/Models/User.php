@@ -49,4 +49,8 @@ class User extends Authenticatable
 
         return parent::delete();
     }
+    public function wishlist()
+    {
+        return $this->hasMany('App\Models\Wishlist');
+    }
 }

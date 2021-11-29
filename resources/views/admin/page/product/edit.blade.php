@@ -72,10 +72,7 @@
             <label for="exampleInputEmail1">Care</label>
             <input type="text" class="form-control" name="care" value="{{ $product->care }}">
         </div>
-        <div class="form-group">
-            <label for="exampleInputEmail">Available Size</label>
-            <input type="text" class="form-control" name="size" value="{{ $product->size }}">
-        </div>
+
         <div class="form-group">
             <label for="exampleInputEmail">Tag</label>
             <input type="text" class="form-control" name="tag" value="{{ $product->tag }}">
@@ -83,15 +80,24 @@
         <div class="form-group">
             <label for="exampleInputEmail">Featured</label>
             <select class="form-control select2-blue" name="featured">
-                <option value="true">True</option>
-                <option value="false">False</option>
+                @if($product->featured == 'true')
+                <option value="true" selected="selected">True</option>
+                    <option value="false" >False</option>
+                @else
+                <option value="false" selected="selected">False</option>
+                    <option value="true" >True</option>
+                    @endif
             </select>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail">Category</label>
             <select class="form-control select2-blue" id="category_id" name="category_id">
                 @foreach($category as $cat)
-                    <option value="{{ $cat->id }}">{{ $cat->title }}</option>
+                    @if($cat->id == $product->category_id)
+                    <option value="{{ $cat->id }}" selected="selected">{{ $cat->title }}</option>
+                    @else
+                        <option value="{{ $cat->id }}">{{ $cat->title }}</option>
+                        @endif
                 @endforeach
             </select>
         </div>

@@ -22,11 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="login background">
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="seperate cover for mobile view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/side.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/side.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/profile.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +230,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/frontend/page" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/page/product" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -246,6 +244,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\admin\page\product" />
+      <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\admin\page" />
       <recent name="C:\xampp\htdocs\ProjectYeon\resources\views\frontend\page" />
       <recent name="C:\xaamp\htdocs\doogdoogi\ProjectYeon\public\images" />
     </key>
@@ -350,6 +350,9 @@
       <workItem from="1635919489273" duration="1704000" />
       <workItem from="1635960313145" duration="1387000" />
       <workItem from="1636264731009" duration="1870000" />
+      <workItem from="1637173690738" duration="3000" />
+      <workItem from="1637260861974" duration="1056000" />
+      <workItem from="1637407880547" duration="2333000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -540,7 +543,28 @@
       <option name="project" value="LOCAL" />
       <updated>1636661706580</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="offer">
+      <created>1637090260906</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1637090260906</updated>
+    </task>
+    <task id="LOCAL-00029" summary="offer">
+      <created>1637407912897</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1637407912897</updated>
+    </task>
+    <task id="LOCAL-00030" summary="seperate cover for mobile view">
+      <created>1638198665255</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1638198665255</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,7 +581,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/finalize" />
+                        <option value="redish_all" />
                       </list>
                     </value>
                   </entry>
@@ -592,7 +616,9 @@
     <MESSAGE value="wishlish.blade fixes" />
     <MESSAGE value="cart button spacing" />
     <MESSAGE value="login background" />
-    <option name="LAST_COMMIT_MESSAGE" value="login background" />
+    <MESSAGE value="offer" />
+    <MESSAGE value="seperate cover for mobile view" />
+    <option name="LAST_COMMIT_MESSAGE" value="seperate cover for mobile view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -604,12 +630,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php</url>
-          <line>113</line>
+          <line>119</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php</url>
-          <line>81</line>
+          <line>87</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>

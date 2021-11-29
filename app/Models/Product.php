@@ -27,10 +27,15 @@ class Product extends Model
       return $this->belongsTo('App\Models\Category', 'category_id');
 
     }
+    public function offer()
+    {
+        return $this->belongsTo('App\Models\Offer','offer_id');
+    }
     public function size()
     {
         return $this->hasMany('App\Models\ProductSize');
     }
+
     public function delete()
     {
         // delete all related photos

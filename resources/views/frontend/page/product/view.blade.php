@@ -74,7 +74,13 @@
 
                 </h4>
                 <div class="mtext-106 cl2 p-tb-7">
-            {{ $product->price }} Taka
+            @if($product->offer_id == null || $product->offer_id == 0)
+                        {{ $product->price }} Taka
+                    @else
+                        <del>{{ $product->price }} Taka </del>
+                        <h1 class="ltext-104 cl2">{{ $product->offer->percentage }} % OFF!</h1>
+                        {{ $product->offer_price }} Taka
+                    @endif
           </div>
 
 
@@ -144,9 +150,15 @@
                     <button class="stext-102 cl0 size-102 m-2 btn-col-bg-red  hov-btn1 p-lr-5 trans-04 js-addwish-detail" onclick="addtoWishlist('{{$product->id}}')">
                         Add to Wishlist
                     </button>
+                    @if($product->quantity>0)
                     <button class="stext-102 cl0 size-102 m-2 btn-col-bg-red hov-btn1 p-lr-10 trans-04 js-addcart-detail" onclick="getMessage('{{$product->id}}')">
                         Add to cart
                     </button>
+                        @else
+                        <button class="stext-102 cl0 size-102 m-2 btn-col-bg-red hov-btn1 p-lr-10 trans-04 js-addcart-detail" disabled>
+                            Add to cart
+                        </button>
+                    @endif
                 </div>
                 <!--
                 <div class="flex-w flex-m p-l-100 p-t-40 respon6">
@@ -177,11 +189,11 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
           <li class="nav-item p-b-10">
-            <a class="nav-link active" data-toggle="tab" href="#description" role="tab">Description</a>
+            <a class="nav-link" data-toggle="tab" href="#description" role="tab">Description</a>
           </li>
 
           <li class="nav-item p-b-10">
-            <a class="nav-link" data-toggle="tab" href="#information" role="tab">Additional information</a>
+            <a class="nav-link active" data-toggle="tab" href="#information" role="tab">Additional information</a>
           </li>
 
 
@@ -190,7 +202,7 @@
         <!-- Tab panes -->
         <div class="tab-content p-t-43">
           <!-- - -->
-          <div class="tab-pane fade show active" id="description" role="tabpanel">
+          <div class="tab-pane fade" id="description" role="tabpanel">
             <div class="how-pos2 p-lr-15-md">
               <p class="stext-102 cl6">
                   {{ $product->description }}
@@ -199,7 +211,7 @@
           </div>
 
           <!-- - -->
-          <div class="tab-pane fade" id="information" role="tabpanel">
+          <div class="tab-pane fade show active" id="information" role="tabpanel">
             <div class="row">
               <div class="col-sm-10 col-md-8 col-lg-6 m-lr-auto">
                 <ul class="p-lr-28 p-lr-15-sm">
@@ -275,14 +287,26 @@
 
 
             <div class="tab-pane fade show active" id="reviews" role="tabpanel">
-                <div class="row">
+
                     <div class="col-sm-10 col-md-8 col-lg-6 m-lr-auto">
                         <div class="p-b-30 m-lr-15-sm">
                             <!-- Review -->
                             <div class="flex-w flex-t p-b-68">
                                 @foreach($review as $rev)
                                     <div class="wrap-pic-s size-109 bor0 of-hidden m-r-18 m-t-6">
-                                        <img src="{{ asset('images/avatar-01.jpg') }}" alt="AVATAR">
+                                        @if(isset(Auth::user()->image[0]->image))
+
+
+                                            <img src="{{ asset('images/profiles/'.Auth::user()->image[0]->image) }}" />
+
+                                        @else
+
+                                        <!--div class="prop"-->
+                                            <img src="{{ asset('images/gallery-03.jpg') }}" />
+
+                                            <!--/div-->
+                                        @endif
+
                                     </div>
 
                                     <div class="size-207">
@@ -300,24 +324,24 @@
                                     </div>
                                 @endforeach
                             </div>
-                        @guest
+                        @if(Auth::guest())
                             <h1>You must be logged in to post review</h1>
                             <!-- Add review -->
 
 
-                            @elseguest
+                            @else
                                 <form method="post" action="{{ route('product.review',['id'=>$product->id,'slug'=>$product->slug ]) }}" class="w-full">
 
                                     @csrf
                                     <h5 class="mtext-108 cl2 p-b-7">
-                                        Add a review
+                                        Write a review
                                     </h5>
 
 
 
 
 
-                                    <div class="row p-b-25">
+                                    <div class="p-b-25">
                                         <div class="col-12 p-b-5">
                                             <label class="stext-102 cl3" for="review">Your review</label>
 
@@ -335,7 +359,7 @@
 
                                     </div>
                                 </form>
-                            @endguest
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -372,6 +396,7 @@
           @foreach($related as $relproduct)
         <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
           <!-- Block2 -->
+            <a href="{{ route('product.view',['slug'=>$relproduct->slug,'id'=>$relproduct->id]) }}">
           <div class="block2">
             <div class="block2-pic hov-img0">
 
@@ -394,6 +419,7 @@
 
             </div>
           </div>
+            </a>
         </div>
           @endforeach
 
