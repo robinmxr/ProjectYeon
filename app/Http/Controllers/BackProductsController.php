@@ -12,6 +12,7 @@ use App\Models\Product;
 use App\Models\ProductImage;
 use Image;
 use Intervention\Image\Size;
+use File;
 
 class BackProductsController extends Controller
 {
@@ -31,12 +32,38 @@ class BackProductsController extends Controller
     {
     $product=Product::find($id);
     if(!is_null($product)){
+        $productimg = ProductImage::where('product_id', '=', $product->id)->get();
+        $destination=public_path().'/images/products/';
+
+        if(count($productimg)>0){
+            foreach ($productimg as $producti){
+                    $loaction = $destination . $producti->image;
+                    $this->filedistroy($loaction);
+            }
+        }
+        else{
+            dd("file(s) doesnt exist.");
+
+        }
+
         $product->delete();
     }
-    session()->flash('success','Product has been deleted');
+    session()->flash('success','Product has been deleted'. $loaction);
     return back();
     }
 
+
+
+    public function filedistroy($path){
+        if(File::exists($path)){
+            File::delete($path);
+            return true;
+        }
+        else{
+            return false;
+
+        }
+    }
 
 
     public function edit($id)
