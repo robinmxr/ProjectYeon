@@ -21,7 +21,7 @@
                     <p class="pd-log selfflex">
 
                         <a class="cl0" href="#"><i class="fa fa-google " aria-hidden="true"></i></a>
-                        <a class="cl0" href="#"><i class="fa fa-facebook " aria-hidden="true"></i></a>
+                        <a class="cl0" href="{{ route('login.facebook') }}"><i class="fa fa-facebook " aria-hidden="true"></i></a>
 
                     </p>
                 </div>

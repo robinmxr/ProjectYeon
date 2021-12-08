@@ -4,7 +4,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="robots" content="noindex, nofollow" />
 
-    <title>@yield('title')-Dashboard</title>
+    <title>@yield('title') Doogdoogi || Dashboard</title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
@@ -304,3 +304,4 @@
         </div>
         <!-- /.sidebar -->
     </aside>
+</div>

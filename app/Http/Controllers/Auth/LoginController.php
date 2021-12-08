@@ -104,7 +104,7 @@ class LoginController extends Controller
                 ]);
 
                 Auth::login($createUser);
-                return redirect();
+                return redirect('/');
             }
 
         } catch (Exception $exception) {

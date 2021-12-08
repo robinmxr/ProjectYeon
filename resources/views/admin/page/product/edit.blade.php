@@ -102,6 +102,18 @@
             </select>
         </div>
 
+        <div class="form-group">
+            <label for="image">Add More Image</label>
+            <div class="input-group">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" name="image[]" id="exampleInputFile">
+                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                </div>
+
+
+            </div>
+        </div>
+
 
 
     </div>
@@ -113,6 +125,30 @@
         </form>
       </div>
     </div>
+      <div class="row">
+          <!-- Gallery item -->
+          @foreach($product->image as $image)
+              <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                  <div class="bg-white rounded shadow-sm"><img src="{{ asset('images/products/'.$image->image) }}" alt="" class="img-fluid card-img-top">
+                      <div class="p-4">
+                          <h5> <a href="#" class="text-dark">Product Image</a></h5>
+                          <p class="small text-muted mb-0">DoogDoogi</p>
+                          <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                              <form method="post" action="{{ route('admin.productimage.delete',$image->id) }}"> @csrf
+                                  <button class="small mb-0" type="submit"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">Delete</span></button>
+                                  <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      @endforeach
+
+      <!-- End -->
+
+
+
+      </div>
   </section>
 </div>
 

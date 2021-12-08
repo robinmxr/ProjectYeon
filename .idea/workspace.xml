@@ -22,90 +22,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="seperate cover for mobile view">
+    <list default="true" id="78c1b3dc-299e-4f64-b583-da01ba22ce3c" name="Default Changelist" comment="Image delete and show on edit product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BackProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BackProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1602059253.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1602071789.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1602144874product-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1602145970product-09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1602147557product-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1602149013product-12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1602149014product-15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/16024388961602144874product-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/16024388971602147557product-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/16024388971602149014product-15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1604945100banner-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1605175669Screenshot (7).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1606311968product-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1606312112product-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1606312212product-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1606312260product-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1606312477product-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1606312517product-07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1608657118product-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1612624514IMG_20210202_155051.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1612624652product-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1612625164IMG_20210202_155051.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1612625369IMG_20210202_155051.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1612625623IMG_20210202_155051.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1612625960IMG_20210202_155051.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1612626163IMG_2533-04.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1612718319IMG_20210202_150320.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/161272923820201118065219_IMG_0724.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1612729299IMG_20210202_150903.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/161272983720201118065409_IMG_0728.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1613240150product-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1613240150product-13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1613289023product-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1613586812banner-09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1613676261slide-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1613676363product-05 - Copy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/161470802600000PORTRAIT_00000_BURST20210202155947172.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/161487938820201118063615_IMG_0689.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/161496172300000PORTRAIT_00000_BURST20210202160222516.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/161496172500000PORTRAIT_00000_BURST20210202160127349.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/161496252420201118065541_IMG_0734.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1614962630IMG_20210202_145841.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1617174349IMG_20210202_150320.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1617174422IMG_20210202_150320.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1617174695product-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1617175610IMG_20210202_150320.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1633687912IMG_0026_1edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/163380854600000PORTRAIT_00000_BURST20200905123736784.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1634203792Adobe_Post_20210702_1554360.09531006903577366.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1634203971slide-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1634215702S37A3982.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1634215891S37A4344.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1634215970S37A4320.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1634216013S37A4009.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1634216082S37A4256.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1634216146S37A4243.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1634216269S37A4054.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1634383404WhatsApp_Media_WhatsApp Images_IMG-20201129-WA0001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1634383405WhatsApp_Media_WhatsApp Images_IMG-20201129-WA0002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1634383405WhatsApp_Media_WhatsApp Images_IMG-20201129-WA0003.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1635100380WhatsApp_Media_WhatsApp Images_IMG-20201129-WA0004.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1635100381WhatsApp_Media_WhatsApp Images_IMG-20201129-WA0005.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/16357928342.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/1636223156WhatsApp_Media_WhatsApp Images_IMG-20201129-WA0004.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-01 - Copy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/product-16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PublicImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PublicImageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/page/product/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/page/product/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partial/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/page/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/partial/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/partial/product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -434,8 +363,6 @@
       <workItem from="1637173690738" duration="3000" />
       <workItem from="1637260861974" duration="1056000" />
       <workItem from="1637407880547" duration="2333000" />
-      <workItem from="1638531323210" duration="899000" />
-      <workItem from="1638551999451" duration="4409000" />
     </task>
     <task id="LOCAL-00001" summary="multiauth">
       <created>1605177345257</created>
@@ -640,14 +567,7 @@
       <option name="project" value="LOCAL" />
       <updated>1637407912897</updated>
     </task>
-    <task id="LOCAL-00030" summary="seperate cover for mobile view">
-      <created>1638198665255</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1638198665255</updated>
-    </task>
-    <option name="localTasksCounter" value="31" />
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -700,8 +620,8 @@
     <MESSAGE value="cart button spacing" />
     <MESSAGE value="login background" />
     <MESSAGE value="offer" />
-    <MESSAGE value="seperate cover for mobile view" />
-    <option name="LAST_COMMIT_MESSAGE" value="seperate cover for mobile view" />
+    <MESSAGE value="Image delete and show on edit product" />
+    <option name="LAST_COMMIT_MESSAGE" value="Image delete and show on edit product" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -720,6 +640,11 @@
           <url>file://$PROJECT_DIR$/resources/views/frontend/page/product/view.blade.php</url>
           <line>87</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/page/image/gallery.blade.php</url>
+          <line>37</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

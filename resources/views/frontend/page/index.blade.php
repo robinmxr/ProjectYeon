@@ -10,7 +10,7 @@
      @foreach($images as $image)
             <div class="item-slick1 bg-overlay1 herobg" style="--bgi: url({{ asset('images/cover/'.$image->image) }});">
 
-      </div>
+            </div>
         @endforeach
 
 
@@ -153,6 +153,7 @@
     </div>
   </div>
 </div>
+
 
 
 <section class="sec-product bg0 p-t-100 p-b-50">

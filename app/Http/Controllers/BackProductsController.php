@@ -12,7 +12,7 @@ use App\Models\Product;
 use App\Models\ProductImage;
 use Image;
 use Intervention\Image\Size;
-use File;
+use Illuminate\Support\Facades\File;
 
 class BackProductsController extends Controller
 {
@@ -50,6 +50,18 @@ class BackProductsController extends Controller
     }
     session()->flash('success','Product has been deleted'. $loaction);
     return back();
+    }
+    public function deleteimage($id)
+    {
+        $image = ProductImage::find($id);
+
+        $path = public_path().'images/products/';
+
+        File::delete('images/products/'.$image->image);
+        $image->delete();
+
+        session()->flash('success','Image has been Deleted');
+        return back();
     }
 
 
@@ -177,8 +189,8 @@ class BackProductsController extends Controller
         $product->save();
 
         //ProductImage Model insert Image
-        /*if(count($request->product_image) > 0) {
-          foreach($request->product_image as $image) {
+        if(count($request->image) > 0) {
+          foreach($request->image as $image) {
 
           $final_image= Image::make($image);
           $originalpath=public_path().'/images/products/';
@@ -189,7 +201,7 @@ class BackProductsController extends Controller
           $product_image->image=time().$image->getClientOriginalName();
           $product_image->save();
         }
-      }*/
+      }
 
 
           session()->flash('success','Product has been edited');

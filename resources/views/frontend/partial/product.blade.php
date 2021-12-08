@@ -55,30 +55,38 @@
 
 
         <div class="row isotope-grid">
-            @foreach($products ?? '' as $product)
+            @foreach($products as $product)
 
 
-                <div class="col-sm-4 col-md-3 col-lg-3 p-b-35 isotope-item {{ $product->category->category_type }}">
+                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item {{ $product->category->category_type }}">
 
 
                     <!-- Block2 -->
                     <a href="{{ route('product.view',['slug'=>$product->slug,'id'=>$product->id]) }}">
                         <div class="block2">
+
+
                             <div class="block2-pic hov-img0">
 
-                                        <img src="{{ asset('images/products/' . $product->image[0]->image) }}" alt="IMG-PRODUCT">
+
+                                <img src="{{ asset('images/products/' . $product->image[0]->image) }}" alt="IMG-PRODUCT">
+                                @if($product->offer_id != null || $product->offer_id != 0)
+                                    <div class="corner-ribbon">{{ $product->offer->percentage }} %</div>
+                                    @elseif($product->quantity==0)
+                                    <div class="corner-ribbon">Stock Out!</div>
+
+                                @endif
 
 
-                                <div class="block2-btn flex-c-m stext-103 cl0 size-102 bg7 bor2 hov-btn3 p-lr-15 trans-04" >
-                                    Add to Cart
                                 @if($product->quantity>0)
+                                    <div class="block2-btn flex-c-m stext-103 cl0 size-102 bg7 bor2 hov-btn3 p-lr-15 trans-04" >
+                                        Add to Cart
                                     </div>
                                 @else
-                                <div class="block2-btn flex-c-m stext-103 cl1 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04" >
-                                Out of Stock
-                                </div>
-                                    @endif
-
+                                    <div class="block2-btn flex-c-m stext-103 cl1 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04" >
+                                        Out of Stock
+                                    </div>
+                                @endif
 
 
                             </div>
@@ -86,13 +94,20 @@
 
                             <div class="block2-txt flex-w flex-t p-t-14">
                                 <div class="block2-txt-child1 flex-col-l ">
-								<span class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-									{{ $product->title }}
-								</span>
-
-                                    <span class="stext-105 cl3">
+                                    <h1 class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                        {{ $product->title }}
+                                    </h1>
+                                    @if($product->offer_id == null || $product->offer_id == 0)
+                                        <span class="stext-105 cl3">
 									Tk {{ $product->price }}
 								</span>
+                                    @else
+                                        <span class="stext-105 cl3">
+									Tk {{ $product->offer_price }}
+								</span>
+                                    @endif
+
+
                                 </div>
 
 

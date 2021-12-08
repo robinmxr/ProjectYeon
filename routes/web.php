@@ -106,6 +106,8 @@ Route::post('/admin/product/{id}', [OfferController::class, 'addoffer'])->name('
 
 Route::post('/admin/product/edit/{id}', [BackProductsController::class, 'update'])->name('admin.product.update')->middleware('is_admin');
 
+Route::post('/admin/product/image/{id}', [BackProductsController::class, 'deleteimage'])->name('admin.productimage.delete')->middleware('is_admin');
+
 Route::post('/admin/product/delete/{id}', [BackProductsController::class, 'delete'])->name('admin.product.delete')->middleware('is_admin');
 
 Route::get('/admin/category/create', [BackCategoriesController::class, 'create'])->name('admin.category.create')->middleware('is_admin');

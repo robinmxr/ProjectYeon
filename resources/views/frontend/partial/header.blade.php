@@ -393,6 +393,14 @@
                 <a href="{{ route('contact') }}" class="sidenavlink">Contact</a>
                 <a href="{{ route('terms') }}" class="sidenavlink">Terms</a>
                 <a href="{{ route('faq') }}" class="sidenavlink">Questions</a>
+                <a class="nav-link" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                        $('#logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                    @csrf
+                </form>
 
 
             </div>
