@@ -358,13 +358,7 @@
 		<div class="wrap-header-mobile">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn sidenavlink" onclick="closeNav()">×</a>
-                <div class="sidenavdiv">
-                <form class="form-inline md-form form-sm mt-0">
-                    
-                    <input class="form-control w-75" type="text" placeholder="Search Products" aria-label="Search">
-                   <button> <i class="fa fa-search" aria-hidden="true"></i></button>
-                  </form>
-                </div>
+               
 
                 @if(!Auth::guest())
 
@@ -389,6 +383,16 @@
                     @else
                     <!-- -->
                     @endif
+                    <div class="sidenavlink">
+                        <a class="nav-link" href="{{ route('logout') }}"
+    onclick="event.preventDefault();
+                     $('#logout-form').submit();">
+    {{ __('Logout') }}
+    </a>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+    @csrf
+    </form>
+                    </div>
 
 
                 @else
@@ -408,17 +412,18 @@
                 <a href="{{ route('contact') }}" class="sidenavlink">Contact</a>
                 <a href="{{ route('terms') }}" class="sidenavlink">Terms</a>
                 <a href="{{ route('faq') }}" class="sidenavlink">Questions</a>
-@if (!Auth::guest())
-<a class="nav-link" href="{{ route('logout') }}"
-onclick="event.preventDefault();
-                     $('#logout-form').submit();">
- {{ __('Logout') }}
-</a>
-<form id="logout-form" action="{{ route('logout') }}" method="POST">
- @csrf
-</form>
-@endif
-                
+
+
+    
+
+                <div class="sidenavdiv">
+                    <form class="form-inline md-form form-sm mt-0">
+                        
+                        <input class="form-control w-100" type="text" placeholder="" aria-label="Search">
+                        
+                       <button class="btn btn-dark mt-1"> Search</button>
+                      </form>
+                    </div>
 
 
             </div>
