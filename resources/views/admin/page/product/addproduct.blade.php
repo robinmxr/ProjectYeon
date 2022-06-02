@@ -35,7 +35,29 @@
         <label for="exampleInputEmail1">Product Title</label>
         <input type="text" class="form-control" name="title" placeholder="Enter Name of Product">
       </div>
+        <div class="form-group">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="size[]" id="inline1" value="S">
+            <label class="form-check-label" for="inline1">Small</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="size[]" id="inlineRadi2" value="M">
+            <label class="form-check-label" for="inlineRadi2">Medium</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="size[]" id="inlineRadio3" value="L">
+            <label class="form-check-label" for="inlineRadio3">Large</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="size[]" id="inlineRadio3" value="XL">
+            <label class="form-check-label" for="inlineRadio3">Extra Large</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="size[]" id="inlineRadio3" value="free">
+            <label class="form-check-label" for="inlineRadio3">Free Size</label>
+        </div>
 
+        </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Product Price</label>
         <input type="number" class="form-control" name="price" placeholder="Enter price">
@@ -64,10 +86,12 @@
             <label for="exampleInputEmail1">Care</label>
             <input type="text" class="form-control" name="care" placeholder="Enter care">
         </div>
+        <!--
         <div class="form-group">
             <label for="exampleInputEmail">Available Size</label>
             <input type="text" class="form-control" name="size" placeholder="Enter sizes">
         </div>
+        -->
         <div class="form-group">
             <label for="exampleInputEmail">Tag</label>
             <input type="text" class="form-control" name="tag" placeholder="Enter tag">
@@ -87,6 +111,7 @@
 
 
 
+
       <div class="form-group">
         <label for="exampleInputEmail1">Description</label>
         <textarea name="description" rows="8" cols="80" class="form-control"></textarea>
@@ -98,6 +123,14 @@
             <input type="file" class="custom-file-input" name="product_image[]" id="exampleInputFile">
             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
           </div>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" name="product_image[]" id="exampleInputFile">
+                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+            </div>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" name="product_image[]" id="exampleInputFile">
+                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+            </div>
             <div class="custom-file">
                 <input type="file" class="custom-file-input" name="product_image[]" id="exampleInputFile">
                 <label class="custom-file-label" for="exampleInputFile">Choose file</label>

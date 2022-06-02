@@ -1,33 +1,30 @@
 <div class="bg0 m-t-23 p-b-140">
     <div class="container">
-        <div class="p-b-10">
-            <h3 class="ltext-103 cl5">
+        <div class="p-b-32">
+            <h3 class="ltext-105 cl5 txt-center respon1">
                 Latest Arrivals
             </h3>
         </div>
-        <div class="flex-w flex-sb-m p-b-52">
+        <div class="flex-w flex-sb-m p-b-32">
+
             <div class="flex-w flex-l-m filter-tope-group m-tb-10">
-                <button class="btn btn-outline-dark" data-filter="*">
+                <button class="bor11 stext-109 btn-col-bg-red size-107 m-2 hov-btn1  trans-04" data-filter="*">
                     All Products
                 </button>
 
-                <button class="btn btn-outline-dark" data-filter=".women">
+                <button class="bor11  stext-109 btn-col-bg-red size-107 m-2 hov-btn1  trans-04" data-filter=".women">
                     Women
                 </button>
 
-                <button class="btn btn-outline-dark" data-filter=".men">
+                <button class="bor11 stext-109 btn-col-bg-red size-107 m-2 hov-btn1  trans-04" data-filter=".men">
                     Men
                 </button>
 
-                <button class="btn btn-outline-dark" data-filter=".etc">
+                <button class="bor11 stext-109 btn-col-bg-red size-107 m-2 hov-btn1  trans-04" data-filter=".etc">
                     Accesories
                 </button>
 
-
-
-
             </div>
-
             <div class="flex-w flex-c-m m-tb-10">
 
 
@@ -58,43 +55,42 @@
 
 
         <div class="row isotope-grid">
-            @foreach($products ?? '' as $product)
+            @foreach($products as $product)
 
 
-                <div class="col-sm-4 col-md-3 col-lg-3 p-b-35 isotope-item {{ $product->category->category_type }}">
+                <div class="col-lg-3 col-6 p-b-35 isotope-item {{ $product->category->category_type }}">
 
 
                     <!-- Block2 -->
-                    <a href="{{ route('product.view',$product->slug) }}">
+                    <a href="{{ route('product.view',['slug'=>$product->slug,'id'=>$product->id]) }}">
                         <div class="block2">
+
+
                             <div class="block2-pic hov-img0">
 
-                                        <img src="{{ asset('images/products/' . $product->image[0]->image) }}" alt="IMG-PRODUCT">
 
-                                <a href="#productmodal{{ $product->id }}" data-toggle="modal" data-target="#productmodal{{ $product->id }}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                    Quick View
-                                </a>
-                                <div class="modal fade" id="productmodal{{ $product->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-
-                                    <div class="modal-dialog modal-xl">
-                                        <div class="modal-content">
-
-                                            <div class="modal-body">
-                                                @include('frontend.partial.utils.modal')
-                                            </div>
-                                            <div class="model-footer">
-                                                <button type="button" class="close" data-dismiss="modal"><i style="font-size: 40px;" class="fa fa-times" aria-hidden="true"></i></button>
-                                            </div>
-
-
-                                        </div>
+                                <img src="{{ asset('images/products/' . $product->image[0]->image) }}" alt="IMG-PRODUCT">
+                                @if($product->offer_id != null || $product->offer_id != 0)
+                                    <div class="corner-ribbon">
+                                        <div class="ribbon-text"> - {{ $product->offer->percentage }} %</div>
+                                    </div>
+                                    @elseif($product->quantity==0)
+                                    <div class="corner-ribbon">
+                                        <div class="ribbon-text">Out!</div>
                                     </div>
 
+                                @endif
 
 
-                                </div>
-
+                                @if($product->quantity>0)
+                                    <div class="block2-btn flex-c-m stext-103 cl0 size-102 bg7 bor2 hov-btn3 p-lr-15 trans-04" >
+                                        Add to Cart
+                                    </div>
+                                @else
+                                    <div class="block2-btn flex-c-m stext-103 cl1 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04" >
+                                        Out of Stock
+                                    </div>
+                                @endif
 
 
                             </div>
@@ -102,13 +98,20 @@
 
                             <div class="block2-txt flex-w flex-t p-t-14">
                                 <div class="block2-txt-child1 flex-col-l ">
-								<span class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-									{{ $product->title }}
-								</span>
-
-                                    <span class="stext-105 cl3">
+                                    <h1 class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                        {{ $product->title }}
+                                    </h1>
+                                    @if($product->offer_id == null || $product->offer_id == 0)
+                                        <span class="stext-105 cl1">
 									Tk {{ $product->price }}
 								</span>
+                                    @else
+                                        <span class="stext-105 cl1">
+									Tk {{ $product->offer_price }}
+								</span>
+                                    @endif
+
+
                                 </div>
 
 
@@ -132,4 +135,5 @@
 
 
     </div>
+</div>
 </div>

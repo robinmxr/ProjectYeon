@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Wishlist;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -106,14 +107,31 @@ class UserController extends Controller
         $final_image= Image::make($image)->resize(180,180, function ($constraint) {
             $constraint->aspectRatio();
         });
-        $originalpath=public_path().'/images/profiles/';
-        $final_image->save($originalpath.time().$image->getClientOriginalName());
+        $originalpath='/images/profiles/';
+        $final_image->save('images/profiles/'.time().$image->getClientOriginalName());
 
-        $user_image = new UserImage;
-        $user_image->user_id = Auth::user()->id;
-        $user_image->image=time().$image->getClientOriginalName();
-        $user_image->save();
+        $cwu_picture = UserImage::where('user_id', "=", Auth::user()->id)->first();
+
+        //Change if user already has one profile picture
+        if(isset($cwu_picture)>0){
+            $cwu_picture->image= time().$image->getCLientOriginalName();
+            $cwu_picture->save();
+        }
+        else{
+            $user_image = new UserImage;
+            $user_image->user_id = Auth::user()->id;
+            $user_image->image=time().$image->getClientOriginalName();
+            $user_image->save();
+        }
+
+
         session()->flash('success','Image has been added');
         return back();
     }
+
+
+
+
+
+
 }

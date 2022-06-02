@@ -19,8 +19,9 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->integer('category_id')->unsigned();
             $table->integer('price');
+            $table->integer('offer_price')->nullable();
             $table->integer('quantity')->default(1);
-            $table->string('size');
+            $table->string('size')->nullable();
             $table->integer('offer_id')->unsigned()->nullable();
             $table->string('slug');
             $table->string('material')->nullable();

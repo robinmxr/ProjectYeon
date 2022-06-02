@@ -6,7 +6,10 @@ use App\Models\Product;
 
 
 use App\Models\ProductReview;
+use App\Models\PublicImage;
+use App\Models\Wishlist;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 
 class FrontPagesController extends Controller
@@ -15,7 +18,9 @@ class FrontPagesController extends Controller
     public function index()
     {
         $products = Product::orderBy('id','desc')->paginate(20);
-        return view('frontend.page.index',compact('products'));
+        $featured = Product::where('featured','true')->orderByDesc('id')->get();
+        $images = PublicImage::all();
+        return view('frontend.page.index',compact('products','featured','images'));
     }
     public function contact()
     {
@@ -43,10 +48,19 @@ class FrontPagesController extends Controller
     {
         return view('frontend.page.cart');
     }
-    public function cartd()
+    public function about()
     {
-        return view('frontend.page.cartdemo');
+        return view('frontend.page.about');
     }
+    public function faq()
+    {
+        return view('frontend.page.faq');
+    }
+    public function terms()
+    {
+        return view('frontend.page.terms');
+    }
+
 
 
 

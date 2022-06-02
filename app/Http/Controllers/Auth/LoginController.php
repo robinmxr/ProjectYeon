@@ -55,9 +55,9 @@ class LoginController extends Controller
     {
         try {
 
-            $user = Socialite::driver('google')->user();
+            $user = Socialite::driver('google')->stateless()->user();
 
-            $finduser = User::where('google_id', $user->id)->first();
+            $finduser = User::where('email', $user->email)->first();
 
             if($finduser){
 
@@ -104,7 +104,7 @@ class LoginController extends Controller
                 ]);
 
                 Auth::login($createUser);
-                return redirect('/dashboard');
+                return redirect('/');
             }
 
         } catch (Exception $exception) {

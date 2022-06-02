@@ -36,9 +36,9 @@ return [
         'redirect' => 'https://doogdoogibd.com/auth/google/callback',
     ],
     'facebook' => [
-        'client_id' => '4511409272243166',
-        'client_secret' => '2df314062e3439d76711927ac511b352',
-        'redirect' => 'http://localhost:8000/auth/facebook/callback',
+        'client_id' => '417009936761845',
+        'client_secret' => '6de4cd5cc510ae981df98bba7f724bf7',
+        'redirect' => 'https://doogdoogibd.com/auth/facebook/callback',
     ],
 
 ];

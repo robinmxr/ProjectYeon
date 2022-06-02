@@ -126,6 +126,12 @@
                                     <p>Add Product</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.offers') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Offers</p>
+                                </a>
+                            </li>
 
                         </ul>
                     </li>
@@ -166,6 +172,31 @@
                                 <a href="{{ route('admin.orders') }}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>All Orders</p>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                    <li class="nav-item has-treeview">
+                        <a  class="nav-link">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                Images
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('admin.coverimage') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Add Cover Image</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.gallery') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Gallery</p>
                                 </a>
                             </li>
 

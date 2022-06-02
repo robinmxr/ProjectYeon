@@ -84,8 +84,8 @@ return [
     */
 
     'from' => [
-        'address' => 'misterpotatobd@gmail.com',
-        'name' => 'Laravel',
+        'address' => 'admin@doogdoogibd.com',
+        'name' => 'Doogdoogi',
     ],
 
     /*

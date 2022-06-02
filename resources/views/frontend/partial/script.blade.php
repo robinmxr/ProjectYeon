@@ -1,16 +1,88 @@
+<script src="{{ asset('vendor/jquery/jquery-3.2.1.min.js') }}"></script>
 <script src="{{ asset('vendor/bootstrap/js/popper.js') }}"></script>
 <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('vendor/jquery/jquery-3.2.1.min.js') }}"></script>
 
 
 <script>
+    //Profile
+
+    let fileupload = $('#propic');
+    $('#propic').on('change', function(e){
+        console.log($('#propic').prop('files')[0]);
+        let url = "{{ route('addimage')  }}";
+
+        let file_data = $('#propic').prop('files')[0]
+
+        //var dataURL = canvas.toDataURL(fileupload.target.files[0], 1.0)
+        //var blob = dataURItoBlob(dataURL)
+        //var fr = new FileReader();
+        //fr.readAsDataURL(("#propic")[0].files[0]);
+        let formData = new FormData();
+        formData.append('image',file_data);
+        formData.append('_token', '{{csrf_token()}}')
+
+        //console.log(formData)
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", url, true);
+        xhr.send(formData);
+        console.log(xhr.status);
+        $('#pict').load(document.URL + ' #pict');
+
+
+
+    });
+</script>
+
+<script>
+
+
+
+    function addtoWishlist(prodId){
+        const url = "{{route('wishlist.add')}}"
+
+        $.ajax({
+            url: url,
+            method: "POST",
+            data: {
+                productId:prodId,
+                _token: '{{csrf_token()}}',
+            }
+            }
+
+        )
+
+    }
+
+    function removewishbyid(id){
+        //$id = id;
+        const url = 'wishlist/remove/' + id;
+
+        $.ajax({
+            url: url,
+            method: "GET",
+            success: function (data) {
+
+                $("#wishlistloader").load(document.URL + " #wishlistloader");
+            }
+        });
+    }
     function getMessage(id) {
         //console.log("button presses function called!");
         //console.log(id);
-        const size = $("#sizeprod").val();
+        //console.log(size);
+        let size = "";
+        //const size = $("#sizeprod").val();
+        if( $(".sizebox:checked ").val()!=null){
+            size = $(".sizebox:checked ").val();
+        }
+        else{
+            size = document.getElementsByName("options")[0].value
+        }
+
 		//console.log(size);
         const quantity = $("#quantity").val();
-        const url = "/cart/";
+        const url = "{{route('product.cart.add')}}";
 
         $.ajax({
             url: url,
@@ -19,11 +91,18 @@
                 quantity: quantity,
                 size:size,
                 _token: '{{csrf_token()}}'},
+            success:function (data){
+                let c = "{{ Cart::getTotalQuantity() }}";
+                //let nott = document.getElementById("#notify-cart");
+                //nott.setAttribute("data-notify", c);
+                //$("#notq").load(document.URL+ " #notify-cart");
+            }
 
         });
 
     }
     $(document).ready(function () {
+
         $('#reloadcart').click(function(){
             //document.getElementById("sidecart").innerText = "Lekhaaaaa";
             let url = window.location.href;
@@ -32,6 +111,7 @@
                 method: "GET",
                 success:function(data)
                 {
+                    console.log("{{ Cart::getTotalQuantity() }}")
                     $("#sidecart").load(document.URL + " #sidecart");
 
                     //$("#sidecart").load("") = doc.getElementById("sidecart")
@@ -41,6 +121,9 @@
 
         });
     })
+
+
+
 
 
 
@@ -112,9 +195,10 @@
 			var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
 
 			$(this).on('click', function(){
+
 				swal(nameProduct, "is added to wishlist !", "success");
 
-				$(this).addClass('js-addedwish-detail');
+
 				$(this).off('click');
 			});
 		});
@@ -127,6 +211,9 @@
 				swal(nameProduct, "is added to cart !", "success");
 			});
 		});
+
+
+
 
 	</script>
 <!--===============================================================================================-->
@@ -150,8 +237,8 @@
 	</script>
 <script>
     function openNav() {
-        document.getElementById("mySidenavpc").style.width = "25%";
-        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mySidenavpc").style.width = "20%";
+        document.getElementById("mySidenav").style.width = "200px";
 
     }
 

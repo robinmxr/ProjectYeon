@@ -1,32 +1,52 @@
 <!-- Slider -->
 @extends ('frontend.layout.master')
+@section('pagetitle')
+    {{Auth::user()->name}}
+@endsection
 
 @section ('content')
 
 
 
 
-    <div class="  p-tb-92  bg-img1" style="background-image: url('images/bg-01.jpg');" >
-
+    <div class="m-0  p-tb-92  bg-img1" style="background-image: url('images/svg/asset8.svg');" >
+<!--TODO:: jquery autochange the profile picture.-->
 
         <div class="row">
-                <div class=" col-sm-4  txt-center p-lr-15 p-tb-40 blurrybox ">
-
+                <div class=" col-sm-4  txt-center p-lr-15 p-tb-40 burrybox ">
+                <!-- USer Image part -->
+<div class="block2-pic hov-img0" id="pict">
 @if(isset(Auth::user()->image[0]->image))
-                        <img class="m-tb-10" src="{{ asset('images/profiles/'.Auth::user()->image[0]->image) }}" style="height: 180px; width:180px;border-radius: 50%;"/>
-@else
-                        <img class="m-tb-10" src="{{ asset('images/gallery-03.jpg') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
-@endif
 
+
+                        <img class="m-tb-10 " src="{{ asset('images/profiles/'.Auth::user()->image[0]->image) }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+
+@else
+
+    <!--div class="prop"-->
+                        <img class="m-tb-10" src="{{ asset('images/gallery-03.jpg') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+
+    <!--/div-->
+@endif
+    <div class="block2-btn bottom-0 flex-c-m stext-101 p-all-10 cl0   bg7 bor2 hov-btn3  trans-04" >
+        <label class="propiclabelstyle"> Change pic
+            <input type="file" name="" id="propic" class="inputinlabel">
+        </label>
+
+    </div>
+                <!-- USer Image part ends -->
+</div>
                     <div class="ltext-101 cl0"> {{ Auth::user()->name }} </div>
                     <div class="ltext-111 cl9"> Customer </div>
 
                     <div class="card-body">
+
+                        <!--
                         <table class="table table-hover  table-borderless" >
                             <tbody>
                             <tr >
                                 <td  >Total Orders: </td>
-                                <td > </td>
+                                <td >  {{ $orderlist->count() }}</td>
                             </tr>
                             <tr>
                                 <td><form method="post" action="{{ route('addimage')  }}" enctype="multipart/form-data">
@@ -39,7 +59,7 @@
 
                             </tbody>
                         </table>
-
+                        -->
                     </div>
 
 
@@ -48,11 +68,10 @@
 
 
                 </div>
-                <div class="col-sm-8 ">
+                <div class="col-sm-8">
                     <div class="container">
 
-                        <div class="flex-w flex-l-m filter-tope-group m-tb-10 ">
-
+                        <div class="flex-sa  filter-tope-group m-tb-10  ">
 
                             <button class="btn cl6 hov2 bor3 trans-04 m-r-32 m-tb-5 how-active1 sels-button" data-filter=".profile">
                                 About
@@ -79,56 +98,52 @@
                                 {{ session('failure') }}
                             </div>
                         @endif
-                        <div class="col isotope-grid p-0 " >
+
+
+                        <div class="col isotope-grid p-0 m-tb-20 " >
 
                             <div class="isotope-item profile col-lg-12">
 
 
-                                <div class="card text-center " >
+                                <div class=" text-center rounded" >
                                     <div class="card-header layout-boxed -align-center color">
                                         Personal Information
 
 
 
                                     </div>
-                                    <div class="card-body ">
+                                    <div class="container ">
 
-                                        <ul class="list-group ">
-                                            <li class="p-all-10  list-group-item">
-                                            <div class="row">
-                                                <div class="col-sm-8">{{Auth::user()->name}}</div>
-                                                <div class="col-sm-4"><button class="btn btn-outline-dark" data-toggle="modal" data-target="#namechange"> Change </button></div>
-
-                                            </div>
-                                            </li>
-                                            <li class="p-all-10 list-group-item ">
-                                            <div class="row">
-                                                <div class="col-sm-8">{{Auth::user()->email}}</div>
-                                                <div class="col-sm-4"><button class="btn btn-outline-dark" data-toggle="modal" data-target="#nope"> Verify </button></div>
+                                        <div class="flex-column">
+                                            <div class="flex-sb m-tb-20">
+                                                <div class="mtext-102 cl0">{{Auth::user()->name}}</div>
+                                                <div class="mtext-102"><button class="btn btn-outline-light" data-toggle="modal" data-target="#namechange"> Change </button></div>
 
                                             </div>
-                                            </li>
-                                            <li class="p-all-10 list-group-item ">
-                                            <div class="row">
-                                                <div class="col-sm-8">{{Auth::user()->phone}}</div>
-                                                <div class="col-sm-4"><button class="btn btn-outline-dark" data-toggle="modal" data-target="#phonechange"> Change </button></div>
+                                            <div class="flex-sb m-tb-20">
+                                                <div class="mtext-102 cl0">{{Auth::user()->email}}</div>
+                                                <div class="mtext-102"><button class="btn btn-outline-light" data-toggle="modal" data-target="#nope"> Verify </button></div>
 
                                             </div>
-                                            </li>
-                                            <li class="p-all-10 list-group-item ">
-                                            <div class="row">
-                                                <div class="col-sm-8">{{Auth::user()->address}}</div>
-                                                <div class="col-sm-4"><button class="btn btn-outline-dark" data-toggle="modal" data-target="#addresschange"> Change </button></div>
+                                            <div class="flex-sb m-tb-20">
+                                                <div class="mtext-102 cl0">{{Auth::user()->phone}}</div>
+                                                <div class="mtext-102"><button class="btn btn-outline-light" data-toggle="modal" data-target="#phonechange"> Change </button></div>
 
                                             </div>
-                                            </li>
+                                            <div class="flex-sb m-tb-20">
+                                                <div class="mtext-102 cl0">{{Auth::user()->address}}</div>
+                                                <div class="mtext-102"><button class="btn btn-outline-light" data-toggle="modal" data-target="#addresschange"> Change </button></div>
 
-                                            <li class="p-all-10 list-group-item ">
-                                                <div class="col-sm-12"><button class="btn btn-danger" data-toggle="modal" data-target="#passchange"> Change password </button></div>
-                                            </li>
+                                            </div>
+                                            <div class="flex-sa m-tb-20">
+
+                                                <div class="mtext-102"><button class="btn btn-outline-light" data-toggle="modal" data-target="#passchange"> Change Password</button></div>
+
+                                            </div>
+
+                                        </div>
 
 
-                                        </ul>
                                     </div>
                                 </div>
 
@@ -195,10 +210,15 @@
 
                             <div class="  isotope-item reviews">
                                 <ul>
+
                                     <li>My Reviews  </li>
+                                    @if($review->count()>0)
                                     @foreach($review as $rev)
                                         <li>{{ $rev->$review }}</li>
 @endforeach
+                                    @else
+                                    <li>No Reviews by you</li>
+                                        @endif
 
                                 </ul>
 

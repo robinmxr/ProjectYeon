@@ -4,6 +4,7 @@
 	<title>@yield('pagetitle') | DoogDoogi </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="csrf-token" content="{{ csrf_token() }}">
      <meta name="robots" content="index, follow" />
      <meta http-equiv="x-ua-compatible" content="ie=edge">
 <!--===============================================================================================-->
@@ -63,6 +64,7 @@
 </head>
 <body class="animsition">
 
+
 	<!-- Header -->
 
 
@@ -70,7 +72,8 @@
 		<!-- Header desktop -->
 
 		<div class="container-menu-desktop trans-03">
-			<div class="wrap-menu-desktop">
+
+			<div class="wrap-menu-desktop how-shadow1">
                 <nav class="limiter-menu-desktop p-l-45">
 
                     <div class="flex-c-m h-full p-lr-19">
@@ -81,40 +84,169 @@
                     <div id="mySidenavpc" class="sidenav ">
 
                         <a href="javascript:void(0)" class="closebtn sidenavlink" onclick="closeNav()">×</a>
+                        <div class="flex-column">
 
 
-                        @if(!Auth::guest())
+                            <div>
 
-                            <div class="img-bordered sidenavimg">
-                                @if(isset(Auth::user()->image[0]->image))
-                                    <img src="{{ asset('images/profiles/'.Auth::user()->image[0]->image) }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+                                <h3 class="cl0 text-uppercase underline p-l-5 p-b-20"> Quick Links </h3>
+
+
+
+                            </div>
+                            <!-- navbar content pc -->
+
+                            <div>
+                                @if(!Auth::guest())
+
+                                    <div class="img-bordered sidenavimg">
+                                        @if(isset(Auth::user()->image[0]->image))
+                                            <img src="{{ asset('images/profiles/'.Auth::user()->image[0]->image) }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+                                        @else
+                                            <img src="{{ asset('images/profiledef.png') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+                                        @endif
+                                    </div>
+
+                                    <h3 class="text-center cl0"> {{ auth()->user()->name }} </h3>
+                                    <div class="sidenavdiv">
+
+                                        <a href="{{route('profile')}}" class="sidenavlink">
+                                            <div class="flex-row">
+                                                <div>
+                                                    <i class="fa fa-user p-r-15 p-l-5" aria-hidden="true"></i>
+                                                </div>
+                                                <div>My profile</div>
+                                            </div>
+
+                                        </a>
+
+
+
+
+
+
+                                    </div>
+                                    <div class="sidenavdiv">
+
+                                        <a href="{{route('wishlist')}}" class="sidenavlink">
+                                            <div class="flex-row">
+                                                <div>
+                                                    <i class="fa fa-heartbeat p-r-15 p-l-5" aria-hidden="true"></i>
+                                                </div>
+                                                <div>My Wishlist</div>
+                                            </div>
+
+                                        </a>
+
+
+
+
+
+
+                                    </div>
+
+
                                 @else
-                                    <img src="{{ asset('images/profiledef.png') }}" style="height: 180px; width:180px;border-radius: 50%;"/>
+                                    <a href="{{route('login')}}" class="sidenavlink">
+                                        <div class="flex-row">
+                                            <div>
+                                                <i class="fa fa-sign-in p-r-15 p-l-5" aria-hidden="true"></i>
+                                            </div>
+                                            <div>Login</div>
+                                        </div>
+
+                                        </a>
+                                    <a href="{{route('register')}}" class="sidenavlink">
+
+                                        <div class="flex-row">
+                                            <div>
+                                                <i class="fa fa-user-plus p-r-15 p-l-5" aria-hidden="true"></i>
+                                            </div>
+                                            <div>Signup</div>
+                                        </div>
+                                        </a>
                                 @endif
+
+
+                                <a href="#demo" data-toggle="collapse"  class="sidenavlink">
+                                    <div class="flex-row">
+                                        <div>
+                                            <i class="fa fa-shopping-bag p-r-15 p-l-5" aria-hidden="true"></i>
+                                        </div>
+                                        <div>Categories</div>
+                                    </div>
+
+                                    </a>
+
+                                <div id="demo" class="collapse p-l-50">
+                                    <a href="{{ route('categories.type','men') }}"  class="sidenavlink">
+                                        <div class="flex-row">
+                                            <div>
+                                                <i class="fa fa-male p-r-15" aria-hidden="true"></i>
+                                            </div>
+                                            <div>Man</div>
+                                        </div>
+                                        </a>
+                                    <a href="{{ route('categories.type','women') }}"  class="sidenavlink">
+                                        <div class="flex-row">
+                                            <div>
+                                                <i class="fa fa-female  p-r-15" aria-hidden="true"></i>
+                                            </div>
+                                            <div>Women</div>
+                                        </div>
+                                         </a>
+                                    <a href="{{ route('categories.type','etc') }}" class="sidenavlink">
+                                        <div class="flex-row">
+                                            <div><i class="fa fa-cog p-r-15" aria-hidden="true"></i></div>
+                                            <div>Accessories</div>
+                                        </div>
+
+                                    </a>
+                                </div>
+
+
+                                <a href="{{ route('about') }}" class="sidenavlink">
+                                    <div class="flex-row">
+                                        <div>
+                                            <i class="fa fa-question-circle-o p-r-15 p-l-5" aria-hidden="true"></i>
+                                        </div>
+                                        <div>About</div>
+                                    </div>
+
+
+                                </a>
+
+
+
+                                <a href="{{ route('contact') }}" class="sidenavlink">
+                                    <div class="flex-row">
+                                        <div>
+                                            <i class="fa fa-compress p-r-15 p-l-5" aria-hidden="true"></i>
+                                        </div>
+                                        <div>Contact</div>
+                                    </div>
+                                    </a>
+                                <a href="{{ route('terms') }}" class="sidenavlink">
+                                    <div class="flex-row">
+                                        <div>
+                                            <i class="fa fa-check p-r-15 p-l-5" aria-hidden="true"></i>
+                                        </div>
+                                        <div>Terms</div>
+                                    </div>
+                                    </a>
+                                <a href="{{ route('faq') }}" class="sidenavlink">
+                                    <div class="flex-row">
+                                        <div>
+                                            <i class="fa fa-question p-r-15 p-l-5" aria-hidden="true"></i>
+                                        </div>
+                                        <div>Questions</div>
+                                    </div>
+                                    </a>
+
+
                             </div>
-                            <div class="sidenavdiv">
-                                <div > {{ auth()->user()->name }} </div>
-
-                                <div class="sidenavlink"> <div><a href="{{ route('profile') }}"> My Profile</a> </div></div>
-
-                            </div>
-
-
-                        @else
-                            <a href="{{route('login')}}" class="sidenavlink"> Login</a>
-                            <a href="{{route('register')}}" class="sidenavlink"> Signup </a>
-                        @endif
-                        <a href="#"  class="sidenavlink">Home</a>
-                        <a href="#"  class="sidenavlink">Order</a>
-                        <a href="#demo" data-toggle="collapse"  class="sidenavlink">Categories</a>
-
-                        <div id="demo" class="collapse">
-                            <a href="{{ route('categories.type','men') }}"  class="sidenavlink">Men</a>
-                            <a href="{{ route('categories.type','women') }}"  class="sidenavlink">Women</a>
-                            <a href="{{ route('categories.type','etc') }}" class="sidenavlink">Accessories</a>
                         </div>
-                        <a href="#" class="sidenavlink">Terms</a>
-                        <a href="#" class="sidenavlink">Contact Us</a>
+
 
                     </div>
 
@@ -164,6 +296,7 @@
                                     <a href="#">{{ Auth::user()->name }} <i class="fa fa-angle-down"></i></a>
                                     <ul class="sub-menu">
                                         <li><a href="{{ route('profile') }}">Profile</a></li>
+                                        <li><a href="{{ route('wishlist') }}">Wishlist</a></li>
                                         @if(auth()->user()->is_admin==1)
 
                                             <li>
@@ -221,10 +354,17 @@
         </div>
 
 		<!-- Header Mobile -->
-
+        <!-- TODO: Edit Mobile view -->
 		<div class="wrap-header-mobile">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn sidenavlink" onclick="closeNav()">×</a>
+                <div class="sidenavdiv">
+                <form class="form-inline md-form form-sm mt-0">
+                    
+                    <input class="form-control w-75" type="text" placeholder="Search Products" aria-label="Search">
+                   <button> <i class="fa fa-search" aria-hidden="true"></i></button>
+                  </form>
+                </div>
 
                 @if(!Auth::guest())
 
@@ -238,17 +378,25 @@
                     <div class="sidenavdiv">
                         <div > {{ auth()->user()->name }} </div>
 
-                        <div class="sidenavlink"> <div><a href="{{ route('profile') }}"> My Profile</a> </div></div>
+                        <div><a class="sidenavlink" href="{{ route('profile') }}"> My Profile</a> </div>
 
                     </div>
+                    @if(auth()->user()->is_admin==1)
+
+
+                        <a class="sidenavlink" href="{{route("admin.index")}}">Admin Panel</a>
+
+                    @else
+                    <!-- -->
+                    @endif
 
 
                 @else
                     <a href="{{route('login')}}" class="sidenavlink"> Login</a>
                     <a href="{{route('register')}}" class="sidenavlink"> Signup </a>
                 @endif
-                <a href="#"  class="sidenavlink">Home</a>
-                <a href="#"  class="sidenavlink">Order</a>
+
+
                 <a href="#demo" data-toggle="collapse"  class="sidenavlink">Categories</a>
 
                 <div id="demo" class="collapse">
@@ -256,13 +404,26 @@
                     <a href="{{ route('categories.type','women') }}"  class="sidenavlink">Women</a>
                     <a href="{{ route('categories.type','etc') }}" class="sidenavlink">Accessories</a>
                 </div>
-                <a href="#" class="sidenavlink">Terms</a>
-                <a href="#" class="sidenavlink">Contact Us</a>
+                <a href="{{ route('about') }}" class="sidenavlink">About</a>
+                <a href="{{ route('contact') }}" class="sidenavlink">Contact</a>
+                <a href="{{ route('terms') }}" class="sidenavlink">Terms</a>
+                <a href="{{ route('faq') }}" class="sidenavlink">Questions</a>
+@if (!Auth::guest())
+<a class="nav-link" href="{{ route('logout') }}"
+onclick="event.preventDefault();
+                     $('#logout-form').submit();">
+ {{ __('Logout') }}
+</a>
+<form id="logout-form" action="{{ route('logout') }}" method="POST">
+ @csrf
+</form>
+@endif
+                
 
 
             </div>
             <div class="flex-c-m h-full p-lr-19">
-                <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11">
+                <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11">
                     <i class="fa fa-bars" onclick="openNav()"></i>
                 </div>
             </div>
@@ -273,7 +434,7 @@
 
             <div class="wrap-icon-header flex-w flex-r-m h-full m-r-15">
                 <div class="flex-c-m h-full p-r-5">
-                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart " data-notify="{{ Cart::getTotalQuantity() }}">
+                    <div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart " data-notify="{{ Cart::getTotalQuantity() }}">
                         <i class="fa fa-opencart"></i>
                     </div>
                 </div>
@@ -330,7 +491,7 @@
         <div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
             <div class="container-search-header">
                 <button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-                    <img src="images/icons/icon-close2.png" alt="CLOSE">
+                    <i class="fa fa-close"></i>
                 </button>
 
                 <form action="{{ route('search') }}" method="get" class="wrap-search-header flex-w p-l-15">
@@ -365,11 +526,19 @@
 
             <div id="sidecart" >
             @if (Cart::isEmpty())
-                <div class="alert alert-danger">
-                    <p>Your shopping cart is empty.</p>
-                </div>
+                    <div> <img src="{{ asset('images/cart.png') }}"></div>
+                    <div class="header-cart-buttons flex-sa w-full m-t-20 m-lr-5">
+                        <a href="{{ route('products') }}" class="flex-c-m stext-109 cl0 size-105 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+                           Go Shopping!
+                        </a>
+                        <a href="{{ route('wishlist') }}" class="flex-c-m stext-109 cl0 size-105 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+                            Check Wishlist
+                        </a>
+
+
+                    </div>
             @else
-            <!--TODO: use "refreshcart()" function to get all the cart data and then show them in the upcoming code -->
+
                 <div class="header-cart-content flex-w js-pscroll">
                     <ul class="header-cart-wrapitem w-full">
                         @foreach(Cart::getcontent() as $item)
@@ -386,8 +555,11 @@
                                     </a>
 
                                     <span class="header-cart-item-info">
-								{{ $item->price }}
+								{{ $item->price }} TK
 							</span>
+
+
+
                                 </div>
                             </li>
 
@@ -406,7 +578,7 @@
                                 View Cart
                             </a>
 
-                            <a href="#" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+                            <a href="{{ route('checkout.index') }}" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
                                 Check Out
                             </a>
                         </div>

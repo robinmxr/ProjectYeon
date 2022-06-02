@@ -1,8 +1,11 @@
 
 @extends('frontend.layout.master')
-
+@section('pagetitle')
+    Sign Up
+@endsection
 @section('content')
-    <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
+    <!--<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">-->
+    <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/svg/asset8.svg');">
         <h2 class="ltext-105 cl0 txt-center">
             Register
         </h2>
@@ -17,14 +20,14 @@
 
                     <p class="pd-log selfflex">
 
-                        <a href="#"><i class="fa fa-google " aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-facebook " aria-hidden="true"></i></a>
+                        <a class="cl0" href="{{ route('login.google') }}"><i class="fa fa-google " aria-hidden="true"></i></a>
+                        <a class="cl0" href="#"><i class="fa fa-facebook " aria-hidden="true"></i></a>
 
                     </p>
                 </div>
                 <form class="formtype scol" method="POST" action="{{ route('register') }}">
                     <!-- <form class="formtype"> -->
-                   @csrf
+                    {{ csrf_field() }}
                     <div >
                         <input id="name" type="text" class="inputy form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Enter Your Full Name">
 
@@ -63,7 +66,7 @@
 
 
                 <!--<input type="password" class="inputy" placeholder="Enter Tour Password" required> -->
-                    <button type="submit"  class="btn btn-primary" style="margin-top: 10px;"> {{ __('Register') }}</button>
+                    <button type="submit"  class="btn btn-danger" style="margin-top: 10px;"> {{ __('Register') }}</button>
 
 
 

@@ -1,5 +1,9 @@
 @extends ('frontend.layout.master')
+@section('pagetitle')
+Categories
+@endsection
 @section ('content')
+
 
 	<!-- Product -->
   <section class="bg-img1 txt-center p-lr-15 p-tb-92 bggrad">
@@ -55,7 +59,7 @@
 
 
         <!-- Block2 -->
-          <a href="#">
+          <a href="{{ route('product.cat',$category->id) }}">
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 						<img src="{{ asset('images/categories/'.$category->image) }}" alt="IMG-PRODUCT">
@@ -69,8 +73,8 @@
 									{{ $category->title }}
 								</span>
 
-								<span class="stext-105 cl3">
-									For {{ $category->category_type }}
+								<span class="mtext-101 cl3">
+									{{ $category->category_type }}
 								</span>
 							</div>
 
@@ -93,11 +97,7 @@
 
 
 	<!-- Back to top -->
-	<div class="btn-back-to-top" id="myBtn">
-		<span class="symbol-btn-back-to-top">
-			<i class="zmdi zmdi-chevron-up"></i>
-		</span>
-	</div>
+	
 
 
 
